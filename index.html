@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light" />
-<title>Stanley Ojima — Senior Product Designer</title>
+<title>Stanley Ojima | Senior Product Designer</title>
 <meta name="description" content="Stanley Ojima — Senior Product Designer with 8+ years across fintech, HR tech, and health tech, turning complex, high-stakes software into products that feel effortless." />
 <meta name="author" content="Stanley Ojima" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -100,7 +100,7 @@
   /* ============================================================
      HERO — pinned backdrop (name doesn't move; sheet scrolls over it)
      ============================================================ */
-  .hero-pin{position:fixed;inset:0;z-index:0;display:flex;flex-direction:column;padding:0 var(--nav-pad-x) var(--footer-h,2.5rem);overflow:hidden;transform-origin:center center;will-change:transform,opacity}
+  .hero-pin{position:fixed;inset:0;z-index:0;display:flex;flex-direction:column;padding:3.5rem var(--nav-pad-x) var(--footer-h,2.5rem);overflow:hidden;transform-origin:center center;will-change:transform,opacity}
   .hero-pin > .name-wrap{position:relative;z-index:1}
 
   /* background layers (one shows at a time via body class) */
@@ -776,6 +776,75 @@
   </footer>
 </div>
 
+<!-- ===== RESUME MODAL ===== -->
+<div class="modal" id="resumeModal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="resumeTitle">
+    <button class="modal-close" type="button" data-close aria-label="Close">&times;</button>
+    <article class="resume" id="resumeDoc">
+      <header class="rs-head">
+        <p class="rs-eyebrow">résumé</p>
+        <h2 class="rs-name" id="resumeTitle">stanley ojima</h2>
+        <p class="rs-title">Senior Product Designer</p>
+      </header>
+      <p class="rs-summary">Senior Product Designer with 8+ years designing intuitive, user-centered products that create real value for users and businesses. I turn complex problems into simple, scalable experiences — working closely with cross-functional teams to ship impactful, data-informed solutions.</p>
+      <div class="rs-contact">
+        <a href="tel:+2347056833543">+234 705 683 3543</a>
+        <a href="mailto:stanleyojima9@gmail.com">stanleyojima9@gmail.com</a>
+        <a href="#top">Portfolio</a>
+        <a href="https://www.linkedin.com/in/ojima-aniegboka/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+      <div class="modal-actions" style="margin:1.1rem 0 .1rem"><button id="rsTopDl" class="btn btn-primary" type="button" data-print>download pdf <span class="arr">↓</span></button></div>
+      <section class="rs-section">
+        <h3 class="rs-h">Experience</h3>
+        <div class="rs-job">
+          <div class="rs-job-top"><span class="rs-company">GoCo</span><span class="rs-dates">Jul 2022 – Apr 2025</span></div>
+          <p class="rs-role">Senior Product Designer</p>
+          <ul class="rs-bullets"><li>Led end-to-end design across the GoCo platform, partnering with PMs to define problems, run research, and ship impactful solutions.</li><li>Spearheaded the redesign of core platform experiences, simplifying complex workflows and improving usability.</li><li>Conducted user research and collaborated cross-functionally to validate decisions and iterate on feedback.</li><li>Contributed to measurable impact — including a 60% rise in customer satisfaction after the platform redesign.</li></ul>
+        </div>
+        <div class="rs-job">
+          <div class="rs-job-top"><span class="rs-company">Curva Digital</span><span class="rs-dates">Feb 2020 – Jul 2022</span></div>
+          <p class="rs-role">Senior Product Designer</p>
+          <ul class="rs-bullets"><li>Owned design execution across mobile apps, websites, and visual systems for multiple clients in a fast-paced agency.</li><li>Translated ambiguous client requirements into clear, user-focused solutions aligned with business goals.</li><li>Led work from early concepts through high-fidelity UI and delivery — balancing speed, quality, and stakeholder expectations.</li></ul>
+        </div>
+        <div class="rs-job">
+          <div class="rs-job-top"><span class="rs-company">DRO Health</span><span class="rs-dates">Nov 2019 – Feb 2021</span></div>
+          <p class="rs-role">Product Designer</p>
+          <ul class="rs-bullets"><li>Designed and improved features within the DRO Health mobile app, enhancing overall UX and usability.</li><li>Focused on clarity, accessibility, and visual consistency across web and mobile.</li></ul>
+        </div>
+        <div class="rs-job">
+          <div class="rs-job-top"><span class="rs-company">Busha</span><span class="rs-dates">May 2019 – Oct 2019</span></div>
+          <p class="rs-role">Product Designer</p>
+          <ul class="rs-bullets"><li>Redesigned the admin dashboard and multiple product pages for a new application within a crypto exchange platform.</li><li>Delivered high-quality, detailed designs while balancing usability and business requirements.</li></ul>
+        </div>
+        <div class="rs-job">
+          <div class="rs-job-top"><span class="rs-company">Transformify</span><span class="rs-dates">Jan 2018 – Apr 2019</span></div>
+          <p class="rs-role">UI/UX Designer</p>
+          <ul class="rs-bullets"><li>Partnered with PMs to research and define user needs for the Transformify platform.</li><li>Translated requirements into wireframes, user flows, and polished UI; supported product decisions through design exploration.</li></ul>
+        </div>
+        <div class="rs-job">
+          <div class="rs-job-top"><span class="rs-company">Freelance</span><span class="rs-dates">Jan 2017 – Present</span></div>
+          <p class="rs-role">UI/UX Designer</p>
+          <ul class="rs-bullets"><li>Consulted with early-stage and growing startups on solutions addressing user needs and business challenges.</li><li>Led end-to-end design across research, UX, UI, and prototyping — often working directly with founders.</li></ul>
+        </div>
+      </section>
+      <section class="rs-section">
+        <h3 class="rs-h">Skills</h3>
+        <p class="rs-skillgroup"><span class="rs-skilllabel">Product &amp; UX</span>Product Thinking · End-to-End UX Design · UX Strategy &amp; Experience Mapping · User Research (Interviews, Usability Testing) · Information Architecture · UI &amp; Visual Design · Design Systems &amp; Scalable UI · Low-to-High Fidelity Design · Interactive Prototyping (Figma)</p>
+        <p class="rs-skillgroup"><span class="rs-skilllabel">Collaboration</span>Cross-functional Collaboration (Product, Engineering, Marketing) · Stakeholder Communication &amp; Alignment · Design–Engineering Handoff · Feedback Facilitation &amp; Iteration</p>
+      </section>
+      <section class="rs-section">
+        <h3 class="rs-h">Languages</h3>
+        <p class="rs-skillgroup">English</p>
+      </section>
+    </article>
+    <div class="modal-actions rs-actions">
+      <button class="btn btn-primary" type="button" data-print>download pdf <span class="arr">↓</span></button>
+    </div>
+  </div>
+</div>
+
+</body>
 <script>
 (() => {
   const root = document.documentElement;
@@ -1098,73 +1167,4 @@
   }
 })();
 </script>
-<!-- ===== RESUME MODAL ===== -->
-<div class="modal" id="resumeModal" aria-hidden="true">
-  <div class="modal-backdrop" data-close></div>
-  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="resumeTitle">
-    <button class="modal-close" type="button" data-close aria-label="Close">&times;</button>
-    <article class="resume" id="resumeDoc">
-      <header class="rs-head">
-        <p class="rs-eyebrow">résumé</p>
-        <h2 class="rs-name" id="resumeTitle">stanley ojima</h2>
-        <p class="rs-title">Senior Product Designer</p>
-      </header>
-      <p class="rs-summary">Senior Product Designer with 8+ years designing intuitive, user-centered products that create real value for users and businesses. I turn complex problems into simple, scalable experiences — working closely with cross-functional teams to ship impactful, data-informed solutions.</p>
-      <div class="rs-contact">
-        <a href="tel:+2347056833543">+234 705 683 3543</a>
-        <a href="mailto:stanleyojima9@gmail.com">stanleyojima9@gmail.com</a>
-        <a href="#top">Portfolio</a>
-        <a href="https://www.linkedin.com/in/ojima-aniegboka/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-      </div>
-      <div class="modal-actions" style="margin:1.1rem 0 .1rem"><button id="rsTopDl" class="btn btn-primary" type="button" data-print>download pdf <span class="arr">↓</span></button></div>
-      <section class="rs-section">
-        <h3 class="rs-h">Experience</h3>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">GoCo</span><span class="rs-dates">Jul 2022 – Apr 2025</span></div>
-          <p class="rs-role">Senior Product Designer</p>
-          <ul class="rs-bullets"><li>Led end-to-end design across the GoCo platform, partnering with PMs to define problems, run research, and ship impactful solutions.</li><li>Spearheaded the redesign of core platform experiences, simplifying complex workflows and improving usability.</li><li>Conducted user research and collaborated cross-functionally to validate decisions and iterate on feedback.</li><li>Contributed to measurable impact — including a 60% rise in customer satisfaction after the platform redesign.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">Curva Digital</span><span class="rs-dates">Feb 2020 – Jul 2022</span></div>
-          <p class="rs-role">Senior Product Designer</p>
-          <ul class="rs-bullets"><li>Owned design execution across mobile apps, websites, and visual systems for multiple clients in a fast-paced agency.</li><li>Translated ambiguous client requirements into clear, user-focused solutions aligned with business goals.</li><li>Led work from early concepts through high-fidelity UI and delivery — balancing speed, quality, and stakeholder expectations.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">DRO Health</span><span class="rs-dates">Nov 2019 – Feb 2021</span></div>
-          <p class="rs-role">Product Designer</p>
-          <ul class="rs-bullets"><li>Designed and improved features within the DRO Health mobile app, enhancing overall UX and usability.</li><li>Focused on clarity, accessibility, and visual consistency across web and mobile.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">Busha</span><span class="rs-dates">May 2019 – Oct 2019</span></div>
-          <p class="rs-role">Product Designer</p>
-          <ul class="rs-bullets"><li>Redesigned the admin dashboard and multiple product pages for a new application within a crypto exchange platform.</li><li>Delivered high-quality, detailed designs while balancing usability and business requirements.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">Transformify</span><span class="rs-dates">Jan 2018 – Apr 2019</span></div>
-          <p class="rs-role">UI/UX Designer</p>
-          <ul class="rs-bullets"><li>Partnered with PMs to research and define user needs for the Transformify platform.</li><li>Translated requirements into wireframes, user flows, and polished UI; supported product decisions through design exploration.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">Freelance</span><span class="rs-dates">Jan 2017 – Present</span></div>
-          <p class="rs-role">UI/UX Designer</p>
-          <ul class="rs-bullets"><li>Consulted with early-stage and growing startups on solutions addressing user needs and business challenges.</li><li>Led end-to-end design across research, UX, UI, and prototyping — often working directly with founders.</li></ul>
-        </div>
-      </section>
-      <section class="rs-section">
-        <h3 class="rs-h">Skills</h3>
-        <p class="rs-skillgroup"><span class="rs-skilllabel">Product &amp; UX</span>Product Thinking · End-to-End UX Design · UX Strategy &amp; Experience Mapping · User Research (Interviews, Usability Testing) · Information Architecture · UI &amp; Visual Design · Design Systems &amp; Scalable UI · Low-to-High Fidelity Design · Interactive Prototyping (Figma)</p>
-        <p class="rs-skillgroup"><span class="rs-skilllabel">Collaboration</span>Cross-functional Collaboration (Product, Engineering, Marketing) · Stakeholder Communication &amp; Alignment · Design–Engineering Handoff · Feedback Facilitation &amp; Iteration</p>
-      </section>
-      <section class="rs-section">
-        <h3 class="rs-h">Languages</h3>
-        <p class="rs-skillgroup">English</p>
-      </section>
-    </article>
-    <div class="modal-actions rs-actions">
-      <button class="btn btn-primary" type="button" data-print>download pdf <span class="arr">↓</span></button>
-    </div>
-  </div>
-</div>
-
-</body>
 </html>
