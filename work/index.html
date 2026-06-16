@@ -69,7 +69,8 @@
   .capsule{width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.55rem 1.1rem .55rem 1.3rem;border:1px solid var(--hairline);border-radius:999px;background:linear-gradient(180deg,rgba(255,255,255,.25),rgba(255,255,255,0) 58%),var(--glass);backdrop-filter:blur(22px) saturate(1.7);-webkit-backdrop-filter:blur(22px) saturate(1.7);box-shadow:0 16px 40px -24px rgba(23,18,15,.6),inset 0 1px 0 rgba(255,255,255,.65),inset 0 -1px 1px rgba(23,18,15,.05);opacity:0;transform:translateY(-14px) scale(.98);animation:capIn 1s cubic-bezier(.2,.7,.2,1) .15s forwards}
   @keyframes capIn{to{opacity:1;transform:none}}
   body.is-scrolled .capsule{background:linear-gradient(180deg,rgba(255,255,255,.28),rgba(255,255,255,0) 58%),rgba(255,255,255,.62);padding-top:.42rem;padding-bottom:.42rem}
-  .wm{font-family:var(--display);font-weight:700;font-size:1rem;letter-spacing:-.01em;text-transform:lowercase;text-decoration:none;color:var(--ink);white-space:nowrap}
+  .wm{display:flex;align-items:center;text-decoration:none}
+  .wm img{width:32px;height:32px;border-radius:6px;display:block}
   .cap-links{gap:1.6rem}
   .cap-links a{text-decoration:none;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;font-family:var(--mono);font-size:.68rem;position:relative;transition:color .25s}
   .cap-links a::after{content:"";position:absolute;left:0;bottom:-5px;height:1px;width:0;background:var(--rose);transition:width .3s cubic-bezier(.2,.7,.2,1)}
@@ -343,7 +344,6 @@
   @media (min-width:1280px){ /* xl */
     :root{--nav-pad-x:2.8rem}
     .nav-inner{width:77%;max-width:1300px}
-    .wm{font-size:1.06rem}
     .cap-links{gap:2.2rem;font-size:.7rem}
     .cta{font-size:.7rem}
   }
@@ -528,11 +528,11 @@
 <header class="nav nav-pill">
   <div class="nav-inner">
     <div class="capsule">
-      <a class="wm" href="../index.html#top" aria-label="Stanley Ojima — home">stanley ojima</a>
+      <a class="wm" href="../#top" aria-label="Stanley Ojima — home"><img src="../favicon.svg" alt="Stanley Ojima" width="32" height="32"></a>
       <nav class="cap-links" aria-label="Primary">
-        <a href="../about.html">About</a>
-        <a href="index.html" aria-current="page">Projects</a>
-        <a href="../index.html#contact">Contact</a>
+        <a href="../about">About</a>
+        <a href="./" aria-current="page">Projects</a>
+        <a href="../#contact">Contact</a>
       </nav>
       <a class="cta cta-pill" href="#" data-resume data-magnetic>Resume <span class="arr">↗</span></a>
       <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
@@ -540,9 +540,9 @@
     <div class="menu" id="menu" aria-hidden="true">
       <div class="menu-inner">
         <nav class="menu-links" aria-label="Mobile">
-          <a href="../about.html">about</a>
-          <a href="index.html">projects</a>
-          <a href="../index.html#contact">contact</a>
+          <a href="../about">about</a>
+          <a href="./">projects</a>
+          <a href="../#contact">contact</a>
         </nav>
         <a class="menu-cta" href="#" data-resume>Resume <span class="arr">↗</span></a>
       </div>
@@ -560,7 +560,7 @@
 
   <div style="max-width:1100px;width:100%;margin:0 auto;padding:0 var(--nav-pad-x)">
     <div class="pi-list">
-      <a class="pi" href="goco.html" style="--accent:var(--rose)">
+      <a class="pi" href="goco" style="--accent:var(--rose)">
         <span class="pi-n">01</span>
         <span class="pi-main">
           <span class="pi-title">the whole product, end to end</span>
@@ -571,7 +571,7 @@
         <span class="pi-arr">↗</span>
       </a>
 
-      <a class="pi" href="risevest.html" style="--accent:var(--c-teal)">
+      <a class="pi" href="risevest" style="--accent:var(--c-teal)">
         <span class="pi-n">02</span>
         <span class="pi-main">
           <span class="pi-title">investing without the jargon</span>
@@ -582,7 +582,7 @@
         <span class="pi-arr">↗</span>
       </a>
 
-      <a class="pi" href="lenox-park.html" style="--accent:var(--c-slate)">
+      <a class="pi" href="lenox-park" style="--accent:var(--c-slate)">
         <span class="pi-n">03</span>
         <span class="pi-main">
           <span class="pi-title">diversity data, made decision-ready</span>
@@ -593,7 +593,7 @@
         <span class="pi-arr">↗</span>
       </a>
 
-      <a class="pi" href="dro-health.html" style="--accent:var(--rose-ink)">
+      <a class="pi" href="dro-health" style="--accent:var(--rose-ink)">
         <span class="pi-n">04</span>
         <span class="pi-main">
           <span class="pi-title">care in minutes, not days</span>
@@ -609,7 +609,7 @@
            set href to its page (e.g. acme.html), and pick an accent:
            var(--rose) · var(--c-teal) · var(--c-slate) · var(--rose-ink)
 
-      <a class="pi" href="acme.html" style="--accent:var(--c-teal)">
+      <a class="pi" href="acme" style="--accent:var(--c-teal)">
         <span class="pi-n">05</span>
         <span class="pi-main">
           <span class="pi-title">short lowercase headline</span>
@@ -661,7 +661,7 @@
       <div class="rs-contact">
         <a href="tel:+2347056833543">+234 705 683 3543</a>
         <a href="mailto:stanleyojima9@gmail.com">stanleyojima9@gmail.com</a>
-        <a href="../index.html">Portfolio</a>
+        <a href="../">Portfolio</a>
         <a href="https://www.linkedin.com/in/ojima-aniegboka/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
       </div>
       <div class="modal-actions" style="margin:1.1rem 0 .1rem"><button id="rsTopDl" class="btn btn-primary" type="button" data-print>download pdf <span class="arr">↓</span></button></div>
