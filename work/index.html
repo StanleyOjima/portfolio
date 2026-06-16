@@ -4,20 +4,20 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light" />
-<title>Lenox Park Solutions | Stanley Ojima</title>
-<meta name="description" content="Lenox Park Solutions case study — Stanley Ojima designed DEI analytics dashboards for investors tracking $4T+ in combined AUM." />
+<title>Projects — Stanley Ojima</title>
+<meta name="description" content="Selected product design work by Stanley Ojima — GoCo, Risevest, Lenox Park Solutions, and DRO Health case studies." />
 <meta name="author" content="Stanley Ojima" />
 <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
-<link rel="canonical" href="https://stanleyojima.xyz/work/lenox-park.html" />
+<link rel="canonical" href="https://stanleyojima.xyz/work/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Stanley Ojima" />
-<meta property="og:title" content="Lenox Park Solutions — Stanley Ojima" />
-<meta property="og:description" content="Lenox Park Solutions case study — Stanley Ojima designed DEI analytics dashboards for investors tracking $4T+ in combined AUM." />
-<meta property="og:url" content="https://stanleyojima.xyz/work/lenox-park.html" />
+<meta property="og:title" content="Work — Stanley Ojima" />
+<meta property="og:description" content="Selected product design work by Stanley Ojima — GoCo, Risevest, Lenox Park Solutions, and DRO Health case studies." />
+<meta property="og:url" content="https://stanleyojima.xyz/work/" />
 <meta property="og:image" content="https://stanleyojima.xyz/og-image.png" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Lenox Park Solutions — Stanley Ojima" />
-<meta name="twitter:description" content="Lenox Park Solutions case study — Stanley Ojima designed DEI analytics dashboards for investors tracking $4T+ in combined AUM." />
+<meta name="twitter:title" content="Work — Stanley Ojima" />
+<meta name="twitter:description" content="Selected product design work by Stanley Ojima — GoCo, Risevest, Lenox Park Solutions, and DRO Health case studies." />
 <meta name="twitter:image" content="https://stanleyojima.xyz/og-image.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -453,6 +453,36 @@
   .btn.is-disabled{opacity:.45;pointer-events:none}
   @media (prefers-reduced-motion:reduce){.modal,.modal.open,.modal-card,.modal.open .modal-card{transition:none!important;transform:none!important}}
 
+  /* ============================================================
+     PROJECTS INDEX
+     ============================================================ */
+  .pl-head{padding:calc(7.5rem + 3vw) 0 clamp(1.6rem,4vw,2.4rem)}
+  .pl-back{display:inline-flex;align-items:center;gap:.6ch;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);text-decoration:none;transition:color .25s}
+  .pl-back .a{display:inline-block;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+  .pl-back:hover{color:var(--ink)} .pl-back:hover .a{transform:translateX(-3px)}
+  .pl-eyebrow{display:inline-flex;align-items:center;gap:.8ch;margin-top:1.6rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .pl-eyebrow::before{content:"";width:1.8rem;height:1px;background:var(--rose)}
+  .pl-title{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,8vw,4.6rem);line-height:.96;letter-spacing:-.035em;text-transform:lowercase;color:var(--ink);margin:1rem 0 0}
+  .pl-lead{font-family:var(--body);font-size:clamp(1.02rem,1.6vw,1.25rem);line-height:1.5;color:var(--dim);margin:1.2rem 0 0;max-width:48ch;text-wrap:balance}
+  .pi-list{max-width:1100px;margin:clamp(1.5rem,4vw,2.6rem) auto 0;border-top:1px solid var(--hairline)}
+  .pi{--accent:var(--rose);display:grid;grid-template-columns:auto minmax(0,1fr) auto;column-gap:clamp(1rem,3vw,2rem);align-items:start;padding:clamp(1.5rem,3.4vw,2.1rem) 0;border-bottom:1px solid var(--hairline);text-decoration:none;color:inherit}
+  .pi-n{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:var(--dim);padding-top:.45rem;transition:color .3s}
+  .pi-main{min-width:0}
+  .pi-title{display:block;font-family:var(--display);font-weight:700;font-size:clamp(1.45rem,3.4vw,2.15rem);line-height:1.05;letter-spacing:-.025em;text-transform:lowercase;color:var(--ink);transition:color .3s}
+  .pi-sub{display:flex;flex-wrap:wrap;align-items:center;gap:.55ch;margin-top:.5rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:var(--dim)}
+  .pi-client{text-transform:uppercase;letter-spacing:.14em;color:var(--ink)}
+  .pi-dot{color:var(--mute)}
+  .pi-tags{list-style:none;display:flex;flex-wrap:wrap;gap:.45rem;margin:.95rem 0 0}
+  .pi-tags li{font-family:var(--mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);background:var(--footer);border:1px solid var(--hairline);border-radius:999px;padding:.42em .8em}
+  .pi-arr{font-family:var(--mono);font-size:1.05rem;color:var(--mute);padding-top:.5rem;transition:transform .3s cubic-bezier(.2,.7,.2,1),color .3s}
+  .pi:hover .pi-title,.pi:hover .pi-n{color:var(--accent)}
+  .pi:hover .pi-arr{color:var(--accent);transform:translate(3px,-3px)}
+  .pi:focus-visible{outline:2px solid var(--accent);outline-offset:6px;border-radius:6px}
+  /* reveal */
+  .pi{opacity:0;transform:translateY(20px);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
+  .pi.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){ .pi{opacity:1!important;transform:none!important} }
+
   /* ---- résumé content + print ---- */
   .modal-card{width:min(94vw,580px);max-height:86vh;overflow:auto;text-align:left}
   .resume{font-family:var(--body);color:var(--ink)}
@@ -487,132 +517,126 @@
     .rs-job{break-inside:avoid}
     @page{margin:1.6cm}
   }
-
-  /* ============================================================
-     CASE STUDY (full)
-     ============================================================ */
-  .cs-wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 var(--nav-pad-x)}
-  .cs-hero{padding:calc(7.5rem + 3vw) 0 clamp(1.4rem,3.5vw,2.2rem)}
-  .cs-back{display:inline-flex;align-items:center;gap:.6ch;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);text-decoration:none;transition:color .25s}
-  .cs-back .a{display:inline-block;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
-  .cs-back:hover{color:var(--ink)} .cs-back:hover .a{transform:translateX(-3px)}
-  .cs-eyebrow{display:inline-flex;align-items:center;gap:.8ch;margin-top:1.6rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
-  .cs-eyebrow::before{content:"";width:1.8rem;height:1px;background:var(--accent)}
-  .cs-title{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,9vw,5.2rem);line-height:.94;letter-spacing:-.04em;text-transform:lowercase;color:var(--ink);margin:1rem 0 0}
-  .cs-summary{font-family:var(--body);font-size:clamp(1.08rem,1.8vw,1.4rem);line-height:1.5;color:var(--dim);margin:1.3rem 0 0;max-width:58ch;text-wrap:balance}
-  .cs-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin:clamp(1.8rem,4vw,2.6rem) 0 0;background:var(--hairline);border:1px solid var(--hairline);border-radius:1rem;overflow:hidden}
-  .cs-stat{background:var(--paper);padding:clamp(1.2rem,3vw,1.7rem)}
-  .cs-stat-v{font-family:var(--display);font-weight:800;font-size:clamp(1.7rem,4.4vw,2.6rem);line-height:1;letter-spacing:-.03em;color:var(--accent)}
-  .cs-stat-l{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-top:.55rem}
-  .cs-cover{position:relative;margin:clamp(1.6rem,4vw,2.6rem) auto 0;border-radius:clamp(1.1rem,2vw,1.6rem);overflow:hidden;aspect-ratio:16/9;border:1px dashed var(--hairline);background:var(--footer);display:grid;place-items:center}
-  .cs-imgtag{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
-  .cs-part{padding:clamp(3rem,7vw,5.5rem) 0 0}
-  .cs-part-label{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
-  .cs-part-title{font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,5vw,3rem);line-height:1.02;letter-spacing:-.03em;text-transform:lowercase;color:var(--ink);margin:.7rem 0 0}
-  .cs-sec{padding:clamp(2.4rem,5vw,3.4rem) 0 0}
-  .cs-kicker{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
-  .cs-sh{font-family:var(--display);font-weight:700;font-size:clamp(1.45rem,3vw,2.1rem);line-height:1.05;letter-spacing:-.02em;color:var(--ink);margin:.55rem 0 0;max-width:24ch}
-  .cs-lede{font-family:var(--body);font-size:clamp(1rem,1.35vw,1.1rem);line-height:1.65;color:var(--dim);margin:1.2rem 0 0;max-width:68ch}
-  .cs-lede + .cs-lede{margin-top:1rem}
-  .cs-lede b{color:var(--ink);font-weight:600}
-  .cs-intro{font-family:var(--body);font-size:1rem;line-height:1.6;color:var(--dim);margin:.9rem 0 0;max-width:64ch}
-  .cs-meta{list-style:none;display:grid;grid-template-columns:1fr;gap:1.3rem 2.5rem;margin:1.4rem 0 0;padding:1.4rem 0 0;border-top:1px solid var(--hairline)}
-  .cs-meta dt{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
-  .cs-meta dd{font-family:var(--body);font-size:.95rem;color:var(--ink);margin:.4rem 0 0;line-height:1.4}
-  .ft-grid{display:grid;grid-template-columns:1fr;gap:clamp(1.4rem,3vw,2rem);margin-top:clamp(1.6rem,4vw,2.2rem)}
-  .ft{display:flex;flex-direction:column}
-  .ft-img{aspect-ratio:4/3;border:1px dashed var(--hairline);border-radius:.9rem;background:var(--footer);display:grid;place-items:center;margin-bottom:1rem}
-  .ft-title{font-family:var(--display);font-weight:700;font-size:1.1rem;letter-spacing:-.01em;color:var(--ink)}
-  .ft-desc{font-family:var(--body);font-size:.92rem;line-height:1.55;color:var(--dim);margin:.5rem 0 0}
-  .cs-callout{margin-top:clamp(1.4rem,3vw,2rem);padding:clamp(1.5rem,4vw,2.2rem);border:1px solid var(--hairline);border-radius:1.3rem;background:var(--footer)}
-  .cs-callout .cs-stats{margin-top:clamp(1.3rem,3vw,1.8rem);background:transparent;border:0;border-radius:0;gap:1.5rem}
-  .cs-callout .cs-stat{background:transparent;padding:0}
-  .steps{counter-reset:s;margin-top:clamp(1.4rem,3vw,2rem);display:grid;gap:1px;background:var(--hairline);border:1px solid var(--hairline);border-radius:1rem;overflow:hidden}
-  .step{background:var(--paper);display:grid;grid-template-columns:auto 1fr;gap:1.1rem;padding:clamp(1.1rem,2.6vw,1.4rem)}
-  .step-n{font-family:var(--display);font-weight:800;font-size:1.1rem;color:var(--accent);line-height:1}
-  .step-t{font-family:var(--body);font-size:.95rem;line-height:1.55;color:var(--dim)}
-  .step-t b{color:var(--ink);font-weight:600}
-  .nlist{list-style:none;counter-reset:n;margin-top:clamp(1.3rem,3vw,1.8rem);display:grid;gap:.9rem}
-  .nlist li{position:relative;padding-left:2.6rem;font-family:var(--body);font-size:.98rem;line-height:1.55;color:var(--dim);counter-increment:n;min-height:1.7rem;display:flex;align-items:center}
-  .nlist li::before{content:counter(n,decimal-leading-zero);position:absolute;left:0;top:0;font-family:var(--mono);font-size:.7rem;color:var(--accent);border:1px solid var(--hairline);border-radius:50%;width:1.7rem;height:1.7rem;display:grid;place-items:center}
-  .rsr{margin-top:clamp(1.3rem,3vw,1.8rem);display:grid;gap:1rem;list-style:none}
-  .rsr li{position:relative;padding-left:1.4rem;font-family:var(--body);font-size:.98rem;line-height:1.55;color:var(--dim)}
-  .rsr li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
-  .rsr b{color:var(--ink);font-weight:600}
-  .dec{margin-top:clamp(1.4rem,3vw,2rem);padding-top:1.4rem;border-top:1px solid var(--hairline)}
-  .dec-k{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-  .dec-title{font-family:var(--display);font-weight:700;font-size:1.2rem;letter-spacing:-.01em;color:var(--ink);margin:.5rem 0 0}
-  .dec-body{font-family:var(--body);font-size:.96rem;line-height:1.6;color:var(--dim);margin:.7rem 0 0;max-width:64ch}
-  .dec-why{font-family:var(--body);font-size:.92rem;line-height:1.55;color:var(--dim);margin:.9rem 0 0;max-width:64ch;padding:.9rem 1.1rem;background:var(--footer);border-left:2px solid var(--accent);border-radius:0 .6rem .6rem 0}
-  .dec-why span{display:block;margin-bottom:.3rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
-  .ba{display:grid;grid-template-columns:1fr;gap:1.2rem;margin-top:clamp(1.4rem,3vw,2rem)}
-  .ba-col{padding:clamp(1.3rem,3vw,1.7rem);border:1px solid var(--hairline);border-radius:1.1rem}
-  .ba-col.after{border-color:var(--accent);background:var(--footer)}
-  .ba-label{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:.9rem}
-  .ba-col.after .ba-label{color:var(--accent)}
-  .ba ul{list-style:none}
-  .ba li{font-family:var(--body);font-size:.92rem;line-height:1.5;color:var(--dim);padding:.55rem 0;border-top:1px solid var(--hairline)}
-  .ba li:first-child{border-top:0}
-  .ba-col.after li{color:var(--ink)}
-  .cs-note{font-family:var(--body);font-size:1rem;line-height:1.65;color:var(--dim);margin:clamp(1.4rem,3vw,2rem) 0 0;max-width:66ch}
-  .creds{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:clamp(1.4rem,3vw,2rem)}
-  .cred-n{font-family:var(--display);font-weight:700;font-size:1rem;color:var(--ink)}
-  .cred-r{font-family:var(--mono);font-size:.66rem;letter-spacing:.04em;color:var(--dim);margin-top:.25rem}
-  .mp-wrap{padding:clamp(3.5rem,8vw,6rem) 0 clamp(2rem,5vw,3rem)}
-  .mp-eyebrow{display:inline-flex;align-items:center;gap:.8ch;font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin-bottom:clamp(1.6rem,4vw,2.2rem)}
-  .mp-eyebrow::before{content:"";width:1.8rem;height:1px;background:var(--rose)}
-  .mp-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--hairline);border:1px solid var(--hairline);border-radius:1.2rem;overflow:hidden}
-  .mp{display:flex;flex-direction:column;background:var(--paper);padding:clamp(1.4rem,3vw,1.8rem);text-decoration:none;color:inherit;transition:background .25s}
-  .mp:hover{background:var(--footer)}
-  .mp-client{font-family:var(--display);font-weight:700;font-size:1.3rem;letter-spacing:-.02em;text-transform:lowercase;color:var(--ink);transition:color .25s}
-  .mp:hover .mp-client{color:var(--accent)}
-  .mp-sector{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-top:.4rem}
-  .mp-teaser{font-family:var(--body);font-size:.9rem;line-height:1.5;color:var(--dim);margin:.9rem 0 1.1rem;flex:1 1 auto}
-  .mp-view{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
-  .cs-rv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
-  .cs-rv.in{opacity:1;transform:none}
-  @media (min-width:680px){ .cs-stats{grid-template-columns:repeat(4,1fr)} .ft-grid{grid-template-columns:repeat(2,1fr)} .ba{grid-template-columns:1fr 1fr} .creds{grid-template-columns:repeat(4,1fr)} .mp-grid{grid-template-columns:repeat(3,1fr)} .cs-callout .cs-stats{grid-template-columns:repeat(3,1fr)} }
-  @media (min-width:768px){ .cs-meta{grid-template-columns:repeat(3,1fr)} }
-  @media (min-width:1024px){ .ft-grid{grid-template-columns:repeat(3,1fr)} }
-  @media (prefers-reduced-motion:reduce){ .cs-rv{opacity:1!important;transform:none!important} }
 </style>
 </head>
 <body id="top">
 <div class="grain" aria-hidden="true"></div>
 <header class="nav nav-pill">
-  <div class="nav-inner"><div class="capsule">
-    <a class="wm" href="../index.html#top" aria-label="Stanley Ojima — home">stanley ojima</a>
-    <nav class="cap-links" aria-label="Primary"><a href="../about.html">About</a><a href="index.html">Projects</a><a href="../index.html#contact">Contact</a></nav>
-    <a class="cta cta-pill" href="#" data-resume data-magnetic>Resume <span class="arr">↗</span></a>
-    <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  <div class="nav-inner">
+    <div class="capsule">
+      <a class="wm" href="../index.html#top" aria-label="Stanley Ojima — home">stanley ojima</a>
+      <nav class="cap-links" aria-label="Primary">
+        <a href="../about.html">About</a>
+        <a href="index.html" aria-current="page">Projects</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a class="cta cta-pill" href="#" data-resume data-magnetic>Resume <span class="arr">↗</span></a>
+      <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+    </div>
+    <div class="menu" id="menu" aria-hidden="true">
+      <div class="menu-inner">
+        <nav class="menu-links" aria-label="Mobile">
+          <a href="../about.html">about</a>
+          <a href="index.html">projects</a>
+          <a href="../index.html#contact">contact</a>
+        </nav>
+        <a class="menu-cta" href="#" data-resume>Resume <span class="arr">↗</span></a>
+      </div>
+    </div>
   </div>
-  <div class="menu" id="menu" aria-hidden="true"><div class="menu-inner">
-    <nav class="menu-links" aria-label="Mobile"><a href="../about.html">about</a><a href="index.html">projects</a><a href="../index.html#contact">contact</a></nav>
-    <a class="menu-cta" href="#" data-resume>Resume <span class="arr">↗</span></a>
-  </div></div></div>
 </header>
-<main style="--accent:var(--c-slate)">
-<section class="cs-hero" style="--accent:var(--c-slate)"><div class="cs-wrap">
-      <a class="cs-back" href="index.html"><span class="a">←</span> all projects</a>
-      <p class="cs-eyebrow">Product Designer · 2023–2024 · Fintech, DEI Analytics</p>
-      <h1 class="cs-title">Lenox Park Solutions</h1>
-      <p class="cs-summary">Designed data-dense analytics dashboards that help institutional investors track diversity metrics across clients representing $4T+ in combined AUM.</p>
-    </div></section>
-    <div class="cs-wrap"><div class="cs-stats"><div class="cs-stat"><div class="cs-stat-v">$4T+</div><div class="cs-stat-l">Assets under management</div></div><div class="cs-stat"><div class="cs-stat-v">3,500+</div><div class="cs-stat-l">Registered users</div></div><div class="cs-stat"><div class="cs-stat-v">1,800+</div><div class="cs-stat-l">Organizations</div></div><div class="cs-stat"><div class="cs-stat-v">3×</div><div class="cs-stat-l">Faster time-to-insight</div></div></div></div>
-    <div class="cs-wrap"><div class="cs-cover cs-rv"><span class="cs-imgtag">cover image — to add</span></div></div>
-<section class="cs-part cs-rv"><div class="cs-wrap"><p class="cs-part-label">Part 1</p><h2 class="cs-part-title">about lenox park solutions</h2><p class="cs-lede">Lenox Park Solutions (RoundTables) is a fintech platform that helps institutional investors — pension funds, endowments, family offices — track and improve diversity metrics across their investment portfolios. Think of it as the Bloomberg terminal for DEI in finance: complex data, high stakes, specialist users.</p><p class="cs-lede">The platform serves institutional investors representing $4T+ in combined client assets, with clients including JP Morgan, Goldman Sachs, Netflix, and Loom. Users are investment analysts and portfolio managers who make compliance decisions based on dense, multi-dimensional data.</p></div></section><section class="cs-rv"><div class="cs-wrap"><p class="cs-kicker" style="margin-bottom:.2rem">My role</p><dl class="cs-meta"><div><dt>My role</dt><dd>Sole Product Designer</dd></div><div><dt>Team</dt><dd>Founder + 2 engineers</dd></div><div><dt>Challenge</dt><dd>Learn institutional compliance fast while designing for specialists</dd></div></dl></div></section><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">What I designed</p><h2 class="cs-sh">6 core product areas</h2><p class="cs-intro">I redesigned the entire platform — from investment tracking to analytics dashboards to the marketing website.</p><div class="ft-grid"><div class="ft"><div class="ft-img"><span class="cs-imgtag">image — to add</span></div><h4 class="ft-title">Investments Overview</h4><p class="ft-desc">Redesigned the deals table with visual status indicators, LPI scoring chips, and role badges — analysts scan 50+ investments and spot action items in seconds.</p></div><div class="ft"><div class="ft-img"><span class="cs-imgtag">image — to add</span></div><h4 class="ft-title">Analytics Dashboard</h4><p class="ft-desc">The LPI (Lenox Park Index) scoring dashboard — diversity trend lines, score breakdowns by AUM size and workforce, and comparative benchmarking. The tool analysts use daily.</p></div><div class="ft"><div class="ft-img"><span class="cs-imgtag">image — to add</span></div><h4 class="ft-title">Diversity Surveys</h4><p class="ft-desc">Survey collection and tracking across portfolio organizations — progress states, contributors, and status at a glance so analysts know what’s outstanding.</p></div><div class="ft"><div class="ft-img"><span class="cs-imgtag">image — to add</span></div><h4 class="ft-title">Deal Detail &amp; Collaboration</h4><p class="ft-desc">Investment info, allocation data, manager details, and team activity in one view. A POD activity feed enables real-time collaboration without leaving the deal page.</p></div><div class="ft"><div class="ft-img"><span class="cs-imgtag">image — to add</span></div><h4 class="ft-title">Organization LPI Score</h4><p class="ft-desc">Per-organization diversity-impact scoring with gender and ethnicity breakdowns, simulated improvements, and the staffing inputs that drive the score.</p></div><div class="ft"><div class="ft-img"><span class="cs-imgtag">image — to add</span></div><h4 class="ft-title">User Profiles &amp; Settings</h4><p class="ft-desc">Member profiles, privacy controls, and organization settings — a settings architecture that scales as the platform adds configuration options.</p></div></div></div></section><section class="cs-part cs-rv"><div class="cs-wrap"><p class="cs-part-label">Part 2 — Deep Dive</p><h2 class="cs-part-title">making complex data actionable</h2><p class="cs-lede">The core challenge wasn’t displaying data — the platform already had plenty. It was making that data actionable. Analysts were drowning in metrics, unable to quickly identify which investments needed attention, which organizations were improving, and where compliance gaps existed.</p></div></section><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">The problem</p><h2 class="cs-sh">Raw data tables weren’t translating into decisions</h2><ul class="nlist"><li>Analysts spent 60% of their time cross-referencing data between views instead of analyzing it.</li><li>All metrics surfaced at once with no hierarchy — LPI scores, deal amounts, status, managers, and dates all competed equally.</li><li>Comparing diversity metrics across portfolio companies required exporting to spreadsheets — the tool meant to eliminate spreadsheets was creating more.</li></ul></div></section><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">Research</p><h2 class="cs-sh">Analysts needed comparison, not deep-dive</h2><ul class="rsr"><li><b>The primary task was comparison.</b> Analysts rarely looked at one company in isolation — their workflow was always relative: “How does Fund A’s score compare to Fund B?”</li><li><b>Even experts experienced overload.</b> These were institutional analysts with decades of experience, and they still struggled with the density. If experts can’t parse it, the UI is wrong.</li><li><b>Compliance deadlines created urgency.</b> Quarterly reporting meant answers in hours, not days. Every extra click cost real time under real pressure.</li></ul></div></section><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">Key decisions &amp; trade-offs</p><div class="dec"><p class="dec-k">Decision 1</p><h3 class="dec-title">Comparative dashboard layout</h3><p class="dec-body">Side-by-side views for cross-company DEI metrics. LPI trend lines, donut charts for asset-class distribution, and comparative scoring — all visible without scrolling.</p><p class="dec-why"><span>Why this, not the alternatives</span>Single-company deep-dive views required constant back-and-forth navigation. The comparative layout matched how analysts actually think — always in relative terms, never absolute.</p></div><div class="dec"><p class="dec-k">Decision 2</p><h3 class="dec-title">Progressive data density</h3><p class="dec-body">Summary cards at the top (Total Investments, AUM, Impact-adjusted AUM) with drill-down into table views. Users choose their depth.</p><p class="dec-why"><span>Why this, not the alternatives</span>Showing everything upfront caused overload even for experts. Summary-first, detail-on-demand matched the “scan then dive” behavior we observed in every interview.</p></div><div class="dec"><p class="dec-k">Decision 3</p><h3 class="dec-title">Visual status system for deals</h3><p class="dec-body">Color-coded status dots, LPI score chips, and role badges on every row. Analysts can scan 50 deals and find the 3 that need attention in under 10 seconds.</p><p class="dec-why"><span>Why this, not the alternatives</span>Text-only status labels required reading every row. Visual encoding lets peripheral vision do the filtering — critical when managing 50+ investments under deadline pressure.</p></div></div></section><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">Impact &amp; results</p><div class="cs-stats"><div class="cs-stat"><div class="cs-stat-v">3×</div><div class="cs-stat-l">Faster time-to-insight</div></div><div class="cs-stat"><div class="cs-stat-v">↓60%</div><div class="cs-stat-l">Cross-referencing time</div></div><div class="cs-stat"><div class="cs-stat-v">$4T+</div><div class="cs-stat-l">Combined client AUM</div></div><div class="cs-stat"><div class="cs-stat-v">ESG</div><div class="cs-stat-l">Full compliance</div></div></div><p class="cs-note">The comparative layout became the default view. Analysts stopped exporting to spreadsheets for cross-company analysis. Quarterly-reporting prep dropped from days to hours.</p></div></section><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">Reflection</p><p class="cs-lede">“Simple” for experts means “well-structured,” not “less information.” The instinct is to hide data to reduce complexity — but institutional analysts need density, they just need it organized. Progressive disclosure with smart defaults gave them the depth they needed without the chaos they had.</p></div></section>
-<section class="mp-wrap cs-rv"><div class="cs-wrap"><p class="mp-eyebrow">more projects</p><div class="mp-grid"><a class="mp" href="goco.html" style="--accent:var(--rose)"><span class="mp-client">goco</span><span class="mp-sector">SaaS, HR Tech</span><p class="mp-teaser">Redesigned core features across an HR platform serving thousands of businesses.</p><span class="mp-view">view project →</span></a><a class="mp" href="risevest.html" style="--accent:var(--c-teal)"><span class="mp-client">risevest</span><span class="mp-sector">Fintech</span><p class="mp-teaser">Overhauled portfolio management for a dollar-based investment app — onboarding nearly doubled.</p><span class="mp-view">view project →</span></a><a class="mp" href="dro-health.html" style="--accent:var(--rose-ink)"><span class="mp-client">dro health</span><span class="mp-sector">Health Tech, Telehealth</span><p class="mp-teaser">Overhauled a healthcare platform serving 50K+ users across Nigeria.</p><span class="mp-view">view project →</span></a></div></div></section>
+<main>
+  <section class="pl-head">
+    <div class="cs-wrap" style="max-width:1100px;width:100%;margin:0 auto;padding:0 var(--nav-pad-x)">
+      <a class="pl-back" href="../index.html#top"><span class="a">←</span> home</a>
+      <p class="pl-eyebrow">all work</p>
+      <h1 class="pl-title">projects</h1>
+      <p class="pl-lead">Selected product design work across HR, fintech, and healthcare — the full set.</p>
+    </div>
+  </section>
+
+  <div style="max-width:1100px;width:100%;margin:0 auto;padding:0 var(--nav-pad-x)">
+    <div class="pi-list">
+      <a class="pi" href="goco.html" style="--accent:var(--rose)">
+        <span class="pi-n">01</span>
+        <span class="pi-main">
+          <span class="pi-title">the whole product, end to end</span>
+          <span class="pi-sub"><span class="pi-client">GoCo</span><span class="pi-dot">·</span><span class="pi-meta">Senior Product Designer · 2022–2025</span></span>
+          <ul class="pi-tags"><li>HR Tech</li><li>Design Systems</li><li>Enterprise SaaS</li></ul>
+        </span>
+        <span class="pi-arr">↗</span>
+      </a>
+
+      <a class="pi" href="risevest.html" style="--accent:var(--c-teal)">
+        <span class="pi-n">02</span>
+        <span class="pi-main">
+          <span class="pi-title">investing without the jargon</span>
+          <span class="pi-sub"><span class="pi-client">Risevest</span><span class="pi-dot">·</span><span class="pi-meta">Senior Product Designer · 2025</span></span>
+          <ul class="pi-tags"><li>Fintech</li><li>Mobile</li><li>Design Systems</li></ul>
+        </span>
+        <span class="pi-arr">↗</span>
+      </a>
+
+      <a class="pi" href="lenox-park.html" style="--accent:var(--c-slate)">
+        <span class="pi-n">03</span>
+        <span class="pi-main">
+          <span class="pi-title">diversity data, made decision-ready</span>
+          <span class="pi-sub"><span class="pi-client">Lenox Park</span><span class="pi-dot">·</span><span class="pi-meta">Product Designer · 2023–2024</span></span>
+          <ul class="pi-tags"><li>Fintech</li><li>DEI Analytics</li><li>Data Visualization</li></ul>
+        </span>
+        <span class="pi-arr">↗</span>
+      </a>
+
+      <a class="pi" href="dro-health.html" style="--accent:var(--rose-ink)">
+        <span class="pi-n">04</span>
+        <span class="pi-main">
+          <span class="pi-title">care in minutes, not days</span>
+          <span class="pi-sub"><span class="pi-client">DRO Health</span><span class="pi-dot">·</span><span class="pi-meta">Product Designer · 2019–2021</span></span>
+          <ul class="pi-tags"><li>Health Tech</li><li>Telehealth</li><li>Mobile</li></ul>
+        </span>
+        <span class="pi-arr">↗</span>
+      </a>
+
+      <!-- ============================================================
+           TO ADD A PROJECT: copy one block below, bump the number,
+           set href to its page (e.g. acme.html), and pick an accent:
+           var(--rose) · var(--c-teal) · var(--c-slate) · var(--rose-ink)
+
+      <a class="pi" href="acme.html" style="--accent:var(--c-teal)">
+        <span class="pi-n">05</span>
+        <span class="pi-main">
+          <span class="pi-title">short lowercase headline</span>
+          <span class="pi-sub"><span class="pi-client">Acme</span><span class="pi-dot">·</span><span class="pi-meta">Role · Year</span></span>
+          <ul class="pi-tags"><li>Tag</li><li>Tag</li></ul>
+        </span>
+        <span class="pi-arr">↗</span>
+      </a>
+           ============================================================ -->
+    </div>
+  </div>
 </main>
 <footer class="site-footer" id="contact">
   <div class="foot-inner">
-    <div class="foot-top"><span class="foot-kicker">get in touch</span><span class="foot-status"><span class="foot-dot"></span>available for work</span></div>
+    <div class="foot-top">
+      <span class="foot-kicker">get in touch</span>
+      <span class="foot-status"><span class="foot-dot"></span>available for work</span>
+    </div>
     <p class="foot-lead">let's make complex software feel <span class="rust">obvious</span>.</p>
     <div class="foot-contact">
-      <div class="foot-email-row"><a class="foot-email" href="mailto:stanleyojima9@gmail.com">stanleyojima9@gmail.com</a><button class="foot-copy" type="button" data-email="stanleyojima9@gmail.com" aria-label="Copy email address">copy</button></div>
-      <nav class="foot-links" aria-label="Elsewhere"><a href="https://www.linkedin.com/in/ojima-aniegboka/" target="_blank" rel="noopener noreferrer">LinkedIn <span class="foot-arr">↗</span></a><a href="https://www.behance.net/stanleyojima" target="_blank" rel="noopener noreferrer">Behance <span class="foot-arr">↗</span></a></nav>
+      <div class="foot-email-row">
+        <a class="foot-email" href="mailto:stanleyojima9@gmail.com">stanleyojima9@gmail.com</a>
+        <button class="foot-copy" type="button" data-email="stanleyojima9@gmail.com" aria-label="Copy email address">copy</button>
+      </div>
+      <nav class="foot-links" aria-label="Elsewhere">
+        <a href="https://www.linkedin.com/in/ojima-aniegboka/" target="_blank" rel="noopener noreferrer">LinkedIn <span class="foot-arr">↗</span></a>
+          <a href="https://www.behance.net/stanleyojima" target="_blank" rel="noopener noreferrer">Behance <span class="foot-arr">↗</span></a>
+      </nav>
     </div>
     <div class="foot-mark" aria-hidden="true">stanley ojima</div>
-    <div class="foot-base"><span>&copy; 2026 stanley ojima</span><button class="foot-top-btn" type="button">back to top <span>↑</span></button></div>
+    <div class="foot-base">
+      <span>&copy; 2026 stanley ojima</span>
+      <button class="foot-top-btn" type="button">back to top <span>↑</span></button>
+    </div>
   </div>
 </footer>
 <div class="modal" id="resumeModal" aria-hidden="true">
@@ -676,33 +700,63 @@
         <p class="rs-skillgroup">English</p>
       </section>
     </article>
-    <div class="modal-actions rs-actions"><button class="btn btn-primary" type="button" data-print>download pdf <span class="arr">↓</span></button></div>
+    <div class="modal-actions rs-actions">
+      <button class="btn btn-primary" type="button" data-print>download pdf <span class="arr">↓</span></button>
+    </div>
   </div>
 </div>
 <script>
 (() => {
-  const root=document.documentElement,menu=document.getElementById('menu'),burgers=document.querySelectorAll('.burger');
-  const reduced=matchMedia('(prefers-reduced-motion:reduce)').matches,fine=matchMedia('(pointer:fine)').matches;
-  function setMenu(o){root.classList.toggle('menu-open',o);burgers.forEach(b=>{b.setAttribute('aria-expanded',String(o));b.setAttribute('aria-label',o?'Close menu':'Open menu')});if(menu)menu.setAttribute('aria-hidden',String(!o));}
-  burgers.forEach(b=>b.addEventListener('click',()=>setMenu(!root.classList.contains('menu-open'))));
-  if(menu)menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&root.classList.contains('menu-open'))setMenu(false);});
-  document.addEventListener('click',e=>{if(root.classList.contains('menu-open')&&!e.target.closest('.nav-inner'))setMenu(false);});
-  window.addEventListener('resize',()=>{if(window.innerWidth>=640&&root.classList.contains('menu-open'))setMenu(false);});
-  window.addEventListener('scroll',()=>document.body.classList.toggle('is-scrolled',window.scrollY>40),{passive:true});
-  if(fine&&!reduced){document.querySelectorAll('[data-magnetic]').forEach(el=>{el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect();el.style.transform='translate('+((e.clientX-(r.left+r.width/2))*0.25)+'px,'+((e.clientY-(r.top+r.height/2))*0.35)+'px)';});el.addEventListener('pointerleave',()=>{el.style.transform='';});});}
-  const rv=[...document.querySelectorAll('.cs-rv,.site-footer')];
-  if('IntersectionObserver' in window && !reduced){const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});rv.forEach(el=>io.observe(el));}else{rv.forEach(el=>el.classList.add('in'));}
-  const rm=document.getElementById('resumeModal');
-  if(rm){let lf=null;const op=()=>{lf=document.activeElement;rm.classList.add('open');rm.setAttribute('aria-hidden','false');root.style.overflow='hidden';const c=rm.querySelector('.modal-close');if(c)c.focus({preventScroll:true});};const cl=()=>{rm.classList.remove('open');rm.setAttribute('aria-hidden','true');root.style.overflow='';if(lf)lf.focus({preventScroll:true});};
-    document.querySelectorAll('[data-resume]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();setMenu(false);op();}));
-    rm.querySelectorAll('[data-close]').forEach(x=>x.addEventListener('click',cl));
-    rm.querySelectorAll('[data-print]').forEach(b=>b.addEventListener('click',()=>window.print()));
-    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&rm.classList.contains('open'))cl();});}
-  const cb=document.querySelector('.foot-copy');
-  if(cb)cb.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(cb.getAttribute('data-email')||'');}catch(_){}cb.classList.add('copied');cb.textContent='copied';clearTimeout(cb._t);cb._t=setTimeout(()=>{cb.classList.remove('copied');cb.textContent='copy';},1600);});
-  const tb=document.querySelector('.foot-top-btn');
-  if(tb)tb.addEventListener('click',()=>window.scrollTo({top:0,behavior:reduced?'auto':'smooth'}));
+  const root = document.documentElement;
+  const menu = document.getElementById('menu');
+  const burgers = document.querySelectorAll('.burger');
+  const reduced = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const fine = matchMedia('(pointer:fine)').matches;
+
+  function setMenu(open){
+    root.classList.toggle('menu-open', open);
+    burgers.forEach(b => { b.setAttribute('aria-expanded', String(open)); b.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); });
+    if(menu) menu.setAttribute('aria-hidden', String(!open));
+  }
+  burgers.forEach(b => b.addEventListener('click', () => setMenu(!root.classList.contains('menu-open'))));
+  if(menu) menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => { if(e.key === 'Escape' && root.classList.contains('menu-open')) setMenu(false); });
+  document.addEventListener('click', e => { if(root.classList.contains('menu-open') && !e.target.closest('.nav-inner')) setMenu(false); });
+  window.addEventListener('resize', () => { if(window.innerWidth >= 640 && root.classList.contains('menu-open')) setMenu(false); });
+  window.addEventListener('scroll', () => document.body.classList.toggle('is-scrolled', window.scrollY > 40), {passive:true});
+
+  if(fine && !reduced){
+    document.querySelectorAll('[data-magnetic]').forEach(el => {
+      el.addEventListener('pointermove', e => { const r = el.getBoundingClientRect(); el.style.transform = 'translate(' + ((e.clientX-(r.left+r.width/2))*0.25) + 'px,' + ((e.clientY-(r.top+r.height/2))*0.35) + 'px)'; });
+      el.addEventListener('pointerleave', () => { el.style.transform = ''; });
+    });
+  }
+
+  const items = [...document.querySelectorAll('.pi')];
+  const footer = document.querySelector('.site-footer');
+  if('IntersectionObserver' in window && !reduced){
+    const io = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:.12});
+    items.forEach((el,i) => { el.style.transitionDelay = (i*0.05).toFixed(2)+'s'; io.observe(el); });
+    if(footer) io.observe(footer);
+  } else { items.forEach(el => el.classList.add('in')); if(footer) footer.classList.add('in'); }
+
+  const rm = document.getElementById('resumeModal');
+  if(rm){
+    let lastFocus = null;
+    const openRM = () => { lastFocus = document.activeElement; rm.classList.add('open'); rm.setAttribute('aria-hidden','false'); root.style.overflow='hidden'; const c = rm.querySelector('.modal-close'); if(c) c.focus({preventScroll:true}); };
+    const closeRM = () => { rm.classList.remove('open'); rm.setAttribute('aria-hidden','true'); root.style.overflow=''; if(lastFocus) lastFocus.focus({preventScroll:true}); };
+    document.querySelectorAll('[data-resume]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); setMenu(false); openRM(); }));
+    rm.querySelectorAll('[data-close]').forEach(x => x.addEventListener('click', closeRM));
+    rm.querySelectorAll('[data-print]').forEach(b => b.addEventListener('click', () => window.print()));
+    document.addEventListener('keydown', e => { if(e.key === 'Escape' && rm.classList.contains('open')) closeRM(); });
+  }
+
+  const copyBtn = document.querySelector('.foot-copy');
+  if(copyBtn){
+    copyBtn.addEventListener('click', async () => { const email = copyBtn.getAttribute('data-email')||''; try{ await navigator.clipboard.writeText(email); }catch(_){ } copyBtn.classList.add('copied'); copyBtn.textContent='copied'; clearTimeout(copyBtn._t); copyBtn._t=setTimeout(()=>{copyBtn.classList.remove('copied');copyBtn.textContent='copy';},1600); });
+  }
+  const topBtn = document.querySelector('.foot-top-btn');
+  if(topBtn) topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' }));
 })();
 </script>
 </body>
