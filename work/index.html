@@ -465,7 +465,11 @@
   .pl-title{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,8vw,4.6rem);line-height:.96;letter-spacing:-.035em;text-transform:lowercase;color:var(--ink);margin:1rem 0 0}
   .pl-lead{font-family:var(--body);font-size:clamp(1.02rem,1.6vw,1.25rem);line-height:1.5;color:var(--dim);margin:1.2rem 0 0;max-width:48ch;text-wrap:balance}
   .pi-list{max-width:1100px;margin:clamp(1.5rem,4vw,2.6rem) auto 0;border-top:1px solid var(--hairline)}
-  .pi{--accent:var(--rose);display:grid;grid-template-columns:auto minmax(0,1fr) auto;column-gap:clamp(1rem,3vw,2rem);align-items:start;padding:clamp(1.5rem,3.4vw,2.1rem) 0;border-bottom:1px solid var(--hairline);text-decoration:none;color:inherit}
+  .pi{--accent:var(--rose);display:grid;grid-template-columns:auto minmax(0,1fr) auto auto;column-gap:clamp(1rem,3vw,2rem);align-items:center;padding:clamp(1.5rem,3.4vw,2.1rem) 0;border-bottom:1px solid var(--hairline);text-decoration:none;color:inherit}
+  .pi-thumb{width:clamp(100px,14vw,180px);aspect-ratio:16/10;border-radius:8px;background:var(--hairline);overflow:hidden;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+  .pi-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .pi:hover .pi-thumb{transform:scale(1.03)}
+  @media(max-width:600px){.pi{grid-template-columns:auto minmax(0,1fr) auto;}.pi-thumb{display:none}}
   .pi-n{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:var(--dim);padding-top:.45rem;transition:color .3s}
   .pi-main{min-width:0}
   .pi-title{display:block;font-family:var(--display);font-weight:700;font-size:clamp(1.45rem,3.4vw,2.15rem);line-height:1.05;letter-spacing:-.025em;text-transform:lowercase;color:var(--ink);transition:color .3s}
@@ -548,7 +552,6 @@
 <main>
   <section class="pl-head">
     <div class="cs-wrap" style="max-width:1100px;width:100%;margin:0 auto;padding:0 var(--nav-pad-x)">
-      <a class="pl-back" href="../index.html#top"><span class="a">←</span> home</a>
       <p class="pl-eyebrow">all work</p>
       <h1 class="pl-title">projects</h1>
       <p class="pl-lead">Selected product design work across HR, fintech, and healthcare — the full set.</p>
@@ -564,6 +567,7 @@
           <span class="pi-sub"><span class="pi-client">GoCo</span><span class="pi-dot">·</span><span class="pi-meta">Senior Product Designer · 2022–2025</span></span>
           <ul class="pi-tags"><li>HR Tech</li><li>Design Systems</li><li>Enterprise SaaS</li></ul>
         </span>
+        <span class="pi-thumb"></span>
         <span class="pi-arr">↗</span>
       </a>
 
@@ -574,6 +578,7 @@
           <span class="pi-sub"><span class="pi-client">Risevest</span><span class="pi-dot">·</span><span class="pi-meta">Senior Product Designer · 2025</span></span>
           <ul class="pi-tags"><li>Fintech</li><li>Mobile</li><li>Design Systems</li></ul>
         </span>
+        <span class="pi-thumb"></span>
         <span class="pi-arr">↗</span>
       </a>
 
@@ -584,6 +589,7 @@
           <span class="pi-sub"><span class="pi-client">Lenox Park</span><span class="pi-dot">·</span><span class="pi-meta">Product Designer · 2023–2024</span></span>
           <ul class="pi-tags"><li>Fintech</li><li>DEI Analytics</li><li>Data Visualization</li></ul>
         </span>
+        <span class="pi-thumb"></span>
         <span class="pi-arr">↗</span>
       </a>
 
@@ -594,6 +600,7 @@
           <span class="pi-sub"><span class="pi-client">DRO Health</span><span class="pi-dot">·</span><span class="pi-meta">Product Designer · 2019–2021</span></span>
           <ul class="pi-tags"><li>Health Tech</li><li>Telehealth</li><li>Mobile</li></ul>
         </span>
+        <span class="pi-thumb"></span>
         <span class="pi-arr">↗</span>
       </a>
 
@@ -609,6 +616,7 @@
           <span class="pi-sub"><span class="pi-client">Acme</span><span class="pi-dot">·</span><span class="pi-meta">Role · Year</span></span>
           <ul class="pi-tags"><li>Tag</li><li>Tag</li></ul>
         </span>
+        <span class="pi-thumb"><img src="thumb-acme.webp" alt="Acme preview"></span>
         <span class="pi-arr">↗</span>
       </a>
            ============================================================ -->
