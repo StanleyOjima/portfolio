@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://stanleyojima.xyz/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://stanleyojima.xyz/about.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stanleyojima.xyz/work/</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://stanleyojima.xyz/work/goco.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stanleyojima.xyz/work/risevest.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stanleyojima.xyz/work/lenox-park.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stanleyojima.xyz/work/dro-health.html</loc>
+    <priority>0.7</priority>
+  </url>
+</urlset>
