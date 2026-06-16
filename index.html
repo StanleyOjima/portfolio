@@ -221,10 +221,15 @@
   .case-tags li{font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);background:var(--footer);border:1px solid var(--hairline);border-radius:999px;padding:.45em .85em;transition:color .25s,border-color .25s,background .25s}
   .case-tags li:hover{color:var(--accent);border-color:var(--accent)}
   .case-tags li:active{color:var(--paper);background:var(--accent);border-color:var(--accent)}
-  .case-view{align-self:flex-start;margin-top:clamp(1.6rem,3vw,2.2rem);width:clamp(82px,7vw,100px);height:clamp(82px,7vw,100px);border-radius:50%;background:var(--rose);color:var(--paper);display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:.15em;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:transform .3s cubic-bezier(.2,.7,.2,1),background .3s}
-  .case-view-arr{font-size:.95em;transition:transform .3s}
-  .case-view:hover{transform:scale(1.07);background:var(--rose-ink)}
-  .case-view:hover .case-view-arr{transform:translate(2px,-2px)}
+  .case-hit{position:absolute;inset:0;z-index:3;border-radius:inherit;font-size:0;color:transparent;-webkit-tap-highlight-color:transparent}
+  .case-hit:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+  .case-summary .case-tags{position:relative;z-index:6}
+  .case-tags li{cursor:pointer}
+  @media (hover:hover) and (pointer:fine){
+    .case-inner{cursor:none}
+    .case-cursor{position:fixed;left:0;top:0;z-index:95;pointer-events:none;width:clamp(74px,5.6vw,94px);height:clamp(74px,5.6vw,94px);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.12em;background:var(--cc-accent,var(--rose));color:var(--paper);font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 16px 34px -14px rgba(23,18,15,.65);opacity:0;will-change:transform}
+    .case-cursor .cc-arr{font-size:.95em}
+  }
   @media (min-width:768px){
     .case{position:sticky;top:5.5rem}
     .case + .case{margin-top:clamp(3.5rem,9vh,7rem)}
@@ -614,8 +619,8 @@
               <li>Design Systems</li>
               <li>Enterprise SaaS</li>
             </ul>
-            <a class="case-view" href="work/goco.html" aria-label="View the GoCo case study">view<span class="case-view-arr">↗</span></a>
           </div>
+          <a class="case-hit" href="work/goco.html" aria-label="View the GoCo case study"></a>
         </div>
       </article>
 
@@ -634,8 +639,8 @@
               <li>Mobile</li>
               <li>Design Systems</li>
             </ul>
-            <a class="case-view" href="work/risevest.html" aria-label="View the Risevest case study">view<span class="case-view-arr">↗</span></a>
           </div>
+          <a class="case-hit" href="work/risevest.html" aria-label="View the Risevest case study"></a>
         </div>
       </article>
 
@@ -654,8 +659,8 @@
               <li>DEI Analytics</li>
               <li>Data Visualization</li>
             </ul>
-            <a class="case-view" href="work/lenox-park.html" aria-label="View the Lenox Park case study">view<span class="case-view-arr">↗</span></a>
           </div>
+          <a class="case-hit" href="work/lenox-park.html" aria-label="View the Lenox Park case study"></a>
         </div>
       </article>
 
@@ -674,8 +679,8 @@
               <li>Telehealth</li>
               <li>Mobile</li>
             </ul>
-            <a class="case-view" href="work/dro-health.html" aria-label="View the DRO Health case study">view<span class="case-view-arr">↗</span></a>
           </div>
+          <a class="case-hit" href="work/dro-health.html" aria-label="View the DRO Health case study"></a>
         </div>
       </article>
 
@@ -1164,6 +1169,39 @@
     rm.querySelectorAll('[data-print]').forEach(b => b.addEventListener('click', () => window.print()));
     document.addEventListener('keydown', e => { if(e.key === 'Escape' && rm.classList.contains('open')) closeRM(); });
   }
+})();
+(function(){
+  if(!matchMedia('(hover:hover) and (pointer:fine)').matches) return;
+  var cards = Array.from(document.querySelectorAll('.cases .case'));
+  if(!cards.length) return;
+  var reduced = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var cur = document.createElement('div');
+  cur.className = 'case-cursor';
+  cur.innerHTML = 'view<span class="cc-arr">↗</span>';
+  document.body.appendChild(cur);
+  var mx=innerWidth/2, my=innerHeight/2, x=mx, y=my, s=0, target=0, raf=0;
+  var posEase = reduced?1:0.2, scaleEase = reduced?1:0.22;
+  function frame(){
+    x += (mx-x)*posEase; y += (my-y)*posEase; s += (target-s)*scaleEase;
+    cur.style.opacity = s;
+    cur.style.transform = 'translate('+x+'px,'+y+'px) translate(-50%,-50%) scale('+s+')';
+    if(target===0 && s<0.002){ raf=0; return; }
+    raf = requestAnimationFrame(frame);
+  }
+  var wake = function(){ if(!raf) raf = requestAnimationFrame(frame); };
+  cards.forEach(function(card){
+    var inner = card.querySelector('.case-inner');
+    var overCtl = function(e){ return !!(e.target.closest && e.target.closest('.case-tags')); };
+    inner.addEventListener('pointerenter', function(e){
+      mx = x = e.clientX; my = y = e.clientY;
+      var a = getComputedStyle(card).getPropertyValue('--accent').trim();
+      if(a) cur.style.setProperty('--cc-accent', a);
+      target = overCtl(e) ? 0 : 1; wake();
+    });
+    inner.addEventListener('pointermove', function(e){ mx=e.clientX; my=e.clientY; target = overCtl(e)?0:1; wake(); });
+    inner.addEventListener('pointerleave', function(){ target=0; wake(); });
+  });
+  window.addEventListener('blur', function(){ target=0; wake(); });
 })();
 </script>
 </body>
