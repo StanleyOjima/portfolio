@@ -38,7 +38,7 @@
     --panel:rgba(255,255,255,.85);
     --footer:#f0f0f2;
     --mute:#c4c4cb;
-    --c-teal:#1f6a60;
+    --c-teal:#1f6a60;--c-purple:#6c2bd0;
     --c-slate:#3b4e63;
 
     --display:'Bricolage Grotesque',sans-serif;
@@ -50,7 +50,7 @@
 
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  html,body{min-height:100%}
+  html,body{min-height:100%;overflow-x:clip}
   body{background:var(--paper);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased}
   ::selection{background:var(--rose);color:var(--paper)}
   a{color:inherit}
@@ -521,7 +521,7 @@
   .cs-meta dd{font-family:var(--body);font-size:.95rem;color:var(--ink);margin:.4rem 0 0;line-height:1.4}
   .ft-grid{display:grid;grid-template-columns:1fr;gap:clamp(1.4rem,3vw,2rem);margin-top:clamp(1.6rem,4vw,2.2rem)}
   .ft{display:flex;flex-direction:column}
-  .ft-img{aspect-ratio:4/3;border:1px dashed var(--hairline);border-radius:.9rem;background:var(--footer);display:grid;place-items:center;margin-bottom:1rem}
+  .ft-img{overflow:hidden;border-radius:clamp(1rem,1.8vw,1.4rem);margin-bottom:1.05rem;border:1px solid rgba(80,30,150,.08);box-shadow:0 26px 54px -38px rgba(70,25,140,.42);background:radial-gradient(86% 76% at 50% -2%,rgba(157,46,251,.10) 0%,rgba(157,46,251,0) 60%),linear-gradient(155deg,#e8ddf8 0%,#efe8fa 50%,#f4f1fb 100%);padding:clamp(1.8rem,4.5vw,3rem) clamp(.8rem,2vw,1.4rem) 0}.ft-img img{display:block;width:100%;height:auto}
   .ft-title{font-family:var(--display);font-weight:700;font-size:1.1rem;letter-spacing:-.01em;color:var(--ink)}
   .ft-desc{font-family:var(--body);font-size:.92rem;line-height:1.55;color:var(--dim);margin:.5rem 0 0}
   .cs-callout{margin-top:clamp(1.4rem,3vw,2rem);padding:clamp(1.5rem,4vw,2.2rem);border:1px solid var(--hairline);border-radius:1.3rem;background:var(--footer)}
@@ -545,15 +545,12 @@
   .dec-body{font-family:var(--body);font-size:.96rem;line-height:1.6;color:var(--dim);margin:.7rem 0 0;max-width:64ch}
   .dec-why{font-family:var(--body);font-size:.92rem;line-height:1.55;color:var(--dim);margin:.9rem 0 0;max-width:64ch;padding:.9rem 1.1rem;background:var(--footer);border-left:2px solid var(--accent);border-radius:0 .6rem .6rem 0}
   .dec-why span{display:block;margin-bottom:.3rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
-  .ba{display:grid;grid-template-columns:1fr;gap:1.2rem;margin-top:clamp(1.4rem,3vw,2rem)}
-  .ba-col{padding:clamp(1.3rem,3vw,1.7rem);border:1px solid var(--hairline);border-radius:1.1rem}
-  .ba-col.after{border-color:var(--accent);background:var(--footer)}
-  .ba-label{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:.9rem}
-  .ba-col.after .ba-label{color:var(--accent)}
-  .ba ul{list-style:none}
-  .ba li{font-family:var(--body);font-size:.92rem;line-height:1.5;color:var(--dim);padding:.55rem 0;border-top:1px solid var(--hairline)}
-  .ba li:first-child{border-top:0}
-  .ba-col.after li{color:var(--ink)}
+  .ba{display:grid;grid-template-columns:1fr 1fr;margin-top:clamp(1.4rem,3vw,2rem);border:1px solid var(--hairline);border-radius:1.1rem;overflow:hidden;background:var(--paper)}
+  .ba-h{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);padding:clamp(.95rem,2.2vw,1.2rem) clamp(1.1rem,3vw,1.6rem);background:var(--footer)}
+  .ba-h.after{color:var(--accent)}
+  .ba-c{font-family:var(--body);font-size:.93rem;line-height:1.45;color:var(--dim);padding:clamp(.85rem,2.2vw,1.1rem) clamp(1.1rem,3vw,1.6rem);border-top:1px solid var(--hairline)}
+  .ba-c.after{color:var(--ink);font-weight:500;background:var(--footer);background:color-mix(in srgb,var(--accent) 6%,transparent)}
+  .ba .after{border-left:1px solid var(--hairline);border-left-color:color-mix(in srgb,var(--accent) 24%,transparent)}
   .cs-note{font-family:var(--body);font-size:1rem;line-height:1.65;color:var(--dim);margin:clamp(1.4rem,3vw,2rem) 0 0;max-width:66ch}
   .creds{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:clamp(1.4rem,3vw,2rem)}
   .cred-n{font-family:var(--display);font-weight:700;font-size:1rem;color:var(--ink)}
@@ -573,10 +570,125 @@
   .cs-rv.in{opacity:1;transform:none}
   @media (min-width:680px){ .cs-stats{grid-template-columns:repeat(4,1fr)} .ft-grid{grid-template-columns:repeat(2,1fr)} .ba{grid-template-columns:1fr 1fr} .creds{grid-template-columns:repeat(4,1fr)} .mp-grid{grid-template-columns:repeat(3,1fr)} .cs-callout .cs-stats{grid-template-columns:repeat(3,1fr)} }
   @media (min-width:768px){ .cs-meta{grid-template-columns:repeat(3,1fr)} }
-  @media (min-width:1024px){ .ft-grid{grid-template-columns:repeat(3,1fr)} }
+  @media (min-width:1024px){ .ft-grid{grid-template-columns:repeat(2,1fr)} }
   @media (prefers-reduced-motion:reduce){ .cs-rv{opacity:1!important;transform:none!important} }
 </style>
-</head>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>/* ===== DRO full-bleed bands (lavender field, purple + teal glow) ===== */
+.cs-big{position:relative;width:100vw;left:50%;margin-left:-50vw;margin-top:clamp(1.8rem,4.5vw,3.4rem);padding:clamp(2.4rem,5.5vw,4.6rem) clamp(1.2rem,4vw,2.4rem);border-top:1px solid rgba(80,30,150,.07);border-bottom:1px solid rgba(80,30,150,.07);background:radial-gradient(70% 64% at 50% -6%,rgba(157,46,251,.12) 0%,rgba(157,46,251,0) 60%),radial-gradient(60% 60% at 88% 112%,rgba(7,154,152,.10) 0%,rgba(7,154,152,0) 60%),linear-gradient(160deg,#e7ddf8 0%,#eee7fa 52%,#f4f1fb 100%);display:flex;flex-direction:column;align-items:center}
+.cs-big-in{width:100%;max-width:1240px;margin:0 auto}
+.cs-big-tall{max-width:680px}
+.cs-big-in img{display:block;width:100%;height:auto;filter:drop-shadow(0 26px 36px rgba(70,25,140,.20)) drop-shadow(0 8px 14px rgba(70,25,140,.12))}
+.cs-big-plain .cs-big-in img{filter:none}
+.cs-big + .cs-big{margin-top:0;border-top:0}
+
+/* ===== DRO design-system showcase ===== */
+.dsys{font-family:'Plus Jakarta Sans',var(--body);margin-top:clamp(1.8rem,4vw,2.6rem);display:flex;flex-direction:column;gap:clamp(2rem,4.5vw,2.8rem)}
+
+.dsys-cap{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin:0 0 1.1rem}
+
+/* palette */
+.dsys-pal{display:grid;grid-template-columns:repeat(4,1fr);gap:.95rem}
+.dsys-sw{display:flex;flex-direction:column}
+.dsys-chip{height:62px;border-radius:.8rem;margin-bottom:.55rem;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
+.dsys-sw b{font-size:.85rem;font-weight:600;color:#16161d}
+.dsys-sw i{font-family:var(--mono);font-style:normal;font-size:.72rem;color:#9a9aa8;margin-top:.05rem}
+
+/* type */
+.dsys-type{display:flex;flex-direction:column;gap:1.05rem}
+.dsys-trow{display:flex;align-items:baseline;justify-content:space-between;gap:1.2rem;border-bottom:1px solid rgba(24,24,27,.07);padding-bottom:1.05rem}
+.dsys-trow:last-child{border-bottom:0;padding-bottom:0}
+.dsys-tspec{color:#16161d;line-height:1.12}
+.dsys-tmeta{font-family:var(--mono);font-size:.66rem;color:#b6b6c2;white-space:nowrap;flex:none;letter-spacing:.04em}
+
+/* buttons */
+.dsys-btns{display:flex;flex-wrap:wrap;gap:.85rem;align-items:center}
+.dsb{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.95rem;border:0;border-radius:.85rem;padding:.95rem 1.7rem;color:#fff;cursor:default;line-height:1}
+.dsb-p{background:linear-gradient(135deg,#a23bf5,#7a12f0);box-shadow:0 14px 26px -12px rgba(122,18,240,.65)}
+.dsb-t{background:#079a98;box-shadow:0 14px 26px -14px rgba(7,154,152,.6)}
+.dsb-y{background:#f2c94c;color:#2a2300}
+.dsb-o{background:#7a12f0}
+.dsb-pill{background:#efe3fd;color:#7a12f0;font-size:.82rem;font-weight:700;padding:.55rem 1.15rem;border-radius:.6rem}
+
+/* components grid */
+.dsys-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.1rem}
+.dsys-tile{background:#fff;border:1px solid rgba(24,24,27,.08);border-radius:1.15rem;padding:1.35rem;box-shadow:0 22px 44px -36px rgba(70,25,140,.45)}
+.dsys-tile-wide{grid-column:1/-1}
+
+/* service cards */
+.dsys-services{display:flex;gap:.85rem}
+.dsv{flex:1;background:#faf9fc;border:1px solid rgba(24,24,27,.06);border-radius:.95rem;padding:1.05rem .8rem;text-align:center}
+.dsv-ic{width:46px;height:46px;border-radius:.75rem;display:inline-grid;place-items:center;margin-bottom:.6rem}
+.dsv-ic svg{width:24px;height:24px}
+.dsv b{font-size:.85rem;font-weight:700;color:#16161d;display:block}
+.dsv i{font-size:.71rem;font-style:normal;color:#9a9aa8;display:block;margin-top:.25rem;line-height:1.3}
+
+/* wallet */
+.dsw{background:linear-gradient(125deg,#9d2efb 0%,#7a12f0 100%);border-radius:1rem;padding:1.3rem 1.4rem;color:#fff;position:relative;overflow:hidden;height:100%}
+.dsw::after{content:"";position:absolute;right:-46px;top:-34px;width:170px;height:170px;border-radius:50%;border:18px solid rgba(255,255,255,.09)}
+.dsw-top{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
+.dsw-lab{font-size:.72rem;letter-spacing:.07em;color:rgba(255,255,255,.85)}
+.dsw-up{font-size:.7rem;font-weight:700;background:rgba(255,255,255,.22);padding:.42rem .75rem;border-radius:.55rem;letter-spacing:.03em}
+.dsw-bal{font-size:1.75rem;font-weight:800;margin-top:.8rem;position:relative;z-index:1}
+
+/* practitioner */
+.dspr{display:flex;align-items:center;gap:.9rem}
+.dspr-av{width:50px;height:50px;border-radius:50%;background:#e9e6f1;color:#b6b2c6;flex:none;display:grid;place-items:center;overflow:hidden}
+.dspr-av svg{width:34px;height:34px}
+.dspr-body{flex:1;min-width:0}
+.dspr-body b{font-size:.95rem;font-weight:700;color:#16161d;display:block}
+.dspr-body i{font-size:.8rem;font-style:normal;color:#8c8ca1;display:block;margin:.12rem 0 .45rem}
+.dspr-meta{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap}
+.dspr-lang{font-size:.71rem;color:#7a12f0;background:#f1e8fd;padding:.22rem .55rem;border-radius:.4rem}
+.dspr-price{font-size:.85rem;font-weight:700;color:#16161d}
+.dspr-price small{font-weight:400;color:#9a9aa8;font-size:.7rem}
+
+/* date/time picker */
+.dsdt{display:flex;flex-direction:column;gap:.75rem}
+.dsdt-row{display:flex;gap:.55rem;flex-wrap:wrap}
+.dsdt-d{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:62px;padding:.6rem .45rem;border-radius:.7rem;background:#f4f3f8;font-size:.85rem;font-weight:600;color:#16161d;line-height:1.2}
+.dsdt-d em{font-style:normal;font-size:.68rem;font-weight:500;color:#9a9aa8;margin-bottom:.15rem}
+.dsdt-d.on{background:linear-gradient(135deg,#a23bf5,#7a12f0);color:#fff}
+.dsdt-d.on em{color:rgba(255,255,255,.85)}
+.dsdt-t{padding:.55rem .9rem;border-radius:.7rem;background:#f4f3f8;font-size:.82rem;font-weight:600;color:#16161d}
+.dsdt-t.on{background:linear-gradient(135deg,#a23bf5,#7a12f0);color:#fff}
+
+/* status chips + tabs */
+.dschips{display:flex;flex-wrap:wrap;gap:.55rem;margin-bottom:1.1rem}
+.dschip{font-size:.77rem;font-weight:600;padding:.4rem .8rem;border-radius:.55rem;background:#eceaf2;color:#6e6e7a}
+.dschip.ok{background:#e3f6ec;color:#1f9d57}
+.dschip.warn{background:#fbeede;color:#b9762a}
+.dstabs{display:inline-flex;background:#f4f3f8;border-radius:.75rem;padding:.25rem}
+.dstab{font-size:.82rem;font-weight:600;padding:.45rem 1.05rem;border-radius:.55rem;color:#8c8ca1}
+.dstab.on{background:linear-gradient(135deg,#a23bf5,#7a12f0);color:#fff}
+
+/* order-status timeline */
+.dstl{display:flex;flex-direction:column}
+.dstl-i{display:flex;gap:.8rem;position:relative;padding-bottom:1.05rem}
+.dstl-i:last-child{padding-bottom:0}
+.dstl-i:not(:last-child)::before{content:"";position:absolute;left:11px;top:24px;bottom:0;width:2px;background:rgba(24,24,27,.12)}
+.dstl-dot{width:24px;height:24px;border-radius:50%;flex:none;background:#eceaf2;position:relative;z-index:1}
+.dstl-i.done .dstl-dot{background:linear-gradient(135deg,#a23bf5,#7a12f0)}
+.dstl-i.done .dstl-dot::after{content:"";position:absolute;left:9px;top:5px;width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.dstl-i b{font-size:.88rem;font-weight:600;color:#16161d;display:block;line-height:1.2}
+.dstl-i i{font-size:.76rem;font-style:normal;color:#9a9aa8;display:block;margin-top:.12rem}
+
+/* profile tabs + field */
+.dsutabs{display:flex;gap:1.7rem;border-bottom:1px solid rgba(24,24,27,.1);margin-bottom:1.1rem}
+.dsutabs span{font-size:.77rem;font-weight:700;letter-spacing:.05em;color:#a8a8b5;padding-bottom:.75rem;position:relative}
+.dsutabs span.on{color:#7a12f0}
+.dsutabs span.on::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:#7a12f0;border-radius:2px}
+.dsfield{display:flex;align-items:center;gap:.7rem;border:1px solid rgba(24,24,27,.14);border-radius:.75rem;padding:.7rem .9rem}
+.dsfield-ic{color:#16161d;flex:none;display:grid;place-items:center}
+.dsfield-ic svg{width:20px;height:20px}
+.dsfield em{display:block;font-style:normal;font-size:.64rem;color:#9a9aa8;margin-bottom:.1rem}
+.dsfield .dsfield-v{font-size:.9rem;color:#16161d}
+
+@media (max-width:640px){
+  .dsys-pal{grid-template-columns:repeat(2,1fr)}
+  .dsys-grid{grid-template-columns:1fr}
+  .dsys-tmeta{display:none}
+}
+.cs-big-intro{padding-top:clamp(.5rem,1.4vw,1rem);padding-bottom:0}.ds-shot{position:relative;width:100vw;left:50%;margin-left:-50vw;margin-top:clamp(1.8rem,4.5vw,3.4rem);padding:clamp(2.4rem,5.5vw,4.4rem) clamp(1.2rem,4vw,3rem);border-top:1px solid rgba(80,30,150,.07);border-bottom:1px solid rgba(80,30,150,.07);background:radial-gradient(70% 64% at 50% -6%,rgba(157,46,251,.12) 0%,rgba(157,46,251,0) 60%),radial-gradient(60% 60% at 88% 112%,rgba(7,154,152,.10) 0%,rgba(7,154,152,0) 60%),linear-gradient(160deg,#e7ddf8 0%,#eee7fa 52%,#f4f1fb 100%);display:flex;flex-direction:column;align-items:center}.ds-shot img{display:block;width:100%;max-width:1280px;height:auto;border-radius:clamp(.8rem,1.4vw,1.1rem);box-shadow:0 40px 80px -42px rgba(70,25,140,.5),0 12px 30px -16px rgba(70,25,140,.32)}.ds-shot figcaption{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin:1.15rem 0 0;text-align:center}</style></head>
 <body id="top">
 <div class="grain" aria-hidden="true"></div>
 <header class="nav nav-pill">
@@ -592,16 +704,16 @@
   </div></div></div>
 </header>
 <main style="--accent:var(--rose-ink)">
-<section class="cs-hero" style="--accent:var(--rose-ink)"><div class="cs-wrap">
+<section class="cs-hero" style="--accent:var(--c-purple)"><div class="cs-wrap">
       <a class="cs-back" href="../"><span class="a">←</span> all projects</a>
       <p class="cs-eyebrow">Product Designer · 2019–2021 · Health Tech, Telehealth</p>
       <h1 class="cs-title">DRO Health</h1>
-      <p class="cs-summary">Redesigned the telehealth experience for 50,000+ users — reducing sign-up drop-off by 18% and increasing satisfaction by 45%.</p>
+      <p class="cs-summary">Redesigned the telehealth experience for 50,000+ users, reducing sign-up drop-off by 18% and increasing satisfaction by 45%.</p>
     </div></section>
     <div class="cs-wrap"><div class="cs-stats"><div class="cs-stat"><div class="cs-stat-v">50K+</div><div class="cs-stat-l">Users</div></div><div class="cs-stat"><div class="cs-stat-v">100K+</div><div class="cs-stat-l">Consultations</div></div><div class="cs-stat"><div class="cs-stat-v">↓18%</div><div class="cs-stat-l">Drop-off rate</div></div><div class="cs-stat"><div class="cs-stat-v">+45%</div><div class="cs-stat-l">Satisfaction</div></div></div></div>
-    <div class="cs-wrap"><div class="cs-cover cs-rv"><span class="cs-imgtag">cover image — to add</span></div></div>
-<section class="cs-part cs-rv"><div class="cs-wrap"><p class="cs-part-label">Part 1</p><h2 class="cs-part-title">about dro health</h2><p class="cs-lede">DRO Health is a digital healthcare platform making medical care accessible via smartphones across Nigeria: consultations with licensed doctors, medication ordering with home delivery, diagnostic lab tests, wellness programs, and health-records management — all in one app.</p><p class="cs-lede">In a market where seeing a doctor often means a full day lost to travel and waiting, DRO Health lets users get care in minutes. The stakes are personal — users are managing real health concerns, not browsing. Every friction point has a direct cost to someone’s wellbeing.</p></div></section><section class="cs-rv"><div class="cs-wrap"><p class="cs-kicker" style="margin-bottom:.2rem">My role</p><dl class="cs-meta"><div><dt>My role</dt><dd>Product Designer — end-to-end redesign</dd></div><div><dt>Team</dt><dd>Co-Founder, 2 designers, engineering team</dd></div><div><dt>Scope</dt><dd>Mobile app, website, design system</dd></div></dl></div></section><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">What I designed</p><h2 class="cs-sh">Every major flow in the healthcare experience</h2><div class="ft-grid"><div class="ft"><div class="ft-img"><span class="cs-imgtag">image — to add</span></div><h4 class="ft-title">Onboarding &amp; Sign-up</h4><p class="ft-desc">Redesigned the signup flow with social login and step-by-step onboarding — reduced drop-off by 18% by removing unnecessary fields and adding progress indication.</p></div><div class="ft"><div class="ft-img"><span class="cs-imgtag">image — to add</span></div><h4 class="ft-title">Consultations &amp; Booking</h4><p class="ft-desc">Redesigned doctor discovery, appointment booking, and consultation flows. Users find a doctor by specialization, date, and time — and book in under 60 seconds.</p></div><div class="ft"><div class="ft-img"><span class="cs-imgtag">image — to add</span></div><h4 class="ft-title">Pharmacy &amp; Medication</h4><p class="ft-desc">Designed the medication-ordering flow with pharmacy search, delivery tracking, and order status — home delivery with real-time updates from confirmation to doorstep.</p></div><div class="ft"><div class="ft-img"><span class="cs-imgtag">image — to add</span></div><h4 class="ft-title">Diagnostic Tests &amp; Results</h4><p class="ft-desc">Designed lab-test booking and results tracking — upcoming tests, pending results, and completed reports in one view with clear status indicators.</p></div></div></div></section><section class="cs-part cs-rv"><div class="cs-wrap"><p class="cs-part-label">Part 2 — Deep Dive</p><h2 class="cs-part-title">making healthcare access effortless</h2><p class="cs-lede">The platform had all the right services but made them hard to reach. Users wanted to see a doctor, order medication, or book a test — three simple goals buried under cluttered navigation and confusing flows.</p></div></section><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">The problem</p><h2 class="cs-sh">Losing users at the moments that mattered most</h2><ul class="nlist"><li>Sign-up asked for too much information upfront — 18% of users abandoned before completing registration.</li><li>The homepage showed everything at once — consultations, pharmacy, lab tests, wallet, and wellness all competing with no clear hierarchy.</li><li>Key actions (“See a Doctor,” “Order Medication”) were buried below the fold — users couldn’t find what they came for.</li><li>No visual trust signals — in healthcare, an inconsistent interface signals unreliable care.</li></ul></div></section><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">Key decisions &amp; trade-offs</p><div class="dec"><p class="dec-k">Decision 1</p><h3 class="dec-title">Reorganized IA around user intent</h3><p class="dec-body">Restructured the homepage into three clear action zones — “See a Doctor,” “Order Medication,” “Book a Test.” Everything else is secondary.</p><p class="dec-why"><span>Why this, not the alternatives</span>The old IA showed all features equally. User data showed 80% of sessions started with one of three goals. Prioritizing those three cut homepage decisions from 8+ to 3.</p></div><div class="dec"><p class="dec-k">Decision 2</p><h3 class="dec-title">Progressive sign-up</h3><p class="dec-body">Reduced initial signup to email + password only. Medical details are collected gradually during the first consultation booking, when context makes them feel necessary rather than intrusive.</p><p class="dec-why"><span>Why this, not the alternatives</span>Full-profile signup felt invasive for a healthcare app — users questioned why an app needed their address before they knew if the service was good. Defer details to moments of trust.</p></div><div class="dec"><p class="dec-k">Decision 3</p><h3 class="dec-title">Unified visual system for trust</h3><p class="dec-body">Built a cohesive component system with consistent spacing, typography, and interaction patterns. Primary actions in brand purple, secondary in outline.</p><p class="dec-why"><span>Why this, not the alternatives</span>In healthcare, visual quality signals care quality. An inconsistent interface makes users wonder: “If they can’t get the app right, can they get my diagnosis right?”</p></div></div></section><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">Impact &amp; results</p><div class="cs-stats"><div class="cs-stat"><div class="cs-stat-v">↓18%</div><div class="cs-stat-l">Sign-up drop-off</div></div><div class="cs-stat"><div class="cs-stat-v">+45%</div><div class="cs-stat-l">User satisfaction</div></div><div class="cs-stat"><div class="cs-stat-v">100K+</div><div class="cs-stat-l">Consultations completed</div></div><div class="cs-stat"><div class="cs-stat-v">80+</div><div class="cs-stat-l">Licensed practitioners</div></div></div><p class="cs-note">The redesigned flows removed friction from the most critical moments. Users could go from opening the app to booking a doctor in under 60 seconds. The design system enabled faster feature iteration for the engineering team.</p></div></section><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">Reflection</p><p class="cs-lede">Healthcare UX confirmed that trust signals matter more than efficiency alone. You can make a flow fast, but if users don’t feel safe, they won’t complete it. Visual quality in healthcare isn’t superficial — it’s whether users feel confident enough to share their symptoms with a stranger through a screen.</p><p class="cs-lede">If I did this again, I’d advocate harder for post-consultation follow-up flows. We optimized getting users to a doctor but didn’t invest enough in what happens after — prescription tracking, follow-up reminders, health progress. That’s where long-term retention lives.</p></div></section><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">Credits</p><div class="creds"><div class="cred"><p class="cred-n">Chinonso Ohambele</p><p class="cred-r">Product Designer</p></div><div class="cred"><p class="cred-n">Karen Cummings</p><p class="cred-r">Product Designer</p></div><div class="cred"><p class="cred-n">Emeka Brian Iwuchukwu</p><p class="cred-r">Co-Founder</p></div></div></div></section>
-<section class="mp-wrap cs-rv"><div class="cs-wrap"><p class="mp-eyebrow">more projects</p><div class="mp-grid"><a class="mp" href="../goco/" style="--accent:var(--rose)"><span class="mp-client">goco</span><span class="mp-sector">SaaS, HR Tech</span><p class="mp-teaser">Redesigned core features across an HR platform serving thousands of businesses.</p><span class="mp-view">view project →</span></a><a class="mp" href="../risevest/" style="--accent:var(--c-teal)"><span class="mp-client">risevest</span><span class="mp-sector">Fintech</span><p class="mp-teaser">Overhauled portfolio management for a dollar-based investment app — onboarding nearly doubled.</p><span class="mp-view">view project →</span></a><a class="mp" href="../lenox-park/" style="--accent:var(--c-slate)"><span class="mp-client">lenox park solutions</span><span class="mp-sector">Fintech, DEI Analytics</span><p class="mp-teaser">Redesigned data-dense dashboards for institutional investors tracking diversity metrics.</p><span class="mp-view">view project →</span></a></div></div></section>
+    <figure class="cs-big cs-big-plain cs-big-intro cs-rv"><div class="cs-big-in"><img src="img/band-intro.webp" alt="DRO Health — home dashboard, doctors and consultations, and community feed across three app screens"></div></figure>
+<section class="cs-part cs-rv"><div class="cs-wrap"><p class="cs-part-label">Part 1</p><h2 class="cs-part-title">about dro health</h2><p class="cs-lede">DRO Health is a digital healthcare platform making medical care accessible via smartphones across Nigeria: consultations with licensed doctors, medication ordering with home delivery, diagnostic lab tests, wellness programs, and health-records management, all in one app.</p><p class="cs-lede">In a market where seeing a doctor often means a full day lost to travel and waiting, DRO Health lets users get care in minutes. The stakes are personal, users are managing real health concerns, not browsing. Every friction point has a direct cost to someone’s wellbeing.</p></div></section><section class="cs-rv"><div class="cs-wrap"><p class="cs-kicker" style="margin-top:clamp(2.4rem,5.5vw,3.8rem);margin-bottom:.2rem">Context &amp; team</p><dl class="cs-meta"><div><dt>My role</dt><dd>Product Designer, end-to-end redesign</dd></div><div><dt>Team</dt><dd>Co-Founder, 2 designers, engineering team</dd></div><div><dt>Scope</dt><dd>Mobile app, website, design system</dd></div></dl></div></section><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">What I designed</p><h2 class="cs-sh">Every major flow in the healthcare experience</h2><div class="ft-grid"><div class="ft"><div class="ft-img"><img src="img/card-onboarding.webp" alt="DRO Health login screen with social sign-in and prescription-delivery onboarding"></div><h4 class="ft-title">Onboarding &amp; Sign-up</h4><p class="ft-desc">Redesigned the signup flow with social login and step-by-step onboarding, reduced drop-off by 18% by removing unnecessary fields and adding progress indication.</p></div><div class="ft"><div class="ft-img"><img src="img/card-consultation.webp" alt="DRO Health home dashboard and doctor payment screen with coupon redemption"></div><h4 class="ft-title">Consultations &amp; Booking</h4><p class="ft-desc">Redesigned doctor discovery, appointment booking, and consultation flows. Users find a doctor by specialization, date, and time, and book in under 60 seconds.</p></div><div class="ft"><div class="ft-img"><img src="img/card-pharmacy.webp" alt="DRO Health order-status tracking timeline and pharmacy catalogue"></div><h4 class="ft-title">Pharmacy &amp; Medication</h4><p class="ft-desc">Designed the medication-ordering flow with pharmacy search, delivery tracking, and order status, home delivery with real-time updates from confirmation to doorstep.</p></div><div class="ft"><div class="ft-img"><img src="img/card-test.webp" alt="DRO Health diagnostic-test booking and tests-and-results list"></div><h4 class="ft-title">Diagnostic Tests &amp; Results</h4><p class="ft-desc">Designed lab-test booking and results tracking, upcoming tests, pending results, and completed reports in one view with clear status indicators.</p></div></div></div></section><section class="cs-part cs-rv"><div class="cs-wrap"><p class="cs-part-label">Part 2, Deep Dive</p><h2 class="cs-part-title">making healthcare access effortless</h2><p class="cs-lede">The platform had all the right services but made them hard to reach. Users wanted to see a doctor, order medication, or book a test, three simple goals buried under cluttered navigation and confusing flows.</p></div></section><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">The problem</p><h2 class="cs-sh">Losing users at the moments that mattered most</h2><ul class="nlist"><li>Sign-up asked for too much information upfront, 18% of users abandoned before completing registration.</li><li>The homepage showed everything at once, consultations, pharmacy, lab tests, wallet, and wellness all competing with no clear hierarchy.</li><li>Key actions (“See a Doctor,” “Order Medication”) were buried below the fold, users couldn’t find what they came for.</li><li>No visual trust signals, in healthcare, an inconsistent interface signals unreliable care.</li></ul></div></section><figure class="cs-big cs-rv"><div class="cs-big-in cs-big-tall"><img src="img/band-problem.webp" alt="DRO Health home dashboard and find-available-practitioners date and time scheduling screens"></div></figure><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">Key decisions &amp; trade-offs</p><div class="dec"><p class="dec-k">Decision 1</p><h3 class="dec-title">Reorganized IA around user intent</h3><p class="dec-body">Restructured the homepage into three clear action zones, “See a Doctor,” “Order Medication,” “Book a Test.” Everything else is secondary.</p><p class="dec-why"><span>Why this, not the alternatives</span>The old IA showed all features equally. User data showed 80% of sessions started with one of three goals. Prioritizing those three cut homepage decisions from 8+ to 3.</p></div><div class="dec"><p class="dec-k">Decision 2</p><h3 class="dec-title">Progressive sign-up</h3><p class="dec-body">Reduced initial signup to email + password only. Medical details are collected gradually during the first consultation booking, when context makes them feel necessary rather than intrusive.</p><p class="dec-why"><span>Why this, not the alternatives</span>Full-profile signup felt invasive for a healthcare app, users questioned why an app needed their address before they knew if the service was good. Defer details to moments of trust.</p></div><div class="dec"><p class="dec-k">Decision 3</p><h3 class="dec-title">Unified visual system for trust</h3><p class="dec-body">Built a cohesive component system with consistent spacing, typography, and interaction patterns. Primary actions in brand purple, secondary in outline.</p><p class="dec-why"><span>Why this, not the alternatives</span>In healthcare, visual quality signals care quality. An inconsistent interface makes users wonder: “If they can’t get the app right, can they get my diagnosis right?”</p></div></div></section><section class="cs-sec cs-rv"><div class="cs-wrap"><figure class="ds-shot cs-rv"><img src="img/ds-system.webp" alt="DRO Health design system — buttons, inputs, selection controls, tabs and segmented controls, status chips and the order-status timeline, with full states and variants"><figcaption>DRO Health design system, the core component library, reconstructed</figcaption></figure></div></section><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">Before vs. after</p><div class="ba"><div class="ba-h">Before</div><div class="ba-h after">After</div><div class="ba-c">Navigation was stressful and unintuitive</div><div class="ba-c after">Clear navigation and reorganized homepage for easy discovery</div><div class="ba-c">High drop-off during account creation and appointment booking</div><div class="ba-c after">Streamlined signup and booking flows with fewer steps</div><div class="ba-c">Key services were hard to discover</div><div class="ba-c after">Modern, accessible UI increased user satisfaction and trust</div></div></div></section><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">Impact &amp; results</p><div class="cs-stats"><div class="cs-stat"><div class="cs-stat-v">↓18%</div><div class="cs-stat-l">Sign-up drop-off</div></div><div class="cs-stat"><div class="cs-stat-v">+45%</div><div class="cs-stat-l">User satisfaction</div></div><div class="cs-stat"><div class="cs-stat-v">100K+</div><div class="cs-stat-l">Consultations completed</div></div><div class="cs-stat"><div class="cs-stat-v">80+</div><div class="cs-stat-l">Licensed practitioners</div></div></div><p class="cs-note">The redesigned flows removed friction from the most critical moments. Users could go from opening the app to booking a doctor in under 60 seconds. The design system enabled faster feature iteration for the engineering team.</p></div></section><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">Reflection</p><p class="cs-lede">Healthcare UX confirmed that trust signals matter more than efficiency alone. You can make a flow fast, but if users don’t feel safe, they won’t complete it. Visual quality in healthcare isn’t superficial, it’s whether users feel confident enough to share their symptoms with a stranger through a screen.</p><p class="cs-lede">If I did this again, I’d advocate harder for post-consultation follow-up flows. We optimized getting users to a doctor but didn’t invest enough in what happens after, prescription tracking, follow-up reminders, health progress. That’s where long-term retention lives.</p></div></section><figure class="cs-big cs-rv"><div class="cs-big-in"><img src="img/band-website.webp" alt="DRO Health website — 50,000+ users, 100,000+ consultations, 95% satisfaction, 80+ practitioners, 10+ partners"></div></figure><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">Credits</p><div class="creds"><div class="cred"><p class="cred-n">Chinonso Ohambele</p><p class="cred-r">Product Designer</p></div><div class="cred"><p class="cred-n">Karen Cummings</p><p class="cred-r">Product Designer</p></div><div class="cred"><p class="cred-n">Emeka Brian Iwuchukwu</p><p class="cred-r">Co-Founder</p></div></div></div></section>
+<section class="mp-wrap cs-rv"><div class="cs-wrap"><p class="mp-eyebrow">more projects</p><div class="mp-grid"><a class="mp" href="../goco/" style="--accent:var(--rose)"><span class="mp-client">goco</span><span class="mp-sector">SaaS, HR Tech</span><p class="mp-teaser">Redesigned core features across an HR platform serving thousands of businesses.</p><span class="mp-view">view project →</span></a><a class="mp" href="../lenox-park/" style="--accent:var(--c-slate)"><span class="mp-client">lenox park solutions</span><span class="mp-sector">Fintech, DEI Analytics</span><p class="mp-teaser">Redesigned data-dense dashboards for institutional investors tracking diversity metrics.</p><span class="mp-view">view project →</span></a><a class="mp" href="../risevest/" style="--accent:var(--c-teal)"><span class="mp-client">risevest</span><span class="mp-sector">Fintech</span><p class="mp-teaser">Overhauled portfolio management for a dollar-based investment app, onboarding nearly doubled.</p><span class="mp-view">view project →</span></a></div></div></section>
 </main>
 <footer class="site-footer" id="contact">
   <div class="foot-inner">
@@ -625,7 +737,7 @@
         <h2 class="rs-name" id="resumeTitle">stanley ojima</h2>
         <p class="rs-title">Senior Product Designer</p>
       </header>
-      <p class="rs-summary">Senior Product Designer with 8+ years designing intuitive, user-centered products that create real value for users and businesses. I turn complex problems into simple, scalable experiences — working closely with cross-functional teams to ship impactful, data-informed solutions.</p>
+      <p class="rs-summary">Senior Product Designer with 8+ years designing intuitive, user-centered products that create real value for users and businesses. I turn complex problems into simple, scalable experiences, working closely with cross-functional teams to ship impactful, data-informed solutions.</p>
       <div class="rs-contact">
         <a href="tel:+2347056833543">+234 705 683 3543</a>
         <a href="mailto:stanleyojima9@gmail.com">stanleyojima9@gmail.com</a>
@@ -638,12 +750,12 @@
         <div class="rs-job">
           <div class="rs-job-top"><span class="rs-company">GoCo</span><span class="rs-dates">Jul 2022 – Apr 2025</span></div>
           <p class="rs-role">Senior Product Designer</p>
-          <ul class="rs-bullets"><li>Led end-to-end design across the GoCo platform, partnering with PMs to define problems, run research, and ship impactful solutions.</li><li>Spearheaded the redesign of core platform experiences, simplifying complex workflows and improving usability.</li><li>Conducted user research and collaborated cross-functionally to validate decisions and iterate on feedback.</li><li>Contributed to measurable impact — including a 60% rise in customer satisfaction after the platform redesign.</li></ul>
+          <ul class="rs-bullets"><li>Led end-to-end design across the GoCo platform, partnering with PMs to define problems, run research, and ship impactful solutions.</li><li>Spearheaded the redesign of core platform experiences, simplifying complex workflows and improving usability.</li><li>Conducted user research and collaborated cross-functionally to validate decisions and iterate on feedback.</li><li>Contributed to measurable impact, including a 60% rise in customer satisfaction after the platform redesign.</li></ul>
         </div>
         <div class="rs-job">
           <div class="rs-job-top"><span class="rs-company">Curva Digital</span><span class="rs-dates">Feb 2020 – Jul 2022</span></div>
           <p class="rs-role">Senior Product Designer</p>
-          <ul class="rs-bullets"><li>Owned design execution across mobile apps, websites, and visual systems for multiple clients in a fast-paced agency.</li><li>Translated ambiguous client requirements into clear, user-focused solutions aligned with business goals.</li><li>Led work from early concepts through high-fidelity UI and delivery — balancing speed, quality, and stakeholder expectations.</li></ul>
+          <ul class="rs-bullets"><li>Owned design execution across mobile apps, websites, and visual systems for multiple clients in a fast-paced agency.</li><li>Translated ambiguous client requirements into clear, user-focused solutions aligned with business goals.</li><li>Led work from early concepts through high-fidelity UI and delivery, balancing speed, quality, and stakeholder expectations.</li></ul>
         </div>
         <div class="rs-job">
           <div class="rs-job-top"><span class="rs-company">DRO Health</span><span class="rs-dates">Nov 2019 – Feb 2021</span></div>
@@ -663,7 +775,7 @@
         <div class="rs-job">
           <div class="rs-job-top"><span class="rs-company">Freelance</span><span class="rs-dates">Jan 2017 – Present</span></div>
           <p class="rs-role">UI/UX Designer</p>
-          <ul class="rs-bullets"><li>Consulted with early-stage and growing startups on solutions addressing user needs and business challenges.</li><li>Led end-to-end design across research, UX, UI, and prototyping — often working directly with founders.</li></ul>
+          <ul class="rs-bullets"><li>Consulted with early-stage and growing startups on solutions addressing user needs and business challenges.</li><li>Led end-to-end design across research, UX, UI, and prototyping, often working directly with founders.</li></ul>
         </div>
       </section>
       <section class="rs-section">
