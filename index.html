@@ -134,7 +134,7 @@
   .scroll-cue i{position:relative;display:block;width:1px;height:38px;background:rgba(23,18,15,.16);overflow:hidden}
   .scroll-cue i::after{content:"";position:absolute;left:0;top:0;width:1px;height:42%;background:var(--rose);animation:scrollDot 1.9s cubic-bezier(.4,0,.2,1) infinite}
   @keyframes scrollDot{0%{transform:translateY(-100%)}55%,100%{transform:translateY(330%)}}
-  @media (max-width:767px){ .hero-pin{min-height:90svh} .name .name-layer{white-space:normal;font-size:clamp(3.4rem,21vw,5.6rem);line-height:.88;letter-spacing:-.045em} }
+  @media (max-width:767px){ .hero-pin{min-height:90svh;padding-top:clamp(5rem,12vh,6rem)} .name .name-layer{white-space:normal;font-size:clamp(3.4rem,21vw,5.6rem);line-height:.88;letter-spacing:-.045em} }
   @media (min-width:768px){ .scroll-cue{display:none} }
   .nm-break{display:none}
   @media (max-width:767px){ .nm-break{display:block} .role{margin-bottom:clamp(.7rem,1.8vh,1.1rem)} }
