@@ -4,21 +4,25 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light" />
-<title>Lenox Park Solutions | Stanley Ojima</title>
-<meta name="description" content="Lenox Park Solutions case study — Stanley Ojima designed DEI analytics dashboards for investors tracking $4T+ in combined AUM." />
+<title>Lenox Park case study | Stanley Ojima</title>
+<meta name="description" content="Lenox Park case study: sole designer on an analytics platform for institutional investors with $4T+ in client assets.">
+<link rel="canonical" href="https://stanleyojima.xyz/work/lenox-park/">
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Stanley Ojima">
+<meta property="og:title" content="Lenox Park case study | Stanley Ojima">
+<meta property="og:description" content="Lenox Park case study: sole designer on an analytics platform for institutional investors with $4T+ in client assets.">
+<meta property="og:url" content="https://stanleyojima.xyz/work/lenox-park/">
+<meta property="og:image" content="https://stanleyojima.xyz/work/lenox-park/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lenox Park case study | Stanley Ojima">
+<meta name="twitter:description" content="Lenox Park case study: sole designer on an analytics platform for institutional investors with $4T+ in client assets.">
+<meta name="twitter:image" content="https://stanleyojima.xyz/work/lenox-park/og.png">
 <meta name="author" content="Stanley Ojima" />
-<link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
-<link rel="canonical" href="https://stanleyojima.xyz/work/lenox-park/" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Stanley Ojima" />
-<meta property="og:title" content="Lenox Park Solutions | Stanley Ojima" />
-<meta property="og:description" content="Lenox Park Solutions case study — Stanley Ojima designed DEI analytics dashboards for investors tracking $4T+ in combined AUM." />
-<meta property="og:url" content="https://stanleyojima.xyz/work/lenox-park/" />
-<meta property="og:image" content="https://stanleyojima.xyz/og-image.png" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Lenox Park Solutions | Stanley Ojima" />
-<meta name="twitter:description" content="Lenox Park Solutions case study — Stanley Ojima designed DEI analytics dashboards for investors tracking $4T+ in combined AUM." />
-<meta name="twitter:image" content="https://stanleyojima.xyz/og-image.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Archivo:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -577,9 +581,466 @@
   @media (min-width:768px){ .cs-meta{grid-template-columns:repeat(3,1fr)} }
   @media (min-width:1024px){ .ft-grid{grid-template-columns:repeat(2,1fr)} }
   @media (prefers-reduced-motion:reduce){ .cs-rv{opacity:1!important;transform:none!important} }
+
+  /* ================= case study template v3 (Geist) ================= */
+  html:root{--display:'Geist',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif;--body:'Geist',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif;--mono:'Geist Mono',ui-monospace,SFMono-Regular,Menlo,monospace}
+  .case-wordmark,.case-title,.block-title,.foot-lead,.foot-mark,.modal-title,.rs-name,.cs-title,.cs-part-title,.mp-client,.cs-acq-line{text-transform:none}
+  .mp-client{font-weight:600}
+  .foot-lead,.foot-mark{font-weight:600;letter-spacing:-.04em}
+  .cs-pq-quote{font-weight:400;letter-spacing:-.02em}
+  .y-wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 var(--nav-pad-x)}
+  .y-wide{width:100%;max-width:1400px;margin:0 auto;padding:0 clamp(.75rem,2vw,1.5rem)}
+  .y-l{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin:0}
+  .y-l.a{color:var(--accent)}
+  /* hero */
+  .y-hero{padding:calc(7rem + 3vw) 0 0}
+  .y-title{font-family:var(--display);font-weight:600;font-size:clamp(3.8rem,10.5vw,8.6rem);line-height:.9;letter-spacing:-.065em;color:var(--ink);margin:1.4rem 0 0}
+  .y-badges{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:1.7rem}
+  .y-pill,.y-flag{display:inline-flex;align-items:center;padding:8px 14px;border-radius:999px;font:500 14px/1 var(--body);white-space:nowrap}
+  .y-pill{background:var(--footer);color:var(--ink)}
+  .y-flag{background:var(--tint);color:var(--accent)}
+  .y-yrs{font-family:var(--mono);font-size:.74rem;color:var(--dim);margin-left:6px}
+  .y-summary{font:400 clamp(1.2rem,2vw,1.55rem)/1.42 var(--body);letter-spacing:-.012em;color:var(--dim);max-width:46ch;margin:1.6rem 0 0;text-wrap:pretty}
+  .y-summary b{color:var(--ink);font-weight:500}
+  .y-ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:2rem}
+  .y-btn{display:inline-flex;align-items:center;gap:10px;padding:15px 22px;border-radius:999px;font:500 15px/1 var(--body);text-decoration:none;transition:background .25s,color .25s,border-color .25s}
+  .y-btn span{transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+  .y-btn:hover span{transform:translate(2px,-2px)}
+  .y-btn.pri{background:var(--ink);color:#fff}
+  .y-btn.pri:hover{background:var(--accent)}
+  .y-btn.sec{border:1px solid rgba(24,24,27,.16);color:var(--ink)}
+  .y-btn.sec:hover{border-color:var(--ink)}
+  .y-btn.light{background:#fff;color:var(--ink)}
+  .y-btn.light:hover{background:var(--accent-bright,var(--accent));color:#fff}
+  .y-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:clamp(2.6rem,5vw,3.6rem) 0 0;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline)}
+  .y-fact{padding:1.2rem 1.2rem 1.3rem 0;margin:0}
+  .y-fact + .y-fact{padding-left:1.2rem;border-left:1px solid var(--hairline)}
+  .y-fact dt{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+  .y-fact dd{margin:.55rem 0 0;font:500 15.5px/1.4 var(--body);color:var(--ink)}
+  .y-nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:clamp(2.2rem,4.5vw,3rem) 0 0}
+  .y-num b{display:block;font-family:var(--display);font-weight:500;font-size:clamp(2.4rem,5vw,4rem);line-height:1;letter-spacing:-.055em;color:var(--ink)}
+  .y-num span{display:block;margin-top:.7rem;font:400 15px/1.4 var(--body);color:var(--dim);max-width:22ch}
+  /* big bands */
+  .y-band{margin-top:clamp(2.8rem,6vw,4.4rem)}
+  .cs-big-in img.bare{border-radius:0;box-shadow:none;border:0}
+  /* part divider: its own moment */
+  .y-part{padding:clamp(6rem,13vw,10rem) 0 0}
+  .y-part-in{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 24px;padding-top:1.4rem;border-top:1px solid var(--ink)}
+  .y-part .y-l{grid-column:1/4;color:var(--ink)}
+  .y-part h2{grid-column:4/13;font-family:var(--display);font-weight:500;font-size:clamp(2.5rem,5.6vw,4.6rem);line-height:.98;letter-spacing:-.055em;color:var(--ink);margin:0;max-width:16ch}
+  /* section head: label left, content shifted right */
+  .y-sec{padding:clamp(4.5rem,10vw,7.5rem) 0 0}
+  .y-part + .y-sec{padding-top:clamp(4.4rem,9vw,6.4rem)}
+  .y-g{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 24px}
+  .y-g > .y-l{grid-column:1/4;padding-top:.7rem}
+  .y-g > .y-c{grid-column:4/13}
+  .y-h2{font-family:var(--display);font-weight:500;font-size:clamp(2rem,3.8vw,3.1rem);line-height:1.04;letter-spacing:-.045em;color:var(--ink);margin:0;max-width:20ch;text-wrap:balance}
+  .y-p{font:400 clamp(1.05rem,1.35vw,1.16rem)/1.62 var(--body);color:var(--dim);margin:1.3rem 0 0;max-width:60ch}
+  .y-p + .y-p{margin-top:1rem}
+  .y-p b{color:var(--ink);font-weight:500}
+  .y-after{margin-top:clamp(2.2rem,5vw,3.4rem)}
+  /* feature panel: text inside, big screen */
+  .y-panels{display:grid;gap:clamp(1rem,2vw,1.5rem);margin-top:clamp(2.4rem,5vw,3.6rem)}
+  .y-panel{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);border-radius:clamp(1.3rem,2.4vw,2rem);overflow:hidden;background:var(--light);min-height:clamp(440px,50vw,700px)}
+  .y-pt{padding:clamp(1.8rem,3.6vw,3.2rem);display:flex;flex-direction:column;justify-content:space-between;gap:2rem}
+  .y-pt h3{font-family:var(--display);font-weight:500;font-size:clamp(1.6rem,2.6vw,2.3rem);line-height:1.05;letter-spacing:-.045em;color:var(--ink);margin:0}
+  .y-pt p{font:400 1.02rem/1.6 var(--body);color:var(--dim);margin:.9rem 0 0;max-width:34ch}
+  .y-metric{display:inline-flex;align-items:baseline;gap:.6ch;margin-top:1.3rem;padding:10px 16px;border-radius:999px;background:#fff;font:400 14px/1 var(--body);color:var(--dim)}
+  .y-metric b{font-weight:600;font-size:16px;color:var(--ink)}
+  .y-pm{position:relative;overflow:hidden;min-height:320px}
+  .y-pm.web img{position:absolute;left:0;top:clamp(2rem,4.4vw,3.6rem);width:132%;max-width:none;height:auto;border-radius:12px 0 0 0;box-shadow:0 30px 70px -30px rgba(0,0,0,.35),0 0 0 1px rgba(0,0,0,.05)}
+  .y-pm.phone{display:flex;align-items:center;justify-content:center;gap:clamp(.8rem,2vw,1.6rem);padding:clamp(1.6rem,3.4vw,2.8rem)}
+  .y-pm.phone img{display:block;height:min(100%,640px);max-height:calc(clamp(440px,50vw,700px) - 5rem);width:auto;border-radius:clamp(18px,2.2vw,30px);box-shadow:0 30px 60px -26px rgba(22,16,46,.45),0 0 0 1px rgba(22,16,46,.06)}
+  /* also shipped: 2-col grid of big tiles */
+  .y-tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1rem,2vw,1.5rem);margin-top:clamp(1rem,2vw,1.5rem)}
+  .y-tile{margin:0}
+  .y-tile .y-pm{aspect-ratio:4/3;border-radius:clamp(1.1rem,2vw,1.6rem);background:var(--light)}
+  .y-tile .y-pm.web img{width:118%;left:clamp(1.4rem,3vw,2.4rem);top:clamp(1.4rem,3vw,2.4rem)}
+  .y-tile figcaption{display:flex;gap:1.2rem;justify-content:space-between;align-items:baseline;padding:1.1rem .2rem 0}
+  .y-tile figcaption b{font:500 1.15rem/1.2 var(--body);letter-spacing:-.02em;color:var(--ink);white-space:nowrap}
+  .y-tile figcaption span{font:400 .96rem/1.5 var(--body);color:var(--dim);text-align:right;max-width:38ch}
+  .y-intro-tile{border-radius:clamp(1.1rem,2vw,1.6rem);border:1px solid var(--hairline);padding:clamp(1.8rem,3.6vw,3rem);display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:4/3}
+  .y-intro-tile h3{font-family:var(--display);font-weight:500;font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.04;letter-spacing:-.045em;color:var(--ink);margin:0}
+  .y-intro-tile p{font:400 1rem/1.6 var(--body);color:var(--dim);margin:0;max-width:36ch}
+  /* numbered rows (process, research, decisions) */
+  .y-rows{margin-top:clamp(2.2rem,5vw,3.4rem);border-bottom:1px solid var(--hairline)}
+  .y-r{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 24px;padding:clamp(1.6rem,3.4vw,2.4rem) 0;border-top:1px solid var(--hairline)}
+  .y-r .y-l{grid-column:1/4;padding-top:.45rem}
+  .y-r h3{grid-column:4/8;font-family:var(--display);font-weight:500;font-size:clamp(1.3rem,2vw,1.65rem);line-height:1.12;letter-spacing:-.035em;color:var(--ink);margin:0;padding-right:1rem}
+  .y-r p{grid-column:8/13;font:400 1.02rem/1.6 var(--body);color:var(--dim);margin:0}
+  .y-r.big h3{grid-column:4/13;font-size:clamp(1.6rem,2.8vw,2.4rem);max-width:24ch}
+  .y-r.big p{grid-column:4/12;margin-top:.9rem}
+  .y-r p.y-l,.y-r.big p.y-l{grid-column:1/4;grid-row:1;margin:0}
+  /* problem trio */
+  .y-trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(2.4rem,5vw,3.6rem);border-top:1px solid var(--ink)}
+  .y-t{padding:1.5rem 1.6rem 0 0}
+  .y-t + .y-t{padding-left:1.6rem;border-left:1px solid var(--hairline)}
+  .y-t h3{font-family:var(--display);font-weight:500;font-size:clamp(1.8rem,3.2vw,2.7rem);line-height:1;letter-spacing:-.05em;color:var(--ink);margin:1.4rem 0 0}
+  .y-t p{font:400 1rem/1.58 var(--body);color:var(--dim);margin:1rem 0 0;max-width:32ch}
+  /* decisions */
+  .y-dec{padding:clamp(3rem,6vw,4.6rem) 0 0}
+  .y-dec-h{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 24px;padding-top:1.4rem;border-top:1px solid var(--hairline)}
+  .y-dec-h .y-l{grid-column:1/4;padding-top:.6rem}
+  .y-dec-h h3{grid-column:4/13;font-family:var(--display);font-weight:500;font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1.04;letter-spacing:-.05em;color:var(--ink);margin:0;max-width:20ch}
+  .y-dec-b{grid-column:4/13;display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.4rem,3vw,2.6rem);margin-top:clamp(1.4rem,3vw,2rem)}
+  .y-dec-b h4{font-family:var(--mono);font-weight:500;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin:0 0 .7rem}
+  .y-dec-b h4.a{color:var(--accent)}
+  .y-dec-b p{font:400 1.02rem/1.62 var(--body);color:var(--dim);margin:0}
+  .y-dec-b p.ink{color:var(--ink)}
+  .y-shot{margin-top:clamp(1.8rem,4vw,2.8rem)}
+  .y-shot-in{border-radius:clamp(1.3rem,2.4vw,2rem);overflow:hidden;background:var(--dark);padding:clamp(1.6rem,4.4vw,4rem)}
+  .y-shot-in.narrow img{max-width:860px;margin:0 auto}
+  .y-shot-in img{display:block;width:100%;height:auto;border-radius:clamp(.6rem,1.2vw,1rem);box-shadow:0 40px 90px -40px rgba(0,0,0,.8)}
+  .y-shot-in.phones{display:flex;justify-content:center;align-items:flex-start;gap:clamp(1rem,4vw,4rem)}
+  .y-shot-in.phones figure{margin:0;flex:0 1 330px}
+  .y-shot-in.phones img{border-radius:clamp(16px,2.4vw,30px)}
+  .y-shot-in figcaption{margin-top:1rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.6);text-align:center}
+  /* before vs after */
+  .y-vs{margin-top:clamp(2.2rem,5vw,3.4rem)}
+  .y-vs-h,.y-vs-r{display:grid;grid-template-columns:minmax(0,1fr) 3rem minmax(0,1fr);align-items:baseline}
+  .y-vs-h{padding-bottom:.9rem;border-bottom:1px solid var(--ink)}
+  .y-vs-h .y-l:last-child{color:var(--accent)}
+  .y-vs-r{padding:clamp(1rem,2.2vw,1.4rem) 0;border-bottom:1px solid var(--hairline)}
+  .y-vs-r span{font:400 clamp(1.05rem,1.8vw,1.35rem)/1.35 var(--body);letter-spacing:-.015em}
+  .y-vs-r span:first-child{color:var(--dim)}
+  .y-vs-r span:last-child{color:var(--ink);font-weight:500}
+  .y-vs-r i{font-style:normal;color:var(--accent);text-align:center}
+  /* impact band */
+  .y-impact{position:relative;width:100vw;left:50%;margin-left:-50vw;margin-top:clamp(2.4rem,5vw,3.4rem);background:var(--dark);color:#fff;padding:clamp(3.4rem,8vw,6rem) 0}
+  .y-impact .y-nums{margin:0}
+  .y-impact .y-num b{color:#fff;font-size:clamp(2.8rem,6.4vw,5.4rem)}
+  .y-impact .y-num span{color:rgba(255,255,255,.62)}
+  .y-impact .y-p{color:rgba(255,255,255,.62);margin-top:clamp(2.2rem,5vw,3.2rem)}
+  /* reflection */
+  .y-quote{font-family:var(--display);font-weight:400;font-size:clamp(1.6rem,3vw,2.5rem);line-height:1.2;letter-spacing:-.035em;color:var(--ink);margin:0;max-width:26ch;text-wrap:pretty}
+  /* two lists (pre-launch) */
+  .y-lists{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.6rem,4vw,3rem);margin-top:clamp(2.2rem,5vw,3.2rem)}
+  .y-lists ul{list-style:none;margin:1rem 0 0;padding:0;border-top:1px solid var(--ink)}
+  .y-lists li{display:flex;gap:.9rem;align-items:baseline;padding:1rem 0;border-bottom:1px solid var(--hairline);font:500 1.05rem/1.4 var(--body);color:var(--ink)}
+  .y-lists li small{margin-left:auto;font:400 .9rem/1.4 var(--body);color:var(--dim);text-align:right}
+  .y-lists li::before{content:"";flex:none;width:.7rem;height:.7rem;border-radius:50%;transform:translateY(.05em)}
+  .y-lists .done li::before{background:var(--accent-bright,var(--accent))}
+  .y-lists .next li{color:var(--dim)}
+  .y-lists .next li::before{border:1.5px solid var(--mute)}
+  /* flow strip + video (dark bands) */
+  .y-flowhead{max-width:1240px;margin:0 auto 2rem;padding:0 var(--nav-pad-x);color:#fff}
+  .y-flowhead .y-l{color:var(--accent-bright,#fff)}
+  .y-flowhead h3{font-family:var(--display);font-weight:500;font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1;letter-spacing:-.05em;margin:.8rem 0 0}
+  .y-flow{display:grid;grid-template-columns:repeat(5,minmax(170px,1fr));gap:clamp(.9rem,1.8vw,1.4rem);max-width:1240px;margin:0 auto;padding:0 var(--nav-pad-x) 6px;overflow-x:auto;scrollbar-width:none}
+  .y-flow::-webkit-scrollbar{display:none}
+  .y-step img{display:block;width:100%;height:auto;border-radius:clamp(14px,1.8vw,22px);box-shadow:0 30px 60px -24px rgba(0,0,0,.6)}
+  .y-step b{display:block;margin-top:1rem;font-family:var(--mono);font-weight:500;font-size:.68rem;color:var(--accent-bright,#fff)}
+  .y-step span{display:block;margin-top:.35rem;font:500 15px/1.3 var(--body);color:#fff}
+  .y-video{position:relative;overflow:hidden;border-radius:clamp(.9rem,1.8vw,1.4rem);aspect-ratio:16/10;background:#0d0a1c;box-shadow:0 50px 100px -40px rgba(0,0,0,.72)}
+  .y-video video,.cs-big-in .y-video img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;border-radius:0;box-shadow:none}
+  .y-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:clamp(66px,7vw,96px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.94);box-shadow:0 20px 50px -10px rgba(0,0,0,.5);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+  .y-play:hover{transform:translate(-50%,-50%) scale(1.07)}
+  .y-play i{width:0;height:0;border-style:solid;border-width:12px 0 12px 19px;border-color:transparent transparent transparent var(--ink);margin-left:5px}
+  .y-tag{position:absolute;left:18px;bottom:18px;font-family:var(--mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.55);padding:8px 13px;border-radius:999px}
+  .y-videocta{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 22px;margin-top:clamp(1.6rem,3.5vw,2.4rem)}
+  .y-videocta p{font:400 .95rem/1.4 var(--body);color:rgba(255,255,255,.65);margin:0}
+  .y-credits{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:1.2rem;padding-top:1.2rem;border-top:1px solid var(--hairline)}
+  .y-credits p{margin:0;font:500 1rem/1.3 var(--body);color:var(--ink)}
+  .y-credits span{display:block;margin-top:.35rem;font:400 .9rem/1.3 var(--body);color:var(--dim)}
+  @media (max-width:860px){
+    .y-g > .y-l,.y-g > .y-c,.y-part .y-l,.y-part h2,.y-r .y-l,.y-r h3,.y-r p,.y-r.big h3,.y-r.big p,.y-dec-h .y-l,.y-dec-h h3,.y-dec-b{grid-column:1/-1}
+    .y-g > .y-l,.y-part .y-l,.y-r .y-l,.y-dec-h .y-l{padding-top:0;margin-bottom:1rem}
+    .y-r p{margin-top:.7rem}
+    .y-r p.y-l,.y-r.big p.y-l{grid-column:1/-1;grid-row:auto;margin:0 0 .8rem}
+    .y-panel{grid-template-columns:1fr;min-height:0}
+    .y-pm.web{aspect-ratio:4/3}
+    .y-pm.phone img{height:auto;width:calc(50% - .5rem);max-width:260px;max-height:none}
+    .y-pm.phone{padding:0 1.2rem 1.6rem}
+    .y-tiles,.y-trio,.y-lists,.y-dec-b{grid-template-columns:1fr}
+    .y-t + .y-t{padding-left:0;border-left:0;border-top:1px solid var(--hairline);margin-top:1.4rem}
+    .y-facts{grid-template-columns:1fr 1fr}
+    .y-fact:nth-child(3){padding-left:0;border-left:0}
+    .y-fact:nth-child(n+3){border-top:1px solid var(--hairline)}
+    .y-nums,.y-credits{grid-template-columns:1fr 1fr;gap:26px 16px}
+    .y-intro-tile{aspect-ratio:auto;gap:1.4rem}
+    .y-tile figcaption{flex-direction:column;gap:.4rem}
+    .y-tile figcaption span{text-align:left}
+    .y-flow{grid-template-columns:repeat(5,62%)}
+    .y-shot-in.phones{gap:.8rem}
+    .y-vs-r span{font-size:1rem}
+    .y-lists li{flex-wrap:wrap}
+  }
+
+  /* ================= v4: calmer type, visuals carry the page ================= */
+  .y-hero{padding:calc(6rem + 2vw) 0 0}
+  .y-title{font-size:clamp(3rem,6.2vw,5rem);letter-spacing:-.055em;margin-top:1.1rem}
+  .y-badges{margin-top:1.2rem}
+  .y-summary{font-size:clamp(1.08rem,1.5vw,1.25rem);max-width:54ch;margin-top:1.2rem}
+  .y-ctas{margin-top:1.5rem}
+  .y-facts{margin-top:clamp(1.8rem,3.4vw,2.4rem)}
+  .y-fact{padding-top:1rem;padding-bottom:1.05rem}
+  .y-nums{margin-top:clamp(1.5rem,3vw,2rem)}
+  .y-num b{font-size:clamp(2rem,3.6vw,2.9rem)}
+  .y-num span{font-size:14px;margin-top:.5rem}
+  .y-h2{font-size:clamp(1.5rem,2.3vw,2.05rem);line-height:1.12;letter-spacing:-.035em;max-width:24ch}
+  .y-p{font-size:1.03rem;line-height:1.62;margin-top:1rem}
+  .y-sec{padding-top:clamp(4rem,8vw,6.2rem)}
+  .y-part{padding-top:clamp(5rem,10vw,8rem)}
+  .y-part-in{padding-top:1rem}
+  .y-part h2{font-size:clamp(1.05rem,1.5vw,1.25rem);line-height:1.3;letter-spacing:-.01em;max-width:none}
+  .y-part + .y-sec{padding-top:clamp(2.6rem,5vw,3.6rem)}
+  /* full-bleed visual */
+  .y-bleed{position:relative;width:100vw;left:50%;margin-left:-50vw;margin-top:clamp(2.2rem,5vw,3.4rem);margin-bottom:0}
+  .y-bleed img{display:block;width:100%;height:auto}
+  .y-bleed figcaption{max-width:1240px;margin:1rem auto 0;padding:0 var(--nav-pad-x);font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--dim)}
+  /* compact grids of small text */
+  .y-cols{display:grid;grid-template-columns:repeat(var(--n,4),minmax(0,1fr));gap:clamp(1.4rem,3vw,2.4rem);margin-top:clamp(1.8rem,4vw,2.6rem)}
+  .y-col{padding-top:1rem;border-top:1px solid var(--hairline)}
+  .y-col .y-l{margin-bottom:.8rem}
+  .y-col h4{font:500 1.04rem/1.3 var(--body);letter-spacing:-.015em;color:var(--ink);margin:0}
+  .y-col p{font:400 .94rem/1.56 var(--body);color:var(--dim);margin:.45rem 0 0}
+  .y-col .y-metric{margin-top:.8rem;background:var(--tint);font-size:13px;padding:8px 13px}
+  .y-col .y-metric b{font-size:14px}
+  .y-t h3{font-size:clamp(1.3rem,2vw,1.6rem);letter-spacing:-.035em;margin-top:1rem}
+  .y-t p{font-size:.96rem}
+  .y-trio{margin-top:clamp(1.8rem,4vw,2.6rem)}
+  /* decisions: compact text, then the visual full bleed */
+  .y-dec{padding-top:clamp(3.4rem,7vw,5rem)}
+  .y-dec-h h3{font-size:clamp(1.35rem,2.1vw,1.8rem);line-height:1.15;letter-spacing:-.035em;max-width:30ch}
+  .y-dec-b{margin-top:1.1rem}
+  .y-dec-b p{font-size:.97rem}
+  .y-dec .y-bleed{margin-top:clamp(1.8rem,4vw,2.6rem)}
+  .y-dec .y-bleed figcaption{display:flex;justify-content:center;gap:clamp(2rem,12vw,11rem)}
+  .y-vs-r span{font-size:clamp(1rem,1.4vw,1.14rem)}
+  .y-impact{padding:clamp(3rem,6vw,4.6rem) 0}
+  .y-impact .y-num b{font-size:clamp(2.4rem,4.8vw,3.9rem)}
+  .y-impact .y-p{margin-top:1.8rem}
+  .y-quote{font-size:clamp(1.25rem,2vw,1.6rem);line-height:1.32;letter-spacing:-.02em;max-width:36ch}
+  .cs-pq-quote{font-size:clamp(1.15rem,1.9vw,1.5rem)!important;line-height:1.4!important}
+  .y-lists li{font-size:.98rem;padding:.8rem 0}
+  /* phone strip with captions (full-bleed band) */
+  .y-strip{position:relative;width:100vw;left:50%;margin-left:-50vw;margin-top:clamp(2.2rem,5vw,3.4rem);padding:clamp(3rem,6vw,4.6rem) 0;background:var(--sbg,var(--light))}
+  .y-strip-in{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(1rem,2.2vw,2rem);max-width:1400px;margin:0 auto;padding:0 clamp(1rem,3vw,2.4rem)}
+  .y-strip figure{margin:0}
+  .y-strip img{display:block;width:100%;height:auto;border-radius:clamp(14px,1.9vw,26px);box-shadow:0 30px 60px -28px rgba(22,16,46,.45),0 0 0 1px rgba(22,16,46,.06)}
+  .y-strip figcaption{margin-top:1.1rem}
+  .y-strip figcaption b{display:block;font-family:var(--mono);font-weight:500;font-size:.66rem;letter-spacing:.06em;color:var(--accent)}
+  .y-strip figcaption strong{display:block;margin-top:.45rem;font:500 1rem/1.3 var(--body);letter-spacing:-.015em;color:var(--ink)}
+  .y-strip figcaption span{display:block;margin-top:.35rem;font:400 .9rem/1.5 var(--body);color:var(--dim)}
+  .y-strip.dark{--sbg:var(--dark)}
+  .y-strip.dark b{color:var(--accent-bright,#fff)}
+  .y-strip.dark strong{color:#fff}
+  .y-strip.dark span{color:rgba(255,255,255,.62)}
+  .y-strip.dark img{box-shadow:0 30px 60px -24px rgba(0,0,0,.6)}
+  .y-strip-head{max-width:1400px;margin:0 auto clamp(1.8rem,4vw,2.6rem);padding:0 clamp(1rem,3vw,2.4rem);display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+  .y-strip-head h3{font:500 clamp(1.25rem,2vw,1.6rem)/1.2 var(--body);letter-spacing:-.03em;color:var(--ink);margin:0}
+  .y-strip.dark .y-strip-head h3{color:#fff}
+  @media (max-width:860px){
+    .y-cols{grid-template-columns:1fr 1fr}
+    .y-bleed img{min-height:280px;object-fit:cover}
+    .y-strip-in{grid-template-columns:repeat(5,64%);overflow-x:auto;scrollbar-width:none}
+    .y-strip-in::-webkit-scrollbar{display:none}
+    .y-dec .y-bleed figcaption{gap:2rem}
+  }
+  @media (max-width:520px){ .y-cols{grid-template-columns:1fr} }
+
+  /* ================= v5: one reading line, better contrast ================= */
+  .y-sec .y-wrap > .y-cols,.y-sec .y-wrap > .y-trio,.y-sec .y-wrap > .y-vs,.y-sec .y-wrap > .y-lists,.y-sec .y-wrap > .y-nums,.y-sec .y-wrap > .y-insight{margin-left:calc((100% + 24px) / 4)}
+  .y-p,.y-col p,.y-dec-b p,.y-t p,.y-strip figcaption span{color:#4b4b53}
+  .y-summary{color:#4b4b53}
+  .y-col h4{font-size:1.06rem}
+  .y-col p{font-size:.97rem}
+  .y-insight{margin-top:clamp(1.6rem,3.4vw,2.2rem);padding:1.2rem 1.4rem;border-left:2px solid var(--accent);background:var(--footer);border-radius:0 .9rem .9rem 0}
+  .y-insight .y-l{margin-bottom:.5rem}
+  .y-insight p:last-child{margin:0;font:500 1.12rem/1.45 var(--body);letter-spacing:-.015em;color:var(--ink);max-width:56ch}
+  .y-strip-in{grid-template-columns:repeat(var(--n,5),minmax(0,1fr))}
+  .y-strip.three .y-strip-in{max-width:1060px;gap:clamp(1.4rem,3.4vw,3rem)}
+  .y-strip.three figcaption strong{font-size:1.06rem}
+  @media (max-width:860px){
+    .y-sec .y-wrap > .y-cols,.y-sec .y-wrap > .y-trio,.y-sec .y-wrap > .y-vs,.y-sec .y-wrap > .y-lists,.y-sec .y-wrap > .y-nums,.y-sec .y-wrap > .y-insight{margin-left:0}
+    .y-strip-in{grid-template-columns:repeat(var(--n,5),64%)}
+  }
+
+  /* ================= v6: calmer meta, outcome tiles, testimonial card ================= */
+  .y-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 0;margin-top:1.1rem;font:400 15px/1.4 var(--body);color:var(--ink)}
+  .y-meta > * + *{margin-left:.9rem;padding-left:.9rem;border-left:1px solid var(--hairline)}
+  .y-meta .st{display:inline-flex;align-items:center;gap:.5rem;color:var(--accent)}
+  .y-meta .st::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent-bright,var(--accent))}
+  .y-meta .yr{font-family:var(--mono);font-size:.76rem;color:var(--dim)}
+  .y-p{font-size:1.06rem;line-height:1.66}
+  .y-p b{font-weight:500;color:var(--ink)}
+  .y-g + .y-cols,.y-c .y-cols{margin-left:0}
+  .y-c .y-cols{margin-top:0}
+  .y-out{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:clamp(1.8rem,4vw,2.6rem) 0 0 calc((100% + 24px) / 4)}
+  .y-o{background:var(--light);border-radius:1.1rem;padding:clamp(1.2rem,2.4vw,1.6rem)}
+  .y-o b{display:block;font-family:var(--display);font-weight:500;font-size:clamp(1.9rem,3vw,2.5rem);line-height:1;letter-spacing:-.05em;color:var(--ink)}
+  .y-o span{display:block;margin-top:.7rem;font:400 .95rem/1.4 var(--body);color:#4b4b53}
+  .y-out + .y-p{margin-left:calc((100% + 24px) / 4)}
+  .y-tq{margin:0;padding:clamp(1.8rem,4vw,2.8rem);border-radius:1.4rem;background:var(--light)}
+  .y-tq .mk{display:block;height:.55em;font:500 4rem/1 Georgia,serif;color:var(--accent)}
+  .y-tq blockquote{margin:1rem 0 0;font:400 clamp(1.12rem,1.6vw,1.34rem)/1.55 var(--body);letter-spacing:-.012em;color:var(--ink);max-width:54ch}
+  .y-tq figcaption{display:flex;align-items:center;gap:.9rem;margin-top:1.7rem}
+  .y-av{flex:none;width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font:500 14px/1 var(--body);letter-spacing:.02em}
+  .y-tq figcaption b{display:block;font:500 15px/1.3 var(--body);color:var(--ink)}
+  .y-tq figcaption span{display:block;font:400 14px/1.3 var(--body);color:var(--dim);margin-top:.15rem}
+  .y-c .y-credits{margin-top:0}
+  @media (max-width:860px){
+    .y-out{grid-template-columns:1fr 1fr;margin-left:0}
+    .y-out + .y-p{margin-left:0}
+  }
+
+  .y-pill,.y-flag{height:30px;padding:0 13px;gap:.5rem;font:400 13.5px/1 var(--body);letter-spacing:-.005em}
+  .y-flag::before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.85}
+  .y-yrs{margin-left:8px}
+
+  /* ================= v7: chapter cards, stat problems, before/after band ================= */
+  .y-part{padding-top:clamp(5.5rem,11vw,8.5rem)}
+  .y-part + .y-sec{padding-top:clamp(3.4rem,7vw,5rem)}
+  .y-ch{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 24px;align-items:end;padding:clamp(2rem,4.4vw,3.4rem) clamp(1.6rem,4vw,3rem);border-radius:clamp(1.2rem,2.2vw,1.8rem);background:var(--dark);color:#fff;position:relative;overflow:hidden}
+  .y-ch::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 90% at 100% 0%,var(--glow,rgba(255,255,255,.08)),transparent 70%);pointer-events:none}
+  .y-ch .num{grid-column:1/4;font-family:var(--display);font-weight:500;font-size:clamp(4rem,9vw,7.4rem);line-height:.78;letter-spacing:-.07em;color:var(--accent-bright,var(--accent))}
+  .y-ch .txt{grid-column:4/13;position:relative;z-index:1}
+  .y-ch .y-l{color:rgba(255,255,255,.6)}
+  .y-ch h2{font-family:var(--display);font-weight:500;font-size:clamp(1.6rem,2.8vw,2.3rem);line-height:1.08;letter-spacing:-.04em;margin:.7rem 0 0;color:#fff}
+  .y-ch p:last-child{font:400 1.02rem/1.55 var(--body);color:rgba(255,255,255,.68);margin:.75rem 0 0;max-width:54ch}
+  .y-trio{gap:12px;border-top:0}
+  .y-t,.y-t + .y-t{background:var(--light);border:0;border-radius:1.1rem;padding:clamp(1.4rem,2.6vw,1.9rem)}
+  .y-t .fig{display:block;font-family:var(--display);font-weight:500;font-size:clamp(2.3rem,4vw,3.2rem);line-height:1;letter-spacing:-.055em;color:var(--accent)}
+  .y-t .fig + h3{margin-top:.9rem;font-size:1.08rem;letter-spacing:-.015em;line-height:1.3}
+  .y-t h3{margin-top:0}
+  .y-t .y-l + h3{margin-top:1rem}
+  .y-vsband{position:relative;width:100vw;left:50%;margin-left:-50vw;background:var(--dark);color:#fff;padding:clamp(3.4rem,7vw,5.4rem) 0}
+  .y-vsband .y-l.a{color:var(--accent-bright,#fff)}
+  .y-vsband .y-h2{color:#fff}
+  .y-vs2{margin:clamp(1.8rem,4vw,2.6rem) 0 0 calc((100% + 24px) / 4)}
+  .y-vs2-h,.y-vs2-r{display:grid;grid-template-columns:minmax(0,5fr) 3rem minmax(0,6fr);align-items:baseline}
+  .y-vs2-h{padding-bottom:.9rem}
+  .y-vs2-h .y-l{color:rgba(255,255,255,.5)}
+  .y-vs2-h .y-l:last-child{color:var(--accent-bright,#fff)}
+  .y-vs2-r{padding:clamp(1rem,2.2vw,1.35rem) 0;border-top:1px solid rgba(255,255,255,.12)}
+  .y-vs2-r span:first-child{font:400 clamp(.98rem,1.3vw,1.08rem)/1.4 var(--body);color:rgba(255,255,255,.46);text-decoration:line-through;text-decoration-color:rgba(255,255,255,.22)}
+  .y-vs2-r i{font-style:normal;color:var(--accent-bright,#fff);text-align:center}
+  .y-vs2-r span:last-child{font:500 clamp(1.08rem,1.7vw,1.32rem)/1.35 var(--body);letter-spacing:-.018em;color:#fff}
+  .y-bleed.tight{margin-top:clamp(.5rem,1.2vw,.9rem)}
+  .y-strip figcaption strong{font-size:.98rem}
+  .y-strip-head .y-l{white-space:nowrap}
+  @media (max-width:860px){
+    .y-ch .num,.y-ch .txt{grid-column:1/-1}
+    .y-ch .num{margin-bottom:1.2rem}
+    .y-vs2{margin-left:0}
+    .y-vs2-h,.y-vs2-r{grid-template-columns:1fr 2rem 1.2fr}
+  }
+
+  /* ================= v8: light chapter openers with contents, problem bento ================= */
+  .y-ch{display:block;background:var(--light);color:var(--ink);padding:clamp(2rem,4.4vw,3.2rem) clamp(1.6rem,4vw,3rem) clamp(1.6rem,3.4vw,2.4rem)}
+  .y-ch::after{display:none}
+  .y-ch-top{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 24px;align-items:start}
+  .y-ch .y-l{grid-column:1/4;color:var(--accent);padding-top:.55rem}
+  .y-ch .txt{grid-column:4/13}
+  .y-ch h2{color:var(--ink);margin:0;font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.045em}
+  .y-ch .txt > p{font:400 1.04rem/1.55 var(--body);color:#4b4b53;margin:.8rem 0 0;max-width:56ch}
+  .y-toc{display:flex;flex-wrap:wrap;gap:8px;margin:clamp(1.6rem,3.4vw,2.2rem) 0 0 calc((100% + 24px) / 4);padding-top:clamp(1.2rem,2.6vw,1.6rem);border-top:1px solid rgba(24,24,27,.1)}
+  .y-toc a{display:inline-flex;align-items:center;gap:.5rem;height:32px;padding:0 13px;border-radius:999px;background:#fff;color:var(--ink);font:400 13.5px/1 var(--body);text-decoration:none;transition:background .2s,color .2s}
+  .y-toc a span{font-family:var(--mono);font-size:.68rem;color:var(--dim)}
+  .y-toc a:hover{background:var(--ink);color:#fff}
+  .y-toc a:hover span{color:rgba(255,255,255,.6)}
+  [id]{scroll-margin-top:110px}
+  /* problem: the biggest problem leads */
+  .y-trio{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);grid-template-rows:auto auto;gap:12px}
+  .y-t:first-child{grid-row:1/3;background:var(--dark);display:flex;flex-direction:column;justify-content:space-between;min-height:clamp(300px,34vw,420px)}
+  .y-t:first-child .fig{color:var(--accent-bright,#fff);font-size:clamp(3.4rem,6.4vw,5.4rem)}
+  .y-t:first-child h3{color:#fff;font-size:clamp(1.3rem,2vw,1.6rem)!important;line-height:1.15!important;letter-spacing:-.03em!important}
+  .y-t:first-child p{color:rgba(255,255,255,.66);font-size:1rem}
+  .y-t:first-child .y-l{color:var(--accent-bright,#fff)}
+  .y-t:first-child .y-l + h3{font-size:clamp(1.6rem,2.8vw,2.2rem)!important}
+  .y-t:not(:first-child) .fig{font-size:clamp(1.9rem,3vw,2.5rem)}
+  @media (max-width:860px){
+    .y-ch .y-l,.y-ch .txt{grid-column:1/-1}
+    .y-ch .y-l{padding-top:0;margin-bottom:.8rem}
+    .y-toc{margin-left:0}
+    .y-trio{grid-template-columns:1fr}
+    .y-t:first-child{grid-row:auto;min-height:0;gap:2rem}
+  }
+
+  /* ================= v9: problem panel, outcome sheet, quieter chapters ================= */
+  .y-toc{border-top:0;padding-top:0;margin-top:clamp(1.4rem,3vw,1.9rem)}
+  .y-ch{padding-bottom:clamp(1.8rem,3.6vw,2.6rem)}
+  .y-trio{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:none;gap:0;background:var(--light);border-radius:1.3rem;padding:clamp(.3rem,.8vw,.5rem)}
+  .y-t,.y-t + .y-t,.y-t:first-child{background:transparent;border-radius:0;min-height:0;grid-row:auto;display:block;padding:clamp(1.4rem,2.8vw,2rem)}
+  .y-t + .y-t{border-left:1px solid rgba(24,24,27,.09)}
+  .y-t .fig,.y-t:first-child .fig,.y-t:not(:first-child) .fig{font-size:clamp(2.4rem,4.2vw,3.3rem);color:var(--accent)}
+  .y-t h3,.y-t:first-child h3,.y-t .fig + h3,.y-t:first-child .y-l + h3{color:var(--ink)!important;font:500 1.08rem/1.3 var(--body)!important;letter-spacing:-.015em!important;margin-top:.9rem}
+  .y-t .y-l + h3,.y-t:first-child .y-l + h3{font-size:clamp(1.2rem,1.8vw,1.4rem)!important;line-height:1.2!important;margin-top:1.4rem}
+  .y-t p,.y-t:first-child p{color:#4b4b53;font-size:.96rem}
+  .y-t:first-child .y-l{color:var(--accent)}
+  .y-out{grid-template-columns:repeat(2,minmax(0,1fr));gap:0;background:#fff;border:1px solid var(--hairline);border-radius:1.3rem;overflow:hidden}
+  .y-o{background:transparent;border-radius:0;padding:clamp(1.5rem,3vw,2.2rem)}
+  .y-o:nth-child(odd){border-right:1px solid var(--hairline)}
+  .y-o:nth-child(n+3){border-top:1px solid var(--hairline)}
+  .y-o b{color:var(--accent);font-size:clamp(2.4rem,4.4vw,3.5rem)}
+  .y-o span{color:var(--ink);font-weight:500;font-size:1rem;margin-top:.8rem}
+  .y-o em{display:block;margin-top:.3rem;font:400 .92rem/1.45 var(--body);font-style:normal;color:#4b4b53}
+  @media (max-width:860px){
+    .y-trio{grid-template-columns:1fr}
+    .y-t + .y-t{border-left:0;border-top:1px solid rgba(24,24,27,.09);margin-top:0}
+    .y-out{grid-template-columns:1fr}
+    .y-o:nth-child(odd){border-right:0}
+    .y-o + .y-o{border-top:1px solid var(--hairline)}
+  }
+
+  /* ================= v10: evidence rows for problems, comparison rows for outcomes ================= */
+  .y-ev{margin:clamp(1.8rem,4vw,2.6rem) 0 0 calc((100% + 24px) / 4);border-top:1px solid var(--ink)}
+  .y-ev-r{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:0 2rem;padding:clamp(1.3rem,2.8vw,1.8rem) 0;border-bottom:1px solid var(--hairline);align-items:start}
+  .y-ev-r .fig{display:block;font:500 clamp(2.3rem,4vw,3.1rem)/1 var(--display);letter-spacing:-.055em;color:var(--accent)}
+  .y-ev-r .cap{display:block;margin-top:.55rem;font:500 1rem/1.3 var(--body);color:var(--ink)}
+  .y-ev-r .idx{display:block;font:500 .68rem/1 var(--mono);letter-spacing:.08em;color:var(--accent);margin-bottom:.7rem}
+  .y-ev-r h3{margin:0;font:500 clamp(1.25rem,1.9vw,1.5rem)/1.2 var(--display);letter-spacing:-.03em;color:var(--ink)}
+  .y-ev-r p{margin:0;font:400 1.02rem/1.6 var(--body);color:#4b4b53;padding-top:.25rem}
+  .y-res{margin:clamp(1.8rem,4vw,2.6rem) 0 0 calc((100% + 24px) / 4);border-top:1px solid var(--ink)}
+  .y-res-r{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,5fr) minmax(0,2.4fr);gap:0 1.8rem;align-items:center;padding:clamp(1.2rem,2.6vw,1.6rem) 0;border-bottom:1px solid var(--hairline)}
+  .y-res-r.nb .lab{grid-column:1/3}
+  .y-res-r .lab b{display:block;font:500 1.05rem/1.3 var(--body);color:var(--ink)}
+  .y-res-r .lab span{display:block;margin-top:.3rem;font:400 .93rem/1.45 var(--body);color:#4b4b53}
+  .y-bars{display:grid;gap:7px}
+  .y-bar{display:grid;grid-template-columns:3.6rem minmax(0,1fr) 2.8rem;align-items:center;gap:.6rem;font:500 .62rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--dim)}
+  .y-bar i{display:block;height:10px;border-radius:999px;background:rgba(24,24,27,.06);position:relative;overflow:hidden}
+  .y-bar i::after{content:"";position:absolute;top:0;bottom:0;left:0;width:var(--w);border-radius:999px;background:#c4c4ca}
+  .y-bar.after i::after{background:var(--accent)}
+  .y-bar em{font-style:normal;text-align:right;text-transform:none;letter-spacing:0;font-size:.78rem;color:var(--ink)}
+  .y-res-r .val{text-align:right;font:500 clamp(1.9rem,3.2vw,2.6rem)/1 var(--display);letter-spacing:-.05em;color:var(--accent);white-space:nowrap}
+  @media (max-width:860px){
+    .y-ev,.y-res{margin-left:0}
+    .y-ev-r{grid-template-columns:1fr}
+    .y-ev-r p{padding-top:.7rem}
+    .y-res-r,.y-res-r.nb{grid-template-columns:1fr auto;gap:.9rem 1rem}
+    .y-res-r .lab,.y-res-r.nb .lab{grid-column:1}
+    .y-res-r .val{grid-column:2;grid-row:1}
+    .y-res-r .y-bars{grid-column:1/-1}
+  }
+
+  .y-note{margin-left:calc((100% + 24px) / 4)}
+  @media (max-width:860px){.y-note{margin-left:0}}
+
+
+  /* ===== global nav: the homepage capsule, everywhere ===== */
+  header.nav.nav-pill{display:none!important}
+  .gnav{position:fixed;top:14px;left:0;right:0;z-index:90;display:flex;justify-content:center;pointer-events:none;padding:0 12px}
+  .gnav .gcap{pointer-events:auto;display:flex;align-items:center;gap:6px;padding:6px;border:1px solid rgba(24,24,27,.1);border-radius:999px;background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) blur(12px);backdrop-filter:saturate(1.4) blur(12px);box-shadow:0 8px 24px -12px rgba(24,24,27,.25)}
+  .gnav .g-mark{width:32px;height:32px;border-radius:50%;background:#18181b;color:#fff;display:grid;place-items:center;font:700 13px/1 var(--body);text-decoration:none}
+  .gnav .g-lnk{font:500 14px/1 var(--body);text-decoration:none;padding:10px 12px;border-radius:999px;color:#18181b;transition:background .2s}
+  .gnav .g-lnk:hover,.gnav .g-lnk.on{background:#f1f0ee}
+  .gnav .g-cv{font:600 14px/1 var(--body);text-decoration:none;padding:10px 14px;border-radius:999px;background:#18181b;color:#fff}
+  @media (max-width:420px){.gnav .gcap{gap:2px;padding:5px}.gnav .g-lnk{padding:9px 9px;font-size:13.5px}.gnav .g-cv{padding:9px 12px;font-size:13.5px}.gnav .g-mark{width:30px;height:30px}}
+  /* ===== case-study section tabs ===== */
+  .y-tabs{position:fixed;left:50%;bottom:18px;z-index:80;transform:translate(-50%,140%);transition:transform .45s cubic-bezier(.2,.7,.2,1);max-width:calc(100vw - 24px)}
+  .y-tabs.on{transform:translate(-50%,0)}
+  .y-tabs-in{display:flex;gap:4px;padding:5px;border-radius:999px;background:rgba(24,24,27,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 14px 34px -14px rgba(0,0,0,.5);overflow-x:auto;scrollbar-width:none}
+  .y-tabs-in::-webkit-scrollbar{display:none}
+  .y-tabs a{flex:none;display:inline-flex;align-items:center;height:34px;padding:0 13px;border-radius:999px;font:500 13px/1 var(--body);color:rgba(255,255,255,.72);text-decoration:none;white-space:nowrap;transition:background .2s,color .2s}
+  .y-tabs a:hover{color:#fff}
+  .y-tabs a.on{background:#fff;color:#18181b}
+  @media (prefers-reduced-motion:reduce){.y-tabs{transition:none}}
+
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body id="top">
+<header class="gnav"><nav class="gcap" aria-label="Primary"><a class="g-mark" href="../../" aria-label="Stanley Ojima, home">so</a><a class="g-lnk" href="../../about/">About</a><a class="g-lnk on" href="../../work/">Projects</a><a class="g-lnk" href="#contact">Contact</a><a class="g-cv" href="#" data-resume>Resume</a></nav></header>
 <div class="grain" aria-hidden="true"></div>
 <header class="nav nav-pill">
   <div class="nav-inner"><div class="capsule">
@@ -593,17 +1054,22 @@
     <a class="menu-cta" href="#" data-resume>Resume <span class="arr">↗</span></a>
   </div></div></div>
 </header>
-<main style="--accent:var(--c-slate)">
-<section class="cs-hero" style="--accent:var(--c-slate)"><div class="cs-wrap">
-      <a class="cs-back" href="../"><span class="a">←</span> all projects</a>
-      <p class="cs-eyebrow">Product Designer · 2023–2024 · Fintech, DEI Analytics</p>
-      <h1 class="cs-title">Lenox Park Solutions</h1>
-      <p class="cs-summary">Designed data-dense analytics dashboards that help institutional investors track diversity metrics across clients representing $4T+ in combined AUM.</p>
-    </div></section>
-    <div class="cs-wrap"><div class="cs-stats"><div class="cs-stat"><div class="cs-stat-v">$4T+</div><div class="cs-stat-l">Assets under management</div></div><div class="cs-stat"><div class="cs-stat-v">3,500+</div><div class="cs-stat-l">Registered users</div></div><div class="cs-stat"><div class="cs-stat-v">1,800+</div><div class="cs-stat-l">Organizations</div></div><div class="cs-stat"><div class="cs-stat-v">3×</div><div class="cs-stat-l">Faster time-to-insight</div></div></div></div>
-    <figure class="cs-big cs-rv"><div class="cs-big-in"><img src="img/intro-investments.webp" alt="RoundTables investments analytics with LPI diversity trend lines and deals by asset class"></div></figure>
-<section class="cs-part cs-rv"><div class="cs-wrap"><p class="cs-part-label">Part 1</p><h2 class="cs-part-title">about lenox park solutions</h2><p class="cs-lede">Lenox Park Solutions (RoundTables) is a fintech platform that helps institutional investors, pension funds, endowments, family offices, track and improve diversity metrics across their investment portfolios. Think of it as the Bloomberg terminal for DEI in finance: complex data, high stakes, specialist users.</p><p class="cs-lede">The platform is trusted by leading organizations representing $4T+ in combined client assets, including J.P. Morgan, Goldman Sachs, Netflix, and Loom. Users are investment analysts and portfolio managers who make compliance decisions based on dense, multi-dimensional data.</p></div></section><section class="cs-rv"><div class="cs-wrap"><p class="cs-kicker" style="margin-top:clamp(2.4rem,5.5vw,3.8rem);margin-bottom:.2rem">Context &amp; team</p><dl class="cs-meta"><div><dt>My role</dt><dd>Sole Product Designer</dd></div><div><dt>Team</dt><dd>Founder + 2 engineers</dd></div><div><dt>Challenge</dt><dd>Learn institutional compliance fast while designing for specialists</dd></div></dl></div></section><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">What I designed</p><h2 class="cs-sh">6 core product areas</h2><p class="cs-intro">I redesigned the entire platform, from investment tracking to analytics dashboards to the marketing website.</p><div class="ft-grid"><div class="ft"><div class="ft-img"><img src="img/card-investments.webp" alt="RoundTables investments table with status dots, LPI score chips and deal-owner badges"></div><h4 class="ft-title">Investments Overview</h4><p class="ft-desc">Redesigned the deals table with visual status indicators, LPI scoring chips, and role badges, analysts scan 50+ investments and spot action items in seconds.</p></div><div class="ft"><div class="ft-img"><img src="img/card-analytics.webp" alt="RoundTables analytics dashboard comparing LPI scores by AUM and workforce size"></div><h4 class="ft-title">Analytics Dashboard</h4><p class="ft-desc">The LPI (Lenox Park Index) scoring dashboard, diversity trend lines, score breakdowns by AUM size and workforce, and comparative benchmarking. The tool analysts use daily.</p></div><div class="ft"><div class="ft-img"><img src="img/card-surveys.webp" alt="RoundTables diversity survey tracking with progress states across portfolio organizations"></div><h4 class="ft-title">Diversity Surveys</h4><p class="ft-desc">Survey collection and tracking across portfolio organizations, progress states, contributors, and status at a glance so analysts know what’s outstanding.</p></div><div class="ft"><div class="ft-img"><img src="img/card-deal-detail.webp" alt="RoundTables investment detail with allocation data, manager details and POD activity feed"></div><h4 class="ft-title">Deal Detail &amp; Collaboration</h4><p class="ft-desc">Investment info, allocation data, manager details, and team activity in one view. A POD activity feed enables real-time collaboration without leaving the deal page.</p></div><div class="ft"><div class="ft-img"><img src="img/card-org-lpi.webp" alt="RoundTables organization LPI score with diversity gauge, staffing inputs and ethnicity breakdown"></div><h4 class="ft-title">Organization LPI Score</h4><p class="ft-desc">Per-organization diversity-impact scoring with gender and ethnicity breakdowns, simulated improvements, and the staffing inputs that drive the score.</p></div><div class="ft"><div class="ft-img"><img src="img/card-profiles.webp" alt="RoundTables member profile and settings with privacy controls"></div><h4 class="ft-title">User Profiles &amp; Settings</h4><p class="ft-desc">Member profiles, privacy controls, and organization settings, a settings architecture that scales as the platform adds configuration options.</p></div></div></div></section><section class="cs-part cs-rv"><div class="cs-wrap"><p class="cs-part-label">Part 2, Deep Dive</p><h2 class="cs-part-title">making complex data actionable</h2><p class="cs-lede">The core challenge wasn’t displaying data, the platform already had plenty. It was making that data actionable. Analysts were drowning in metrics, unable to quickly identify which investments needed attention, which organizations were improving, and where compliance gaps existed.</p></div></section><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">The problem</p><h2 class="cs-sh">Raw data tables weren’t translating into decisions</h2><ul class="nlist"><li>Analysts spent 60% of their time cross-referencing data between views instead of analyzing it.</li><li>All metrics surfaced at once with no hierarchy, LPI scores, deal amounts, status, managers, and dates all competed equally.</li><li>Comparing diversity metrics across portfolio companies required exporting to spreadsheets, the tool meant to eliminate spreadsheets was creating more.</li></ul></div></section><figure class="cs-big cs-rv"><div class="cs-big-in"><img src="img/band-problem-research.webp" alt="RoundTables investment research table showing many competing data dimensions at once"></div></figure><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">Research</p><h2 class="cs-sh">Analysts needed comparison, not deep-dive</h2><ul class="rsr"><li><b>The primary task was comparison.</b> Analysts rarely looked at one company in isolation, their workflow was always relative: “How does Fund A’s score compare to Fund B?”</li><li><b>Even experts experienced overload.</b> These were institutional analysts with decades of experience, and they still struggled with the density. If experts can’t parse it, the UI is wrong.</li><li><b>Compliance deadlines created urgency.</b> Quarterly reporting meant answers in hours, not days. Every extra click cost real time under real pressure.</li></ul></div></section><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">Key decisions &amp; trade-offs</p><div class="dec"><p class="dec-k">Decision 1</p><h3 class="dec-title">Comparative dashboard layout</h3><p class="dec-body">Side-by-side views for cross-company DEI metrics. LPI trend lines, donut charts for asset-class distribution, and comparative scoring, all visible without scrolling.</p><p class="dec-why"><span>Why this, not the alternatives</span>Single-company deep-dive views required constant back-and-forth navigation. The comparative layout matched how analysts actually think, always in relative terms, never absolute.</p></div><div class="dec"><p class="dec-k">Decision 2</p><h3 class="dec-title">Progressive data density</h3><p class="dec-body">Summary cards at the top (Total Investments, AUM, Impact-adjusted AUM) with drill-down into table views. Users choose their depth.</p><p class="dec-why"><span>Why this, not the alternatives</span>Showing everything upfront caused overload even for experts. Summary-first, detail-on-demand matched the “scan then dive” behavior we observed in every interview.</p></div><div class="dec"><p class="dec-k">Decision 3</p><h3 class="dec-title">Visual status system for deals</h3><p class="dec-body">Color-coded status dots, LPI score chips, and role badges on every row. Analysts can scan 50 deals and find the 3 that need attention in under 10 seconds.</p><p class="dec-why"><span>Why this, not the alternatives</span>Text-only status labels required reading every row. Visual encoding lets peripheral vision do the filtering, critical when managing 50+ investments under deadline pressure.</p></div></div></section><figure class="cs-big cs-rv"><div class="cs-big-in"><img src="img/band-dec-org-lpi.webp" alt="RoundTables organization LPI scoring detail with diversity gauge and staffing inputs"></div></figure><figure class="cs-big cs-rv"><div class="cs-big-in"><img src="img/band-dec-deal.webp" alt="RoundTables single deal detail view with allocation, manager and activity panels"></div></figure><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">Before vs. after</p><div class="ba"><div class="ba-h">Before</div><div class="ba-h after">After</div><div class="ba-c">Cluttered, overwhelming dashboard layout</div><div class="ba-c after">Simplified, scannable interface with clear visual hierarchy</div><div class="ba-c">Hard-to-scan investment data</div><div class="ba-c after">Streamlined investment management for faster decisions</div><div class="ba-c">Collaboration felt disjointed and secondary</div><div class="ba-c after">Integrated collaboration for seamless teamwork</div></div></div></section><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">Impact &amp; results</p><div class="cs-stats"><div class="cs-stat"><div class="cs-stat-v">3×</div><div class="cs-stat-l">Faster time-to-insight</div></div><div class="cs-stat"><div class="cs-stat-v">↓60%</div><div class="cs-stat-l">Cross-referencing time</div></div><div class="cs-stat"><div class="cs-stat-v">$4T+</div><div class="cs-stat-l">Combined client AUM</div></div><div class="cs-stat"><div class="cs-stat-v">ESG</div><div class="cs-stat-l">Full compliance</div></div></div><p class="cs-note">The comparative layout became the default view. Analysts stopped exporting to spreadsheets for cross-company analysis. Quarterly-reporting prep dropped from days to hours.</p></div></section><section class="cs-sec cs-rv"><div class="cs-wrap"><p class="cs-kicker">Reflection</p><p class="cs-lede">“Simple” for experts means “well-structured,” not “less information.” The instinct is to hide data to reduce complexity, but institutional analysts need density, they just need it organized. Progressive disclosure with smart defaults gave them the depth they needed without the chaos they had.</p></div></section><figure class="cs-big cs-rv"><div class="cs-big-in"><img src="img/band-landing.webp" alt="Lenox Park Solutions RoundTables marketing landing page"></div></figure>
-<section class="mp-wrap cs-rv"><div class="cs-wrap"><p class="mp-eyebrow">more projects</p><div class="mp-grid"><a class="mp" href="../goco/" style="--accent:var(--rose)"><span class="mp-client">goco</span><span class="mp-sector">SaaS, HR Tech</span><p class="mp-teaser">Redesigned core features across an HR platform serving thousands of businesses.</p><span class="mp-view">view project →</span></a><a class="mp" href="../risevest/" style="--accent:var(--c-teal)"><span class="mp-client">risevest</span><span class="mp-sector">Fintech</span><p class="mp-teaser">Overhauled portfolio management for a dollar-based investment app, onboarding nearly doubled.</p><span class="mp-view">view project →</span></a><a class="mp" href="../dro-health/" style="--accent:var(--rose-ink)"><span class="mp-client">dro health</span><span class="mp-sector">Health Tech, Telehealth</span><p class="mp-teaser">Overhauled a healthcare platform serving 50K+ users across Nigeria.</p><span class="mp-view">view project →</span></a></div></div></section>
+<main style="--accent:#3b4e63;--accent-bright:#7ea3cc;--tint:rgba(59,78,99,.1);--light:#EDF0F4;--dark:#141b24;--glow:rgba(126,163,204,.2)">
+<section class="y-hero"><div class="y-wrap"><a class="cs-back" href="../"><span class="a">←</span> all projects</a><h1 class="y-title">Lenox Park</h1><div class="y-badges"><span class="y-pill">Sole product designer</span><span class="y-flag">$4T+ client AUM</span><span class="y-yrs">2023–2024 · Fintech, DEI analytics</span></div><p class="y-summary">As the only designer, I redesigned an analytics platform institutional investors use to track diversity across their portfolios, for clients representing more than $4 trillion in assets. The brief was to turn dense data into decisions analysts could make under deadline.</p><dl class="y-facts"><div class="y-fact"><dt>Role</dt><dd>Sole product designer</dd></div><div class="y-fact"><dt>Timeline</dt><dd>2023–2024</dd></div><div class="y-fact"><dt>Team</dt><dd>Founder and 2 engineers</dd></div><div class="y-fact"><dt>Scope</dt><dd>6 product areas and the marketing site</dd></div></dl><div class="y-nums"><div class="y-num"><b>$4T+</b><span>Combined client AUM</span></div><div class="y-num"><b>3,500+</b><span>Registered users</span></div><div class="y-num"><b>3×</b><span>Faster time to insight</span></div><div class="y-num"><b>↓60%</b><span>Cross-referencing time</span></div></div></div></section>
+<figure class="y-bleed cs-rv"><img src="img/lx-hero.webp" alt="Lenox Park investments overview with diversity score trends and asset-class breakdown" loading="lazy"></figure>
+<section class="y-part cs-rv"><div class="y-wrap"><div class="y-ch"><div class="y-ch-top"><p class="y-l">Part one</p><div class="txt"><h2>The platform and my role</h2><p>What the platform does, who relies on it, and everything I designed.</p></div></div></div></div></section>
+<section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="overview"><p class="y-l a">Overview</p><div class="y-c"><h2 class="y-h2">A Bloomberg terminal for diversity in finance</h2><p class="y-p">Lenox Park Solutions (RoundTables) helps pension funds, endowments and family offices track diversity across the managers and companies they invest in. Its clients represent more than $4 trillion in assets, and organisations including J.P. Morgan, Goldman Sachs, Netflix and Loom have used it.</p><p class="y-p">The users are investment analysts making compliance decisions on dense, multi-dimensional data. <b>They’re experts, and the interface still overwhelmed them.</b> As the only designer, working directly with the founder and two engineers, I had to learn institutional compliance fast enough to design for people who’d spent careers in it.</p></div></div></div></section>
+<section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="what-i-designed"><p class="y-l a">What I designed</p><div class="y-c"><h2 class="y-h2">The whole platform, end to end</h2><p class="y-p">Investment tracking, analytics, surveys, collaboration and the marketing site.</p></div></div></div></section>
+<figure class="y-bleed cs-rv"><img src="img/lx-areas.webp" alt="Lenox Park screens: investments, organisation scores, deal detail, the marketing site, analytics and surveys" loading="lazy"></figure>
+<section class="y-sec" style="padding-top:clamp(2.2rem,5vw,3.2rem)"><div class="y-wrap cs-rv"><div class="y-g"><p class="y-l a">The areas</p><div class="y-c"><div class="y-cols" style="--n:2"><div class="y-col"><p class="y-l a">01</p><h4>Investments overview</h4><p>Status, score and role on every row, so analysts scan 50+ investments and spot what needs action.</p></div><div class="y-col"><p class="y-l a">02</p><h4>Analytics dashboard</h4><p>Scores, diversity trends and benchmarks by fund size and workforce. The screen analysts use daily.</p></div><div class="y-col"><p class="y-l a">03</p><h4>Diversity surveys</h4><p>Collection and progress across portfolio organisations, so nothing outstanding gets missed.</p></div><div class="y-col"><p class="y-l a">04</p><h4>Deal detail and collaboration</h4><p>Investment data, managers and a team activity feed on one page.</p></div><div class="y-col"><p class="y-l a">05</p><h4>Organisation scoring</h4><p>Per-organisation scores with breakdowns, staffing inputs and simulated improvements.</p></div><div class="y-col"><p class="y-l a">06</p><h4>Marketing site</h4><p>The public story for a product sold to institutional buyers.</p></div></div></div></div></div></section>
+<section class="y-part cs-rv"><div class="y-wrap"><div class="y-ch"><div class="y-ch-top"><p class="y-l">Part two</p><div class="txt"><h2>Deep dive: designing for comparison</h2><p>Why expert users were still overwhelmed, and the three calls that made comparison the default.</p></div></div></div></div></section>
+<section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="the-problem"><p class="y-l a">The problem</p><div class="y-c"><h2 class="y-h2">Data everywhere, decisions nowhere</h2><p class="y-p">The platform had plenty of data. The problem was acting on it. <b>Analysts couldn’t quickly see which investments needed attention, which organisations were improving, or where compliance gaps were.</b></p></div></div><div class="y-ev"><div class="y-ev-r"><div><span class="fig">60%</span><span class="cap">Of analyst time on cross-referencing</span></div><p>Moving between views instead of analysing.</p></div><div class="y-ev-r"><div><span class="fig">50+</span><span class="cap">Investments at equal weight</span></div><p>Scores, amounts, status and dates all competed, row after row.</p></div><div class="y-ev-r"><div><span class="fig">Excel</span><span class="cap">Where comparison actually happened</span></div><p>The tool built to replace spreadsheets was generating them.</p></div></div></div></section>
+<section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="what-we-learned"><p class="y-l a">What we learned</p><div class="y-c"><h2 class="y-h2">Analysts compare. They rarely inspect.</h2><p class="y-p">I interviewed analysts and watched how they prepared quarterly reports.</p></div></div><div class="y-cols" style="--n:3"><div class="y-col"><p class="y-l a">Interviews</p><h4>Everything is relative</h4><p>Nobody asked “how is Fund A doing?” They asked “how does Fund A compare to Fund B?”</p></div><div class="y-col"><p class="y-l a">Observation</p><h4>Experts were overloaded too</h4><p>These were people with decades of experience. If they struggled, the interface was wrong.</p></div><div class="y-col"><p class="y-l a">Context</p><h4>Deadlines set the pace</h4><p>Quarterly reporting meant answers in hours, not days. Every extra click cost real time.</p></div></div><div class="y-insight"><p class="y-l a">The insight</p><p>The primary task was comparison. Every decision after this was about making comparison the default instead of an export.</p></div></div></section>
+<section class="y-sec" style="padding-bottom:0"><div class="y-wrap cs-rv"><div class="y-g" id="key-decisions-and-trade-offs"><p class="y-l a">Key decisions &amp; trade-offs</p><div class="y-c"><h2 class="y-h2">Three calls that made the data usable</h2></div></div></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 01</p><h3>Design for comparison, not inspection</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">Side-by-side scores, trends and benchmarks across companies, visible without scrolling.</p></div><div><h4>The trade-off</h4><p>Single-company pages are the obvious structure for a data product, and they forced analysts to hold one company in their head while opening another. A comparative default matched how they already reasoned.</p></div></div></div></div><figure class="y-bleed cs-rv"><img src="img/lx-dec1.webp" alt="Organisation diversity score with trend, breakdowns and staffing inputs" loading="lazy"></figure></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 02</p><h3>Let experts choose their depth</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">Summary cards first (total investments, AUM, impact-adjusted AUM), with full detail one step down.</p></div><div><h4>The trade-off</h4><p>Hiding data would have looked simpler and failed these users, who need density. The answer was order, not reduction: summary first, detail on demand, the “scan, then dive” pattern I saw in every session.</p></div></div></div></div><figure class="y-bleed cs-rv"><img src="img/lx-dec2.webp" alt="Deal detail with investment info, allocation and manager details" loading="lazy"></figure></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 03</p><h3>Let peripheral vision do the filtering</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">Status, score and role are encoded visually on every row, so the three deals that need attention stand out from fifty.</p></div><div><h4>The trade-off</h4><p>Text labels were accurate and meant reading every row. Visual encoding gives up a little explicitness and saves what analysts don’t have near quarter-end: time.</p></div></div></div></div><figure class="y-bleed cs-rv"><img src="img/lx-dec3.webp" alt="Investments table with status dots, score chips and role badges" loading="lazy"></figure></div></section>
+<section class="y-sec cs-rv"><div class="y-vsband"><div class="y-wrap"><div class="y-g" id="before-vs-after"><p class="y-l a">Before vs. after</p><div class="y-c"><h2 class="y-h2">What changed for analysts</h2></div></div><div class="y-vs2"><div class="y-vs2-h"><p class="y-l">Before</p><i></i><p class="y-l">After</p></div><div class="y-vs2-r"><span>Every metric at the same weight</span><i>→</i><span>A clear hierarchy, summary first</span></div><div class="y-vs2-r"><span>One company at a time</span><i>→</i><span>Side-by-side comparison by default</span></div><div class="y-vs2-r"><span>Reading every row for status</span><i>→</i><span>Status visible at a glance</span></div><div class="y-vs2-r"><span>Exporting to compare</span><i>→</i><span>Comparison inside the product</span></div><div class="y-vs2-r"><span>Days of quarterly prep</span><i>→</i><span>Hours of quarterly prep</span></div></div></div></div></section>
+<section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="outcome"><p class="y-l a">Outcome</p><div class="y-c"><h2 class="y-h2">Analysts stopped exporting to compare</h2></div></div><div class="y-res"><div class="y-res-r"><div class="lab"><b>Faster time to insight</b><span>With comparison as the default view.</span></div><div class="y-bars"><div class="y-bar"><span>Before</span><i style="--w:100%"></i><em></em></div><div class="y-bar after"><span>After</span><i style="--w:33%"></i><em></em></div></div><div class="val">3×</div></div><div class="y-res-r"><div class="lab"><b>Cross-referencing time</b><span>Less switching between views.</span></div><div class="y-bars"><div class="y-bar"><span>Before</span><i style="--w:100%"></i><em></em></div><div class="y-bar after"><span>After</span><i style="--w:40%"></i><em></em></div></div><div class="val">↓60%</div></div><div class="y-res-r nb"><div class="lab"><b>Quarterly reporting prep</b><span>Down from days.</span></div><div class="val">Hours</div></div></div><p class="y-p y-note"><!-- VERIFY: 3x and 60% were estimates on the original page -->The comparative layout became the default view. <b>Cross-company analysis moved out of spreadsheets and back into the product.</b></p></div></section>
+<section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="reflection"><p class="y-l a">Reflection</p><div class="y-c"><p class="y-quote">For experts, “simple” means well-structured, not less information.</p><p class="y-p">The instinct is to hide data to reduce complexity, but analysts need density. They just need it organised. Summary-first with smart defaults gave them the depth they needed without the chaos they had.</p></div></div></div></section>
+<section class="mp-wrap cs-rv"><div class="y-wrap"><p class="mp-eyebrow">more projects</p><div class="mp-grid"><a class="mp" href="../risevest/" style="--accent:var(--c-teal)"><span class="mp-client">Risevest</span><span class="mp-sector">Fintech</span><p class="mp-teaser">Redesigned a dollar-investment app for 620K+ users; onboarding rose from 34% to 58%.</p><span class="mp-view">view project →</span></a><a class="mp" href="../dro-health/" style="--accent:#6D28D9"><span class="mp-client">DRO Health</span><span class="mp-sector">Health tech, Telehealth</span><p class="mp-teaser">Redesigned telehealth for 50K+ users in Nigeria; sign-up drop-off fell 18%.</p><span class="mp-view">view project →</span></a><a class="mp" href="../goco/" style="--accent:var(--rose)"><span class="mp-client">GoCo</span><span class="mp-sector">SaaS, HR Tech</span><p class="mp-teaser">Led design across an HR platform for 200K+ users, and rebuilt its most complained-about feature.</p><span class="mp-view">view project →</span></a></div></div></section>
 </main>
 <footer class="site-footer" id="contact">
   <div class="foot-inner">
@@ -637,6 +1103,11 @@
       <div class="modal-actions" style="margin:1.1rem 0 .1rem"><button id="rsTopDl" class="btn btn-primary" type="button" data-print>download pdf <span class="arr">↓</span></button></div>
       <section class="rs-section">
         <h3 class="rs-h">Experience</h3>
+        <div class="rs-job">
+          <div class="rs-job-top"><span class="rs-company">QuickFleet</span><span class="rs-dates">2026 – Present</span></div>
+          <p class="rs-role">Co-founder &amp; CTO</p>
+          <ul class="rs-bullets"><li>Co-founded an electric delivery network for Nigerian cities; own product and technology.</li><li>Designed the customer app end to end, from booking and fixed pricing to live tracking and delivery codes.</li><li>Designed and built the marketing site, quickfleet.co.</li></ul>
+        </div>
         <div class="rs-job">
           <div class="rs-job-top"><span class="rs-company">GoCo</span><span class="rs-dates">Jul 2022 – Apr 2025</span></div>
           <p class="rs-role">Senior Product Designer</p>
@@ -705,6 +1176,19 @@
   if(cb)cb.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(cb.getAttribute('data-email')||'');}catch(_){}cb.classList.add('copied');cb.textContent='copied';clearTimeout(cb._t);cb._t=setTimeout(()=>{cb.classList.remove('copied');cb.textContent='copy';},1600);});
   const tb=document.querySelector('.foot-top-btn');
   if(tb)tb.addEventListener('click',()=>window.scrollTo({top:0,behavior:reduced?'auto':'smooth'}));
+})();
+</script>
+<nav class="y-tabs" aria-label="Sections"><div class="y-tabs-in"><a href="#overview">Overview</a><a href="#what-i-designed">Designed</a><a href="#the-problem">Problem</a><a href="#what-we-learned">Research</a><a href="#key-decisions-and-trade-offs">Decisions</a><a href="#outcome">Outcome</a></div></nav><script>
+(function(){
+  var bar=document.querySelector('.y-tabs'); if(!bar) return;
+  var links=[].slice.call(bar.querySelectorAll('a')), hero=document.querySelector('.y-hero'), foot=document.querySelector('.site-footer');
+  function vis(){ var h=hero?hero.getBoundingClientRect().bottom<80:true; var f=foot?foot.getBoundingClientRect().top<innerHeight-40:false; bar.classList.toggle('on',h&&!f); }
+  addEventListener('scroll',vis,{passive:true}); vis();
+  var secs=links.map(function(l){return document.querySelector(l.getAttribute('href'));});
+  function act(){ var i=-1; secs.forEach(function(s,k){ if(s && s.getBoundingClientRect().top<innerHeight*.35) i=k; });
+    links.forEach(function(l,k){ l.classList.toggle('on',k===i); });
+    if(i>=0){ var l=links[i], p=l.parentNode; var x=l.offsetLeft-(p.clientWidth-l.clientWidth)/2; p.scrollTo({left:x,behavior:'smooth'}); } }
+  addEventListener('scroll',act,{passive:true}); act();
 })();
 </script>
 </body>
