@@ -1011,6 +1011,156 @@
   .y-note{margin-left:calc((100% + 24px) / 4)}
   @media (max-width:860px){.y-note{margin-left:0}}
 
+  /* ================= v11: grid-aligned chapter bands, problem tiles, outcome panel ================= */
+  .y-part{padding-top:clamp(5rem,10vw,7.5rem)}
+  .y-chb{background:var(--light);padding:clamp(2.6rem,5.6vw,4rem) 0}
+  .y-chb .y-ch-top{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 24px;align-items:start}
+  .y-chb .y-l{grid-column:1/4;color:var(--accent);padding-top:.6rem}
+  .y-chb .txt{grid-column:4/13}
+  .y-chb h2{margin:0;font:500 clamp(1.8rem,3.2vw,2.6rem)/1.05 var(--display);letter-spacing:-.045em;color:var(--ink);max-width:22ch}
+  .y-chb .txt > p{margin:.8rem 0 0;font:400 1.05rem/1.55 var(--body);color:#4b4b53;max-width:56ch}
+  .y-part + .y-sec{padding-top:clamp(3.6rem,7vw,5rem)}
+  .y-ev{border-top:0;display:grid;gap:10px}
+  .y-ev-r{grid-template-columns:clamp(150px,18vw,210px) minmax(0,1fr);gap:0 clamp(1.2rem,2.6vw,2rem);padding:0;border:0;align-items:stretch}
+  .y-ev-r .tile{border-radius:1rem;background:var(--light);padding:clamp(1rem,2vw,1.3rem) clamp(1rem,2vw,1.4rem);display:flex;align-items:flex-end;min-height:clamp(96px,10vw,120px)}
+  .y-ev-r .fig{font-size:clamp(2.1rem,3.6vw,2.8rem)}
+  .y-ev-r .word{font:500 clamp(1.25rem,2vw,1.55rem)/1.05 var(--display);letter-spacing:-.035em;color:var(--accent)}
+  .y-ev-r .body{padding:clamp(.6rem,1.4vw,.9rem) 0;border-bottom:1px solid var(--hairline);display:flex;flex-direction:column;justify-content:center}
+  .y-ev-r:last-child .body{border-bottom:0}
+  .y-ev-r .body h3{font:500 1.1rem/1.3 var(--body);letter-spacing:-.015em;color:var(--ink);margin:0}
+  .y-ev-r .body p{margin:.35rem 0 0;padding:0;font-size:.98rem}
+  .y-res{border-top:0;background:var(--light);border-radius:1.3rem;padding:.4rem clamp(1.2rem,2.6vw,1.8rem)}
+  .y-res-r{border-bottom:1px solid rgba(24,24,27,.08)}
+  .y-res-r:last-child{border-bottom:0}
+  .y-bar i{height:12px;background:rgba(24,24,27,.07)}
+  .y-res-r{grid-template-columns:minmax(0,4fr) minmax(0,4.4fr) minmax(0,3.2fr)}
+  .y-res-r .val{font-size:clamp(1.8rem,3vw,2.5rem)}
+  img.y-av{object-fit:cover;background:var(--light)}
+  @media (max-width:860px){
+    .y-chb .y-l,.y-chb .txt{grid-column:1/-1}
+    .y-chb .y-l{padding-top:0;margin-bottom:.8rem}
+    .y-ev-r{grid-template-columns:1fr}
+    .y-ev-r .tile{min-height:0}
+    .y-ev-r .body{padding-top:.8rem}
+  }
+
+  /* ================= v12: problem as a journey, outcome with a lead result ================= */
+  .y-jn{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));margin-top:clamp(2rem,4.4vw,3rem)}
+  .y-st{position:relative;padding-right:clamp(.8rem,1.6vw,1.4rem)}
+  .y-st::before{content:"";position:absolute;top:7px;left:18px;right:0;height:2px;background:rgba(24,24,27,.1)}
+  .y-st:last-child::before{display:none}
+  .y-st .dot{position:relative;z-index:1;display:block;width:16px;height:16px;border-radius:50%;background:#fff;border:2px solid #c9c9cf}
+  .y-st.pain .dot{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 6px var(--tint)}
+  .y-st .n{display:block;margin-top:1.1rem;font:500 .66rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+  .y-st h4{margin:.5rem 0 0;font:500 1.02rem/1.3 var(--body);letter-spacing:-.015em;color:var(--ink)}
+  .y-st p{margin:.4rem 0 0;font:400 .92rem/1.5 var(--body);color:#4b4b53}
+  .y-st .pb{margin-top:1rem;padding:.85rem .95rem;border-radius:.85rem;background:var(--tint)}
+  .y-st .pb b{display:block;font:500 clamp(1.5rem,2.4vw,1.9rem)/1 var(--display);letter-spacing:-.045em;color:var(--accent)}
+  .y-st .pb span{display:block;margin-top:.35rem;font:500 .86rem/1.35 var(--body);color:var(--ink)}
+  .y-st .pb.t span{margin-top:0}
+  .y-res-hero{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:0 2rem;align-items:center;padding:clamp(1.4rem,3vw,2rem) 0;border-bottom:1px solid rgba(24,24,27,.08)}
+  .y-res-hero .val{text-align:left;font:500 clamp(3.2rem,6vw,5rem)/.95 var(--display);letter-spacing:-.06em;color:var(--accent)}
+  .y-res-hero .lab b{display:block;font:500 clamp(1.15rem,1.8vw,1.4rem)/1.25 var(--body);letter-spacing:-.02em;color:var(--ink)}
+  .y-res-hero .lab > span{display:block;margin-top:.4rem;font:400 1rem/1.5 var(--body);color:#4b4b53}
+  .y-res-hero .y-bars{margin-top:1rem;max-width:420px}
+  @media (max-width:860px){
+    .y-jn{grid-template-columns:1fr;gap:0}
+    .y-st{padding:0 0 1.6rem 2.2rem}
+    .y-st::before{top:18px;bottom:0;left:7px;right:auto;width:2px;height:auto}
+    .y-st .dot{position:absolute;left:0;top:0}
+    .y-st .n{margin-top:0}
+    .y-res-hero{grid-template-columns:1fr;gap:.8rem}
+  }
+
+  /* ================= v13: journey as connected cards, outcome as a clean scoreboard ================= */
+  .y-out3{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));background:var(--light);border-radius:1.4rem;margin:clamp(1.8rem,4vw,2.6rem) 0 0 calc((100% + 24px) / 4);overflow:hidden}
+  .y-o3{padding:clamp(1.4rem,2.8vw,2rem) clamp(1.1rem,2.2vw,1.6rem)}
+  .y-o3 + .y-o3{border-left:1px solid rgba(24,24,27,.08)}
+  .y-o3 b{display:block;font:500 clamp(2rem,3.4vw,2.8rem)/1 var(--display);letter-spacing:-.055em;color:var(--accent);white-space:nowrap}
+  .y-o3 h4{margin:1rem 0 0;font:500 1rem/1.3 var(--body);letter-spacing:-.01em;color:var(--ink)}
+  .y-o3 p{margin:.35rem 0 0;font:400 .9rem/1.5 var(--body);color:#4b4b53}
+  .y-o3 small{display:inline-block;margin-top:.8rem;font:500 .7rem/1 var(--mono);letter-spacing:.04em;color:var(--dim);background:#fff;padding:6px 9px;border-radius:999px}
+  .y-tq blockquote{font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(1.25rem,1.9vw,1.55rem);line-height:1.45;letter-spacing:-.01em}
+  @media (max-width:860px){
+    .y-out3{grid-template-columns:1fr 1fr;margin-left:0}
+    .y-o3 + .y-o3{border-left:0}
+    .y-o3:nth-child(even){border-left:1px solid rgba(24,24,27,.08)}
+    .y-o3:nth-child(n+3){border-top:1px solid rgba(24,24,27,.08)}
+  }
+
+  /* ================= v14: the journey, refined (same concept as v12) ================= */
+  .y-jn{margin-top:clamp(2.2rem,4.6vw,3.2rem);align-items:stretch}
+  .y-st{display:flex;flex-direction:column;padding-right:clamp(1rem,2vw,1.6rem)}
+  .y-st::before{top:8px;left:20px;right:2px;height:2px;background:rgba(24,24,27,.12);border-radius:2px}
+  .y-st .dot{width:18px;height:18px;border:2px solid #c9c9cf;background:#fff}
+  .y-st.pain .dot{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 6px var(--tint)}
+  .y-st .n{margin-top:1.15rem;color:var(--dim)}
+  .y-st.pain .n{color:var(--accent)}
+  .y-st h4{margin-top:.45rem;font-size:1.04rem}
+  .y-st p{font-size:.93rem;max-width:26ch}
+  .y-st .pb{margin-top:auto;padding:1rem 1.05rem;border-radius:.9rem;background:var(--tint)}
+  .y-st .pb::before{content:none}
+  .y-st h4 + p + .pb,.y-st p + .pb{margin-top:auto}
+  .y-st > p{margin-bottom:1.1rem}
+  .y-st .pb b{font-size:clamp(1.5rem,2.3vw,1.9rem)}
+  .y-st .pb span{color:var(--ink);font-weight:500}
+  .y-st .pb.t{padding:.85rem 1.05rem}
+  .y-st .pb.t span{color:var(--accent);font-weight:500}
+  /* outcome: same scoreboard, each result its own card */
+  .y-out3{background:var(--light);gap:10px;padding:10px;overflow:visible}
+  .y-o3{background:#fff;border-radius:1rem;padding:clamp(1.3rem,2.6vw,1.8rem) clamp(1.1rem,2vw,1.5rem);display:flex;flex-direction:column}
+  .y-o3 + .y-o3{border-left:0}
+  .y-o3 b{font-size:clamp(2.1rem,3.6vw,3rem)}
+  .y-o3 h4{margin-top:1.1rem}
+  .y-o3 small{margin-top:auto;padding-top:0;align-self:flex-start;background:var(--light)}
+  .y-o3 p{margin-bottom:.9rem}
+  @media (max-width:860px){
+    .y-st{padding:0 0 1.8rem 2.4rem}
+    .y-st::before{top:22px;bottom:0;left:8px;right:auto;width:2px;height:auto}
+    .y-st .dot{position:absolute;left:0;top:0}
+    .y-st .n{margin-top:0}
+    .y-st > p{margin-bottom:.9rem}
+    .y-st p{max-width:none}
+    .y-o3:nth-child(even),.y-o3:nth-child(n+3){border:0}
+  }
+  .y-st .pb b.long{font-size:clamp(1.15rem,1.7vw,1.4rem);letter-spacing:-.035em}
+  .y-o3 b.long{font-size:clamp(1.7rem,2.6vw,2.3rem)}
+
+  /* ================= v15: evidence as margin notes, outcome as a stat row ================= */
+  .y-st .pb,.y-st .pb.t{background:none;border-radius:0;padding:.15rem 0 .2rem .85rem;border-left:2px solid var(--accent)}
+  .y-st .pb b{font-size:clamp(1.45rem,2.2vw,1.8rem)}
+  .y-st .pb span{margin-top:.3rem;color:#4b4b53;font-weight:400;font-size:.88rem}
+  .y-st .pb.t span{margin-top:0;color:var(--ink);font-weight:500;font-size:.9rem}
+  .y-out3{background:none;padding:0;gap:clamp(1.2rem,2.6vw,2rem);border-radius:0}
+  .y-o3{background:none;border-radius:0;padding:1.1rem 0 0;position:relative}
+  .y-o3::before{content:"";position:absolute;top:0;left:0;width:28px;height:2px;background:var(--accent)}
+  .y-o3 b{color:var(--ink);font-size:clamp(2.3rem,4vw,3.3rem)}
+  .y-o3 b.long{font-size:clamp(1.9rem,3vw,2.6rem)}
+  .y-o3 h4{margin-top:.9rem}
+  .y-o3 small{background:var(--light)}
+  .y-tq blockquote{font-family:var(--body);font-weight:400;font-size:clamp(1.2rem,1.8vw,1.45rem);line-height:1.5;letter-spacing:-.02em}
+
+  .y-tq blockquote{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:500;font-size:clamp(1.25rem,1.9vw,1.55rem);line-height:1.35;letter-spacing:-.025em;font-variation-settings:'opsz' 48}
+
+  /* ================= v16: a little life: pain path, pulse, counting results ================= */
+  .y-st:has(+ .y-st.pain)::before{background:linear-gradient(90deg,rgba(24,24,27,.12),var(--accent))}
+  .y-st.pain:has(+ .y-st.pain)::before{background:var(--accent)}
+  .y-st.pain h4{font-weight:600}
+  @keyframes y-pulse{0%{box-shadow:0 0 0 0 var(--tint),0 0 0 6px var(--tint)}70%{box-shadow:0 0 0 10px rgba(255,255,255,0),0 0 0 6px var(--tint)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0),0 0 0 6px var(--tint)}}
+  .y-st.pain .dot{animation:y-pulse 2.6s cubic-bezier(.2,.7,.2,1) infinite}
+  .y-o3 b .acc{color:var(--accent)}
+  .y-o3::before{transition:width .9s cubic-bezier(.2,.7,.2,1)}
+  .y-out3.counted .y-o3::before{width:44px}
+  @media (prefers-reduced-motion:reduce){.y-st.pain .dot{animation:none}.y-o3::before{transition:none}}
+  .y-num b .acc{color:var(--accent)}
+  .y-st .pb b{display:block;line-height:1}
+  .y-st .pb span{display:block;margin-top:.6rem;line-height:1.45}
+  .y-st .pb{padding:.25rem 0 .3rem 1rem}
+  @media (max-width:860px){.y-bleed img{min-height:230px}}
+  .y-num b span{display:inline!important;margin:0!important;font:inherit!important;letter-spacing:inherit!important;color:inherit!important;max-width:none!important}
+  .y-num b span.acc{color:var(--accent)!important}
+  @media (max-width:860px){.y-bleed.ph img{min-height:380px;object-fit:cover}}
+
 
   /* ===== global nav: the homepage capsule, everywhere ===== */
   header.nav.nav-pill{display:none!important}
@@ -1147,7 +1297,39 @@
   .dsys-grid{grid-template-columns:1fr}
   .dsys-tmeta{display:none}
 }
-.cs-big-intro{padding-top:clamp(.5rem,1.4vw,1rem);padding-bottom:0}.ds-shot{position:relative;width:100vw;left:50%;margin-left:-50vw;margin-top:clamp(1.8rem,4.5vw,3.4rem);padding:clamp(2.4rem,5.5vw,4.4rem) clamp(1.2rem,4vw,3rem);border-top:1px solid rgba(80,30,150,.07);border-bottom:1px solid rgba(80,30,150,.07);background:radial-gradient(70% 64% at 50% -6%,rgba(157,46,251,.12) 0%,rgba(157,46,251,0) 60%),radial-gradient(60% 60% at 88% 112%,rgba(7,154,152,.10) 0%,rgba(7,154,152,0) 60%),linear-gradient(160deg,#e7ddf8 0%,#eee7fa 52%,#f4f1fb 100%);display:flex;flex-direction:column;align-items:center}.ds-shot img{display:block;width:100%;max-width:1280px;height:auto;border-radius:clamp(.8rem,1.4vw,1.1rem);box-shadow:0 40px 80px -42px rgba(70,25,140,.5),0 12px 30px -16px rgba(70,25,140,.32)}.ds-shot figcaption{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin:1.15rem 0 0;text-align:center}</style><link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+.cs-big-intro{padding-top:clamp(.5rem,1.4vw,1rem);padding-bottom:0}.ds-shot{position:relative;width:100vw;left:50%;margin-left:-50vw;margin-top:clamp(1.8rem,4.5vw,3.4rem);padding:clamp(2.4rem,5.5vw,4.4rem) clamp(1.2rem,4vw,3rem);border-top:1px solid rgba(80,30,150,.07);border-bottom:1px solid rgba(80,30,150,.07);background:radial-gradient(70% 64% at 50% -6%,rgba(157,46,251,.12) 0%,rgba(157,46,251,0) 60%),radial-gradient(60% 60% at 88% 112%,rgba(7,154,152,.10) 0%,rgba(7,154,152,0) 60%),linear-gradient(160deg,#e7ddf8 0%,#eee7fa 52%,#f4f1fb 100%);display:flex;flex-direction:column;align-items:center}.ds-shot img{display:block;width:100%;max-width:1280px;height:auto;border-radius:clamp(.8rem,1.4vw,1.1rem);box-shadow:0 40px 80px -42px rgba(70,25,140,.5),0 12px 30px -16px rgba(70,25,140,.32)}.ds-shot figcaption{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin:1.15rem 0 0;text-align:center}</style><link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400;500&family=Bricolage+Grotesque:opsz,wght@12..96,500&display=swap" rel="stylesheet">
+<style id="resume-wide">@media screen{#resumeModal .modal-card{width:min(94vw,860px);max-height:90vh;padding:clamp(1.8rem,4vw,3rem)}}</style>
+<link id="rp-fonts" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style id="rp-css">
+.rp{font-family:'Open Sans',Arial,sans-serif;color:#1a1a1a;font-size:12px;line-height:1.5;text-align:left}
+.rp *{text-transform:none;letter-spacing:normal}
+.rp-head{display:block;padding-bottom:1rem;border-bottom:1px solid #d9d9d9}
+.rp-name{margin:0;font:700 34px/1.05 'Merriweather',Georgia,serif;color:#000}
+.rp-title{margin:.45rem 0 0;font-size:13px;color:#333}
+.rp-contact{margin-top:.55rem;text-align:left;font-size:11.5px;line-height:1.65;color:#444}
+.rp-contact p{margin:0}
+.rp-contact a{color:#1155cc;text-decoration:none}
+.rp-contact a[href^="tel"]{color:#444}
+.rp-sum{margin:1rem 0 0;font-size:12.5px;line-height:1.6;color:#1a1a1a}
+.rp-h{margin:1.5rem 0 .75rem;font:700 10.5px/1 'Open Sans',Arial,sans-serif;letter-spacing:.08em!important;text-transform:uppercase!important;color:#2079c7}
+.rp-job{break-inside:avoid;margin-bottom:1.05rem}
+.rp-row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.rp-co{margin:0;font:400 13.5px/1.35 'Merriweather',Georgia,serif;color:#000}
+.rp-co b{font-weight:700}
+.rp-co a{color:inherit;text-decoration:none}
+.rp-site{font-weight:400;color:#555!important}
+.rp-co a:hover{text-decoration:underline}
+.rp-dates{margin:0;white-space:nowrap;font-size:11px;color:#555}
+.rp-meta{margin:.2rem 0 0;font-size:11px;line-height:1.45;color:#666}
+.rp ul{margin:.45rem 0 0;padding-left:1.15rem}
+.rp li{margin:.2rem 0;font-size:12px;line-height:1.55;color:#2b2b2b}
+.rp li::marker{color:#999}
+.rp-line{margin:.3rem 0 0;font-size:12px;line-height:1.55;color:#2b2b2b}
+.rp-line b{font-weight:600;color:#000}
+.rp-dl{display:inline-flex;align-items:center;height:30px;margin-top:.6rem;padding:0 13px;border-radius:999px;background:#111;color:#fff!important;font:600 12px/1 'Open Sans',Arial,sans-serif;text-decoration:none}
+.rp-dl:hover{background:#333}
+@media (max-width:640px){.rp-head{flex-direction:column;align-items:flex-start}.rp-contact{text-align:left}.rp-name{font-size:28px}.rp-row{flex-direction:column;gap:.1rem}}
+</style>
 </head>
 <body id="top">
 <header class="gnav"><nav class="gcap" aria-label="Primary"><a class="g-mark" href="../../" aria-label="Stanley Ojima, home">so</a><a class="g-lnk" href="../../about/">About</a><a class="g-lnk on" href="../../work/">Projects</a><a class="g-lnk" href="#contact">Contact</a><a class="g-cv" href="#" data-resume>Resume</a></nav></header>
@@ -1165,22 +1347,22 @@
   </div></div></div>
 </header>
 <main style="--accent:#6D28D9;--accent-bright:#a78bfa;--tint:rgba(109,40,217,.08);--light:#F2EEFB;--dark:#1a1030;--glow:rgba(167,139,250,.22)">
-<section class="y-hero"><div class="y-wrap"><a class="cs-back" href="../"><span class="a">←</span> all projects</a><h1 class="y-title">DRO Health</h1><div class="y-badges"><span class="y-pill">Product designer</span><span class="y-flag">100K+ consultations</span><span class="y-yrs">2019–2021 · Health tech</span></div><p class="y-summary">Redesigned a telehealth platform for 50,000+ users in Nigeria, covering consultations, medication delivery and lab tests. The goal was to get people from worry to a doctor faster, and to make the product feel trustworthy enough to share symptoms with.</p><dl class="y-facts"><div class="y-fact"><dt>Role</dt><dd>Product designer, end-to-end redesign</dd></div><div class="y-fact"><dt>Timeline</dt><dd>2019–2021</dd></div><div class="y-fact"><dt>Team</dt><dd>Co-founder, 2 other designers, engineering</dd></div><div class="y-fact"><dt>Scope</dt><dd>Mobile app, website and design system</dd></div></dl><div class="y-nums"><div class="y-num"><b>50K+</b><span>Users</span></div><div class="y-num"><b>100K+</b><span>Consultations</span></div><div class="y-num"><b>↓18%</b><span>Sign-up drop-off</span></div><div class="y-num"><b>+45%</b><span>User satisfaction</span></div></div></div></section>
-<figure class="y-bleed cs-rv"><img src="img/dro-hero.webp" alt="DRO Health home screen and practitioner booking" loading="lazy"></figure>
-<section class="y-part cs-rv"><div class="y-wrap"><div class="y-ch"><div class="y-ch-top"><p class="y-l">Part one</p><div class="txt"><h2>The platform and the redesign</h2><p>What DRO Health does, the team, and every flow I redesigned.</p></div></div></div></div></section>
+<section class="y-hero"><div class="y-wrap"><a class="cs-back" href="../"><span class="a">←</span> all projects</a><h1 class="y-title">DRO Health</h1><div class="y-badges"><span class="y-pill">Product designer</span><span class="y-flag">100K+ consultations</span><span class="y-yrs">2019–2021 · Health tech</span></div><p class="y-summary">Redesigned a telehealth platform for 50,000+ users in Nigeria, covering consultations, medication delivery and lab tests. The goal was to get people from worry to a doctor faster, and to make the product feel trustworthy enough to share symptoms with.</p><dl class="y-facts"><div class="y-fact"><dt>Role</dt><dd>Product designer, end-to-end redesign</dd></div><div class="y-fact"><dt>Timeline</dt><dd>2019–2021</dd></div><div class="y-fact"><dt>Team</dt><dd>Co-founder, 2 other designers, engineering</dd></div><div class="y-fact"><dt>Scope</dt><dd>Mobile app, website and design system</dd></div></dl><div class="y-nums"><div class="y-num"><b><span class="num">50K+</span></b><span>Users</span></div><div class="y-num"><b><span class="num">100K+</span></b><span>Consultations</span></div><div class="y-num"><b><span class="acc">↓</span><span class="num">18%</span></b><span>Sign-up drop-off</span></div><div class="y-num"><b><span class="acc">+</span><span class="num">45%</span></b><span>User satisfaction</span></div></div></div></section>
+<figure class="y-bleed ph cs-rv"><img src="img/dro-hero.webp" alt="DRO Health home screen and practitioner booking" loading="lazy"></figure>
+<section class="y-part cs-rv"><div class="y-chb"><div class="y-wrap"><div class="y-ch-top"><p class="y-l">Part one</p><div class="txt"><h2>The platform and the redesign</h2><p>What DRO Health does, the team, and every flow I redesigned.</p></div></div></div></div></section>
 <section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="overview"><p class="y-l a">Overview</p><div class="y-c"><h2 class="y-h2">Care in minutes instead of a lost day</h2><p class="y-p">DRO Health puts consultations with licensed doctors, medication delivery, lab tests and health records in one app. In Nigeria, seeing a doctor often means a full day lost to travel and waiting.</p><p class="y-p"><b>People open this app with a real health concern, not to browse.</b> Every point of friction has a direct cost to someone’s wellbeing. I worked with the co-founder, two other designers and the engineering team across the app, the website and the design system.</p></div></div></div></section>
 <section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="what-i-designed"><p class="y-l a">What I designed</p><div class="y-c"><h2 class="y-h2">Every major flow in the care experience</h2><p class="y-p">From sign-up to seeing a doctor, getting medication and tracking lab results.</p></div></div></div></section>
 <figure class="y-bleed cs-rv"><img src="img/dro-areas.webp" alt="DRO Health screens: sign-up, consultation booking, pharmacy orders and diagnostic tests" loading="lazy"></figure>
 <section class="y-sec" style="padding-top:clamp(2.2rem,5vw,3.2rem)"><div class="y-wrap cs-rv"><div class="y-g"><p class="y-l a">The areas</p><div class="y-c"><div class="y-cols" style="--n:2"><div class="y-col"><p class="y-l a">01</p><h4>Sign-up and onboarding</h4><p>Social login and a shorter sign-up with visible progress.</p><p class="y-metric"><b>↓18%</b> sign-up drop-off</p></div><div class="y-col"><p class="y-l a">02</p><h4>Consultations and booking</h4><p>Find a doctor by specialty, date and time, and book in under a minute.</p></div><div class="y-col"><p class="y-l a">03</p><h4>Pharmacy and medication</h4><p>Search, order and follow delivery from confirmation to doorstep.</p></div><div class="y-col"><p class="y-l a">04</p><h4>Diagnostic tests</h4><p>Upcoming tests, pending results and completed reports in one view.</p></div></div></div></div></div></section>
-<section class="y-part cs-rv"><div class="y-wrap"><div class="y-ch"><div class="y-ch-top"><p class="y-l">Part two</p><div class="txt"><h2>Deep dive: from worry to a doctor</h2><p>Why people couldn’t reach the care they came for, and the three calls that fixed it.</p></div></div></div></div></section>
-<section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="the-problem"><p class="y-l a">The problem</p><div class="y-c"><h2 class="y-h2">All the right services, hard to reach</h2><p class="y-p">People came with one of three goals: see a doctor, order medication or book a test. <b>All three were buried under cluttered navigation and long flows.</b></p></div></div><div class="y-ev"><div class="y-ev-r"><div><span class="idx">01</span><h3>Too much before any value</h3></div><p>Sign-up asked for medical and personal details before people knew if the service was good.</p></div><div class="y-ev-r"><div><span class="idx">02</span><h3>Everything at once</h3></div><p>Consultations, pharmacy, tests, wallet and wellness competed on one homepage.</p></div><div class="y-ev-r"><div><span class="idx">03</span><h3>The main actions buried</h3></div><p>“See a doctor” and “Order medication” sat below the fold.</p></div></div></div></section>
+<section class="y-part cs-rv"><div class="y-chb"><div class="y-wrap"><div class="y-ch-top"><p class="y-l">Part two</p><div class="txt"><h2>Deep dive: from worry to a doctor</h2><p>Why people couldn’t reach the care they came for, and the three calls that fixed it.</p></div></div></div></div></section>
+<section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="the-problem"><p class="y-l a">The problem</p><div class="y-c"><h2 class="y-h2">All the right services, hard to reach</h2><p class="y-p">People came with one of three goals: see a doctor, order medication or book a test. <b>All three were buried under cluttered navigation and long flows.</b></p></div></div><div class="y-jn" style="--n:5"><div class="y-st"><span class="dot"></span><span class="n">Step 1</span><h4>Open the app</h4><p>A real health concern and an urgent need to see a doctor.</p></div><div class="y-st pain"><span class="dot"></span><span class="n">Step 2</span><h4>Sign up</h4><p>Medical and address details requested before any value.</p><div class="pb t"><span>The steepest drop-off in the funnel</span></div></div><div class="y-st pain"><span class="dot"></span><span class="n">Step 3</span><h4>Land on the homepage</h4><p>Eight services competing, with no hierarchy.</p><div class="pb"><b>8+</b><span>options on the first screen</span></div></div><div class="y-st pain"><span class="dot"></span><span class="n">Step 4</span><h4>Find “See a doctor”</h4><p>The primary action sat below the fold.</p><div class="pb t"><span>Core task hidden</span></div></div><div class="y-st"><span class="dot"></span><span class="n">Step 5</span><h4>Book</h4><p>Reached only by those who persisted.</p></div></div></div></section>
 <section class="y-sec cs-rv"><div class="y-wrap"><!-- VERIFY: research sources --><div class="y-g" id="what-we-learned"><p class="y-l a">What we learned</p><div class="y-c"><h2 class="y-h2">People trust care that looks cared for</h2><p class="y-p">We looked at session data and sign-up analytics, and talked to users about why they hesitated.</p></div></div><div class="y-cols" style="--n:3"><div class="y-col"><p class="y-l a">Session data</p><h4>Three goals, most sessions</h4><p>80% of sessions started with seeing a doctor, ordering medication or booking a test.</p></div><div class="y-col"><p class="y-l a">Sign-up analytics</p><h4>Drop-off at the details</h4><p>People left when asked for medical and address details before seeing any value.</p></div><div class="y-col"><p class="y-l a">User conversations</p><h4>Polish signals safety</h4><p>An inconsistent interface made people doubt the care behind it.</p></div></div><div class="y-insight"><p class="y-l a">The insight</p><p>Lead with the three things people came for, and ask for personal details only when the moment makes them feel necessary.</p></div></div></section>
-<section class="y-sec" style="padding-bottom:0"><div class="y-wrap cs-rv"><div class="y-g" id="key-decisions-and-trade-offs"><p class="y-l a">Key decisions &amp; trade-offs</p><div class="y-c"><h2 class="y-h2">Three calls that got people to care faster</h2></div></div></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 01</p><h3>Build the homepage around three intents</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">Three action zones (see a doctor, order medication, book a test). Everything else is secondary.</p></div><div><h4>The trade-off</h4><p>Giving every service equal space felt fair to the business and failed users. With 80% of sessions starting from one of three goals, prioritising them cut the first decision from eight-plus options to three.</p></div></div></div></div><figure class="y-bleed cs-rv"><img src="img/dro-dec1.webp" alt="DRO Health home screen with see a doctor, order medication and book a test" loading="lazy"></figure></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 02</p><h3>Earn the right to ask for personal data</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">Sign-up needs an email and password. Medical details are collected during the first booking, when the reason is obvious.</p></div><div><h4>The trade-off</h4><p>Collecting everything upfront is cleaner for data and worse for trust. People questioned why a health app needed their address before they’d seen a doctor. Asking later costs a step in booking and wins the sign-up.</p></div></div></div></div><figure class="y-bleed cs-rv"><img src="img/dro-dec2.webp" alt="DRO Health sign-up with social login" loading="lazy"></figure></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 03</p><h3>Treat consistency as clinical credibility</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">One component system across app and website: primary actions in brand purple, secondary in outline, one set of spacing and type.</p></div><div><h4>The trade-off</h4><p>Shipping features on inconsistent screens was faster. In healthcare it’s also how you lose people: if the app looks careless, they wonder about the care.</p></div></div></div></div><figure class="y-bleed cs-rv"><img src="img/dro-dec3.webp" alt="DRO Health design system components" loading="lazy"></figure></div></section>
+<section class="y-sec" style="padding-bottom:0"><div class="y-wrap cs-rv"><div class="y-g" id="key-decisions-and-trade-offs"><p class="y-l a">Key decisions &amp; trade-offs</p><div class="y-c"><h2 class="y-h2">Three calls that got people to care faster</h2></div></div></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 01</p><h3>Build the homepage around three intents</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">Three action zones (see a doctor, order medication, book a test). Everything else is secondary.</p></div><div><h4>The trade-off</h4><p>Giving every service equal space felt fair to the business and failed users. With 80% of sessions starting from one of three goals, prioritising them cut the first decision from eight-plus options to three.</p></div></div></div></div><figure class="y-bleed ph cs-rv"><img src="img/dro-dec1.webp" alt="DRO Health home screen with see a doctor, order medication and book a test" loading="lazy"></figure></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 02</p><h3>Earn the right to ask for personal data</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">Sign-up needs an email and password. Medical details are collected during the first booking, when the reason is obvious.</p></div><div><h4>The trade-off</h4><p>Collecting everything upfront is cleaner for data and worse for trust. People questioned why a health app needed their address before they’d seen a doctor. Asking later costs a step in booking and wins the sign-up.</p></div></div></div></div><figure class="y-bleed ph cs-rv"><img src="img/dro-dec2.webp" alt="DRO Health sign-up with social login" loading="lazy"></figure></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 03</p><h3>Treat consistency as clinical credibility</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">One component system across app and website: primary actions in brand purple, secondary in outline, one set of spacing and type.</p></div><div><h4>The trade-off</h4><p>Shipping features on inconsistent screens was faster. In healthcare it’s also how you lose people: if the app looks careless, they wonder about the care.</p></div></div></div></div><figure class="y-bleed cs-rv"><img src="img/dro-dec3.webp" alt="DRO Health design system components" loading="lazy"></figure></div></section>
 <section class="y-sec cs-rv"><div class="y-vsband"><div class="y-wrap"><div class="y-g" id="before-vs-after"><p class="y-l a">Before vs. after</p><div class="y-c"><h2 class="y-h2">What changed for patients</h2></div></div><div class="y-vs2"><div class="y-vs2-h"><p class="y-l">Before</p><i></i><p class="y-l">After</p></div><div class="y-vs2-r"><span>Everything on one homepage</span><i>→</i><span>Three clear actions up front</span></div><div class="y-vs2-r"><span>A full profile before any value</span><i>→</i><span>Email and password, details later</span></div><div class="y-vs2-r"><span>Key services hard to find</span><i>→</i><span>Doctor, pharmacy and tests one tap away</span></div><div class="y-vs2-r"><span>Inconsistent screens</span><i>→</i><span>One system across app and website</span></div></div></div></div></section>
-<section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="outcome"><p class="y-l a">Outcome</p><div class="y-c"><h2 class="y-h2">Faster to care, easier to trust</h2></div></div><div class="y-res"><div class="y-res-r"><div class="lab"><b>Sign-up drop-off</b><span>With a shorter, progressive sign-up.</span></div><div class="y-bars"><div class="y-bar"><span>Before</span><i style="--w:100%"></i><em></em></div><div class="y-bar after"><span>After</span><i style="--w:82%"></i><em></em></div></div><div class="val">↓18%</div></div><div class="y-res-r"><div class="lab"><b>User satisfaction</b><span>After the redesign shipped.</span></div><div class="y-bars"><div class="y-bar"><span>Before</span><i style="--w:69%"></i><em></em></div><div class="y-bar after"><span>After</span><i style="--w:100%"></i><em></em></div></div><div class="val">+45%</div></div><div class="y-res-r nb"><div class="lab"><b>From opening the app to booking</b><span>With the homepage built around intent.</span></div><div class="val">&lt;60s</div></div><div class="y-res-r nb"><div class="lab"><b>Consultations completed</b><span>On the redesigned platform.</span></div><div class="val">100K+</div></div></div><p class="y-p y-note">The design system also let engineering ship new features faster. <b>People could go from opening the app to booking a doctor in under a minute.</b></p></div></section>
+<section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="outcome"><p class="y-l a">Outcome</p><div class="y-c"><h2 class="y-h2">Faster to care, easier to trust</h2></div></div><div class="y-out3" style="--n:4"><div class="y-o3"><b><span class="acc">↓</span><span class="num">18%</span></b><h4>Sign-up drop-off</h4><p>With a shorter, progressive sign-up.</p></div><div class="y-o3"><b><span class="acc">+</span><span class="num">45%</span></b><h4>User satisfaction</h4><p>After the redesign shipped.</p></div><div class="y-o3"><b class='long'><span class="acc">&lt;</span><span class="num">60s</span></b><h4>From opening the app to booking</h4><p>With the homepage built around intent.</p></div><div class="y-o3"><b><span class="num">100K+</span></b><h4>Consultations completed</h4><p>On the redesigned platform.</p></div></div><p class="y-p y-note">The design system also let engineering ship new features faster. <b>People could go from opening the app to booking a doctor in under a minute.</b></p></div></section>
 <section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="reflection"><p class="y-l a">Reflection</p><div class="y-c"><p class="y-quote">In healthcare, people won’t finish a flow they don’t feel safe in, however fast it is.</p><p class="y-p">If I did this again, I’d push harder on what happens after the consultation: prescription tracking, follow-up reminders and health progress. We optimised getting people to a doctor, but long-term retention lives after the visit.</p></div></div></div></section>
 <section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g"><p class="y-l a">Credits</p><div class="y-c"><div class="y-credits"><p>Chinonso Ohambele<span>Product designer</span></p><p>Karen Cummings<span>Product designer</span></p><p>Emeka Brian Iwuchukwu<span>Co-founder</span></p></div></div></div></div></section>
-<section class="mp-wrap cs-rv"><div class="y-wrap"><p class="mp-eyebrow">more projects</p><div class="mp-grid"><a class="mp" href="../goco/" style="--accent:var(--rose)"><span class="mp-client">GoCo</span><span class="mp-sector">SaaS, HR Tech</span><p class="mp-teaser">Led design across an HR platform for 200K+ users, and rebuilt its most complained-about feature.</p><span class="mp-view">view project →</span></a><a class="mp" href="../quickfleet/" style="--accent:#087A64"><span class="mp-client">QuickFleet</span><span class="mp-sector">Logistics, Electric mobility</span><p class="mp-teaser">Co-founded an electric delivery network, and designed the product it runs on.</p><span class="mp-view">view project →</span></a><a class="mp" href="../lenox-park/" style="--accent:var(--c-slate)"><span class="mp-client">Lenox Park</span><span class="mp-sector">Fintech, DEI analytics</span><p class="mp-teaser">Sole designer on an analytics platform for investors with $4T+ in client assets.</p><span class="mp-view">view project →</span></a></div></div></section>
+<section class="mp-wrap cs-rv"><div class="y-wrap"><p class="mp-eyebrow">more projects</p><div class="mp-grid"><a class="mp" href="../goco/" style="--accent:#0E7A4A"><span class="mp-client">GoCo</span><span class="mp-sector">SaaS, HR Tech</span><p class="mp-teaser">Led design across an HR platform for 200K+ users, and rebuilt its most complained-about feature.</p><span class="mp-view">view project →</span></a><a class="mp" href="../quickfleet/" style="--accent:#087A64"><span class="mp-client">QuickFleet</span><span class="mp-sector">Logistics, Electric mobility</span><p class="mp-teaser">Co-founded an electric delivery network, and designed the product it runs on.</p><span class="mp-view">view project →</span></a><a class="mp" href="../lenox-park/" style="--accent:var(--c-slate)"><span class="mp-client">Lenox Park</span><span class="mp-sector">Fintech, DEI analytics</span><p class="mp-teaser">Sole designer on an analytics platform for investors with $4T+ in client assets.</p><span class="mp-view">view project →</span></a></div></div></section>
 </main>
 <footer class="site-footer" id="contact">
   <div class="foot-inner">
@@ -1198,69 +1380,16 @@
   <div class="modal-backdrop" data-close></div>
   <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="resumeTitle">
     <button class="modal-close" type="button" data-close aria-label="Close">&times;</button>
-    <article class="resume" id="resumeDoc">
-      <header class="rs-head">
-        <p class="rs-eyebrow">résumé</p>
-        <h2 class="rs-name" id="resumeTitle">stanley ojima</h2>
-        <p class="rs-title">Senior Product Designer</p>
-      </header>
-      <p class="rs-summary">Senior Product Designer with 8+ years designing intuitive, user-centered products that create real value for users and businesses. I turn complex problems into simple, scalable experiences, working closely with cross-functional teams to ship impactful, data-informed solutions.</p>
-      <div class="rs-contact">
-        <a href="tel:+2347056833543">+234 705 683 3543</a>
-        <a href="mailto:stanleyojima9@gmail.com">stanleyojima9@gmail.com</a>
-        <a href="../../">Portfolio</a>
-        <a href="https://www.linkedin.com/in/ojima-aniegboka/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-      </div>
-      <div class="modal-actions" style="margin:1.1rem 0 .1rem"><button id="rsTopDl" class="btn btn-primary" type="button" data-print>download pdf <span class="arr">↓</span></button></div>
-      <section class="rs-section">
-        <h3 class="rs-h">Experience</h3>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">QuickFleet</span><span class="rs-dates">2026 – Present</span></div>
-          <p class="rs-role">Co-founder &amp; CTO</p>
-          <ul class="rs-bullets"><li>Co-founded an electric delivery network for Nigerian cities; own product and technology.</li><li>Designed the customer app end to end, from booking and fixed pricing to live tracking and delivery codes.</li><li>Designed and built the marketing site, quickfleet.co.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">GoCo</span><span class="rs-dates">Jul 2022 – Apr 2025</span></div>
-          <p class="rs-role">Senior Product Designer</p>
-          <ul class="rs-bullets"><li>Led end-to-end design across the GoCo platform, partnering with PMs to define problems, run research, and ship impactful solutions.</li><li>Spearheaded the redesign of core platform experiences, simplifying complex workflows and improving usability.</li><li>Conducted user research and collaborated cross-functionally to validate decisions and iterate on feedback.</li><li>Contributed to measurable impact, including a 60% rise in customer satisfaction after the platform redesign.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">Curva Digital</span><span class="rs-dates">Feb 2020 – Jul 2022</span></div>
-          <p class="rs-role">Senior Product Designer</p>
-          <ul class="rs-bullets"><li>Owned design execution across mobile apps, websites, and visual systems for multiple clients in a fast-paced agency.</li><li>Translated ambiguous client requirements into clear, user-focused solutions aligned with business goals.</li><li>Led work from early concepts through high-fidelity UI and delivery, balancing speed, quality, and stakeholder expectations.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">DRO Health</span><span class="rs-dates">Nov 2019 – Feb 2021</span></div>
-          <p class="rs-role">Product Designer</p>
-          <ul class="rs-bullets"><li>Designed and improved features within the DRO Health mobile app, enhancing overall UX and usability.</li><li>Focused on clarity, accessibility, and visual consistency across web and mobile.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">Busha</span><span class="rs-dates">May 2019 – Oct 2019</span></div>
-          <p class="rs-role">Product Designer</p>
-          <ul class="rs-bullets"><li>Redesigned the admin dashboard and multiple product pages for a new application within a crypto exchange platform.</li><li>Delivered high-quality, detailed designs while balancing usability and business requirements.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">Transformify</span><span class="rs-dates">Jan 2018 – Apr 2019</span></div>
-          <p class="rs-role">UI/UX Designer</p>
-          <ul class="rs-bullets"><li>Partnered with PMs to research and define user needs for the Transformify platform.</li><li>Translated requirements into wireframes, user flows, and polished UI; supported product decisions through design exploration.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">Freelance</span><span class="rs-dates">Jan 2017 – Present</span></div>
-          <p class="rs-role">UI/UX Designer</p>
-          <ul class="rs-bullets"><li>Consulted with early-stage and growing startups on solutions addressing user needs and business challenges.</li><li>Led end-to-end design across research, UX, UI, and prototyping, often working directly with founders.</li></ul>
-        </div>
-      </section>
-      <section class="rs-section">
-        <h3 class="rs-h">Skills</h3>
-        <p class="rs-skillgroup"><span class="rs-skilllabel">Product &amp; UX</span>Product Thinking · End-to-End UX Design · UX Strategy &amp; Experience Mapping · User Research (Interviews, Usability Testing) · Information Architecture · UI &amp; Visual Design · Design Systems &amp; Scalable UI · Low-to-High Fidelity Design · Interactive Prototyping (Figma)</p>
-        <p class="rs-skillgroup"><span class="rs-skilllabel">Collaboration</span>Cross-functional Collaboration (Product, Engineering, Marketing) · Stakeholder Communication &amp; Alignment · Design–Engineering Handoff · Feedback Facilitation &amp; Iteration</p>
-      </section>
-      <section class="rs-section">
-        <h3 class="rs-h">Languages</h3>
-        <p class="rs-skillgroup">English</p>
-      </section>
-    </article>
-    <div class="modal-actions rs-actions"><button class="btn btn-primary" type="button" data-print>download pdf <span class="arr">↓</span></button></div>
+    <article class="resume rp" id="resumeDoc">
+<header class="rp-head"><div><h2 class="rp-name">Stanley Ojima</h2><p class="rp-title">Senior Product Designer · B2B SaaS and enterprise products</p></div>
+<div class="rp-contact"><p><a href="mailto:stanleyojima9@gmail.com">stanleyojima9@gmail.com</a> · <a href="tel:+2347056833543">+234 705 683 3543</a></p><p><a href="https://stanleyojima.xyz">stanleyojima.xyz</a> · <a href="https://www.linkedin.com/in/ojima-aniegboka/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ojima-aniegboka</a> · Remote</p><a class="rp-dl" href="/resume.pdf" download="Stanley-Ojima-Resume.pdf">Download PDF</a></div></header>
+<p class="rp-sum">Senior product designer with 8+ years designing B2B SaaS and enterprise products across HR, fintech, health and logistics. I take dense, high-stakes workflows and make them predictable, and I measure the work by what it changes. At GoCo (acquired by Intuit), rebuilding Reports cut support tickets by 30% and lifted monthly usage from 28% to 52%.</p>
+<h3 class="rp-h">Experience</h3><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>QuickFleet</b> <a class="rp-site" href="https://quickfleet.co" target="_blank" rel="noopener noreferrer">(quickfleet.co)</a>, <i>Co-founder &amp; CTO</i></p><p class="rp-dates">2026 – Present</p></div><p class="rp-meta">Abuja, Nigeria · Electric last-mile delivery network for Nigerian cities. Pre-launch.</p><ul><li>Own product and technology. Defined booking, fixed pricing, dispatch, live tracking and proof of delivery as one system.</li><li>Designed the customer app end to end, including a four-digit delivery code receivers confirm from a text link, with no app to install.</li><li>Designed and built the marketing site and waitlist at quickfleet.co.</li><li>Proposed the battery-swap partnership that makes fixed, pump-independent pricing viable.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>GoCo</b> <a class="rp-site" href="https://www.goco.io" target="_blank" rel="noopener noreferrer">(goco.io)</a>, <i>Senior Product Designer</i></p><p class="rp-dates">July 2022 – April 2025</p></div><p class="rp-meta">Remote · HR, benefits and payroll platform for U.S. small and mid-sized businesses, 200K+ users. Acquired by Intuit in 2025. One of two product designers, working with 8 product managers.</p><ul><li>Rebuilt Reports, the platform’s largest source of support tickets, into a three-step flow with live preview and smart defaults: support tickets down 30%, monthly usage up from 28% to 52%, report creation 2.2× faster.</li><li>Designed across 10+ product areas, including employee profiles, scheduling, workflows, time off and payroll; the new scheduling flow cut weekly scheduling from 45 to 15 minutes.</li><li>Built GoCo’s design system: 120+ components and tokens adopted across 12+ product modules, cutting design-to-development handoff time by 35%.</li><li>With the Director of Design, introduced weekly critiques of work in progress, research before design, and a standard handoff format.</li><li>Contributed to a 60% increase in customer satisfaction following the platform redesign.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>Curva Digital</b> <a class="rp-site" href="https://curvadigital.co.uk" target="_blank" rel="noopener noreferrer">(curvadigital.co.uk)</a>, <i>Senior Product Designer</i></p><p class="rp-dates">February 2020 – July 2022</p></div><p class="rp-meta">Remote · London-based digital agency.</p><ul><li>Owned design execution across mobile apps, websites and visual systems for multiple clients, from early concepts through high-fidelity UI and delivery.</li><li>Translated ambiguous client briefs into clear, user-focused solutions tied to business goals.</li><li>Balanced speed, quality and stakeholder expectations across concurrent client projects.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>DRO Health</b> <a class="rp-site" href="https://drohealth.com" target="_blank" rel="noopener noreferrer">(drohealth.com)</a>, <i>Product Designer</i></p><p class="rp-dates">November 2019 – February 2021</p></div><p class="rp-meta">Remote · Telehealth platform in Nigeria for consultations, medication delivery and lab tests. 50K+ users, 100K+ consultations.</p><ul><li>Restructured the app around its three primary intents (see a doctor, order medication, book a test); users could go from opening the app to booking in under a minute.</li><li>Moved medical-detail collection from sign-up to the first booking, reducing sign-up drop-off by 18%.</li><li>Worked with two other designers on a shared component system across app and website; user satisfaction rose 45%.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>Busha</b> <a class="rp-site" href="https://busha.co" target="_blank" rel="noopener noreferrer">(busha.co)</a>, <i>Product Designer</i></p><p class="rp-dates">May 2019 – October 2019</p></div><p class="rp-meta">Remote · Cryptocurrency exchange.</p><ul><li>Redesigned the admin dashboard and multiple product pages for a new application on the exchange platform.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>Transformify</b> <a class="rp-site" href="https://transformify.org" target="_blank" rel="noopener noreferrer">(transformify.org)</a>, <i>UI/UX Designer</i></p><p class="rp-dates">January 2018 – April 2019</p></div><p class="rp-meta">Remote · Recruitment platform.</p><ul><li>Partnered with product managers on research and user needs; translated requirements into user flows, wireframes and UI.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>Independent</b>, <i>Contract Product Designer</i></p><p class="rp-dates">January 2017 – Present</p></div><p class="rp-meta">Remote · Scoped contract engagements with startups and scale-ups, alongside full-time roles.</p><ul><li>Risevest (2025): redesigned onboarding, the dashboard and withdrawals for a dollar-investment app with 620K+ users; onboarding completion rose from 34% to 58%, and withdrawing went from 6 taps to 2.</li><li>Lenox Park Solutions (2023): sole designer on an analytics platform for institutional investors with $4T+ in client assets; made side-by-side comparison the default view.</li></ul></div>
+<h3 class="rp-h">Mentoring</h3><p class="rp-line">Mentored 30+ designers through portfolio reviews, mock interviews and career strategy. Trained 100+ students in workshops on problem framing and measuring impact.</p>
+<h3 class="rp-h">Skills</h3><p class="rp-line"><b>Product &amp; UX:</b> Product strategy, end-to-end UX, user research (interviews, usability testing), information architecture, experience mapping</p><p class="rp-line"><b>Design:</b> Design systems, UI and visual design, interaction design, prototyping (Figma)</p><p class="rp-line"><b>Collaboration:</b> Cross-functional work with product, engineering and marketing; stakeholder alignment; design–engineering handoff; written, async communication</p>
+<h3 class="rp-h">Languages</h3><p class="rp-line">English</p>
+</article>
+    <div class="modal-actions rs-actions"><a class="btn btn-primary"  href="/resume.pdf" download="Stanley-Ojima-Resume.pdf">download pdf <span class="arr">↓</span></a></div>
   </div>
 </div>
 <script>
@@ -1302,5 +1431,24 @@
   addEventListener('scroll',act,{passive:true}); act();
 })();
 </script>
-</body>
+<script>
+(function(){
+  var rows=document.querySelectorAll('.y-out3, .y-sec .y-nums'); if(!rows.length) return;
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function run(row){
+    row.classList.add('counted'); if(reduce) return;
+    row.querySelectorAll('.num').forEach(function(el){
+      var txt=el.textContent, m=txt.match(/^(\d+(?:\.\d+)?)(.*)$/);
+      if(!m||txt.indexOf('→')>-1) return;
+      var to=parseFloat(m[1]), dec=(m[1].split('.')[1]||'').length, suf=m[2], t0=null, dur=1100;
+      function step(t){ if(!t0) t0=t; var k=Math.min((t-t0)/dur,1), e=1-Math.pow(1-k,3);
+        el.textContent=(to*e).toFixed(dec)+suf; if(k<1) requestAnimationFrame(step); else el.textContent=txt; }
+      el.textContent=(0).toFixed(dec)+suf; requestAnimationFrame(step);
+    });
+  }
+  if(!('IntersectionObserver' in window)){ rows.forEach(run); return; }
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ run(e.target); io.unobserve(e.target);} }); },{threshold:.4});
+  rows.forEach(function(r){ io.observe(r); });
+})();
+</script></body>
 </html>

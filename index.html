@@ -130,15 +130,22 @@ a{color:inherit}
 .card .cos{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 12px}
 .card .cos li{font:700 13.5px/1.25 var(--display);letter-spacing:-.015em;font-variation-settings:'opsz' 24}
 
+/* role-led card */
+.card .nm.role{white-space:normal;font-size:24px;line-height:1;max-width:11ch}
+.card .cv-now{margin:0;font:600 13px/1.3 var(--text);color:var(--ink)}
+.card .prev.cur{margin-top:13px}
+.card .prev.cur + .prev{margin-top:11px}
 /* narrow badge */
 .badge.sm .card .top{padding:8px 11px}
 .badge.sm .card .dept{font-size:10px}
 .badge.sm .card .ph{margin:10px 10px 0;aspect-ratio:1/0.8}
 .badge.sm .card .body{padding:11px 12px 12px}
-.badge.sm .card .nm{font-size:18px}
+.badge.sm .card .nm{font-size:21px}
 .badge.sm .card .ttl{font-size:11px;white-space:nowrap;margin-top:6px}
-.badge.sm .card .ttl .yrs{display:none}
-.badge.sm .exp,.badge.sm .prev{display:none}
+.badge.sm .card .prev{margin-top:11px;padding-top:9px}
+.badge.sm .card .cos li{font-size:12px}
+.badge.sm .card .lb{font-size:9.5px;margin-bottom:4px}
+.badge.sm .card .cv-now{font-size:11.5px}
 .badge.sm .card .meta{grid-template-columns:1fr;margin-top:10px;padding-top:9px}
 
 /* ---------- temp: next section preview ---------- */
@@ -456,12 +463,67 @@ html:root{--display:'Geist',system-ui,-apple-system,'Helvetica Neue',Arial,sans-
 .nm{font-weight:700;font-variation-settings:normal}
 .case-title,.case-co,.block-title,.modal-title{font-weight:600;letter-spacing:-.03em}
 .foot-lead,.foot-mark{font-weight:600;letter-spacing:-.04em}
-.t-quote,.t-quote-sm{font-weight:400;letter-spacing:-.02em}
+.t-quote-sm{font-weight:400;letter-spacing:-.02em}
+.t-quote{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:500;letter-spacing:-.03em;line-height:1.18;font-variation-settings:'opsz' 48}
 .stmt{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:500;letter-spacing:-.035em;line-height:1.12;font-variation-settings:'opsz' 48}
 .stats{border-top:0;padding-top:0}
 .stat{position:relative;padding-top:16px}
 .stat::before{content:"";position:absolute;top:0;left:0;width:28px;height:2px;background:var(--rose)}
+@media (min-width:768px){.status-m{display:none}}
+@media (max-width:767px){
+.status-m{margin:0 0 1.1rem}
+.now p:first-child{display:none}
+.wordmark{margin-top:-2px;text-align:center}
+.hero .copy{padding-top:22px}
+.about{height:auto!important;border-top:0!important}
+.about-pin{position:static!important;height:auto!important;padding:72px 0 40px!important}
+.stmt .w{opacity:1!important}
+.claim{font-size:clamp(30px,8.4vw,36px)!important}
+.stats{gap:26px}
+.stat{display:block;padding-top:18px}
+.num{display:block;font-size:46px;line-height:1}
+.stat dd{margin:.55rem 0 0;font-size:15px;max-width:30ch}
+.case{position:sticky;top:72px}
+.case + .case{margin-top:28px}
+.cases .case .case-visual{aspect-ratio:16/11!important}
+.case-desc{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.case-tags{display:none}
+.case-summary::after{content:"Read the case study →";display:block;margin-top:1rem;font:600 14px/1 var(--text);color:var(--ink)}
+.case-inner{box-shadow:0 -10px 30px -18px rgba(23,18,15,.35)}
+}
 @media (max-width:420px){.capsule{gap:2px;padding:5px}.capsule a.lnk{padding:9px 9px;font-size:13.5px}.capsule a.cv{padding:9px 12px;font-size:13.5px}.capsule .mark{width:30px;height:30px}}
+</style>
+<style id="resume-wide">@media screen{#resumeModal .modal-card{width:min(94vw,860px);max-height:90vh;padding:clamp(1.8rem,4vw,3rem)}}</style>
+<link id="rp-fonts" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style id="rp-css">
+.rp{font-family:'Open Sans',Arial,sans-serif;color:#1a1a1a;font-size:12px;line-height:1.5;text-align:left}
+.rp *{text-transform:none;letter-spacing:normal}
+.rp-head{display:block;padding-bottom:1rem;border-bottom:1px solid #d9d9d9}
+.rp-name{margin:0;font:700 34px/1.05 'Merriweather',Georgia,serif;color:#000}
+.rp-title{margin:.45rem 0 0;font-size:13px;color:#333}
+.rp-contact{margin-top:.55rem;text-align:left;font-size:11.5px;line-height:1.65;color:#444}
+.rp-contact p{margin:0}
+.rp-contact a{color:#1155cc;text-decoration:none}
+.rp-contact a[href^="tel"]{color:#444}
+.rp-sum{margin:1rem 0 0;font-size:12.5px;line-height:1.6;color:#1a1a1a}
+.rp-h{margin:1.5rem 0 .75rem;font:700 10.5px/1 'Open Sans',Arial,sans-serif;letter-spacing:.08em!important;text-transform:uppercase!important;color:#2079c7}
+.rp-job{break-inside:avoid;margin-bottom:1.05rem}
+.rp-row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.rp-co{margin:0;font:400 13.5px/1.35 'Merriweather',Georgia,serif;color:#000}
+.rp-co b{font-weight:700}
+.rp-co a{color:inherit;text-decoration:none}
+.rp-site{font-weight:400;color:#555!important}
+.rp-co a:hover{text-decoration:underline}
+.rp-dates{margin:0;white-space:nowrap;font-size:11px;color:#555}
+.rp-meta{margin:.2rem 0 0;font-size:11px;line-height:1.45;color:#666}
+.rp ul{margin:.45rem 0 0;padding-left:1.15rem}
+.rp li{margin:.2rem 0;font-size:12px;line-height:1.55;color:#2b2b2b}
+.rp li::marker{color:#999}
+.rp-line{margin:.3rem 0 0;font-size:12px;line-height:1.55;color:#2b2b2b}
+.rp-line b{font-weight:600;color:#000}
+.rp-dl{display:inline-flex;align-items:center;height:30px;margin-top:.6rem;padding:0 13px;border-radius:999px;background:#111;color:#fff!important;font:600 12px/1 'Open Sans',Arial,sans-serif;text-decoration:none}
+.rp-dl:hover{background:#333}
+@media (max-width:640px){.rp-head{flex-direction:column;align-items:flex-start}.rp-contact{text-align:left}.rp-name{font-size:28px}.rp-row{flex-direction:column;gap:.1rem}}
 </style>
 </head>
 <body>
@@ -492,6 +554,7 @@ html:root{--display:'Geist',system-ui,-apple-system,'Helvetica Neue',Arial,sans-
 
   <div class="copy order-last md:order-first pt-10 pb-14 md:pt-[108px] md:pb-0 flex flex-col md:grid md:grid-cols-[minmax(0,1.35fr)_minmax(300px,360px)_minmax(0,.9fr)] md:items-start">
     <div class="intro">
+      <p class="status-m"><span class="status"><i></i>Open to full-time remote roles</span></p>
       <p class="claim">I design software people can&rsquo;t afford to get wrong.</p>
       <p class="proof">Eight years across HR, fintech, investing and analytics. <b>GoCo</b>, acquired by Intuit. <b>Risevest</b>, 620,000 users. <b>Lenox Park</b>, built for investors managing $4&nbsp;trillion.</p>
       <p class="see"><a href="#projects">See selected work <span aria-hidden="true">&darr;</span></a></p>
@@ -515,8 +578,9 @@ html:root{--display:'Geist',system-ui,-apple-system,'Helvetica Neue',Arial,sans-
         <div class="top"><span class="dept">Design &amp; build</span><span class="hole" aria-hidden="true"></span></div>
         <div class="ph"><img src="data:image/webp;base64,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" alt="" draggable="false"></div>
         <div class="body">
-          <p class="nm">stanley ojima</p>
-          <p class="ttl">Senior product designer<span class="yrs">8+ years</span></p>
+          <p class="nm role">Senior Product Designer</p>
+          <p class="ttl">B2B SaaS &amp; enterprise<span class="yrs">8+ years</span></p>
+          <div class="prev cur"><p class="lb">Currently</p><p class="cv-now">Co-founder &amp; CTO, QuickFleet</p></div>
           <div class="prev"><p class="lb">Shipped at</p><ul class="cos"><li>GoCo</li><li>Risevest</li><li>Lenox Park</li><li>DRO Health</li><li>Transformify</li></ul></div>
         </div>
       </div>
@@ -840,18 +904,18 @@ html:root{--display:'Geist',system-ui,-apple-system,'Helvetica Neue',Arial,sans-
     W = hero.clientWidth;
     const narrow = W < 700;
     badge.classList.toggle('sm', narrow);
-    bw = narrow ? 184 : Math.round(Math.min(304, Math.max(270, W * 0.21)));
+    bw = narrow ? Math.round(Math.min(250, W * 0.62, innerHeight * 0.3)) : Math.round(Math.min(304, Math.max(270, W * 0.21)));
     badge.style.setProperty('--bw', bw + 'px');
     const nav = document.querySelector('.capsule').getBoundingClientRect();
     const hr = hero.getBoundingClientRect();
-    anchor = { x: W / 2, y: nav.top + nav.height / 2 - hr.top };
     bh = badge.offsetHeight;
-    // on phones the badge hangs above the name instead of over it
-    stage.style.minHeight = narrow ? Math.ceil(nav.bottom - hr.top + 26 + bh + 18) + 'px' : '';
+    anchor = { x: W / 2, y: nav.top + nav.height / 2 - hr.top };
+    // on phones the badge hangs from the nav, directly above the name
+    stage.style.minHeight = narrow ? Math.ceil(nav.bottom - hr.top + 22 + bh + 12) + 'px' : '';
     const fs = fitWordmark();
     H = hero.clientHeight;
     const restBottom = narrow ? wm.offsetTop - 18 : wm.offsetTop + fs * 0.5;
-    const clipY = Math.max(restBottom - bh, nav.bottom - hr.top + 26);
+    const clipY = Math.max(restBottom - bh, nav.bottom - hr.top + 22);
     seg = (clipY - anchor.y) / (N - 1);
     dClip = bh * 0.5;
   }
@@ -1106,70 +1170,17 @@ html:root{--display:'Geist',system-ui,-apple-system,'Helvetica Neue',Arial,sans-
   <div class="modal-backdrop" data-close></div>
   <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="resumeTitle">
     <button class="modal-close" type="button" data-close aria-label="Close">&times;</button>
-    <article class="resume" id="resumeDoc">
-      <header class="rs-head">
-        <p class="rs-eyebrow">résumé</p>
-        <h2 class="rs-name" id="resumeTitle">stanley ojima</h2>
-        <p class="rs-title">Senior Product Designer</p>
-      </header>
-      <p class="rs-summary">Senior Product Designer with 8+ years designing intuitive, user-centered products that create real value for users and businesses. I turn complex problems into simple, scalable experiences, working closely with cross-functional teams to ship impactful, data-informed solutions.</p>
-      <div class="rs-contact">
-        <a href="tel:+2347056833543">+234 705 683 3543</a>
-        <a href="mailto:stanleyojima9@gmail.com">stanleyojima9@gmail.com</a>
-        <a href="#top">Portfolio</a>
-        <a href="https://www.linkedin.com/in/ojima-aniegboka/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-      </div>
-      <div class="modal-actions" style="margin:1.1rem 0 .1rem"><button id="rsTopDl" class="btn btn-primary" type="button" data-print>download pdf <span class="arr">↓</span></button></div>
-      <section class="rs-section">
-        <h3 class="rs-h">Experience</h3>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">QuickFleet</span><span class="rs-dates">2026 – Present</span></div>
-          <p class="rs-role">Co-founder &amp; CTO</p>
-          <ul class="rs-bullets"><li>Co-founded an electric delivery network for Nigerian cities; own product and technology.</li><li>Designed the customer app end to end, from booking and fixed pricing to live tracking and delivery codes.</li><li>Designed and built the marketing site, quickfleet.co.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">GoCo</span><span class="rs-dates">Jul 2022 – Apr 2025</span></div>
-          <p class="rs-role">Senior Product Designer</p>
-          <ul class="rs-bullets"><li>Led end-to-end design across the GoCo platform, partnering with PMs to define problems, run research, and ship impactful solutions.</li><li>Spearheaded the redesign of core platform experiences, simplifying complex workflows and improving usability.</li><li>Conducted user research and collaborated cross-functionally to validate decisions and iterate on feedback.</li><li>Contributed to measurable impact, including a 60% rise in customer satisfaction after the platform redesign.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">Curva Digital</span><span class="rs-dates">Feb 2020 – Jul 2022</span></div>
-          <p class="rs-role">Senior Product Designer</p>
-          <ul class="rs-bullets"><li>Owned design execution across mobile apps, websites, and visual systems for multiple clients in a fast-paced agency.</li><li>Translated ambiguous client requirements into clear, user-focused solutions aligned with business goals.</li><li>Led work from early concepts through high-fidelity UI and delivery, balancing speed, quality, and stakeholder expectations.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">DRO Health</span><span class="rs-dates">Nov 2019 – Feb 2021</span></div>
-          <p class="rs-role">Product Designer</p>
-          <ul class="rs-bullets"><li>Designed and improved features within the DRO Health mobile app, enhancing overall UX and usability.</li><li>Focused on clarity, accessibility, and visual consistency across web and mobile.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">Busha</span><span class="rs-dates">May 2019 – Oct 2019</span></div>
-          <p class="rs-role">Product Designer</p>
-          <ul class="rs-bullets"><li>Redesigned the admin dashboard and multiple product pages for a new application within a crypto exchange platform.</li><li>Delivered high-quality, detailed designs while balancing usability and business requirements.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">Transformify</span><span class="rs-dates">Jan 2018 – Apr 2019</span></div>
-          <p class="rs-role">UI/UX Designer</p>
-          <ul class="rs-bullets"><li>Partnered with PMs to research and define user needs for the Transformify platform.</li><li>Translated requirements into wireframes, user flows, and polished UI; supported product decisions through design exploration.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">Freelance</span><span class="rs-dates">Jan 2017 – Present</span></div>
-          <p class="rs-role">UI/UX Designer</p>
-          <ul class="rs-bullets"><li>Consulted with early-stage and growing startups on solutions addressing user needs and business challenges.</li><li>Led end-to-end design across research, UX, UI, and prototyping, often working directly with founders.</li></ul>
-        </div>
-      </section>
-      <section class="rs-section">
-        <h3 class="rs-h">Skills</h3>
-        <p class="rs-skillgroup"><span class="rs-skilllabel">Product &amp; UX</span>Product Thinking · End-to-End UX Design · UX Strategy &amp; Experience Mapping · User Research (Interviews, Usability Testing) · Information Architecture · UI &amp; Visual Design · Design Systems &amp; Scalable UI · Low-to-High Fidelity Design · Interactive Prototyping (Figma)</p>
-        <p class="rs-skillgroup"><span class="rs-skilllabel">Collaboration</span>Cross-functional Collaboration (Product, Engineering, Marketing) · Stakeholder Communication &amp; Alignment · Design–Engineering Handoff · Feedback Facilitation &amp; Iteration</p>
-      </section>
-      <section class="rs-section">
-        <h3 class="rs-h">Languages</h3>
-        <p class="rs-skillgroup">English</p>
-      </section>
-    </article>
+    <article class="resume rp" id="resumeDoc">
+<header class="rp-head"><div><h2 class="rp-name">Stanley Ojima</h2><p class="rp-title">Senior Product Designer · B2B SaaS and enterprise products</p></div>
+<div class="rp-contact"><p><a href="mailto:stanleyojima9@gmail.com">stanleyojima9@gmail.com</a> · <a href="tel:+2347056833543">+234 705 683 3543</a></p><p><a href="https://stanleyojima.xyz">stanleyojima.xyz</a> · <a href="https://www.linkedin.com/in/ojima-aniegboka/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ojima-aniegboka</a> · Remote</p><a class="rp-dl" href="/resume.pdf" download="Stanley-Ojima-Resume.pdf">Download PDF</a></div></header>
+<p class="rp-sum">Senior product designer with 8+ years designing B2B SaaS and enterprise products across HR, fintech, health and logistics. I take dense, high-stakes workflows and make them predictable, and I measure the work by what it changes. At GoCo (acquired by Intuit), rebuilding Reports cut support tickets by 30% and lifted monthly usage from 28% to 52%.</p>
+<h3 class="rp-h">Experience</h3><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>QuickFleet</b> <a class="rp-site" href="https://quickfleet.co" target="_blank" rel="noopener noreferrer">(quickfleet.co)</a>, <i>Co-founder &amp; CTO</i></p><p class="rp-dates">2026 – Present</p></div><p class="rp-meta">Abuja, Nigeria · Electric last-mile delivery network for Nigerian cities. Pre-launch.</p><ul><li>Own product and technology. Defined booking, fixed pricing, dispatch, live tracking and proof of delivery as one system.</li><li>Designed the customer app end to end, including a four-digit delivery code receivers confirm from a text link, with no app to install.</li><li>Designed and built the marketing site and waitlist at quickfleet.co.</li><li>Proposed the battery-swap partnership that makes fixed, pump-independent pricing viable.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>GoCo</b> <a class="rp-site" href="https://www.goco.io" target="_blank" rel="noopener noreferrer">(goco.io)</a>, <i>Senior Product Designer</i></p><p class="rp-dates">July 2022 – April 2025</p></div><p class="rp-meta">Remote · HR, benefits and payroll platform for U.S. small and mid-sized businesses, 200K+ users. Acquired by Intuit in 2025. One of two product designers, working with 8 product managers.</p><ul><li>Rebuilt Reports, the platform’s largest source of support tickets, into a three-step flow with live preview and smart defaults: support tickets down 30%, monthly usage up from 28% to 52%, report creation 2.2× faster.</li><li>Designed across 10+ product areas, including employee profiles, scheduling, workflows, time off and payroll; the new scheduling flow cut weekly scheduling from 45 to 15 minutes.</li><li>Built GoCo’s design system: 120+ components and tokens adopted across 12+ product modules, cutting design-to-development handoff time by 35%.</li><li>With the Director of Design, introduced weekly critiques of work in progress, research before design, and a standard handoff format.</li><li>Contributed to a 60% increase in customer satisfaction following the platform redesign.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>Curva Digital</b> <a class="rp-site" href="https://curvadigital.co.uk" target="_blank" rel="noopener noreferrer">(curvadigital.co.uk)</a>, <i>Senior Product Designer</i></p><p class="rp-dates">February 2020 – July 2022</p></div><p class="rp-meta">Remote · London-based digital agency.</p><ul><li>Owned design execution across mobile apps, websites and visual systems for multiple clients, from early concepts through high-fidelity UI and delivery.</li><li>Translated ambiguous client briefs into clear, user-focused solutions tied to business goals.</li><li>Balanced speed, quality and stakeholder expectations across concurrent client projects.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>DRO Health</b> <a class="rp-site" href="https://drohealth.com" target="_blank" rel="noopener noreferrer">(drohealth.com)</a>, <i>Product Designer</i></p><p class="rp-dates">November 2019 – February 2021</p></div><p class="rp-meta">Remote · Telehealth platform in Nigeria for consultations, medication delivery and lab tests. 50K+ users, 100K+ consultations.</p><ul><li>Restructured the app around its three primary intents (see a doctor, order medication, book a test); users could go from opening the app to booking in under a minute.</li><li>Moved medical-detail collection from sign-up to the first booking, reducing sign-up drop-off by 18%.</li><li>Worked with two other designers on a shared component system across app and website; user satisfaction rose 45%.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>Busha</b> <a class="rp-site" href="https://busha.co" target="_blank" rel="noopener noreferrer">(busha.co)</a>, <i>Product Designer</i></p><p class="rp-dates">May 2019 – October 2019</p></div><p class="rp-meta">Remote · Cryptocurrency exchange.</p><ul><li>Redesigned the admin dashboard and multiple product pages for a new application on the exchange platform.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>Transformify</b> <a class="rp-site" href="https://transformify.org" target="_blank" rel="noopener noreferrer">(transformify.org)</a>, <i>UI/UX Designer</i></p><p class="rp-dates">January 2018 – April 2019</p></div><p class="rp-meta">Remote · Recruitment platform.</p><ul><li>Partnered with product managers on research and user needs; translated requirements into user flows, wireframes and UI.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>Independent</b>, <i>Contract Product Designer</i></p><p class="rp-dates">January 2017 – Present</p></div><p class="rp-meta">Remote · Scoped contract engagements with startups and scale-ups, alongside full-time roles.</p><ul><li>Risevest (2025): redesigned onboarding, the dashboard and withdrawals for a dollar-investment app with 620K+ users; onboarding completion rose from 34% to 58%, and withdrawing went from 6 taps to 2.</li><li>Lenox Park Solutions (2023): sole designer on an analytics platform for institutional investors with $4T+ in client assets; made side-by-side comparison the default view.</li></ul></div>
+<h3 class="rp-h">Mentoring</h3><p class="rp-line">Mentored 30+ designers through portfolio reviews, mock interviews and career strategy. Trained 100+ students in workshops on problem framing and measuring impact.</p>
+<h3 class="rp-h">Skills</h3><p class="rp-line"><b>Product &amp; UX:</b> Product strategy, end-to-end UX, user research (interviews, usability testing), information architecture, experience mapping</p><p class="rp-line"><b>Design:</b> Design systems, UI and visual design, interaction design, prototyping (Figma)</p><p class="rp-line"><b>Collaboration:</b> Cross-functional work with product, engineering and marketing; stakeholder alignment; design–engineering handoff; written, async communication</p>
+<h3 class="rp-h">Languages</h3><p class="rp-line">English</p>
+</article>
     <div class="modal-actions rs-actions">
-      <button class="btn btn-primary" type="button" data-print>download pdf <span class="arr">↓</span></button>
+      <a class="btn btn-primary"  href="/resume.pdf" download="Stanley-Ojima-Resume.pdf">download pdf <span class="arr">↓</span></a>
     </div>
   </div>
 </div>
@@ -1218,7 +1229,7 @@ html:root{--display:'Geist',system-ui,-apple-system,'Helvetica Neue',Arial,sans-
       casesEl.classList.add('in');
     }
     const cards = [...casesEl.querySelectorAll('.case')];
-    const mqStack = matchMedia('(min-width:768px)');
+    const mqStack = matchMedia('(min-width:0px)');
     if(cards.length > 1 && !reduced){
       let ticking = false;
       function depth(){

@@ -1023,6 +1023,156 @@
   .y-note{margin-left:calc((100% + 24px) / 4)}
   @media (max-width:860px){.y-note{margin-left:0}}
 
+  /* ================= v11: grid-aligned chapter bands, problem tiles, outcome panel ================= */
+  .y-part{padding-top:clamp(5rem,10vw,7.5rem)}
+  .y-chb{background:var(--light);padding:clamp(2.6rem,5.6vw,4rem) 0}
+  .y-chb .y-ch-top{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 24px;align-items:start}
+  .y-chb .y-l{grid-column:1/4;color:var(--accent);padding-top:.6rem}
+  .y-chb .txt{grid-column:4/13}
+  .y-chb h2{margin:0;font:500 clamp(1.8rem,3.2vw,2.6rem)/1.05 var(--display);letter-spacing:-.045em;color:var(--ink);max-width:22ch}
+  .y-chb .txt > p{margin:.8rem 0 0;font:400 1.05rem/1.55 var(--body);color:#4b4b53;max-width:56ch}
+  .y-part + .y-sec{padding-top:clamp(3.6rem,7vw,5rem)}
+  .y-ev{border-top:0;display:grid;gap:10px}
+  .y-ev-r{grid-template-columns:clamp(150px,18vw,210px) minmax(0,1fr);gap:0 clamp(1.2rem,2.6vw,2rem);padding:0;border:0;align-items:stretch}
+  .y-ev-r .tile{border-radius:1rem;background:var(--light);padding:clamp(1rem,2vw,1.3rem) clamp(1rem,2vw,1.4rem);display:flex;align-items:flex-end;min-height:clamp(96px,10vw,120px)}
+  .y-ev-r .fig{font-size:clamp(2.1rem,3.6vw,2.8rem)}
+  .y-ev-r .word{font:500 clamp(1.25rem,2vw,1.55rem)/1.05 var(--display);letter-spacing:-.035em;color:var(--accent)}
+  .y-ev-r .body{padding:clamp(.6rem,1.4vw,.9rem) 0;border-bottom:1px solid var(--hairline);display:flex;flex-direction:column;justify-content:center}
+  .y-ev-r:last-child .body{border-bottom:0}
+  .y-ev-r .body h3{font:500 1.1rem/1.3 var(--body);letter-spacing:-.015em;color:var(--ink);margin:0}
+  .y-ev-r .body p{margin:.35rem 0 0;padding:0;font-size:.98rem}
+  .y-res{border-top:0;background:var(--light);border-radius:1.3rem;padding:.4rem clamp(1.2rem,2.6vw,1.8rem)}
+  .y-res-r{border-bottom:1px solid rgba(24,24,27,.08)}
+  .y-res-r:last-child{border-bottom:0}
+  .y-bar i{height:12px;background:rgba(24,24,27,.07)}
+  .y-res-r{grid-template-columns:minmax(0,4fr) minmax(0,4.4fr) minmax(0,3.2fr)}
+  .y-res-r .val{font-size:clamp(1.8rem,3vw,2.5rem)}
+  img.y-av{object-fit:cover;background:var(--light)}
+  @media (max-width:860px){
+    .y-chb .y-l,.y-chb .txt{grid-column:1/-1}
+    .y-chb .y-l{padding-top:0;margin-bottom:.8rem}
+    .y-ev-r{grid-template-columns:1fr}
+    .y-ev-r .tile{min-height:0}
+    .y-ev-r .body{padding-top:.8rem}
+  }
+
+  /* ================= v12: problem as a journey, outcome with a lead result ================= */
+  .y-jn{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));margin-top:clamp(2rem,4.4vw,3rem)}
+  .y-st{position:relative;padding-right:clamp(.8rem,1.6vw,1.4rem)}
+  .y-st::before{content:"";position:absolute;top:7px;left:18px;right:0;height:2px;background:rgba(24,24,27,.1)}
+  .y-st:last-child::before{display:none}
+  .y-st .dot{position:relative;z-index:1;display:block;width:16px;height:16px;border-radius:50%;background:#fff;border:2px solid #c9c9cf}
+  .y-st.pain .dot{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 6px var(--tint)}
+  .y-st .n{display:block;margin-top:1.1rem;font:500 .66rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+  .y-st h4{margin:.5rem 0 0;font:500 1.02rem/1.3 var(--body);letter-spacing:-.015em;color:var(--ink)}
+  .y-st p{margin:.4rem 0 0;font:400 .92rem/1.5 var(--body);color:#4b4b53}
+  .y-st .pb{margin-top:1rem;padding:.85rem .95rem;border-radius:.85rem;background:var(--tint)}
+  .y-st .pb b{display:block;font:500 clamp(1.5rem,2.4vw,1.9rem)/1 var(--display);letter-spacing:-.045em;color:var(--accent)}
+  .y-st .pb span{display:block;margin-top:.35rem;font:500 .86rem/1.35 var(--body);color:var(--ink)}
+  .y-st .pb.t span{margin-top:0}
+  .y-res-hero{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:0 2rem;align-items:center;padding:clamp(1.4rem,3vw,2rem) 0;border-bottom:1px solid rgba(24,24,27,.08)}
+  .y-res-hero .val{text-align:left;font:500 clamp(3.2rem,6vw,5rem)/.95 var(--display);letter-spacing:-.06em;color:var(--accent)}
+  .y-res-hero .lab b{display:block;font:500 clamp(1.15rem,1.8vw,1.4rem)/1.25 var(--body);letter-spacing:-.02em;color:var(--ink)}
+  .y-res-hero .lab > span{display:block;margin-top:.4rem;font:400 1rem/1.5 var(--body);color:#4b4b53}
+  .y-res-hero .y-bars{margin-top:1rem;max-width:420px}
+  @media (max-width:860px){
+    .y-jn{grid-template-columns:1fr;gap:0}
+    .y-st{padding:0 0 1.6rem 2.2rem}
+    .y-st::before{top:18px;bottom:0;left:7px;right:auto;width:2px;height:auto}
+    .y-st .dot{position:absolute;left:0;top:0}
+    .y-st .n{margin-top:0}
+    .y-res-hero{grid-template-columns:1fr;gap:.8rem}
+  }
+
+  /* ================= v13: journey as connected cards, outcome as a clean scoreboard ================= */
+  .y-out3{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));background:var(--light);border-radius:1.4rem;margin:clamp(1.8rem,4vw,2.6rem) 0 0 calc((100% + 24px) / 4);overflow:hidden}
+  .y-o3{padding:clamp(1.4rem,2.8vw,2rem) clamp(1.1rem,2.2vw,1.6rem)}
+  .y-o3 + .y-o3{border-left:1px solid rgba(24,24,27,.08)}
+  .y-o3 b{display:block;font:500 clamp(2rem,3.4vw,2.8rem)/1 var(--display);letter-spacing:-.055em;color:var(--accent);white-space:nowrap}
+  .y-o3 h4{margin:1rem 0 0;font:500 1rem/1.3 var(--body);letter-spacing:-.01em;color:var(--ink)}
+  .y-o3 p{margin:.35rem 0 0;font:400 .9rem/1.5 var(--body);color:#4b4b53}
+  .y-o3 small{display:inline-block;margin-top:.8rem;font:500 .7rem/1 var(--mono);letter-spacing:.04em;color:var(--dim);background:#fff;padding:6px 9px;border-radius:999px}
+  .y-tq blockquote{font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(1.25rem,1.9vw,1.55rem);line-height:1.45;letter-spacing:-.01em}
+  @media (max-width:860px){
+    .y-out3{grid-template-columns:1fr 1fr;margin-left:0}
+    .y-o3 + .y-o3{border-left:0}
+    .y-o3:nth-child(even){border-left:1px solid rgba(24,24,27,.08)}
+    .y-o3:nth-child(n+3){border-top:1px solid rgba(24,24,27,.08)}
+  }
+
+  /* ================= v14: the journey, refined (same concept as v12) ================= */
+  .y-jn{margin-top:clamp(2.2rem,4.6vw,3.2rem);align-items:stretch}
+  .y-st{display:flex;flex-direction:column;padding-right:clamp(1rem,2vw,1.6rem)}
+  .y-st::before{top:8px;left:20px;right:2px;height:2px;background:rgba(24,24,27,.12);border-radius:2px}
+  .y-st .dot{width:18px;height:18px;border:2px solid #c9c9cf;background:#fff}
+  .y-st.pain .dot{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 6px var(--tint)}
+  .y-st .n{margin-top:1.15rem;color:var(--dim)}
+  .y-st.pain .n{color:var(--accent)}
+  .y-st h4{margin-top:.45rem;font-size:1.04rem}
+  .y-st p{font-size:.93rem;max-width:26ch}
+  .y-st .pb{margin-top:auto;padding:1rem 1.05rem;border-radius:.9rem;background:var(--tint)}
+  .y-st .pb::before{content:none}
+  .y-st h4 + p + .pb,.y-st p + .pb{margin-top:auto}
+  .y-st > p{margin-bottom:1.1rem}
+  .y-st .pb b{font-size:clamp(1.5rem,2.3vw,1.9rem)}
+  .y-st .pb span{color:var(--ink);font-weight:500}
+  .y-st .pb.t{padding:.85rem 1.05rem}
+  .y-st .pb.t span{color:var(--accent);font-weight:500}
+  /* outcome: same scoreboard, each result its own card */
+  .y-out3{background:var(--light);gap:10px;padding:10px;overflow:visible}
+  .y-o3{background:#fff;border-radius:1rem;padding:clamp(1.3rem,2.6vw,1.8rem) clamp(1.1rem,2vw,1.5rem);display:flex;flex-direction:column}
+  .y-o3 + .y-o3{border-left:0}
+  .y-o3 b{font-size:clamp(2.1rem,3.6vw,3rem)}
+  .y-o3 h4{margin-top:1.1rem}
+  .y-o3 small{margin-top:auto;padding-top:0;align-self:flex-start;background:var(--light)}
+  .y-o3 p{margin-bottom:.9rem}
+  @media (max-width:860px){
+    .y-st{padding:0 0 1.8rem 2.4rem}
+    .y-st::before{top:22px;bottom:0;left:8px;right:auto;width:2px;height:auto}
+    .y-st .dot{position:absolute;left:0;top:0}
+    .y-st .n{margin-top:0}
+    .y-st > p{margin-bottom:.9rem}
+    .y-st p{max-width:none}
+    .y-o3:nth-child(even),.y-o3:nth-child(n+3){border:0}
+  }
+  .y-st .pb b.long{font-size:clamp(1.15rem,1.7vw,1.4rem);letter-spacing:-.035em}
+  .y-o3 b.long{font-size:clamp(1.7rem,2.6vw,2.3rem)}
+
+  /* ================= v15: evidence as margin notes, outcome as a stat row ================= */
+  .y-st .pb,.y-st .pb.t{background:none;border-radius:0;padding:.15rem 0 .2rem .85rem;border-left:2px solid var(--accent)}
+  .y-st .pb b{font-size:clamp(1.45rem,2.2vw,1.8rem)}
+  .y-st .pb span{margin-top:.3rem;color:#4b4b53;font-weight:400;font-size:.88rem}
+  .y-st .pb.t span{margin-top:0;color:var(--ink);font-weight:500;font-size:.9rem}
+  .y-out3{background:none;padding:0;gap:clamp(1.2rem,2.6vw,2rem);border-radius:0}
+  .y-o3{background:none;border-radius:0;padding:1.1rem 0 0;position:relative}
+  .y-o3::before{content:"";position:absolute;top:0;left:0;width:28px;height:2px;background:var(--accent)}
+  .y-o3 b{color:var(--ink);font-size:clamp(2.3rem,4vw,3.3rem)}
+  .y-o3 b.long{font-size:clamp(1.9rem,3vw,2.6rem)}
+  .y-o3 h4{margin-top:.9rem}
+  .y-o3 small{background:var(--light)}
+  .y-tq blockquote{font-family:var(--body);font-weight:400;font-size:clamp(1.2rem,1.8vw,1.45rem);line-height:1.5;letter-spacing:-.02em}
+
+  .y-tq blockquote{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:500;font-size:clamp(1.25rem,1.9vw,1.55rem);line-height:1.35;letter-spacing:-.025em;font-variation-settings:'opsz' 48}
+
+  /* ================= v16: a little life: pain path, pulse, counting results ================= */
+  .y-st:has(+ .y-st.pain)::before{background:linear-gradient(90deg,rgba(24,24,27,.12),var(--accent))}
+  .y-st.pain:has(+ .y-st.pain)::before{background:var(--accent)}
+  .y-st.pain h4{font-weight:600}
+  @keyframes y-pulse{0%{box-shadow:0 0 0 0 var(--tint),0 0 0 6px var(--tint)}70%{box-shadow:0 0 0 10px rgba(255,255,255,0),0 0 0 6px var(--tint)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0),0 0 0 6px var(--tint)}}
+  .y-st.pain .dot{animation:y-pulse 2.6s cubic-bezier(.2,.7,.2,1) infinite}
+  .y-o3 b .acc{color:var(--accent)}
+  .y-o3::before{transition:width .9s cubic-bezier(.2,.7,.2,1)}
+  .y-out3.counted .y-o3::before{width:44px}
+  @media (prefers-reduced-motion:reduce){.y-st.pain .dot{animation:none}.y-o3::before{transition:none}}
+  .y-num b .acc{color:var(--accent)}
+  .y-st .pb b{display:block;line-height:1}
+  .y-st .pb span{display:block;margin-top:.6rem;line-height:1.45}
+  .y-st .pb{padding:.25rem 0 .3rem 1rem}
+  @media (max-width:860px){.y-bleed img{min-height:230px}}
+  .y-num b span{display:inline!important;margin:0!important;font:inherit!important;letter-spacing:inherit!important;color:inherit!important;max-width:none!important}
+  .y-num b span.acc{color:var(--accent)!important}
+  @media (max-width:860px){.y-bleed.ph img{min-height:380px;object-fit:cover}}
+
 
   /* ===== global nav: the homepage capsule, everywhere ===== */
   header.nav.nav-pill{display:none!important}
@@ -1044,7 +1194,39 @@
   @media (prefers-reduced-motion:reduce){.y-tabs{transition:none}}
 
 </style>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400;500&family=Bricolage+Grotesque:opsz,wght@12..96,500&display=swap" rel="stylesheet">
+<style id="resume-wide">@media screen{#resumeModal .modal-card{width:min(94vw,860px);max-height:90vh;padding:clamp(1.8rem,4vw,3rem)}}</style>
+<link id="rp-fonts" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style id="rp-css">
+.rp{font-family:'Open Sans',Arial,sans-serif;color:#1a1a1a;font-size:12px;line-height:1.5;text-align:left}
+.rp *{text-transform:none;letter-spacing:normal}
+.rp-head{display:block;padding-bottom:1rem;border-bottom:1px solid #d9d9d9}
+.rp-name{margin:0;font:700 34px/1.05 'Merriweather',Georgia,serif;color:#000}
+.rp-title{margin:.45rem 0 0;font-size:13px;color:#333}
+.rp-contact{margin-top:.55rem;text-align:left;font-size:11.5px;line-height:1.65;color:#444}
+.rp-contact p{margin:0}
+.rp-contact a{color:#1155cc;text-decoration:none}
+.rp-contact a[href^="tel"]{color:#444}
+.rp-sum{margin:1rem 0 0;font-size:12.5px;line-height:1.6;color:#1a1a1a}
+.rp-h{margin:1.5rem 0 .75rem;font:700 10.5px/1 'Open Sans',Arial,sans-serif;letter-spacing:.08em!important;text-transform:uppercase!important;color:#2079c7}
+.rp-job{break-inside:avoid;margin-bottom:1.05rem}
+.rp-row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.rp-co{margin:0;font:400 13.5px/1.35 'Merriweather',Georgia,serif;color:#000}
+.rp-co b{font-weight:700}
+.rp-co a{color:inherit;text-decoration:none}
+.rp-site{font-weight:400;color:#555!important}
+.rp-co a:hover{text-decoration:underline}
+.rp-dates{margin:0;white-space:nowrap;font-size:11px;color:#555}
+.rp-meta{margin:.2rem 0 0;font-size:11px;line-height:1.45;color:#666}
+.rp ul{margin:.45rem 0 0;padding-left:1.15rem}
+.rp li{margin:.2rem 0;font-size:12px;line-height:1.55;color:#2b2b2b}
+.rp li::marker{color:#999}
+.rp-line{margin:.3rem 0 0;font-size:12px;line-height:1.55;color:#2b2b2b}
+.rp-line b{font-weight:600;color:#000}
+.rp-dl{display:inline-flex;align-items:center;height:30px;margin-top:.6rem;padding:0 13px;border-radius:999px;background:#111;color:#fff!important;font:600 12px/1 'Open Sans',Arial,sans-serif;text-decoration:none}
+.rp-dl:hover{background:#333}
+@media (max-width:640px){.rp-head{flex-direction:column;align-items:flex-start}.rp-contact{text-align:left}.rp-name{font-size:28px}.rp-row{flex-direction:column;gap:.1rem}}
+</style>
 </head>
 <body id="top">
 <header class="gnav"><nav class="gcap" aria-label="Primary"><a class="g-mark" href="../../" aria-label="Stanley Ojima, home">so</a><a class="g-lnk" href="../../about/">About</a><a class="g-lnk on" href="../../work/">Projects</a><a class="g-lnk" href="#contact">Contact</a><a class="g-cv" href="#" data-resume>Resume</a></nav></header>
@@ -1062,24 +1244,24 @@
   </div></div></div>
 </header>
 <main style="--accent:#1f6a60;--accent-bright:#2a9d8c;--tint:rgba(31,106,96,.1);--light:#EDF3F1;--dark:#0f2b27;--glow:rgba(42,157,140,.22)">
-<section class="y-hero"><div class="y-wrap"><a class="cs-back" href="../"><span class="a">←</span> all projects</a><h1 class="y-title">Risevest</h1><div class="y-badges"><span class="y-pill">Senior product designer</span><span class="y-flag">620K+ users</span><span class="y-yrs">2025 · Fintech</span></div><p class="y-summary">Redesigned the mobile app for a dollar-investment platform used by 620,000+ people across Nigeria, Ghana and Kenya. As one of three designers, I owned onboarding, the dashboard and withdrawals: the moments that decide whether people trust an app with their savings.</p><dl class="y-facts"><div class="y-fact"><dt>Role</dt><dd>Senior product designer, one of three</dd></div><div class="y-fact"><dt>Timeline</dt><dd>2025</dd></div><div class="y-fact"><dt>Team</dt><dd>3 designers, 6 engineers, 2 PMs</dd></div><div class="y-fact"><dt>Scope</dt><dd>End-to-end mobile app redesign</dd></div></dl><div class="y-nums"><div class="y-num"><b>620K+</b><span>Active users</span></div><div class="y-num"><b>34→58%</b><span>Onboarding completion</span></div><div class="y-num"><b>6→2</b><span>Taps to withdraw</span></div><div class="y-num"><b>94%</b><span>Customer satisfaction</span></div></div></div></section>
+<section class="y-hero"><div class="y-wrap"><a class="cs-back" href="../"><span class="a">←</span> all projects</a><h1 class="y-title">Risevest</h1><div class="y-badges"><span class="y-pill">Senior product designer</span><span class="y-flag">620K+ users</span><span class="y-yrs">2025 · Fintech</span></div><p class="y-summary">Redesigned the mobile app for a dollar-investment platform used by 620,000+ people across Nigeria, Ghana and Kenya. As one of three designers, I owned onboarding, the dashboard and withdrawals: the moments that decide whether people trust an app with their savings.</p><dl class="y-facts"><div class="y-fact"><dt>Role</dt><dd>Senior product designer, one of three</dd></div><div class="y-fact"><dt>Timeline</dt><dd>2025</dd></div><div class="y-fact"><dt>Team</dt><dd>3 designers, 6 engineers, 2 PMs</dd></div><div class="y-fact"><dt>Scope</dt><dd>End-to-end mobile app redesign</dd></div></dl><div class="y-nums"><div class="y-num"><b><span class="num">620K+</span></b><span>Active users</span></div><div class="y-num"><b><span class="num">34→58%</span></b><span>Onboarding completion</span></div><div class="y-num"><b><span class="num">6→2</span></b><span>Taps to withdraw</span></div><div class="y-num"><b><span class="num">94%</span></b><span>Customer satisfaction</span></div></div></div></section>
 <figure class="y-bleed cs-rv"><img src="img/rv-hero.webp" alt="Risevest app: onboarding, home and review screens" loading="lazy"></figure>
-<section class="y-part cs-rv"><div class="y-wrap"><div class="y-ch"><div class="y-ch-top"><p class="y-l">Part one</p><div class="txt"><h2>The product and the redesign</h2><p>What Risevest is, the constraint we worked under, and the flows I owned.</p></div></div></div></div></section>
+<section class="y-part cs-rv"><div class="y-chb"><div class="y-wrap"><div class="y-ch-top"><p class="y-l">Part one</p><div class="txt"><h2>The product and the redesign</h2><p>What Risevest is, the constraint we worked under, and the flows I owned.</p></div></div></div></div></section>
 <section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="overview"><p class="y-l a">Overview</p><div class="y-c"><h2 class="y-h2">An app people trust with their savings</h2><p class="y-p">Risevest lets people in emerging markets invest in dollar-denominated assets (U.S. stocks, real estate and fixed income) from a phone. Where inflation steadily erodes local currency, it’s how everyday people protect what they’ve saved. <b>People keep wedding funds and school fees in this app, so confusion isn’t a usability issue. It’s a trust issue.</b></p><p class="y-p">I was one of three designers on a full redesign, working with two product managers and six engineers. The hard constraint was full feature parity: nothing could be removed while everything was rethought.</p></div></div></div></section>
 <section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="what-i-designed"><p class="y-l a">What I designed</p><div class="y-c"><h2 class="y-h2">Every core flow, onboarding to withdrawal</h2><p class="y-p">I contributed across the whole app and led the three flows where trust is won or lost.</p></div></div></div></section>
 <figure class="y-bleed cs-rv"><img src="img/rv-areas1.webp" alt="Risevest onboarding, dashboard and review screens" loading="lazy"></figure>
 <figure class="y-bleed tight cs-rv"><img src="img/rv-areas2.webp" alt="Risevest plans, wallet and support screens" loading="lazy"></figure>
 <section class="y-sec" style="padding-top:clamp(2.2rem,5vw,3.2rem)"><div class="y-wrap cs-rv"><div class="y-g"><p class="y-l a">The areas</p><div class="y-c"><div class="y-cols" style="--n:2"><div class="y-col"><p class="y-l a">01</p><h4>Onboarding and setup guide</h4><p>A progressive checklist (verify ID, add money, create a plan) that explains why each step matters.</p><p class="y-metric"><b>34% → 58%</b> completion</p></div><div class="y-col"><p class="y-l a">02</p><h4>Dashboard and portfolio</h4><p>Total balance, asset mix and quick actions on one screen instead of across tabs.</p></div><div class="y-col"><p class="y-l a">03</p><h4>Review and withdrawals</h4><p>Projections, fees and exchange rates before confirmation. No surprises after.</p><p class="y-metric"><b>6 → 2</b> taps to withdraw</p></div><div class="y-col"><p class="y-l a">04</p><h4>Plans and auto-invest</h4><p>Performance, auto-invest and reinvestment controls, so investing feels active, not passive.</p></div><div class="y-col"><p class="y-l a">05</p><h4>Wallet and banking</h4><p>Funding, multi-currency accounts and linked cards, where trust is won or lost.</p></div><div class="y-col"><p class="y-l a">06</p><h4>Support</h4><p>In-app chat and “shake to chat”, so help is one gesture away from any screen.</p></div></div></div></div></div></section>
-<section class="y-part cs-rv"><div class="y-wrap"><div class="y-ch"><div class="y-ch-top"><p class="y-l">Part two</p><div class="txt"><h2>Deep dive: making money legible</h2><p>Why people couldn’t read their own portfolio, and the three calls that fixed it.</p></div></div></div></div></section>
-<section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="the-problem"><p class="y-l a">The problem</p><div class="y-c"><h2 class="y-h2">People had money in the app and couldn’t read it</h2><p class="y-p">Investing worked. Understanding didn’t. Checking a balance took several taps, performance meant mental math, and withdrawing felt like a maze. <b>For a product that holds savings, friction reads as risk.</b></p></div></div><div class="y-ev"><div class="y-ev-r"><div><span class="fig">4+</span><span class="cap">Taps for basic tasks</span></div><p>Checking a balance, comparing plans and withdrawing all took four or more.</p></div><div class="y-ev-r"><div><span class="fig">22s</span><span class="cap">To check performance</span></div><p>Four taps and 22 seconds to answer “how am I doing?”</p></div><div class="y-ev-r"><div><span class="fig">66%</span><span class="cap">Lost during onboarding</span></div><p>Setup asked for everything upfront without saying why.</p></div></div></div></section>
+<section class="y-part cs-rv"><div class="y-chb"><div class="y-wrap"><div class="y-ch-top"><p class="y-l">Part two</p><div class="txt"><h2>Deep dive: making money legible</h2><p>Why people couldn’t read their own portfolio, and the three calls that fixed it.</p></div></div></div></div></section>
+<section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="the-problem"><p class="y-l a">The problem</p><div class="y-c"><h2 class="y-h2">People had money in the app and couldn’t read it</h2><p class="y-p">Investing worked. Understanding didn’t. Checking a balance took several taps, performance meant mental math, and withdrawing felt like a maze. <b>For a product that holds savings, friction reads as risk.</b></p></div></div><div class="y-jn" style="--n:4"><div class="y-st pain"><span class="dot"></span><span class="n">Step 1</span><h4>Onboard</h4><p>Every requirement asked upfront, with no reason given.</p><div class="pb"><b>66%</b><span>never finished setup</span></div></div><div class="y-st pain"><span class="dot"></span><span class="n">Step 2</span><h4>Check the balance</h4><p>Several taps through unclear navigation.</p><div class="pb"><b>4+</b><span>taps for routine tasks</span></div></div><div class="y-st pain"><span class="dot"></span><span class="n">Step 3</span><h4>Read performance</h4><p>Raw figures that needed mental maths.</p><div class="pb"><b>22s</b><span>to answer “how am I doing?”</span></div></div><div class="y-st pain"><span class="dot"></span><span class="n">Step 4</span><h4>Withdraw</h4><p>Three screens to move money out.</p><div class="pb"><b>6</b><span>taps to withdraw</span></div></div></div></div></section>
 <section class="y-sec cs-rv"><div class="y-wrap"><!-- VERIFY: ownership split --><div class="y-g" id="my-role"><p class="y-l a">My role</p><div class="y-c"><h2 class="y-h2">Onboarding, dashboard and withdrawals</h2><p class="y-p">With three designers on the redesign, I owned the flows that decide trust: the first five minutes, the home screen, and getting money out.</p></div></div><div class="y-cols" style="--n:2"><div class="y-col"><p class="y-l a">What I owned</p><h4>Research through spec</h4><p>Interviews, task timing, the competitive review, flows, prototypes and specs for my areas.</p></div><div class="y-col"><p class="y-l a">Constraint</p><h4>Full feature parity</h4><p>Every feature had to survive, so simplicity had to come from structure, not removal.</p></div></div></div></section>
 <section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="what-we-learned"><p class="y-l a">What we learned</p><div class="y-c"><h2 class="y-h2">Users struggled with complexity, not investing</h2><p class="y-p">We interviewed users, timed core tasks, and compared Risevest with the simpler apps people also used.</p></div></div><div class="y-cols" style="--n:3"><div class="y-col"><p class="y-l a">Interviews</p><h4>“Make it simpler”</h4><p>The most common request. People wanted to check a balance and leave in under ten seconds.</p></div><div class="y-col"><p class="y-l a">Task timing</p><h4>22 seconds to see performance</h4><p>Withdrawing took 6 taps across 3 screens.</p></div><div class="y-col"><p class="y-l a">Competitive review</p><h4>Simpler rivals, better completion</h4><p>Cowrywise and Bamboo had fewer features and faster core flows. Every Risevest addition made it harder.</p></div></div><div class="y-insight"><p class="y-l a">The insight</p><p>People didn’t need more features. They needed answers to “how am I doing?” and “can I get my money?” on the first screen.</p></div></div></section>
-<section class="y-sec" style="padding-bottom:0"><div class="y-wrap cs-rv"><div class="y-g" id="key-decisions-and-trade-offs"><p class="y-l a">Key decisions &amp; trade-offs</p><div class="y-c"><h2 class="y-h2">Three calls that made the app feel safe</h2></div></div></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 01</p><h3>Answer “how am I doing?” before anything else</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">Total balance and portfolio summary on the home screen. Individual plans open only when someone taps in.</p></div><div><h4>The trade-off</h4><p>A card per plan looked tidy and tested poorly: people with five or more plans couldn’t see their total. Aggregating first and expanding on demand put the one answer everyone wanted on the first screen.</p></div></div></div></div><figure class="y-bleed cs-rv"><img src="img/rv-dec1.webp" alt="Risevest home screen with total balance, and the portfolio view" loading="lazy"></figure></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 02</p><h3>Show risk as shape, not numbers</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">A colour-coded asset mix with risk cues. Each class keeps one colour everywhere, and any segment opens its performance.</p></div><div><h4>The trade-off</h4><p>Tables were precise and unreadable for first-time investors. A chart gives up some precision at a glance and wins comprehension, and the exact numbers are one tap away.</p></div></div></div></div><figure class="y-bleed cs-rv"><img src="img/rv-dec2.webp" alt="Risevest portfolio breakdown with the colour-coded asset mix" loading="lazy"></figure></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 03</p><h3>Invest in the system, not the screens</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">One design system, so people learn an interaction once and it behaves the same everywhere.</p></div><div><h4>The trade-off</h4><p>Patching screens would have shipped sooner. With full feature parity, simplicity couldn’t come from removing things. It had to come from consistency, and in fintech, predictable reads as trustworthy.</p></div></div></div></div><figure class="y-bleed cs-rv"><img src="img/rv-dec3.webp" alt="Redesigned Risevest wallet, bank account and plan screens" loading="lazy"></figure></div></section>
+<section class="y-sec" style="padding-bottom:0"><div class="y-wrap cs-rv"><div class="y-g" id="key-decisions-and-trade-offs"><p class="y-l a">Key decisions &amp; trade-offs</p><div class="y-c"><h2 class="y-h2">Three calls that made the app feel safe</h2></div></div></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 01</p><h3>Answer “how am I doing?” before anything else</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">Total balance and portfolio summary on the home screen. Individual plans open only when someone taps in.</p></div><div><h4>The trade-off</h4><p>A card per plan looked tidy and tested poorly: people with five or more plans couldn’t see their total. Aggregating first and expanding on demand put the one answer everyone wanted on the first screen.</p></div></div></div></div><figure class="y-bleed ph cs-rv"><img src="img/rv-dec1.webp" alt="Risevest home screen with total balance, and the portfolio view" loading="lazy"></figure></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 02</p><h3>Show risk as shape, not numbers</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">A colour-coded asset mix with risk cues. Each class keeps one colour everywhere, and any segment opens its performance.</p></div><div><h4>The trade-off</h4><p>Tables were precise and unreadable for first-time investors. A chart gives up some precision at a glance and wins comprehension, and the exact numbers are one tap away.</p></div></div></div></div><figure class="y-bleed ph cs-rv"><img src="img/rv-dec2.webp" alt="Risevest portfolio breakdown with the colour-coded asset mix" loading="lazy"></figure></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 03</p><h3>Invest in the system, not the screens</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">One design system, so people learn an interaction once and it behaves the same everywhere.</p></div><div><h4>The trade-off</h4><p>Patching screens would have shipped sooner. With full feature parity, simplicity couldn’t come from removing things. It had to come from consistency, and in fintech, predictable reads as trustworthy.</p></div></div></div></div><figure class="y-bleed cs-rv"><img src="img/rv-dec3.webp" alt="Redesigned Risevest wallet, bank account and plan screens" loading="lazy"></figure></div></section>
 <section class="y-sec cs-rv"><div class="y-vsband"><div class="y-wrap"><div class="y-g" id="before-vs-after"><p class="y-l a">Before vs. after</p><div class="y-c"><h2 class="y-h2">What changed for investors</h2></div></div><div class="y-vs2"><div class="y-vs2-h"><p class="y-l">Before</p><i></i><p class="y-l">After</p></div><div class="y-vs2-r"><span>Key numbers hidden behind taps</span><i>→</i><span>The whole position on the home screen</span></div><div class="y-vs2-r"><span>Raw figures, no risk cues</span><i>→</i><span>Colour-coded asset mix with risk levels</span></div><div class="y-vs2-r"><span>A different pattern on every screen</span><i>→</i><span>One system across the app</span></div><div class="y-vs2-r"><span>4 to 6 taps for core tasks</span><i>→</i><span>1 to 2 taps</span></div><div class="y-vs2-r"><span>34% onboarding completion</span><i>→</i><span>58% onboarding completion</span></div></div></div></div></section>
-<section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="outcome"><p class="y-l a">Outcome</p><div class="y-c"><h2 class="y-h2">Less friction, more confidence</h2></div></div><div class="y-res"><div class="y-res-r"><div class="lab"><b>Onboarding completion</b><span>From sign-up to a first funded plan.</span></div><div class="y-bars"><div class="y-bar"><span>Before</span><i style="--w:59%"></i><em>34%</em></div><div class="y-bar after"><span>After</span><i style="--w:100%"></i><em>58%</em></div></div><div class="val">34→58%</div></div><div class="y-res-r"><div class="lab"><b>Taps to withdraw</b><span>Three screens down to one.</span></div><div class="y-bars"><div class="y-bar"><span>Before</span><i style="--w:100%"></i><em>6</em></div><div class="y-bar after"><span>After</span><i style="--w:33%"></i><em>2</em></div></div><div class="val">6→2</div></div><div class="y-res-r"><div class="lab"><b>Support friction</b><span>With in-app chat and shake to chat.</span></div><div class="y-bars"><div class="y-bar"><span>Before</span><i style="--w:100%"></i><em></em></div><div class="y-bar after"><span>After</span><i style="--w:60%"></i><em></em></div></div><div class="val">↓40%</div></div><div class="y-res-r nb"><div class="lab"><b>Customer satisfaction</b><span>After the redesign shipped.</span></div><div class="val">94%</div></div></div><p class="y-p y-note">Core tasks went from four to six taps to one or two. <b>People reported feeling more in control, not because we added features, but because we removed friction from every interaction.</b></p></div></section>
+<section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="outcome"><p class="y-l a">Outcome</p><div class="y-c"><h2 class="y-h2">Less friction, more confidence</h2></div></div><div class="y-out3" style="--n:4"><div class="y-o3"><b class='long'><span class="num">34→58%</span></b><h4>Onboarding completion</h4><p>From sign-up to a first funded plan.</p></div><div class="y-o3"><b><span class="num">6→2</span></b><h4>Taps to withdraw</h4><p>Three screens down to one.</p></div><div class="y-o3"><b><span class="acc">↓</span><span class="num">40%</span></b><h4>Support friction</h4><p>With in-app chat and shake to chat.</p></div><div class="y-o3"><b><span class="num">94%</span></b><h4>Customer satisfaction</h4><p>After the redesign shipped.</p></div></div><p class="y-p y-note">Core tasks went from four to six taps to one or two. <b>People reported feeling more in control, not because we added features, but because we removed friction from every interaction.</b></p></div></section>
 <section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="reflection"><p class="y-l a">Reflection</p><div class="y-c"><p class="y-quote">In fintech, simplicity is safety.</p><p class="y-p">If I did this again, I’d put real users in front of prototypes in week two, not week six. Early reviews with internal stakeholders pulled us toward feature completeness, and we found the onboarding friction later than we should have.</p></div></div></div></section>
 <section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g"><p class="y-l a">Credits</p><div class="y-c"><div class="y-credits"><p>Risevest product team<span>Product management</span></p><p>Risevest brand team<span>Brand design</span></p><p>Engineering<span>6 engineers</span></p></div></div></div></div></section>
-<section class="mp-wrap cs-rv"><div class="y-wrap"><p class="mp-eyebrow">more projects</p><div class="mp-grid"><a class="mp" href="../dro-health/" style="--accent:#6D28D9"><span class="mp-client">DRO Health</span><span class="mp-sector">Health tech, Telehealth</span><p class="mp-teaser">Redesigned telehealth for 50K+ users in Nigeria; sign-up drop-off fell 18%.</p><span class="mp-view">view project →</span></a><a class="mp" href="../goco/" style="--accent:var(--rose)"><span class="mp-client">GoCo</span><span class="mp-sector">SaaS, HR Tech</span><p class="mp-teaser">Led design across an HR platform for 200K+ users, and rebuilt its most complained-about feature.</p><span class="mp-view">view project →</span></a><a class="mp" href="../quickfleet/" style="--accent:#087A64"><span class="mp-client">QuickFleet</span><span class="mp-sector">Logistics, Electric mobility</span><p class="mp-teaser">Co-founded an electric delivery network, and designed the product it runs on.</p><span class="mp-view">view project →</span></a></div></div></section>
+<section class="mp-wrap cs-rv"><div class="y-wrap"><p class="mp-eyebrow">more projects</p><div class="mp-grid"><a class="mp" href="../dro-health/" style="--accent:#6D28D9"><span class="mp-client">DRO Health</span><span class="mp-sector">Health tech, Telehealth</span><p class="mp-teaser">Redesigned telehealth for 50K+ users in Nigeria; sign-up drop-off fell 18%.</p><span class="mp-view">view project →</span></a><a class="mp" href="../goco/" style="--accent:#0E7A4A"><span class="mp-client">GoCo</span><span class="mp-sector">SaaS, HR Tech</span><p class="mp-teaser">Led design across an HR platform for 200K+ users, and rebuilt its most complained-about feature.</p><span class="mp-view">view project →</span></a><a class="mp" href="../quickfleet/" style="--accent:#087A64"><span class="mp-client">QuickFleet</span><span class="mp-sector">Logistics, Electric mobility</span><p class="mp-teaser">Co-founded an electric delivery network, and designed the product it runs on.</p><span class="mp-view">view project →</span></a></div></div></section>
 </main>
 <footer class="site-footer" id="contact">
   <div class="foot-inner">
@@ -1097,69 +1279,16 @@
   <div class="modal-backdrop" data-close></div>
   <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="resumeTitle">
     <button class="modal-close" type="button" data-close aria-label="Close">&times;</button>
-    <article class="resume" id="resumeDoc">
-      <header class="rs-head">
-        <p class="rs-eyebrow">résumé</p>
-        <h2 class="rs-name" id="resumeTitle">stanley ojima</h2>
-        <p class="rs-title">Senior Product Designer</p>
-      </header>
-      <p class="rs-summary">Senior Product Designer with 8+ years designing intuitive, user-centered products that create real value for users and businesses. I turn complex problems into simple, scalable experiences, working closely with cross-functional teams to ship impactful, data-informed solutions.</p>
-      <div class="rs-contact">
-        <a href="tel:+2347056833543">+234 705 683 3543</a>
-        <a href="mailto:stanleyojima9@gmail.com">stanleyojima9@gmail.com</a>
-        <a href="../../">Portfolio</a>
-        <a href="https://www.linkedin.com/in/ojima-aniegboka/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-      </div>
-      <div class="modal-actions" style="margin:1.1rem 0 .1rem"><button id="rsTopDl" class="btn btn-primary" type="button" data-print>download pdf <span class="arr">↓</span></button></div>
-      <section class="rs-section">
-        <h3 class="rs-h">Experience</h3>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">QuickFleet</span><span class="rs-dates">2026 – Present</span></div>
-          <p class="rs-role">Co-founder &amp; CTO</p>
-          <ul class="rs-bullets"><li>Co-founded an electric delivery network for Nigerian cities; own product and technology.</li><li>Designed the customer app end to end, from booking and fixed pricing to live tracking and delivery codes.</li><li>Designed and built the marketing site, quickfleet.co.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">GoCo</span><span class="rs-dates">Jul 2022 – Apr 2025</span></div>
-          <p class="rs-role">Senior Product Designer</p>
-          <ul class="rs-bullets"><li>Led end-to-end design across the GoCo platform, partnering with PMs to define problems, run research, and ship impactful solutions.</li><li>Spearheaded the redesign of core platform experiences, simplifying complex workflows and improving usability.</li><li>Conducted user research and collaborated cross-functionally to validate decisions and iterate on feedback.</li><li>Contributed to measurable impact, including a 60% rise in customer satisfaction after the platform redesign.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">Curva Digital</span><span class="rs-dates">Feb 2020 – Jul 2022</span></div>
-          <p class="rs-role">Senior Product Designer</p>
-          <ul class="rs-bullets"><li>Owned design execution across mobile apps, websites, and visual systems for multiple clients in a fast-paced agency.</li><li>Translated ambiguous client requirements into clear, user-focused solutions aligned with business goals.</li><li>Led work from early concepts through high-fidelity UI and delivery, balancing speed, quality, and stakeholder expectations.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">DRO Health</span><span class="rs-dates">Nov 2019 – Feb 2021</span></div>
-          <p class="rs-role">Product Designer</p>
-          <ul class="rs-bullets"><li>Designed and improved features within the DRO Health mobile app, enhancing overall UX and usability.</li><li>Focused on clarity, accessibility, and visual consistency across web and mobile.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">Busha</span><span class="rs-dates">May 2019 – Oct 2019</span></div>
-          <p class="rs-role">Product Designer</p>
-          <ul class="rs-bullets"><li>Redesigned the admin dashboard and multiple product pages for a new application within a crypto exchange platform.</li><li>Delivered high-quality, detailed designs while balancing usability and business requirements.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">Transformify</span><span class="rs-dates">Jan 2018 – Apr 2019</span></div>
-          <p class="rs-role">UI/UX Designer</p>
-          <ul class="rs-bullets"><li>Partnered with PMs to research and define user needs for the Transformify platform.</li><li>Translated requirements into wireframes, user flows, and polished UI; supported product decisions through design exploration.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">Freelance</span><span class="rs-dates">Jan 2017 – Present</span></div>
-          <p class="rs-role">UI/UX Designer</p>
-          <ul class="rs-bullets"><li>Consulted with early-stage and growing startups on solutions addressing user needs and business challenges.</li><li>Led end-to-end design across research, UX, UI, and prototyping, often working directly with founders.</li></ul>
-        </div>
-      </section>
-      <section class="rs-section">
-        <h3 class="rs-h">Skills</h3>
-        <p class="rs-skillgroup"><span class="rs-skilllabel">Product &amp; UX</span>Product Thinking · End-to-End UX Design · UX Strategy &amp; Experience Mapping · User Research (Interviews, Usability Testing) · Information Architecture · UI &amp; Visual Design · Design Systems &amp; Scalable UI · Low-to-High Fidelity Design · Interactive Prototyping (Figma)</p>
-        <p class="rs-skillgroup"><span class="rs-skilllabel">Collaboration</span>Cross-functional Collaboration (Product, Engineering, Marketing) · Stakeholder Communication &amp; Alignment · Design–Engineering Handoff · Feedback Facilitation &amp; Iteration</p>
-      </section>
-      <section class="rs-section">
-        <h3 class="rs-h">Languages</h3>
-        <p class="rs-skillgroup">English</p>
-      </section>
-    </article>
-    <div class="modal-actions rs-actions"><button class="btn btn-primary" type="button" data-print>download pdf <span class="arr">↓</span></button></div>
+    <article class="resume rp" id="resumeDoc">
+<header class="rp-head"><div><h2 class="rp-name">Stanley Ojima</h2><p class="rp-title">Senior Product Designer · B2B SaaS and enterprise products</p></div>
+<div class="rp-contact"><p><a href="mailto:stanleyojima9@gmail.com">stanleyojima9@gmail.com</a> · <a href="tel:+2347056833543">+234 705 683 3543</a></p><p><a href="https://stanleyojima.xyz">stanleyojima.xyz</a> · <a href="https://www.linkedin.com/in/ojima-aniegboka/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ojima-aniegboka</a> · Remote</p><a class="rp-dl" href="/resume.pdf" download="Stanley-Ojima-Resume.pdf">Download PDF</a></div></header>
+<p class="rp-sum">Senior product designer with 8+ years designing B2B SaaS and enterprise products across HR, fintech, health and logistics. I take dense, high-stakes workflows and make them predictable, and I measure the work by what it changes. At GoCo (acquired by Intuit), rebuilding Reports cut support tickets by 30% and lifted monthly usage from 28% to 52%.</p>
+<h3 class="rp-h">Experience</h3><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>QuickFleet</b> <a class="rp-site" href="https://quickfleet.co" target="_blank" rel="noopener noreferrer">(quickfleet.co)</a>, <i>Co-founder &amp; CTO</i></p><p class="rp-dates">2026 – Present</p></div><p class="rp-meta">Abuja, Nigeria · Electric last-mile delivery network for Nigerian cities. Pre-launch.</p><ul><li>Own product and technology. Defined booking, fixed pricing, dispatch, live tracking and proof of delivery as one system.</li><li>Designed the customer app end to end, including a four-digit delivery code receivers confirm from a text link, with no app to install.</li><li>Designed and built the marketing site and waitlist at quickfleet.co.</li><li>Proposed the battery-swap partnership that makes fixed, pump-independent pricing viable.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>GoCo</b> <a class="rp-site" href="https://www.goco.io" target="_blank" rel="noopener noreferrer">(goco.io)</a>, <i>Senior Product Designer</i></p><p class="rp-dates">July 2022 – April 2025</p></div><p class="rp-meta">Remote · HR, benefits and payroll platform for U.S. small and mid-sized businesses, 200K+ users. Acquired by Intuit in 2025. One of two product designers, working with 8 product managers.</p><ul><li>Rebuilt Reports, the platform’s largest source of support tickets, into a three-step flow with live preview and smart defaults: support tickets down 30%, monthly usage up from 28% to 52%, report creation 2.2× faster.</li><li>Designed across 10+ product areas, including employee profiles, scheduling, workflows, time off and payroll; the new scheduling flow cut weekly scheduling from 45 to 15 minutes.</li><li>Built GoCo’s design system: 120+ components and tokens adopted across 12+ product modules, cutting design-to-development handoff time by 35%.</li><li>With the Director of Design, introduced weekly critiques of work in progress, research before design, and a standard handoff format.</li><li>Contributed to a 60% increase in customer satisfaction following the platform redesign.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>Curva Digital</b> <a class="rp-site" href="https://curvadigital.co.uk" target="_blank" rel="noopener noreferrer">(curvadigital.co.uk)</a>, <i>Senior Product Designer</i></p><p class="rp-dates">February 2020 – July 2022</p></div><p class="rp-meta">Remote · London-based digital agency.</p><ul><li>Owned design execution across mobile apps, websites and visual systems for multiple clients, from early concepts through high-fidelity UI and delivery.</li><li>Translated ambiguous client briefs into clear, user-focused solutions tied to business goals.</li><li>Balanced speed, quality and stakeholder expectations across concurrent client projects.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>DRO Health</b> <a class="rp-site" href="https://drohealth.com" target="_blank" rel="noopener noreferrer">(drohealth.com)</a>, <i>Product Designer</i></p><p class="rp-dates">November 2019 – February 2021</p></div><p class="rp-meta">Remote · Telehealth platform in Nigeria for consultations, medication delivery and lab tests. 50K+ users, 100K+ consultations.</p><ul><li>Restructured the app around its three primary intents (see a doctor, order medication, book a test); users could go from opening the app to booking in under a minute.</li><li>Moved medical-detail collection from sign-up to the first booking, reducing sign-up drop-off by 18%.</li><li>Worked with two other designers on a shared component system across app and website; user satisfaction rose 45%.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>Busha</b> <a class="rp-site" href="https://busha.co" target="_blank" rel="noopener noreferrer">(busha.co)</a>, <i>Product Designer</i></p><p class="rp-dates">May 2019 – October 2019</p></div><p class="rp-meta">Remote · Cryptocurrency exchange.</p><ul><li>Redesigned the admin dashboard and multiple product pages for a new application on the exchange platform.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>Transformify</b> <a class="rp-site" href="https://transformify.org" target="_blank" rel="noopener noreferrer">(transformify.org)</a>, <i>UI/UX Designer</i></p><p class="rp-dates">January 2018 – April 2019</p></div><p class="rp-meta">Remote · Recruitment platform.</p><ul><li>Partnered with product managers on research and user needs; translated requirements into user flows, wireframes and UI.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>Independent</b>, <i>Contract Product Designer</i></p><p class="rp-dates">January 2017 – Present</p></div><p class="rp-meta">Remote · Scoped contract engagements with startups and scale-ups, alongside full-time roles.</p><ul><li>Risevest (2025): redesigned onboarding, the dashboard and withdrawals for a dollar-investment app with 620K+ users; onboarding completion rose from 34% to 58%, and withdrawing went from 6 taps to 2.</li><li>Lenox Park Solutions (2023): sole designer on an analytics platform for institutional investors with $4T+ in client assets; made side-by-side comparison the default view.</li></ul></div>
+<h3 class="rp-h">Mentoring</h3><p class="rp-line">Mentored 30+ designers through portfolio reviews, mock interviews and career strategy. Trained 100+ students in workshops on problem framing and measuring impact.</p>
+<h3 class="rp-h">Skills</h3><p class="rp-line"><b>Product &amp; UX:</b> Product strategy, end-to-end UX, user research (interviews, usability testing), information architecture, experience mapping</p><p class="rp-line"><b>Design:</b> Design systems, UI and visual design, interaction design, prototyping (Figma)</p><p class="rp-line"><b>Collaboration:</b> Cross-functional work with product, engineering and marketing; stakeholder alignment; design–engineering handoff; written, async communication</p>
+<h3 class="rp-h">Languages</h3><p class="rp-line">English</p>
+</article>
+    <div class="modal-actions rs-actions"><a class="btn btn-primary"  href="/resume.pdf" download="Stanley-Ojima-Resume.pdf">download pdf <span class="arr">↓</span></a></div>
   </div>
 </div>
 <script>
@@ -1201,5 +1330,24 @@
   addEventListener('scroll',act,{passive:true}); act();
 })();
 </script>
-</body>
+<script>
+(function(){
+  var rows=document.querySelectorAll('.y-out3, .y-sec .y-nums'); if(!rows.length) return;
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function run(row){
+    row.classList.add('counted'); if(reduce) return;
+    row.querySelectorAll('.num').forEach(function(el){
+      var txt=el.textContent, m=txt.match(/^(\d+(?:\.\d+)?)(.*)$/);
+      if(!m||txt.indexOf('→')>-1) return;
+      var to=parseFloat(m[1]), dec=(m[1].split('.')[1]||'').length, suf=m[2], t0=null, dur=1100;
+      function step(t){ if(!t0) t0=t; var k=Math.min((t-t0)/dur,1), e=1-Math.pow(1-k,3);
+        el.textContent=(to*e).toFixed(dec)+suf; if(k<1) requestAnimationFrame(step); else el.textContent=txt; }
+      el.textContent=(0).toFixed(dec)+suf; requestAnimationFrame(step);
+    });
+  }
+  if(!('IntersectionObserver' in window)){ rows.forEach(run); return; }
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ run(e.target); io.unobserve(e.target);} }); },{threshold:.4});
+  rows.forEach(function(r){ io.observe(r); });
+})();
+</script></body>
 </html>

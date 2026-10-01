@@ -1016,6 +1016,156 @@
   .y-note{margin-left:calc((100% + 24px) / 4)}
   @media (max-width:860px){.y-note{margin-left:0}}
 
+  /* ================= v11: grid-aligned chapter bands, problem tiles, outcome panel ================= */
+  .y-part{padding-top:clamp(5rem,10vw,7.5rem)}
+  .y-chb{background:var(--light);padding:clamp(2.6rem,5.6vw,4rem) 0}
+  .y-chb .y-ch-top{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 24px;align-items:start}
+  .y-chb .y-l{grid-column:1/4;color:var(--accent);padding-top:.6rem}
+  .y-chb .txt{grid-column:4/13}
+  .y-chb h2{margin:0;font:500 clamp(1.8rem,3.2vw,2.6rem)/1.05 var(--display);letter-spacing:-.045em;color:var(--ink);max-width:22ch}
+  .y-chb .txt > p{margin:.8rem 0 0;font:400 1.05rem/1.55 var(--body);color:#4b4b53;max-width:56ch}
+  .y-part + .y-sec{padding-top:clamp(3.6rem,7vw,5rem)}
+  .y-ev{border-top:0;display:grid;gap:10px}
+  .y-ev-r{grid-template-columns:clamp(150px,18vw,210px) minmax(0,1fr);gap:0 clamp(1.2rem,2.6vw,2rem);padding:0;border:0;align-items:stretch}
+  .y-ev-r .tile{border-radius:1rem;background:var(--light);padding:clamp(1rem,2vw,1.3rem) clamp(1rem,2vw,1.4rem);display:flex;align-items:flex-end;min-height:clamp(96px,10vw,120px)}
+  .y-ev-r .fig{font-size:clamp(2.1rem,3.6vw,2.8rem)}
+  .y-ev-r .word{font:500 clamp(1.25rem,2vw,1.55rem)/1.05 var(--display);letter-spacing:-.035em;color:var(--accent)}
+  .y-ev-r .body{padding:clamp(.6rem,1.4vw,.9rem) 0;border-bottom:1px solid var(--hairline);display:flex;flex-direction:column;justify-content:center}
+  .y-ev-r:last-child .body{border-bottom:0}
+  .y-ev-r .body h3{font:500 1.1rem/1.3 var(--body);letter-spacing:-.015em;color:var(--ink);margin:0}
+  .y-ev-r .body p{margin:.35rem 0 0;padding:0;font-size:.98rem}
+  .y-res{border-top:0;background:var(--light);border-radius:1.3rem;padding:.4rem clamp(1.2rem,2.6vw,1.8rem)}
+  .y-res-r{border-bottom:1px solid rgba(24,24,27,.08)}
+  .y-res-r:last-child{border-bottom:0}
+  .y-bar i{height:12px;background:rgba(24,24,27,.07)}
+  .y-res-r{grid-template-columns:minmax(0,4fr) minmax(0,4.4fr) minmax(0,3.2fr)}
+  .y-res-r .val{font-size:clamp(1.8rem,3vw,2.5rem)}
+  img.y-av{object-fit:cover;background:var(--light)}
+  @media (max-width:860px){
+    .y-chb .y-l,.y-chb .txt{grid-column:1/-1}
+    .y-chb .y-l{padding-top:0;margin-bottom:.8rem}
+    .y-ev-r{grid-template-columns:1fr}
+    .y-ev-r .tile{min-height:0}
+    .y-ev-r .body{padding-top:.8rem}
+  }
+
+  /* ================= v12: problem as a journey, outcome with a lead result ================= */
+  .y-jn{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));margin-top:clamp(2rem,4.4vw,3rem)}
+  .y-st{position:relative;padding-right:clamp(.8rem,1.6vw,1.4rem)}
+  .y-st::before{content:"";position:absolute;top:7px;left:18px;right:0;height:2px;background:rgba(24,24,27,.1)}
+  .y-st:last-child::before{display:none}
+  .y-st .dot{position:relative;z-index:1;display:block;width:16px;height:16px;border-radius:50%;background:#fff;border:2px solid #c9c9cf}
+  .y-st.pain .dot{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 6px var(--tint)}
+  .y-st .n{display:block;margin-top:1.1rem;font:500 .66rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+  .y-st h4{margin:.5rem 0 0;font:500 1.02rem/1.3 var(--body);letter-spacing:-.015em;color:var(--ink)}
+  .y-st p{margin:.4rem 0 0;font:400 .92rem/1.5 var(--body);color:#4b4b53}
+  .y-st .pb{margin-top:1rem;padding:.85rem .95rem;border-radius:.85rem;background:var(--tint)}
+  .y-st .pb b{display:block;font:500 clamp(1.5rem,2.4vw,1.9rem)/1 var(--display);letter-spacing:-.045em;color:var(--accent)}
+  .y-st .pb span{display:block;margin-top:.35rem;font:500 .86rem/1.35 var(--body);color:var(--ink)}
+  .y-st .pb.t span{margin-top:0}
+  .y-res-hero{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:0 2rem;align-items:center;padding:clamp(1.4rem,3vw,2rem) 0;border-bottom:1px solid rgba(24,24,27,.08)}
+  .y-res-hero .val{text-align:left;font:500 clamp(3.2rem,6vw,5rem)/.95 var(--display);letter-spacing:-.06em;color:var(--accent)}
+  .y-res-hero .lab b{display:block;font:500 clamp(1.15rem,1.8vw,1.4rem)/1.25 var(--body);letter-spacing:-.02em;color:var(--ink)}
+  .y-res-hero .lab > span{display:block;margin-top:.4rem;font:400 1rem/1.5 var(--body);color:#4b4b53}
+  .y-res-hero .y-bars{margin-top:1rem;max-width:420px}
+  @media (max-width:860px){
+    .y-jn{grid-template-columns:1fr;gap:0}
+    .y-st{padding:0 0 1.6rem 2.2rem}
+    .y-st::before{top:18px;bottom:0;left:7px;right:auto;width:2px;height:auto}
+    .y-st .dot{position:absolute;left:0;top:0}
+    .y-st .n{margin-top:0}
+    .y-res-hero{grid-template-columns:1fr;gap:.8rem}
+  }
+
+  /* ================= v13: journey as connected cards, outcome as a clean scoreboard ================= */
+  .y-out3{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));background:var(--light);border-radius:1.4rem;margin:clamp(1.8rem,4vw,2.6rem) 0 0 calc((100% + 24px) / 4);overflow:hidden}
+  .y-o3{padding:clamp(1.4rem,2.8vw,2rem) clamp(1.1rem,2.2vw,1.6rem)}
+  .y-o3 + .y-o3{border-left:1px solid rgba(24,24,27,.08)}
+  .y-o3 b{display:block;font:500 clamp(2rem,3.4vw,2.8rem)/1 var(--display);letter-spacing:-.055em;color:var(--accent);white-space:nowrap}
+  .y-o3 h4{margin:1rem 0 0;font:500 1rem/1.3 var(--body);letter-spacing:-.01em;color:var(--ink)}
+  .y-o3 p{margin:.35rem 0 0;font:400 .9rem/1.5 var(--body);color:#4b4b53}
+  .y-o3 small{display:inline-block;margin-top:.8rem;font:500 .7rem/1 var(--mono);letter-spacing:.04em;color:var(--dim);background:#fff;padding:6px 9px;border-radius:999px}
+  .y-tq blockquote{font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(1.25rem,1.9vw,1.55rem);line-height:1.45;letter-spacing:-.01em}
+  @media (max-width:860px){
+    .y-out3{grid-template-columns:1fr 1fr;margin-left:0}
+    .y-o3 + .y-o3{border-left:0}
+    .y-o3:nth-child(even){border-left:1px solid rgba(24,24,27,.08)}
+    .y-o3:nth-child(n+3){border-top:1px solid rgba(24,24,27,.08)}
+  }
+
+  /* ================= v14: the journey, refined (same concept as v12) ================= */
+  .y-jn{margin-top:clamp(2.2rem,4.6vw,3.2rem);align-items:stretch}
+  .y-st{display:flex;flex-direction:column;padding-right:clamp(1rem,2vw,1.6rem)}
+  .y-st::before{top:8px;left:20px;right:2px;height:2px;background:rgba(24,24,27,.12);border-radius:2px}
+  .y-st .dot{width:18px;height:18px;border:2px solid #c9c9cf;background:#fff}
+  .y-st.pain .dot{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 6px var(--tint)}
+  .y-st .n{margin-top:1.15rem;color:var(--dim)}
+  .y-st.pain .n{color:var(--accent)}
+  .y-st h4{margin-top:.45rem;font-size:1.04rem}
+  .y-st p{font-size:.93rem;max-width:26ch}
+  .y-st .pb{margin-top:auto;padding:1rem 1.05rem;border-radius:.9rem;background:var(--tint)}
+  .y-st .pb::before{content:none}
+  .y-st h4 + p + .pb,.y-st p + .pb{margin-top:auto}
+  .y-st > p{margin-bottom:1.1rem}
+  .y-st .pb b{font-size:clamp(1.5rem,2.3vw,1.9rem)}
+  .y-st .pb span{color:var(--ink);font-weight:500}
+  .y-st .pb.t{padding:.85rem 1.05rem}
+  .y-st .pb.t span{color:var(--accent);font-weight:500}
+  /* outcome: same scoreboard, each result its own card */
+  .y-out3{background:var(--light);gap:10px;padding:10px;overflow:visible}
+  .y-o3{background:#fff;border-radius:1rem;padding:clamp(1.3rem,2.6vw,1.8rem) clamp(1.1rem,2vw,1.5rem);display:flex;flex-direction:column}
+  .y-o3 + .y-o3{border-left:0}
+  .y-o3 b{font-size:clamp(2.1rem,3.6vw,3rem)}
+  .y-o3 h4{margin-top:1.1rem}
+  .y-o3 small{margin-top:auto;padding-top:0;align-self:flex-start;background:var(--light)}
+  .y-o3 p{margin-bottom:.9rem}
+  @media (max-width:860px){
+    .y-st{padding:0 0 1.8rem 2.4rem}
+    .y-st::before{top:22px;bottom:0;left:8px;right:auto;width:2px;height:auto}
+    .y-st .dot{position:absolute;left:0;top:0}
+    .y-st .n{margin-top:0}
+    .y-st > p{margin-bottom:.9rem}
+    .y-st p{max-width:none}
+    .y-o3:nth-child(even),.y-o3:nth-child(n+3){border:0}
+  }
+  .y-st .pb b.long{font-size:clamp(1.15rem,1.7vw,1.4rem);letter-spacing:-.035em}
+  .y-o3 b.long{font-size:clamp(1.7rem,2.6vw,2.3rem)}
+
+  /* ================= v15: evidence as margin notes, outcome as a stat row ================= */
+  .y-st .pb,.y-st .pb.t{background:none;border-radius:0;padding:.15rem 0 .2rem .85rem;border-left:2px solid var(--accent)}
+  .y-st .pb b{font-size:clamp(1.45rem,2.2vw,1.8rem)}
+  .y-st .pb span{margin-top:.3rem;color:#4b4b53;font-weight:400;font-size:.88rem}
+  .y-st .pb.t span{margin-top:0;color:var(--ink);font-weight:500;font-size:.9rem}
+  .y-out3{background:none;padding:0;gap:clamp(1.2rem,2.6vw,2rem);border-radius:0}
+  .y-o3{background:none;border-radius:0;padding:1.1rem 0 0;position:relative}
+  .y-o3::before{content:"";position:absolute;top:0;left:0;width:28px;height:2px;background:var(--accent)}
+  .y-o3 b{color:var(--ink);font-size:clamp(2.3rem,4vw,3.3rem)}
+  .y-o3 b.long{font-size:clamp(1.9rem,3vw,2.6rem)}
+  .y-o3 h4{margin-top:.9rem}
+  .y-o3 small{background:var(--light)}
+  .y-tq blockquote{font-family:var(--body);font-weight:400;font-size:clamp(1.2rem,1.8vw,1.45rem);line-height:1.5;letter-spacing:-.02em}
+
+  .y-tq blockquote{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:500;font-size:clamp(1.25rem,1.9vw,1.55rem);line-height:1.35;letter-spacing:-.025em;font-variation-settings:'opsz' 48}
+
+  /* ================= v16: a little life: pain path, pulse, counting results ================= */
+  .y-st:has(+ .y-st.pain)::before{background:linear-gradient(90deg,rgba(24,24,27,.12),var(--accent))}
+  .y-st.pain:has(+ .y-st.pain)::before{background:var(--accent)}
+  .y-st.pain h4{font-weight:600}
+  @keyframes y-pulse{0%{box-shadow:0 0 0 0 var(--tint),0 0 0 6px var(--tint)}70%{box-shadow:0 0 0 10px rgba(255,255,255,0),0 0 0 6px var(--tint)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0),0 0 0 6px var(--tint)}}
+  .y-st.pain .dot{animation:y-pulse 2.6s cubic-bezier(.2,.7,.2,1) infinite}
+  .y-o3 b .acc{color:var(--accent)}
+  .y-o3::before{transition:width .9s cubic-bezier(.2,.7,.2,1)}
+  .y-out3.counted .y-o3::before{width:44px}
+  @media (prefers-reduced-motion:reduce){.y-st.pain .dot{animation:none}.y-o3::before{transition:none}}
+  .y-num b .acc{color:var(--accent)}
+  .y-st .pb b{display:block;line-height:1}
+  .y-st .pb span{display:block;margin-top:.6rem;line-height:1.45}
+  .y-st .pb{padding:.25rem 0 .3rem 1rem}
+  @media (max-width:860px){.y-bleed img{min-height:230px}}
+  .y-num b span{display:inline!important;margin:0!important;font:inherit!important;letter-spacing:inherit!important;color:inherit!important;max-width:none!important}
+  .y-num b span.acc{color:var(--accent)!important}
+  @media (max-width:860px){.y-bleed.ph img{min-height:380px;object-fit:cover}}
+
   .cs-big.qf{background:radial-gradient(80% 70% at 50% -5%,rgba(10,153,125,.18) 0%,rgba(10,153,125,0) 55%),linear-gradient(165deg,#221a52 0%,#16102E 60%,#140e2a 100%);border-color:rgba(255,255,255,.06)}
 
 
@@ -1039,7 +1189,39 @@
   @media (prefers-reduced-motion:reduce){.y-tabs{transition:none}}
 
 </style>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400;500&family=Bricolage+Grotesque:opsz,wght@12..96,500&display=swap" rel="stylesheet">
+<style id="resume-wide">@media screen{#resumeModal .modal-card{width:min(94vw,860px);max-height:90vh;padding:clamp(1.8rem,4vw,3rem)}}</style>
+<link id="rp-fonts" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style id="rp-css">
+.rp{font-family:'Open Sans',Arial,sans-serif;color:#1a1a1a;font-size:12px;line-height:1.5;text-align:left}
+.rp *{text-transform:none;letter-spacing:normal}
+.rp-head{display:block;padding-bottom:1rem;border-bottom:1px solid #d9d9d9}
+.rp-name{margin:0;font:700 34px/1.05 'Merriweather',Georgia,serif;color:#000}
+.rp-title{margin:.45rem 0 0;font-size:13px;color:#333}
+.rp-contact{margin-top:.55rem;text-align:left;font-size:11.5px;line-height:1.65;color:#444}
+.rp-contact p{margin:0}
+.rp-contact a{color:#1155cc;text-decoration:none}
+.rp-contact a[href^="tel"]{color:#444}
+.rp-sum{margin:1rem 0 0;font-size:12.5px;line-height:1.6;color:#1a1a1a}
+.rp-h{margin:1.5rem 0 .75rem;font:700 10.5px/1 'Open Sans',Arial,sans-serif;letter-spacing:.08em!important;text-transform:uppercase!important;color:#2079c7}
+.rp-job{break-inside:avoid;margin-bottom:1.05rem}
+.rp-row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.rp-co{margin:0;font:400 13.5px/1.35 'Merriweather',Georgia,serif;color:#000}
+.rp-co b{font-weight:700}
+.rp-co a{color:inherit;text-decoration:none}
+.rp-site{font-weight:400;color:#555!important}
+.rp-co a:hover{text-decoration:underline}
+.rp-dates{margin:0;white-space:nowrap;font-size:11px;color:#555}
+.rp-meta{margin:.2rem 0 0;font-size:11px;line-height:1.45;color:#666}
+.rp ul{margin:.45rem 0 0;padding-left:1.15rem}
+.rp li{margin:.2rem 0;font-size:12px;line-height:1.55;color:#2b2b2b}
+.rp li::marker{color:#999}
+.rp-line{margin:.3rem 0 0;font-size:12px;line-height:1.55;color:#2b2b2b}
+.rp-line b{font-weight:600;color:#000}
+.rp-dl{display:inline-flex;align-items:center;height:30px;margin-top:.6rem;padding:0 13px;border-radius:999px;background:#111;color:#fff!important;font:600 12px/1 'Open Sans',Arial,sans-serif;text-decoration:none}
+.rp-dl:hover{background:#333}
+@media (max-width:640px){.rp-head{flex-direction:column;align-items:flex-start}.rp-contact{text-align:left}.rp-name{font-size:28px}.rp-row{flex-direction:column;gap:.1rem}}
+</style>
 </head>
 <body id="top">
 <header class="gnav"><nav class="gcap" aria-label="Primary"><a class="g-mark" href="../../" aria-label="Stanley Ojima, home">so</a><a class="g-lnk" href="../../about/">About</a><a class="g-lnk on" href="../../work/">Projects</a><a class="g-lnk" href="#contact">Contact</a><a class="g-cv" href="#" data-resume>Resume</a></nav></header>
@@ -1059,8 +1241,8 @@
 <main class="qfp" style="--accent:#087A64;--accent-bright:#0A997D;--tint:rgba(10,153,125,.1);--light:#E6F2EE;--dark:#16102E;--glow:rgba(10,153,125,.22)">
 <section class="y-hero"><div class="y-wrap"><a class="cs-back" href="../"><span class="a">←</span> all projects</a><h1 class="y-title">QuickFleet</h1><div class="y-badges"><span class="y-pill">Co-founder &amp; CTO</span><span class="y-flag">Pre-launch</span><span class="y-yrs">2026 · Logistics, Electric mobility</span></div><p class="y-summary">I co-founded QuickFleet and lead product and technology. It’s an electric delivery network for Nigerian cities, designed around three promises informal dispatch can’t make: a fixed price, a known rider, and proof at the door. I designed the customer app, and designed and built the website.</p><div class="y-ctas"><a class="y-btn pri" href="https://quickfleet.co" target="_blank" rel="noopener noreferrer">Visit quickfleet.co <span aria-hidden="true">↗</span></a><a class="y-btn sec" href="#website">Watch the walkthrough <span aria-hidden="true">↓</span></a></div><dl class="y-facts"><div class="y-fact"><dt>Role</dt><dd>Co-founder &amp; CTO</dd></div><div class="y-fact"><dt>Timeline</dt><dd>2026, pre-launch</dd></div><div class="y-fact"><dt>Team</dt><dd>3 co-founders: CEO, COO and me</dd></div><div class="y-fact"><dt>Shipped</dt><dd>Website live, customer app designed</dd></div></dl></div></section>
 <figure class="y-bleed cs-rv"><img src="img/qf-hero.webp" alt="QuickFleet customer app: rider assigned, deliveries, home, live tracking and the delivered record" loading="lazy"></figure>
-<section class="y-part cs-rv"><div class="y-wrap"><div class="y-ch"><div class="y-ch-top"><p class="y-l">Part one</p><div class="txt"><h2>The company and the product</h2><p>Why QuickFleet exists, what I own, and the product I designed.</p></div></div></div></div></section>
-<section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="overview"><p class="y-l a">Overview</p><div class="y-c"><h2 class="y-h2">Delivery priced by the pump and proven by nothing</h2><p class="y-p">Since Nigeria’s fuel subsidy ended in May 2023, petrol has gone from ₦238 to about ₦1,390 a litre, and delivery fees moved with it. <b>Most deliveries still run on informal dispatch:</b> a price agreed on the phone, a rider nobody vetted, and no record once the parcel leaves.</p><p class="y-p">QuickFleet replaces that with electric motorcycles, battery-swap hubs placed where orders come from, and one platform that takes a parcel from booking to a confirmed handover. Abuja first.</p></div></div><div class="y-ev"><div class="y-ev-r"><div><span class="idx">01</span><h3>Unpredictable price</h3></div><p>Fees track the pump, so every quote moves and sellers can’t plan a margin.</p></div><div class="y-ev-r"><div><span class="idx">02</span><h3>Unaccountable riders</h3></div><p>Service depends on who turns up, and what else they’re doing on the way.</p></div><div class="y-ev-r"><div><span class="idx">03</span><h3>Unprovable handover</h3></div><p>Silence between pickup and drop-off, and no record when a parcel goes missing.</p></div></div></div></section>
+<section class="y-part cs-rv"><div class="y-chb"><div class="y-wrap"><div class="y-ch-top"><p class="y-l">Part one</p><div class="txt"><h2>The company and the product</h2><p>Why QuickFleet exists, what I own, and the product I designed.</p></div></div></div></div></section>
+<section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="overview"><p class="y-l a">Overview</p><div class="y-c"><h2 class="y-h2">Delivery priced by the pump and proven by nothing</h2><p class="y-p">Since Nigeria’s fuel subsidy ended in May 2023, petrol has gone from ₦238 to about ₦1,390 a litre, and delivery fees moved with it. <b>Most deliveries still run on informal dispatch:</b> a price agreed on the phone, a rider nobody vetted, and no record once the parcel leaves.</p><p class="y-p">QuickFleet replaces that with electric motorcycles, battery-swap hubs placed where orders come from, and one platform that takes a parcel from booking to a confirmed handover. Abuja first.</p></div></div><div class="y-jn" style="--n:5"><div class="y-st pain"><span class="dot"></span><span class="n">Step 1</span><h4>Agree a price</h4><p>Quoted by phone and pegged to that day’s pump price.</p><div class="pb"><b class='long'>₦238→₦1,390</b><span>petrol per litre since 2023</span></div></div><div class="y-st pain"><span class="dot"></span><span class="n">Step 2</span><h4>Wait for a rider</h4><p>Whoever is free, with no vetting or training.</p><div class="pb t"><span>No accountability</span></div></div><div class="y-st pain"><span class="dot"></span><span class="n">Step 3</span><h4>In transit</h4><p>No tracking, no updates, and detours are common.</p><div class="pb t"><span>No visibility</span></div></div><div class="y-st"><span class="dot"></span><span class="n">Step 4</span><h4>Handover</h4><p>Released to whoever answers the door.</p></div><div class="y-st pain"><span class="dot"></span><span class="n">Step 5</span><h4>Dispute</h4><p>“It never came,” and nothing to settle it.</p><div class="pb t"><span>No proof of delivery</span></div></div></div></div></section>
 <section class="y-sec cs-rv"><div class="y-wrap"><!-- VERIFY: constraints --><div class="y-g" id="my-role"><p class="y-l a">My role</p><div class="y-c"><h2 class="y-h2">Product and technology, end to end</h2><p class="y-p">As CTO I own what the platform does, not only how it looks. Most of the important design decisions here were business decisions first.</p></div></div><div class="y-cols" style="--n:2"><div class="y-col"><p class="y-l a">Product</p><h4>Defined the system</h4><p>Booking, pricing, dispatch, tracking and proof of delivery designed as one flow, not five features.</p></div><div class="y-col"><p class="y-l a">Design &amp; build</p><h4>App and website</h4><p>Designed the customer app. Designed and built quickfleet.co.</p></div><div class="y-col"><p class="y-l a">Partnerships</p><h4>The energy model</h4><p>Proposed the battery-swap partnership that makes a fixed price sustainable.</p></div><div class="y-col"><p class="y-l a">Constraints</p><h4>Real-world conditions</h4><p>No outside funding yet, riders on low-end Android phones, and patchy mobile data across the city.</p></div></div></div></section>
 <section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="what-i-designed"><p class="y-l a">What I designed</p><div class="y-c"><h2 class="y-h2">Every screen answers one of those three failures</h2><p class="y-p">The customer app covers booking, tracking, payment and proof. The receiver never needs it: they confirm from a text link.</p></div></div></div></section>
 <section class="y-strip dark cs-rv"><div class="y-strip-head"><h3>Booking</h3><p class="y-l">Five screens, price locked by the third</p></div><div class="y-strip-in"><figure><img src="img/flow-1.webp" alt="Where it is going" loading="lazy"><figcaption><b>01</b><strong>Where to</strong></figcaption></figure><figure><img src="img/flow-2.webp" alt="Who receives it" loading="lazy"><figcaption><b>02</b><strong>Who receives it</strong></figcaption></figure><figure><img src="img/flow-3.webp" alt="Price and route" loading="lazy"><figcaption><b>03</b><strong>Price and route</strong></figcaption></figure><figure><img src="img/flow-4.webp" alt="Finding a rider" loading="lazy"><figcaption><b>04</b><strong>Matching a rider</strong></figcaption></figure><figure><img src="img/flow-5.webp" alt="Paid on delivery" loading="lazy"><figcaption><b>05</b><strong>Payment</strong></figcaption></figure></div></section>
@@ -1076,12 +1258,12 @@
 </div>
 <div class="y-videocta"><a class="y-btn light" href="https://quickfleet.co" target="_blank" rel="noopener noreferrer">Visit quickfleet.co <span aria-hidden="true">↗</span></a><p>Designed and built by me, from layout to motion to front end.</p></div>
 </div></figure>
-<section class="y-part cs-rv"><div class="y-wrap"><div class="y-ch"><div class="y-ch-top"><p class="y-l">Part two</p><div class="txt"><h2>Deep dive: designing for trust</h2><p>What senders and receivers needed, and the three calls that make a delivery provable.</p></div></div></div></div></section>
+<section class="y-part cs-rv"><div class="y-chb"><div class="y-wrap"><div class="y-ch-top"><p class="y-l">Part two</p><div class="txt"><h2>Deep dive: designing for trust</h2><p>What senders and receivers needed, and the three calls that make a delivery provable.</p></div></div></div></div></section>
 <section class="y-sec cs-rv"><div class="y-wrap"><!-- PLACEHOLDER: swap in what you actually heard, and who from --><div class="y-g" id="what-we-learned"><p class="y-l a">What we learned</p><div class="y-c"><h2 class="y-h2">Certainty mattered more than speed</h2><p class="y-p">The motorcycle is the easy part. What makes a delivery service worth trusting is everything around it.</p></div></div><div class="y-cols" style="--n:3"><div class="y-col"><p class="y-l a">Senders &amp; sellers</p><h4>Price came first</h4><p>Sellers build delivery into every order. A quote that moves with the pump eats the margin before the parcel leaves.</p></div><div class="y-col"><p class="y-l a">Senders</p><h4>Trust is about the rider</h4><p>Nobody asked for faster. They asked to know who was coming, and that the rider would come straight to them.</p></div><div class="y-col"><p class="y-l a">Receivers</p><h4>No app to receive</h4><p>Anything that asked the receiver to download something would fail at the door.</p></div></div><div class="y-insight"><p class="y-l a">The insight</p><p>Speed is table stakes. The product has to remove uncertainty at three moments: when you book, while the parcel moves, and at the door.</p></div></div></section>
-<section class="y-sec" style="padding-bottom:0"><div class="y-wrap cs-rv"><div class="y-g" id="key-decisions-and-trade-offs"><p class="y-l a">Key decisions &amp; trade-offs</p><div class="y-c"><h2 class="y-h2">Three calls that make it trustworthy</h2></div></div></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 01</p><h3>Make the price a promise the business can keep</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">Route, distance and price are shown before booking and locked at pickup. The rider has nothing to renegotiate at the gate.</p></div><div><h4>The trade-off</h4><p>Metered and negotiated fares are the market norm, and exactly what customers distrust. A fixed price only works if costs are stable, which is why this was a business decision before it was a screen: electric energy costs about a quarter of petrol and follows the tariff, not the pump.</p></div></div></div></div><figure class="y-bleed cs-rv"><img src="img/qf-dec1.webp" alt="Fixed price before booking and the same price after delivery" loading="lazy"><figcaption><span>Before booking · ₦1,500</span><span>After delivery · ₦1,500</span></figcaption></figure></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 02</p><h3>Let the receiver close the delivery</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">The receiver’s number is part of the booking. They get a text, open a web page and give the rider a four-digit code, and every step is timestamped.</p></div><div><h4>The trade-off</h4><p>Photos can be staged, and a signature proves nothing to the sender. An app download would fail at the door. A code only the receiver holds settles “it never came” in one line, with nothing to install.</p></div></div></div></div><figure class="y-bleed cs-rv"><img src="img/qf-dec2.webp" alt="Receiver named at booking and the code confirmed at the door" loading="lazy"><figcaption><span>At booking · receiver named</span><span>At the door · code confirmed</span></figcaption></figure></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 03</p><h3>Design the fallback first</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">Every step has an offline path and a manual fallback at the hub, and the app syncs when it’s back in range.</p></div><div><h4>The trade-off</h4><p>Designing for fast data and new phones would have made a better demo and a worse service. Starting from the failure case means an outage slows a delivery down instead of losing it.</p></div></div></div></div></div></section>
+<section class="y-sec" style="padding-bottom:0"><div class="y-wrap cs-rv"><div class="y-g" id="key-decisions-and-trade-offs"><p class="y-l a">Key decisions &amp; trade-offs</p><div class="y-c"><h2 class="y-h2">Three calls that make it trustworthy</h2></div></div></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 01</p><h3>Make the price a promise the business can keep</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">Route, distance and price are shown before booking and locked at pickup. The rider has nothing to renegotiate at the gate.</p></div><div><h4>The trade-off</h4><p>Metered and negotiated fares are the market norm, and exactly what customers distrust. A fixed price only works if costs are stable, which is why this was a business decision before it was a screen: electric energy costs about a quarter of petrol and follows the tariff, not the pump.</p></div></div></div></div><figure class="y-bleed ph cs-rv"><img src="img/qf-dec1.webp" alt="Fixed price before booking and the same price after delivery" loading="lazy"><figcaption><span>Before booking · ₦1,500</span><span>After delivery · ₦1,500</span></figcaption></figure></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 02</p><h3>Let the receiver close the delivery</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">The receiver’s number is part of the booking. They get a text, open a web page and give the rider a four-digit code, and every step is timestamped.</p></div><div><h4>The trade-off</h4><p>Photos can be staged, and a signature proves nothing to the sender. An app download would fail at the door. A code only the receiver holds settles “it never came” in one line, with nothing to install.</p></div></div></div></div><figure class="y-bleed ph cs-rv"><img src="img/qf-dec2.webp" alt="Receiver named at booking and the code confirmed at the door" loading="lazy"><figcaption><span>At booking · receiver named</span><span>At the door · code confirmed</span></figcaption></figure></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 03</p><h3>Design the fallback first</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">Every step has an offline path and a manual fallback at the hub, and the app syncs when it’s back in range.</p></div><div><h4>The trade-off</h4><p>Designing for fast data and new phones would have made a better demo and a worse service. Starting from the failure case means an outage slows a delivery down instead of losing it.</p></div></div></div></div></div></section>
 <section class="y-sec cs-rv"><div class="y-vsband"><div class="y-wrap"><div class="y-g" id="before-vs-after"><p class="y-l a">Before vs. after</p><div class="y-c"><h2 class="y-h2">What changes for a sender</h2></div></div><div class="y-vs2"><div class="y-vs2-h"><p class="y-l">Informal dispatch today</p><i></i><p class="y-l">QuickFleet</p></div><div class="y-vs2-r"><span>Fees move with the pump</span><i>→</i><span>Price locked before pickup</span></div><div class="y-vs2-r"><span>Whoever turns up</span><i>→</i><span>Riders vetted, trained and employed</span></div><div class="y-vs2-r"><span>Silence until it arrives</span><i>→</i><span>A live link for sender and receiver</span></div><div class="y-vs2-r"><span>“It never came”</span><i>→</i><span>A code and a timestamp for every step</span></div></div></div></div></section>
 <section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="reflection"><p class="y-l a">Reflection</p><div class="y-c"><p class="y-quote">As CTO, every screen was also a business decision.</p><p class="y-p">A fixed price only works if energy costs hold, and a delivery code only works if riders are trained to ask for it. The most useful thing this taught me is to design the product and the operation as one system.</p></div></div></div></section>
-<section class="mp-wrap cs-rv"><div class="y-wrap"><p class="mp-eyebrow">more projects</p><div class="mp-grid"><a class="mp" href="../goco/" style="--accent:var(--rose)"><span class="mp-client">GoCo</span><span class="mp-sector">SaaS, HR Tech</span><p class="mp-teaser">Led design across an HR platform for 200K+ users, and rebuilt its most complained-about feature.</p><span class="mp-view">view project →</span></a><a class="mp" href="../lenox-park/" style="--accent:var(--c-slate)"><span class="mp-client">Lenox Park</span><span class="mp-sector">Fintech, DEI analytics</span><p class="mp-teaser">Sole designer on an analytics platform for investors with $4T+ in client assets.</p><span class="mp-view">view project →</span></a><a class="mp" href="../risevest/" style="--accent:var(--c-teal)"><span class="mp-client">Risevest</span><span class="mp-sector">Fintech</span><p class="mp-teaser">Redesigned a dollar-investment app for 620K+ users; onboarding rose from 34% to 58%.</p><span class="mp-view">view project →</span></a></div></div></section>
+<section class="mp-wrap cs-rv"><div class="y-wrap"><p class="mp-eyebrow">more projects</p><div class="mp-grid"><a class="mp" href="../goco/" style="--accent:#0E7A4A"><span class="mp-client">GoCo</span><span class="mp-sector">SaaS, HR Tech</span><p class="mp-teaser">Led design across an HR platform for 200K+ users, and rebuilt its most complained-about feature.</p><span class="mp-view">view project →</span></a><a class="mp" href="../lenox-park/" style="--accent:var(--c-slate)"><span class="mp-client">Lenox Park</span><span class="mp-sector">Fintech, DEI analytics</span><p class="mp-teaser">Sole designer on an analytics platform for investors with $4T+ in client assets.</p><span class="mp-view">view project →</span></a><a class="mp" href="../risevest/" style="--accent:var(--c-teal)"><span class="mp-client">Risevest</span><span class="mp-sector">Fintech</span><p class="mp-teaser">Redesigned a dollar-investment app for 620K+ users; onboarding rose from 34% to 58%.</p><span class="mp-view">view project →</span></a></div></div></section>
 </main>
 <footer class="site-footer" id="contact">
   <div class="foot-inner">
@@ -1099,69 +1281,16 @@
   <div class="modal-backdrop" data-close></div>
   <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="resumeTitle">
     <button class="modal-close" type="button" data-close aria-label="Close">&times;</button>
-    <article class="resume" id="resumeDoc">
-      <header class="rs-head">
-        <p class="rs-eyebrow">résumé</p>
-        <h2 class="rs-name" id="resumeTitle">stanley ojima</h2>
-        <p class="rs-title">Senior Product Designer</p>
-      </header>
-      <p class="rs-summary">Senior Product Designer with 8+ years designing intuitive, user-centered products that create real value for users and businesses. I turn complex problems into simple, scalable experiences, working closely with cross-functional teams to ship impactful, data-informed solutions.</p>
-      <div class="rs-contact">
-        <a href="tel:+2347056833543">+234 705 683 3543</a>
-        <a href="mailto:stanleyojima9@gmail.com">stanleyojima9@gmail.com</a>
-        <a href="../../">Portfolio</a>
-        <a href="https://www.linkedin.com/in/ojima-aniegboka/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-      </div>
-      <div class="modal-actions" style="margin:1.1rem 0 .1rem"><button id="rsTopDl" class="btn btn-primary" type="button" data-print>download pdf <span class="arr">↓</span></button></div>
-      <section class="rs-section">
-        <h3 class="rs-h">Experience</h3>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">QuickFleet</span><span class="rs-dates">2026 – Present</span></div>
-          <p class="rs-role">Co-founder &amp; CTO</p>
-          <ul class="rs-bullets"><li>Co-founded an electric delivery network for Nigerian cities; own product and technology.</li><li>Designed the customer app end to end, from booking and fixed pricing to live tracking and delivery codes.</li><li>Designed and built the marketing site, quickfleet.co.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">GoCo</span><span class="rs-dates">Jul 2022 – Apr 2025</span></div>
-          <p class="rs-role">Senior Product Designer</p>
-          <ul class="rs-bullets"><li>Led end-to-end design across the GoCo platform, partnering with PMs to define problems, run research, and ship impactful solutions.</li><li>Spearheaded the redesign of core platform experiences, simplifying complex workflows and improving usability.</li><li>Conducted user research and collaborated cross-functionally to validate decisions and iterate on feedback.</li><li>Contributed to measurable impact, including a 60% rise in customer satisfaction after the platform redesign.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">Curva Digital</span><span class="rs-dates">Feb 2020 – Jul 2022</span></div>
-          <p class="rs-role">Senior Product Designer</p>
-          <ul class="rs-bullets"><li>Owned design execution across mobile apps, websites, and visual systems for multiple clients in a fast-paced agency.</li><li>Translated ambiguous client requirements into clear, user-focused solutions aligned with business goals.</li><li>Led work from early concepts through high-fidelity UI and delivery, balancing speed, quality, and stakeholder expectations.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">DRO Health</span><span class="rs-dates">Nov 2019 – Feb 2021</span></div>
-          <p class="rs-role">Product Designer</p>
-          <ul class="rs-bullets"><li>Designed and improved features within the DRO Health mobile app, enhancing overall UX and usability.</li><li>Focused on clarity, accessibility, and visual consistency across web and mobile.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">Busha</span><span class="rs-dates">May 2019 – Oct 2019</span></div>
-          <p class="rs-role">Product Designer</p>
-          <ul class="rs-bullets"><li>Redesigned the admin dashboard and multiple product pages for a new application within a crypto exchange platform.</li><li>Delivered high-quality, detailed designs while balancing usability and business requirements.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">Transformify</span><span class="rs-dates">Jan 2018 – Apr 2019</span></div>
-          <p class="rs-role">UI/UX Designer</p>
-          <ul class="rs-bullets"><li>Partnered with PMs to research and define user needs for the Transformify platform.</li><li>Translated requirements into wireframes, user flows, and polished UI; supported product decisions through design exploration.</li></ul>
-        </div>
-        <div class="rs-job">
-          <div class="rs-job-top"><span class="rs-company">Freelance</span><span class="rs-dates">Jan 2017 – Present</span></div>
-          <p class="rs-role">UI/UX Designer</p>
-          <ul class="rs-bullets"><li>Consulted with early-stage and growing startups on solutions addressing user needs and business challenges.</li><li>Led end-to-end design across research, UX, UI, and prototyping, often working directly with founders.</li></ul>
-        </div>
-      </section>
-      <section class="rs-section">
-        <h3 class="rs-h">Skills</h3>
-        <p class="rs-skillgroup"><span class="rs-skilllabel">Product &amp; UX</span>Product Thinking · End-to-End UX Design · UX Strategy &amp; Experience Mapping · User Research (Interviews, Usability Testing) · Information Architecture · UI &amp; Visual Design · Design Systems &amp; Scalable UI · Low-to-High Fidelity Design · Interactive Prototyping (Figma)</p>
-        <p class="rs-skillgroup"><span class="rs-skilllabel">Collaboration</span>Cross-functional Collaboration (Product, Engineering, Marketing) · Stakeholder Communication &amp; Alignment · Design–Engineering Handoff · Feedback Facilitation &amp; Iteration</p>
-      </section>
-      <section class="rs-section">
-        <h3 class="rs-h">Languages</h3>
-        <p class="rs-skillgroup">English</p>
-      </section>
-    </article>
-    <div class="modal-actions rs-actions"><button class="btn btn-primary" type="button" data-print>download pdf <span class="arr">↓</span></button></div>
+    <article class="resume rp" id="resumeDoc">
+<header class="rp-head"><div><h2 class="rp-name">Stanley Ojima</h2><p class="rp-title">Senior Product Designer · B2B SaaS and enterprise products</p></div>
+<div class="rp-contact"><p><a href="mailto:stanleyojima9@gmail.com">stanleyojima9@gmail.com</a> · <a href="tel:+2347056833543">+234 705 683 3543</a></p><p><a href="https://stanleyojima.xyz">stanleyojima.xyz</a> · <a href="https://www.linkedin.com/in/ojima-aniegboka/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ojima-aniegboka</a> · Remote</p><a class="rp-dl" href="/resume.pdf" download="Stanley-Ojima-Resume.pdf">Download PDF</a></div></header>
+<p class="rp-sum">Senior product designer with 8+ years designing B2B SaaS and enterprise products across HR, fintech, health and logistics. I take dense, high-stakes workflows and make them predictable, and I measure the work by what it changes. At GoCo (acquired by Intuit), rebuilding Reports cut support tickets by 30% and lifted monthly usage from 28% to 52%.</p>
+<h3 class="rp-h">Experience</h3><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>QuickFleet</b> <a class="rp-site" href="https://quickfleet.co" target="_blank" rel="noopener noreferrer">(quickfleet.co)</a>, <i>Co-founder &amp; CTO</i></p><p class="rp-dates">2026 – Present</p></div><p class="rp-meta">Abuja, Nigeria · Electric last-mile delivery network for Nigerian cities. Pre-launch.</p><ul><li>Own product and technology. Defined booking, fixed pricing, dispatch, live tracking and proof of delivery as one system.</li><li>Designed the customer app end to end, including a four-digit delivery code receivers confirm from a text link, with no app to install.</li><li>Designed and built the marketing site and waitlist at quickfleet.co.</li><li>Proposed the battery-swap partnership that makes fixed, pump-independent pricing viable.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>GoCo</b> <a class="rp-site" href="https://www.goco.io" target="_blank" rel="noopener noreferrer">(goco.io)</a>, <i>Senior Product Designer</i></p><p class="rp-dates">July 2022 – April 2025</p></div><p class="rp-meta">Remote · HR, benefits and payroll platform for U.S. small and mid-sized businesses, 200K+ users. Acquired by Intuit in 2025. One of two product designers, working with 8 product managers.</p><ul><li>Rebuilt Reports, the platform’s largest source of support tickets, into a three-step flow with live preview and smart defaults: support tickets down 30%, monthly usage up from 28% to 52%, report creation 2.2× faster.</li><li>Designed across 10+ product areas, including employee profiles, scheduling, workflows, time off and payroll; the new scheduling flow cut weekly scheduling from 45 to 15 minutes.</li><li>Built GoCo’s design system: 120+ components and tokens adopted across 12+ product modules, cutting design-to-development handoff time by 35%.</li><li>With the Director of Design, introduced weekly critiques of work in progress, research before design, and a standard handoff format.</li><li>Contributed to a 60% increase in customer satisfaction following the platform redesign.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>Curva Digital</b> <a class="rp-site" href="https://curvadigital.co.uk" target="_blank" rel="noopener noreferrer">(curvadigital.co.uk)</a>, <i>Senior Product Designer</i></p><p class="rp-dates">February 2020 – July 2022</p></div><p class="rp-meta">Remote · London-based digital agency.</p><ul><li>Owned design execution across mobile apps, websites and visual systems for multiple clients, from early concepts through high-fidelity UI and delivery.</li><li>Translated ambiguous client briefs into clear, user-focused solutions tied to business goals.</li><li>Balanced speed, quality and stakeholder expectations across concurrent client projects.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>DRO Health</b> <a class="rp-site" href="https://drohealth.com" target="_blank" rel="noopener noreferrer">(drohealth.com)</a>, <i>Product Designer</i></p><p class="rp-dates">November 2019 – February 2021</p></div><p class="rp-meta">Remote · Telehealth platform in Nigeria for consultations, medication delivery and lab tests. 50K+ users, 100K+ consultations.</p><ul><li>Restructured the app around its three primary intents (see a doctor, order medication, book a test); users could go from opening the app to booking in under a minute.</li><li>Moved medical-detail collection from sign-up to the first booking, reducing sign-up drop-off by 18%.</li><li>Worked with two other designers on a shared component system across app and website; user satisfaction rose 45%.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>Busha</b> <a class="rp-site" href="https://busha.co" target="_blank" rel="noopener noreferrer">(busha.co)</a>, <i>Product Designer</i></p><p class="rp-dates">May 2019 – October 2019</p></div><p class="rp-meta">Remote · Cryptocurrency exchange.</p><ul><li>Redesigned the admin dashboard and multiple product pages for a new application on the exchange platform.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>Transformify</b> <a class="rp-site" href="https://transformify.org" target="_blank" rel="noopener noreferrer">(transformify.org)</a>, <i>UI/UX Designer</i></p><p class="rp-dates">January 2018 – April 2019</p></div><p class="rp-meta">Remote · Recruitment platform.</p><ul><li>Partnered with product managers on research and user needs; translated requirements into user flows, wireframes and UI.</li></ul></div><div class="rp-job"><div class="rp-row"><p class="rp-co"><b>Independent</b>, <i>Contract Product Designer</i></p><p class="rp-dates">January 2017 – Present</p></div><p class="rp-meta">Remote · Scoped contract engagements with startups and scale-ups, alongside full-time roles.</p><ul><li>Risevest (2025): redesigned onboarding, the dashboard and withdrawals for a dollar-investment app with 620K+ users; onboarding completion rose from 34% to 58%, and withdrawing went from 6 taps to 2.</li><li>Lenox Park Solutions (2023): sole designer on an analytics platform for institutional investors with $4T+ in client assets; made side-by-side comparison the default view.</li></ul></div>
+<h3 class="rp-h">Mentoring</h3><p class="rp-line">Mentored 30+ designers through portfolio reviews, mock interviews and career strategy. Trained 100+ students in workshops on problem framing and measuring impact.</p>
+<h3 class="rp-h">Skills</h3><p class="rp-line"><b>Product &amp; UX:</b> Product strategy, end-to-end UX, user research (interviews, usability testing), information architecture, experience mapping</p><p class="rp-line"><b>Design:</b> Design systems, UI and visual design, interaction design, prototyping (Figma)</p><p class="rp-line"><b>Collaboration:</b> Cross-functional work with product, engineering and marketing; stakeholder alignment; design–engineering handoff; written, async communication</p>
+<h3 class="rp-h">Languages</h3><p class="rp-line">English</p>
+</article>
+    <div class="modal-actions rs-actions"><a class="btn btn-primary"  href="/resume.pdf" download="Stanley-Ojima-Resume.pdf">download pdf <span class="arr">↓</span></a></div>
   </div>
 </div>
 <script>
@@ -1203,5 +1332,24 @@
   addEventListener('scroll',act,{passive:true}); act();
 })();
 </script>
-</body>
+<script>
+(function(){
+  var rows=document.querySelectorAll('.y-out3, .y-sec .y-nums'); if(!rows.length) return;
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function run(row){
+    row.classList.add('counted'); if(reduce) return;
+    row.querySelectorAll('.num').forEach(function(el){
+      var txt=el.textContent, m=txt.match(/^(\d+(?:\.\d+)?)(.*)$/);
+      if(!m||txt.indexOf('→')>-1) return;
+      var to=parseFloat(m[1]), dec=(m[1].split('.')[1]||'').length, suf=m[2], t0=null, dur=1100;
+      function step(t){ if(!t0) t0=t; var k=Math.min((t-t0)/dur,1), e=1-Math.pow(1-k,3);
+        el.textContent=(to*e).toFixed(dec)+suf; if(k<1) requestAnimationFrame(step); else el.textContent=txt; }
+      el.textContent=(0).toFixed(dec)+suf; requestAnimationFrame(step);
+    });
+  }
+  if(!('IntersectionObserver' in window)){ rows.forEach(run); return; }
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ run(e.target); io.unobserve(e.target);} }); },{threshold:.4});
+  rows.forEach(function(r){ io.observe(r); });
+})();
+</script></body>
 </html>
