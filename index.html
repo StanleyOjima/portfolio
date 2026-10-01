@@ -493,7 +493,6 @@ html:root{--display:'Geist',system-ui,-apple-system,'Helvetica Neue',Arial,sans-
 }
 @media (max-width:420px){.capsule{gap:2px;padding:5px}.capsule a.lnk{padding:9px 9px;font-size:13.5px}.capsule a.cv{padding:9px 12px;font-size:13.5px}.capsule .mark{width:30px;height:30px}}
 </style>
-<style id="resume-wide">@media screen{#resumeModal .modal-card{width:min(94vw,860px);max-height:90vh;padding:clamp(1.8rem,4vw,3rem)}}</style>
 <link id="rp-fonts" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style id="rp-css">
 .rp{font-family:'Open Sans',Arial,sans-serif;color:#1a1a1a;font-size:12px;line-height:1.5;text-align:left}
@@ -525,6 +524,7 @@ html:root{--display:'Geist',system-ui,-apple-system,'Helvetica Neue',Arial,sans-
 .rp-dl:hover{background:#333}
 @media (max-width:640px){.rp-head{flex-direction:column;align-items:flex-start}.rp-contact{text-align:left}.rp-name{font-size:28px}.rp-row{flex-direction:column;gap:.1rem}}
 </style>
+<style id="resume-wide">@media screen{#resumeModal .modal-card{width:min(94vw,860px);max-height:90vh;padding:clamp(1.8rem,4vw,3rem)}}</style>
 </head>
 <body>
 
@@ -532,7 +532,7 @@ html:root{--display:'Geist',system-ui,-apple-system,'Helvetica Neue',Arial,sans-
   <nav class="capsule" aria-label="Primary">
     <a class="mark" href="#top" aria-label="Stanley Ojima, home">so</a>
     <a class="lnk" href="about/">About</a>
-    <a class="lnk" href="#projects">Projects</a>
+    <a class="lnk" href="work/">Projects</a>
     <a class="lnk" href="#contact">Contact</a>
     <a class="cv" href="#" data-resume>Resume</a>
   </nav>
@@ -1151,7 +1151,7 @@ html:root{--display:'Geist',system-ui,-apple-system,'Helvetica Neue',Arial,sans-
   <nav class="capsule" aria-label="Primary (sticky)">
     <a class="mark" href="#top" aria-label="Stanley Ojima, home">so</a>
     <a class="lnk" href="about/">About</a>
-    <a class="lnk" href="#projects">Projects</a>
+    <a class="lnk" href="work/">Projects</a>
     <a class="lnk" href="#contact">Contact</a>
     <a class="cv" href="#" data-resume>Resume</a>
   </nav>
@@ -1180,7 +1180,7 @@ html:root{--display:'Geist',system-ui,-apple-system,'Helvetica Neue',Arial,sans-
 <h3 class="rp-h">Languages</h3><p class="rp-line">English</p>
 </article>
     <div class="modal-actions rs-actions">
-      <a class="btn btn-primary"  href="/resume.pdf" download="Stanley-Ojima-Resume.pdf">download pdf <span class="arr">↓</span></a>
+      <button class="btn btn-primary" type="button" data-print>download pdf <span class="arr">↓</span></button>
     </div>
   </div>
 </div>
