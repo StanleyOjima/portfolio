@@ -1,0 +1,16 @@
+{
+  "redirects": [
+    {
+      "source": "/work",
+      "destination": "/projects/",
+      "permanent": true
+    },
+    {
+      "source": "/work/:path*",
+      "destination": "/projects/:path*",
+      "permanent": true
+    }
+  ],
+  "cleanUrls": false,
+  "trailingSlash": true
+}
