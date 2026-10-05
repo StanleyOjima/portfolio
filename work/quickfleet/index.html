@@ -1165,6 +1165,209 @@
   .y-num b span{display:inline!important;margin:0!important;font:inherit!important;letter-spacing:inherit!important;color:inherit!important;max-width:none!important}
   .y-num b span.acc{color:var(--accent)!important}
   @media (max-width:860px){.y-bleed.ph img{min-height:380px;object-fit:cover}}
+  .y-video:has(video){aspect-ratio:1600/914;background:#0d0a1c}
+
+  /* ================= v18: platform map, real-screen sequences, next project ================= */
+  .pmap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(1rem,1.8vw,1.4rem);margin-top:clamp(.4rem,1vw,.8rem)}
+  .pm{margin:0;display:flex;flex-direction:column}
+  .pm-img{border-radius:.9rem;overflow:hidden;background:var(--light);box-shadow:0 0 0 1px rgba(24,24,27,.07),0 18px 36px -26px rgba(24,24,27,.4);aspect-ratio:16/10}
+  .pm-img img{display:block;width:100%;height:100%;object-fit:cover;object-position:left top;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+  .pm:hover .pm-img img{transform:scale(1.03)}
+  .pm figcaption{padding:.95rem .1rem 0}
+  .pm-n{display:block;font:500 .66rem/1 var(--mono);letter-spacing:.1em;color:var(--accent)}
+  .pm b{display:block;margin-top:.5rem;font:500 1.02rem/1.3 var(--body);letter-spacing:-.01em;color:var(--ink)}
+  .pm p{margin:.35rem 0 0;font:400 .9rem/1.5 var(--body);color:#4b4b53}
+  .pm .pm-m{display:inline-block;margin-top:.6rem;padding:4px 9px;border-radius:999px;background:var(--tint);font:500 .78rem/1.3 var(--body);color:var(--accent)}
+  .ws-band{background:var(--light);padding:clamp(2.4rem,5vw,3.6rem) 0 clamp(2.2rem,4vw,3rem)}
+  .ws-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-bottom:clamp(1.2rem,2.4vw,1.8rem)}
+  .ws-head h3{margin:0;font:500 clamp(1.25rem,2vw,1.6rem)/1.2 var(--display);letter-spacing:-.03em;color:var(--ink)}
+  .ws-head span{font:500 .7rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+  .ws-track{display:flex;gap:clamp(1rem,2vw,1.6rem);overflow-x:auto;scroll-snap-type:x mandatory;padding:4px max(var(--gutter,24px),calc((100vw - 1240px)/2 + 24px)) 18px;scrollbar-width:thin}
+  .ws-item{flex:none;width:min(78vw,720px);scroll-snap-align:start;margin:0}
+  .ws-item img{display:block;width:100%;height:auto;border-radius:.8rem;box-shadow:0 0 0 1px rgba(24,24,27,.08),0 26px 50px -30px rgba(24,24,27,.5);background:#fff}
+  .ws-item figcaption{display:grid;grid-template-columns:auto 1fr;gap:.2rem .8rem;margin-top:1rem;align-items:baseline}
+  .ws-item figcaption span{font:500 .7rem/1 var(--mono);letter-spacing:.08em;color:var(--accent)}
+  .ws-item figcaption b{font:500 1rem/1.3 var(--body);color:var(--ink)}
+  .ws-item figcaption p{grid-column:2;margin:0;font:400 .9rem/1.5 var(--body);color:#4b4b53}
+  .nxp{display:block;text-decoration:none;color:#fff;background:var(--dark);padding:clamp(3rem,7vw,5rem) 0;transition:background .3s}
+  .nxp .y-wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 24px;align-items:end}
+  .nxp .l{grid-column:1/4;font:500 .7rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent-bright,#fff)}
+  .nxp .t{grid-column:4/12}
+  .nxp .t b{display:block;font:600 clamp(2.4rem,6vw,4.6rem)/.95 var(--display);letter-spacing:-.05em}
+  .nxp .t i{display:block;margin-top:.9rem;font:400 clamp(1rem,1.4vw,1.15rem)/1.45 var(--body);font-style:normal;color:rgba(255,255,255,.66);max-width:48ch}
+  .nxp .ar{grid-column:12/13;justify-self:end;font:400 clamp(2rem,4vw,3.2rem)/1 var(--body);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+  .nxp:hover .ar{transform:translateX(8px)}
+  .nxp-sub{display:flex;justify-content:space-between;gap:1rem;padding:1.1rem 0;font:500 .72rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase}
+  .nxp-sub a{color:var(--dim);text-decoration:none}
+  .nxp-sub a:hover{color:var(--ink)}
+  @media (max-width:860px){
+    .pmap{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .nxp .l,.nxp .t{grid-column:1/-1}.nxp .l{margin-bottom:1rem}.nxp .ar{grid-column:1/-1;justify-self:start;margin-top:1.2rem}
+  }
+
+  /* ================= v19: large-screen product gallery, Reports walkthrough, next-project spacing ================= */
+  .pg-band{background:var(--light);padding:clamp(3rem,6vw,5rem) 0 clamp(3.4rem,6vw,5.4rem);margin-top:clamp(1.4rem,3vw,2.2rem)}
+  .pg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(2rem,4vw,3.2rem) clamp(1.4rem,2.6vw,2.2rem)}
+  .pg-item{margin:0}
+  .pg-item img{display:block;width:100%;height:auto;border-radius:clamp(.6rem,1vw,.9rem);background:#fff;box-shadow:0 0 0 1px rgba(24,24,27,.07),0 30px 60px -34px rgba(24,24,27,.45)}
+  .pg-item figcaption{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.25rem .9rem;margin-top:1.1rem;align-items:baseline}
+  .pg-item figcaption span{font:500 .7rem/1 var(--mono);letter-spacing:.1em;color:var(--accent)}
+  .pg-item figcaption b{font:500 1.08rem/1.3 var(--body);letter-spacing:-.01em;color:var(--ink)}
+  .pg-item figcaption p{grid-column:2;margin:0;font:400 .95rem/1.5 var(--body);color:#4b4b53;max-width:46ch}
+  .pg-item figcaption em{grid-column:2;justify-self:start;margin-top:.45rem;padding:4px 10px;border-radius:999px;background:var(--tint);font:500 .8rem/1.3 var(--body);font-style:normal;color:var(--accent)}
+  .wt{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(1.6rem,3.4vw,3rem);align-items:start;margin-top:clamp(1.8rem,3.6vw,2.6rem)}
+  .wt-steps{display:flex;flex-direction:column;border-top:1px solid var(--hairline)}
+  .wt-step{display:grid;grid-template-columns:auto 1fr;gap:.25rem .9rem;padding:1rem .2rem;border:0;border-bottom:1px solid var(--hairline);background:none;text-align:left;cursor:pointer;color:var(--dim);transition:color .2s}
+  .wt-step span{font:500 .7rem/1.6 var(--mono);letter-spacing:.08em;color:inherit}
+  .wt-step b{font:500 1rem/1.3 var(--body);color:inherit}
+  .wt-step p{grid-column:2;margin:0;max-height:0;overflow:hidden;font:400 .9rem/1.5 var(--body);color:#4b4b53;transition:max-height .35s ease,margin .35s}
+  .wt-step:hover{color:var(--ink)}
+  .wt-step.on{color:var(--ink)}
+  .wt-step.on span{color:var(--accent)}
+  .wt-step.on p{max-height:6em;margin-top:.3rem}
+  .wt-step:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+  .wt-stage{position:sticky;top:96px;display:grid;border-radius:clamp(.7rem,1.1vw,1rem);overflow:hidden;background:#fff;box-shadow:0 0 0 1px rgba(24,24,27,.08),0 36px 70px -40px rgba(24,24,27,.5)}
+  .wt-stage img{grid-area:1/1;display:block;width:100%;height:auto;opacity:0;transition:opacity .35s ease}
+  .wt-stage img.on{opacity:1}
+  .nxp{margin-top:clamp(4.5rem,9vw,7rem)}
+  @media (max-width:860px){
+    .pg{grid-template-columns:1fr}
+    .wt{grid-template-columns:1fr}
+    .wt-steps{flex-direction:row;overflow-x:auto;border-top:0;gap:.5rem;order:2;scrollbar-width:none}
+    .wt-step{flex:none;border:1px solid var(--hairline);border-radius:999px;padding:.55rem .9rem;grid-template-columns:auto auto}
+    .wt-step p{display:none}
+    .wt-stage{position:relative;top:auto}
+  }
+  .pg-band .y-wrap{max-width:1480px}
+  .wt-wrap-wide{max-width:1320px}
+  /* walkthrough affordance */
+  .wt-step{position:relative;grid-template-columns:auto 1fr auto;border-radius:.6rem;padding:1rem .9rem;margin:0 -.9rem;border-bottom:1px solid var(--hairline)}
+  .wt-step .wt-go{font-style:normal;opacity:0;transform:translateX(-4px);transition:opacity .2s,transform .2s;color:var(--accent)}
+  .wt-step:hover .wt-go,.wt-step.on .wt-go{opacity:1;transform:none}
+  .wt-step:hover{background:rgba(24,24,27,.03)}
+  .wt-step.on{background:var(--tint)}
+  .wt-step p{grid-column:2/4}
+  .wt-bar{position:absolute;left:.9rem;right:.9rem;bottom:-1px;height:2px;background:transparent;overflow:hidden;text-decoration:none}
+  .wt-bar::after{content:"";position:absolute;inset:0;background:var(--accent);transform-origin:left;transform:scaleX(0)}
+  .wt-step.run .wt-bar::after{animation:wt-run 5s linear forwards}
+
+
+  @keyframes wt-run{to{transform:scaleX(1)}}
+  .wt-hint{display:flex;align-items:center;gap:.5rem;margin:1rem 0 0;font:500 .72rem/1.4 var(--mono);letter-spacing:.06em;color:var(--dim)}
+  .wt-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:wt-pulse 1.6s ease-in-out infinite}
+
+  @keyframes wt-pulse{50%{opacity:.25}}
+  .wt-stage{cursor:default}
+  .wt-count{position:absolute;right:12px;top:12px;z-index:2;padding:5px 9px;border-radius:999px;background:rgba(17,17,19,.78);color:#fff;font:500 .7rem/1 var(--mono);letter-spacing:.08em}
+  .wt-count b{font-weight:500}
+  /* more projects */
+  .ex{padding:clamp(4.5rem,9vw,7rem) 0 clamp(3.4rem,7vw,5rem)}
+  .ex-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:clamp(1.2rem,2.4vw,1.8rem)}
+  .ex-all{font:500 .78rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+  .ex-all:hover{color:var(--accent)}
+  .ex-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(1rem,1.8vw,1.4rem)}
+  .ex-card{position:relative;display:flex;flex-direction:column;text-decoration:none;color:var(--ink)}
+  .ex-img{display:block;aspect-ratio:4/3;border-radius:.9rem;overflow:hidden;background:#111;box-shadow:0 18px 36px -26px rgba(24,24,27,.45)}
+  .ex-img img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+  .ex-card:hover .ex-img img{transform:scale(1.05)}
+  .ex-t{display:block;margin-top:.9rem;padding-right:1.6rem}
+  .ex-t b{display:block;font:500 1.05rem/1.25 var(--body);letter-spacing:-.01em}
+  .ex-t i{display:block;margin-top:.2rem;font:400 .88rem/1.4 var(--body);font-style:normal;color:var(--dim)}
+  .ex-ar{position:absolute;right:0;bottom:1.45rem;font:400 1.1rem/1 var(--body);transition:transform .3s}
+  .ex-card:hover .ex-ar{transform:translateX(4px)}
+  @media (max-width:860px){.ex-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.wt-hint{display:none}.wt-step{margin:0}}
+  .pg-item.wide{grid-column:1/-1}
+  .pg-item.wide figcaption{max-width:720px}
+  .mp-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+  .mp-wrap{margin-top:clamp(3rem,6vw,4.5rem)}
+  @media (max-width:980px){.mp-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+  @media (max-width:560px){.mp-grid{grid-template-columns:1fr!important}}
+  /* phone gallery */
+  .phg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(2rem,4vw,3rem) clamp(1rem,2.2vw,1.8rem)}
+  .phg-item{margin:0}
+  .phg-item img{display:block;width:100%;height:auto;aspect-ratio:750/1624;object-fit:cover;object-position:top;border-radius:clamp(14px,1.8vw,26px);background:#fff;box-shadow:0 0 0 1px rgba(24,24,27,.08),0 30px 56px -30px rgba(24,24,27,.5)}
+  .phg-item figcaption{margin-top:1rem}
+  .phg-item figcaption span{display:block;font:500 .68rem/1 var(--mono);letter-spacing:.1em;color:var(--accent)}
+  .phg-item figcaption b{display:block;margin-top:.45rem;font:500 1rem/1.3 var(--body);letter-spacing:-.01em;color:var(--ink)}
+  .phg-item figcaption p{margin:.3rem 0 0;font:400 .88rem/1.5 var(--body);color:#4b4b53}
+  .phg-item figcaption em{display:inline-block;margin-top:.5rem;padding:4px 10px;border-radius:999px;background:var(--tint);font:500 .78rem/1.3 var(--body);font-style:normal;color:var(--accent)}
+  @media (max-width:860px){.phg{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  .phg-stage{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin:0 0 clamp(1.4rem,2.6vw,2rem)}
+  .phg-stage h3{margin:0;font:500 clamp(1.3rem,2vw,1.7rem)/1.2 var(--display);letter-spacing:-.03em;color:var(--ink)}
+  .phg-stage span{font:500 .7rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+  .phg + .phg-stage{margin-top:clamp(3.4rem,6vw,5rem)}
+  .hyp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2vw,1.6rem);margin-top:clamp(1.6rem,3vw,2.4rem)}
+  .hyp-c{padding:clamp(1.4rem,2.4vw,1.9rem);border-radius:1rem;background:var(--light)}
+  .hyp-c .n{font:500 .7rem/1 var(--mono);letter-spacing:.1em;color:var(--accent)}
+  .hyp-c h4{margin:.8rem 0 0;font:500 1.12rem/1.3 var(--body);letter-spacing:-.01em;color:var(--ink)}
+  .hyp-c .k{margin:1.2rem 0 0;font:500 .66rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+  .hyp-c p{margin:.45rem 0 0;font:400 .93rem/1.5 var(--body);color:#4b4b53}
+  @media (max-width:860px){.hyp{grid-template-columns:1fr}}
+  .phg.short .phg-item img{aspect-ratio:750/1293}
+  /* outcome v2: one featured result with a before/after comparison, the rest as a list */
+  .y-out4{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(1.6rem,4vw,3.6rem);margin-top:clamp(1.6rem,3vw,2.4rem);align-items:start}
+  .o4-feat{padding:clamp(1.6rem,3vw,2.4rem);border-radius:1.1rem;background:var(--light)}
+  .o4-feat b{display:block;font:600 clamp(3.4rem,8vw,6.2rem)/.9 var(--display);letter-spacing:-.05em;color:var(--ink)}
+  .o4-feat b .acc,.o4-row b .acc{color:var(--accent)}
+  .o4-feat h4{margin:1.1rem 0 0;font:500 1.2rem/1.3 var(--body);color:var(--ink)}
+  .o4-feat p{margin:.35rem 0 0;font:400 1rem/1.5 var(--body);color:#4b4b53;max-width:40ch}
+  .o4-bars{display:grid;gap:.7rem;margin-top:clamp(1.4rem,2.6vw,2rem)}
+  .o4-bar{display:grid;grid-template-columns:4.2rem 1fr auto;align-items:center;gap:.9rem}
+  .o4-bar span{font:500 .68rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+  .o4-bar i{display:block;height:12px;border-radius:999px;background:rgba(24,24,27,.14);width:0;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+  .o4-bar.now i{background:var(--accent)}
+  .o4-bar em{font:500 .85rem/1 var(--body);font-style:normal;color:var(--ink)}
+  .y-out4.counted .o4-bar i{width:calc(var(--w) * 100%)}
+  .o4-r{display:flex;flex-direction:column}
+  .o4-row{display:grid;grid-template-columns:minmax(6.5rem,auto) 1fr;gap:1.2rem;align-items:baseline;padding:1.3rem 0;border-bottom:1px solid var(--hairline)}
+  .o4-row:first-child{padding-top:.4rem}
+  .o4-row b{font:600 clamp(1.9rem,3vw,2.5rem)/1 var(--display);letter-spacing:-.04em;color:var(--ink);white-space:nowrap}
+  .o4-row h4{margin:0;font:500 1rem/1.3 var(--body);color:var(--ink)}
+  .o4-row p{margin:.3rem 0 0;font:400 .9rem/1.5 var(--body);color:#4b4b53}
+  @media (prefers-reduced-motion:reduce){.o4-bar i{transition:none;width:calc(var(--w) * 100%)}}
+  @media (max-width:860px){.y-out4{grid-template-columns:1fr}}
+  /* gallery captions v2: number on the image, title and description side by side */
+  .pg-item,.phg-item{position:relative}
+  .pg-item figcaption,.phg-item figcaption{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:.4rem 1.4rem;margin-top:1.15rem;align-items:baseline}
+  .pg-item figcaption span,.phg-item figcaption span{position:absolute;left:14px;top:14px;z-index:2;display:inline-grid;place-items:center;min-width:34px;height:26px;padding:0 9px;border-radius:999px;background:rgba(17,17,19,.82);color:#fff!important;font:500 .7rem/1 var(--mono);letter-spacing:.06em;backdrop-filter:blur(6px)}
+  .pg-item figcaption b,.phg-item figcaption b{grid-column:1;font:600 1.12rem/1.25 var(--display)!important;letter-spacing:-.02em!important;color:var(--ink)}
+  .pg-item figcaption p,.phg-item figcaption p{grid-column:2;grid-row:1/3;margin:0!important;max-width:none!important;font-size:.94rem!important;line-height:1.5!important}
+  .pg-item figcaption em,.phg-item figcaption em{grid-column:1;grid-row:2;justify-self:start;margin-top:.15rem!important}
+  .pg-item.wide figcaption{max-width:none!important;grid-template-columns:minmax(0,4fr) minmax(0,8fr)}
+  .phg-item figcaption{grid-template-columns:1fr;gap:.35rem}
+  .phg-item figcaption b,.phg-item figcaption p,.phg-item figcaption em{grid-column:1!important;grid-row:auto!important}
+  .phg-item figcaption span{left:12px;top:12px}
+  @media (max-width:860px){.pg-item figcaption{grid-template-columns:1fr}.pg-item figcaption b,.pg-item figcaption p,.pg-item figcaption em{grid-column:1!important;grid-row:auto!important}}
+  /* outcome list: stacked and aligned, no closing border */
+  .o4-r{justify-content:center;align-self:stretch}
+  .o4-row{display:block;padding:1.3rem 0}
+  .o4-row:first-child{padding-top:0}
+  .o4-row:last-child{border-bottom:0;padding-bottom:0}
+  .o4-row b{display:block}
+  .o4-row h4{margin-top:.6rem}
+  /* galleries: no number tags; title with its description directly underneath */
+  .pg-item figcaption span,.phg-item figcaption span{display:none!important}
+  .pg-item figcaption,.phg-item figcaption,.pg-item.wide figcaption{display:block!important;max-width:62ch}
+  .pg-item figcaption b,.phg-item figcaption b{display:block}
+  .pg-item figcaption p,.phg-item figcaption p{margin-top:.35rem!important}
+  .pg-item figcaption em,.phg-item figcaption em{display:inline-block;margin-top:.6rem!important}
+  /* outcome v3: supporting results as matching tiles that fill the height of the featured one */
+  .o4-r{display:flex;flex-direction:column;gap:clamp(.8rem,1.4vw,1rem);align-self:stretch;justify-content:stretch}
+  .o4-row,.o4-row:first-child,.o4-row:last-child{flex:1;display:flex;flex-direction:column;justify-content:center;padding:clamp(1.1rem,2vw,1.5rem) clamp(1.2rem,2vw,1.6rem);border:1px solid var(--hairline);border-radius:1rem;background:#fff}
+  .o4-row b{font-size:clamp(1.8rem,2.8vw,2.3rem)}
+  .o4-row h4{margin-top:.55rem}
+  .y-out4{align-items:stretch}
+  .o4-l{display:flex}
+  .o4-feat{flex:1;display:flex;flex-direction:column;justify-content:center}
+
+  /* ================= v20: problem as a row of step cards; outcome layout for three supporting results ================= */
+  .y-out4.n3{grid-template-columns:1fr}
+  .y-out4.n3 .o4-feat{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:clamp(2rem,5vw,4rem);align-items:center}
+  .y-out4.n3 .o4-feat > *{grid-column:1}
+  .y-out4.n3 .o4-bars{grid-column:2;grid-row:1/4;align-self:center;margin-top:0}
+  .y-out4.n3 .o4-r{flex-direction:row}
+  .y-out4.n3 .o4-row{flex:1 1 0}
+  @media (max-width:860px){.y-out4.n3 .o4-feat{grid-template-columns:1fr}.y-out4.n3 .o4-bars{grid-column:1;grid-row:auto;margin-top:1.4rem}.y-out4.n3 .o4-r{flex-direction:column}}
 
   .cs-big.qf{background:radial-gradient(80% 70% at 50% -5%,rgba(10,153,125,.18) 0%,rgba(10,153,125,0) 55%),linear-gradient(165deg,#221a52 0%,#16102E 60%,#140e2a 100%);border-color:rgba(255,255,255,.06)}
 
@@ -1190,6 +1393,27 @@
 
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400;500&family=Bricolage+Grotesque:opsz,wght@12..96,500&display=swap" rel="stylesheet">
+<script>(function(){try{var r=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(r)return;if(sessionStorage.getItem('pt'))document.documentElement.classList.add('pt-arrive');}catch(e){}})();</script>
+<style id="pt-css">
+.pt{position:fixed;inset:0;z-index:9999;background:#111113;color:#fff;display:flex;align-items:flex-end;justify-content:flex-start;padding:clamp(1.4rem,4vw,3rem);transform:translateY(101%);pointer-events:none}
+.pt-label{font:500 12px/1 'Geist Mono',ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);opacity:0;transition:opacity .25s}
+html.pt-arrive .pt{transform:none}
+html.pt-arrive .pt .pt-label{opacity:1}
+.pt.go{transform:none;transition:transform .42s cubic-bezier(.7,0,.25,1)}
+.pt.go .pt-label{opacity:1;transition-delay:.2s}
+.pt.leave{transform:translateY(-101%);transition:transform .55s cubic-bezier(.7,0,.25,1)}
+.pt.leave .pt-label{opacity:0;transition-delay:0s}
+@media (prefers-reduced-motion:reduce){.pt{display:none}}
+@view-transition{navigation:auto}
+@media (prefers-reduced-motion:reduce){@view-transition{navigation:none}}
+::view-transition-old(root){animation:vt-out .38s cubic-bezier(.7,0,.25,1) both}
+::view-transition-new(root){animation:vt-in .5s cubic-bezier(.2,.7,.2,1) .08s both}
+::view-transition-group(case-hero){animation-duration:.62s;animation-timing-function:cubic-bezier(.7,0,.2,1)}
+::view-transition-old(case-hero),::view-transition-new(case-hero){height:100%;object-fit:cover;animation-duration:.62s}
+@keyframes vt-out{to{opacity:0;transform:scale(.985)}}
+@keyframes vt-in{from{opacity:0;transform:translateY(14px)}}
+.y-hero + .y-bleed img{view-transition-name:case-hero}
+</style>
 <style id="resume-wide">@media screen{#resumeModal .modal-card{width:min(94vw,860px);max-height:90vh;padding:clamp(1.8rem,4vw,3rem)}}</style>
 <link id="rp-fonts" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style id="rp-css">
@@ -1224,7 +1448,7 @@
 </style>
 </head>
 <body id="top">
-<header class="gnav"><nav class="gcap" aria-label="Primary"><a class="g-mark" href="../../" aria-label="Stanley Ojima, home">so</a><a class="g-lnk" href="../../about/">About</a><a class="g-lnk on" href="../../work/">Projects</a><a class="g-lnk" href="#contact">Contact</a><a class="g-cv" href="#" data-resume>Resume</a></nav></header>
+<header class="gnav"><nav class="gcap" aria-label="Primary"><a class="g-mark" href="../../" aria-label="Stanley Ojima, home">so</a><a class="g-lnk" href="../../about/">About</a><a class="g-lnk" href="../../work/">Projects</a><a class="g-lnk" href="#contact">Contact</a><a class="g-cv" href="#" data-resume>Resume</a></nav></header>
 <div class="grain" aria-hidden="true"></div>
 <header class="nav nav-pill">
   <div class="nav-inner"><div class="capsule">
@@ -1245,33 +1469,28 @@
 <section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="overview"><p class="y-l a">Overview</p><div class="y-c"><h2 class="y-h2">Delivery priced by the pump and proven by nothing</h2><p class="y-p">Since Nigeria’s fuel subsidy ended in May 2023, petrol has gone from ₦238 to about ₦1,390 a litre, and delivery fees moved with it. <b>Most deliveries still run on informal dispatch:</b> a price agreed on the phone, a rider nobody vetted, and no record once the parcel leaves.</p><p class="y-p">QuickFleet replaces that with electric motorcycles, battery-swap hubs placed where orders come from, and one platform that takes a parcel from booking to a confirmed handover. Abuja first.</p></div></div><div class="y-jn" style="--n:5"><div class="y-st pain"><span class="dot"></span><span class="n">Step 1</span><h4>Agree a price</h4><p>Quoted by phone and pegged to that day’s pump price.</p><div class="pb"><b class='long'>₦238→₦1,390</b><span>petrol per litre since 2023</span></div></div><div class="y-st pain"><span class="dot"></span><span class="n">Step 2</span><h4>Wait for a rider</h4><p>Whoever is free, with no vetting or training.</p><div class="pb t"><span>No accountability</span></div></div><div class="y-st pain"><span class="dot"></span><span class="n">Step 3</span><h4>In transit</h4><p>No tracking, no updates, and detours are common.</p><div class="pb t"><span>No visibility</span></div></div><div class="y-st"><span class="dot"></span><span class="n">Step 4</span><h4>Handover</h4><p>Released to whoever answers the door.</p></div><div class="y-st pain"><span class="dot"></span><span class="n">Step 5</span><h4>Dispute</h4><p>“It never came,” and nothing to settle it.</p><div class="pb t"><span>No proof of delivery</span></div></div></div></div></section>
 <section class="y-sec cs-rv"><div class="y-wrap"><!-- VERIFY: constraints --><div class="y-g" id="my-role"><p class="y-l a">My role</p><div class="y-c"><h2 class="y-h2">Product and technology, end to end</h2><p class="y-p">As CTO I own what the platform does, not only how it looks. Most of the important design decisions here were business decisions first.</p></div></div><div class="y-cols" style="--n:2"><div class="y-col"><p class="y-l a">Product</p><h4>Defined the system</h4><p>Booking, pricing, dispatch, tracking and proof of delivery designed as one flow, not five features.</p></div><div class="y-col"><p class="y-l a">Design &amp; build</p><h4>App and website</h4><p>Designed the customer app. Designed and built quickfleet.co.</p></div><div class="y-col"><p class="y-l a">Partnerships</p><h4>The energy model</h4><p>Proposed the battery-swap partnership that makes a fixed price sustainable.</p></div><div class="y-col"><p class="y-l a">Constraints</p><h4>Real-world conditions</h4><p>No outside funding yet, riders on low-end Android phones, and patchy mobile data across the city.</p></div></div></div></section>
 <section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="what-i-designed"><p class="y-l a">What I designed</p><div class="y-c"><h2 class="y-h2">Every screen answers one of those three failures</h2><p class="y-p">The customer app covers booking, tracking, payment and proof. The receiver never needs it: they confirm from a text link.</p></div></div></div></section>
-<section class="y-strip dark cs-rv"><div class="y-strip-head"><h3>Booking</h3><p class="y-l">Five screens, price locked by the third</p></div><div class="y-strip-in"><figure><img src="img/flow-1.webp" alt="Where it is going" loading="lazy"><figcaption><b>01</b><strong>Where to</strong></figcaption></figure><figure><img src="img/flow-2.webp" alt="Who receives it" loading="lazy"><figcaption><b>02</b><strong>Who receives it</strong></figcaption></figure><figure><img src="img/flow-3.webp" alt="Price and route" loading="lazy"><figcaption><b>03</b><strong>Price and route</strong></figcaption></figure><figure><img src="img/flow-4.webp" alt="Finding a rider" loading="lazy"><figcaption><b>04</b><strong>Matching a rider</strong></figcaption></figure><figure><img src="img/flow-5.webp" alt="Paid on delivery" loading="lazy"><figcaption><b>05</b><strong>Payment</strong></figcaption></figure></div></section>
-<section class="y-strip cs-rv"><div class="y-strip-head"><h3>Delivery</h3><p class="y-l">From pickup to proof</p></div><div class="y-strip-in"><figure><img src="img/s-06.webp" alt="Rider assigned" loading="lazy"><figcaption><b>06</b><strong>Rider assigned</strong></figcaption></figure><figure><img src="img/s-07.webp" alt="Live tracking" loading="lazy"><figcaption><b>07</b><strong>Live tracking</strong></figcaption></figure><figure><img src="img/s-09.webp" alt="Transfer received" loading="lazy"><figcaption><b>08</b><strong>Transfer received</strong></figcaption></figure><figure><img src="img/s-11.webp" alt="Delivery record" loading="lazy"><figcaption><b>09</b><strong>Delivery record</strong></figcaption></figure><figure><img src="img/s-13.webp" alt="Receiver confirms" loading="lazy"><figcaption><b>10</b><strong>Receiver confirms</strong></figcaption></figure></div></section>
+<section class="pg-band cs-rv"><div class="y-wrap"><div class="phg-stage"><h3>Booking</h3><span>Four screens</span></div><div class="phg"><figure class="phg-item"><img src="img/qfp-1.webp" alt="Home screen" loading="lazy"><figcaption><span>01</span><b>Home</b><p>One clear action on first run: send a parcel.</p></figcaption></figure><figure class="phg-item"><img src="img/qfp-2.webp" alt="Where to screen" loading="lazy"><figcaption><span>02</span><b>Where to</b><p>Saved places and recent addresses before any typing.</p></figcaption></figure><figure class="phg-item"><img src="img/qfp-3.webp" alt="Price and route screen" loading="lazy"><figcaption><span>03</span><b>Price and route</b><p>The fixed price is shown before anything is booked.</p><em>Price locked before pickup</em></figcaption></figure><figure class="phg-item"><img src="img/qfp-4.webp" alt="Who receives it screen" loading="lazy"><figcaption><span>04</span><b>Who receives it</b><p>Only the receiver’s number. They never need the app.</p></figcaption></figure></div><div class="phg-stage"><h3>Delivery and proof</h3><span>Four screens</span></div><div class="phg"><figure class="phg-item"><img src="img/qfp-5.webp" alt="Rider assigned screen" loading="lazy"><figcaption><span>05</span><b>Rider assigned</b><p>A named, vetted rider with a photo before pickup.</p></figcaption></figure><figure class="phg-item"><img src="img/qfp-6.webp" alt="Live tracking screen" loading="lazy"><figcaption><span>06</span><b>Live tracking</b><p>The same live view for sender and receiver.</p></figcaption></figure><figure class="phg-item"><img src="img/qfp-7.webp" alt="Delivery record screen" loading="lazy"><figcaption><span>07</span><b>Delivery record</b><p>Every step timestamped, so “it never came” has an answer.</p></figcaption></figure><figure class="phg-item"><img src="img/qfp-8.webp" alt="Receiver’s page screen" loading="lazy"><figcaption><span>08</span><b>Receiver’s page</b><p>The receiver confirms with a four-digit code from a text link.</p><em>No app to install</em></figcaption></figure></div></div></section>
 <section class="y-sec cs-rv" id="website"><div class="y-wrap"><div class="y-g" id="the-website"><p class="y-l a">The website</p><div class="y-c"><h2 class="y-h2">Live at quickfleet.co</h2><p class="y-p">I designed and built the marketing site: the network explained section by section, the brand in motion, and a waitlist that separates customers, businesses and riders from the first click.</p></div></div></div></section>
 <figure class="cs-big qf y-band cs-rv"><div class="cs-big-in">
 <div class="y-video">
-<!-- VIDEO: put the walkthrough in img/ and replace the three lines below with:
-     <video src="img/site-walkthrough.mp4" poster="img/site-poster.webp" autoplay muted loop playsinline controls></video> -->
-<img src="img/site-poster.webp" alt="QuickFleet website hero: electric delivery motorcycles in Abuja">
-<a class="y-play" href="https://quickfleet.co" target="_blank" rel="noopener noreferrer" aria-label="Open quickfleet.co"><i></i></a>
-<span class="y-tag">Walkthrough video coming</span>
+<video src="img/site-walkthrough.mp4" poster="img/site-poster.webp" muted loop playsinline controls preload="metadata" aria-label="Screen recording scrolling through quickfleet.co"></video>
 </div>
 <div class="y-videocta"><a class="y-btn light" href="https://quickfleet.co" target="_blank" rel="noopener noreferrer">Visit quickfleet.co <span aria-hidden="true">↗</span></a><p>Designed and built by me, from layout to motion to front end.</p></div>
 </div></figure>
-<section class="y-part cs-rv"><div class="y-chb"><div class="y-wrap"><div class="y-ch-top"><p class="y-l">Part two</p><div class="txt"><h2>Deep dive: designing for trust</h2><p>What senders and receivers needed, and the three calls that make a delivery provable.</p></div></div></div></div></section>
+<section class="y-part cs-rv"><div class="y-chb"><div class="y-wrap"><div class="y-ch-top"><p class="y-l">Part two</p><div class="txt"><h2>Deep dive: making every delivery provable</h2><p>What senders and receivers needed, and the three calls that turn a handover into a record.</p></div></div></div></div></section>
 <section class="y-sec cs-rv"><div class="y-wrap"><!-- PLACEHOLDER: swap in what you actually heard, and who from --><div class="y-g" id="what-we-learned"><p class="y-l a">What we learned</p><div class="y-c"><h2 class="y-h2">Certainty mattered more than speed</h2><p class="y-p">The motorcycle is the easy part. What makes a delivery service worth trusting is everything around it.</p></div></div><div class="y-cols" style="--n:3"><div class="y-col"><p class="y-l a">Senders &amp; sellers</p><h4>Price came first</h4><p>Sellers build delivery into every order. A quote that moves with the pump eats the margin before the parcel leaves.</p></div><div class="y-col"><p class="y-l a">Senders</p><h4>Trust is about the rider</h4><p>Nobody asked for faster. They asked to know who was coming, and that the rider would come straight to them.</p></div><div class="y-col"><p class="y-l a">Receivers</p><h4>No app to receive</h4><p>Anything that asked the receiver to download something would fail at the door.</p></div></div><div class="y-insight"><p class="y-l a">The insight</p><p>Speed is table stakes. The product has to remove uncertainty at three moments: when you book, while the parcel moves, and at the door.</p></div></div></section>
 <section class="y-sec" style="padding-bottom:0"><div class="y-wrap cs-rv"><div class="y-g" id="key-decisions-and-trade-offs"><p class="y-l a">Key decisions &amp; trade-offs</p><div class="y-c"><h2 class="y-h2">Three calls that make it trustworthy</h2></div></div></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 01</p><h3>Make the price a promise the business can keep</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">Route, distance and price are shown before booking and locked at pickup. The rider has nothing to renegotiate at the gate.</p></div><div><h4>The trade-off</h4><p>Metered and negotiated fares are the market norm, and exactly what customers distrust. A fixed price only works if costs are stable, which is why this was a business decision before it was a screen: electric energy costs about a quarter of petrol and follows the tariff, not the pump.</p></div></div></div></div><figure class="y-bleed ph cs-rv"><img src="img/qf-dec1.webp" alt="Fixed price before booking and the same price after delivery" loading="lazy"><figcaption><span>Before booking · ₦1,500</span><span>After delivery · ₦1,500</span></figcaption></figure></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 02</p><h3>Let the receiver close the delivery</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">The receiver’s number is part of the booking. They get a text, open a web page and give the rider a four-digit code, and every step is timestamped.</p></div><div><h4>The trade-off</h4><p>Photos can be staged, and a signature proves nothing to the sender. An app download would fail at the door. A code only the receiver holds settles “it never came” in one line, with nothing to install.</p></div></div></div></div><figure class="y-bleed ph cs-rv"><img src="img/qf-dec2.webp" alt="Receiver named at booking and the code confirmed at the door" loading="lazy"><figcaption><span>At booking · receiver named</span><span>At the door · code confirmed</span></figcaption></figure></div><div class="y-dec cs-rv"><div class="y-wrap"><div class="y-dec-h"><p class="y-l a">Decision 03</p><h3>Design the fallback first</h3><div class="y-dec-b"><div><h4 class="a">The call</h4><p class="ink">Every step has an offline path and a manual fallback at the hub, and the app syncs when it’s back in range.</p></div><div><h4>The trade-off</h4><p>Designing for fast data and new phones would have made a better demo and a worse service. Starting from the failure case means an outage slows a delivery down instead of losing it.</p></div></div></div></div></div></section>
 <section class="y-sec cs-rv"><div class="y-vsband"><div class="y-wrap"><div class="y-g" id="before-vs-after"><p class="y-l a">Before vs. after</p><div class="y-c"><h2 class="y-h2">What changes for a sender</h2></div></div><div class="y-vs2"><div class="y-vs2-h"><p class="y-l">Informal dispatch today</p><i></i><p class="y-l">QuickFleet</p></div><div class="y-vs2-r"><span>Fees move with the pump</span><i>→</i><span>Price locked before pickup</span></div><div class="y-vs2-r"><span>Whoever turns up</span><i>→</i><span>Riders vetted, trained and employed</span></div><div class="y-vs2-r"><span>Silence until it arrives</span><i>→</i><span>A live link for sender and receiver</span></div><div class="y-vs2-r"><span>“It never came”</span><i>→</i><span>A code and a timestamp for every step</span></div></div></div></div></section>
 <section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="reflection"><p class="y-l a">Reflection</p><div class="y-c"><p class="y-quote">As CTO, every screen was also a business decision.</p><p class="y-p">A fixed price only works if energy costs hold, and a delivery code only works if riders are trained to ask for it. The most useful thing this taught me is to design the product and the operation as one system.</p></div></div></div></section>
-<section class="mp-wrap cs-rv"><div class="y-wrap"><p class="mp-eyebrow">more projects</p><div class="mp-grid"><a class="mp" href="../goco/" style="--accent:#0E7A4A"><span class="mp-client">GoCo</span><span class="mp-sector">SaaS, HR Tech</span><p class="mp-teaser">Led design across an HR platform for 200K+ users, and rebuilt its most complained-about feature.</p><span class="mp-view">view project →</span></a><a class="mp" href="../lenox-park/" style="--accent:var(--c-slate)"><span class="mp-client">Lenox Park</span><span class="mp-sector">Fintech, DEI analytics</span><p class="mp-teaser">Sole designer on an analytics platform for investors with $4T+ in client assets.</p><span class="mp-view">view project →</span></a><a class="mp" href="../risevest/" style="--accent:var(--c-teal)"><span class="mp-client">Risevest</span><span class="mp-sector">Fintech</span><p class="mp-teaser">Redesigned a dollar-investment app for 620K+ users; onboarding rose from 34% to 58%.</p><span class="mp-view">view project →</span></a></div></div></section>
+<section class="mp-wrap cs-rv"><div class="y-wrap"><p class="mp-eyebrow">more projects</p><div class="mp-grid"><a class="mp" href="../goco/" style="--accent:#0E7A4A"><span class="mp-client">GoCo</span><span class="mp-sector">SaaS, HR Tech</span><p class="mp-teaser">Led design across an HR platform for 200K+ users, and rebuilt its most complained-about feature.</p><span class="mp-view">view project →</span></a><a class="mp" href="../lenox-park/" style="--accent:var(--c-slate)"><span class="mp-client">Lenox Park</span><span class="mp-sector">Fintech, DEI analytics</span><p class="mp-teaser">Sole designer on an analytics platform for investors with $4T+ in client assets.</p><span class="mp-view">view project →</span></a><a class="mp" href="../risevest/" style="--accent:var(--c-teal)"><span class="mp-client">Risevest</span><span class="mp-sector">Fintech</span><p class="mp-teaser">Redesigned an investing app used by 620K+ people; onboarding rose from 34% to 58%.</p><span class="mp-view">view project →</span></a><a class="mp" href="../dro-health/" style="--accent:#6D28D9"><span class="mp-client">DRO Health</span><span class="mp-sector">Health tech, Telehealth</span><p class="mp-teaser">Redesigned telehealth for 50K+ users in Nigeria; sign-up drop-off fell 18%.</p><span class="mp-view">view project →</span></a></div></div></section>
 </main>
 <footer class="site-footer" id="contact">
   <div class="foot-inner">
     <div class="foot-top"><span class="foot-kicker">get in touch</span><span class="foot-status"><span class="foot-dot"></span>available for work</span></div>
-    <p class="foot-lead">let's make complex software feel <span class="rust">obvious</span>.</p>
+    <p class="foot-lead">Let's make complex software feel <span class="rust">obvious</span>.</p>
     <div class="foot-contact">
       <div class="foot-email-row"><a class="foot-email" href="mailto:stanleyojima9@gmail.com">stanleyojima9@gmail.com</a><button class="foot-copy" type="button" data-email="stanleyojima9@gmail.com" aria-label="Copy email address">copy</button></div>
-      <nav class="foot-links" aria-label="Elsewhere"><a href="https://www.linkedin.com/in/ojima-aniegboka/" target="_blank" rel="noopener noreferrer">LinkedIn <span class="foot-arr">↗</span></a><a href="https://www.behance.net/stanleyojima" target="_blank" rel="noopener noreferrer">Behance <span class="foot-arr">↗</span></a></nav>
+      <nav class="foot-links" aria-label="Elsewhere"><a href="https://www.linkedin.com/in/ojima-aniegboka/" target="_blank" rel="noopener noreferrer">LinkedIn <span class="foot-arr">↗</span></a></nav>
     </div>
     <div class="foot-mark" aria-hidden="true">stanley ojima</div>
     <div class="foot-base"><span>&copy; 2026 stanley ojima</span><button class="foot-top-btn" type="button">back to top <span>↑</span></button></div>
@@ -1333,8 +1552,12 @@
 })();
 </script>
 <script>
+(function(){var red=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;document.querySelectorAll('.wt').forEach(function(w){var b=[].slice.call(w.querySelectorAll('.wt-step')),im=[].slice.call(w.querySelectorAll('.wt-stage img')),cnt=w.querySelector('.wt-count b'),cur=0,t=null,started=false,DUR=5000;function show(k){cur=k;b.forEach(function(x,j){x.classList.toggle('on',j===k);x.setAttribute('aria-pressed',j===k?'true':'false');x.classList.remove('run');});im.forEach(function(x,j){x.classList.toggle('on',j===k);});if(cnt)cnt.textContent='0'+(k+1);if(started&&!red){void b[k].offsetWidth;b[k].classList.add('run');}}function loop(){clearInterval(t);t=setInterval(function(){show((cur+1)%b.length);},DUR);}function start(){if(started||red)return;started=true;show(cur);loop();}b.forEach(function(x,k){x.addEventListener('click',function(){show(k);if(started)loop();});});if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)start();});},{threshold:0,rootMargin:'0px 0px -25% 0px'}).observe(w.querySelector('.wt-stage'));}else start();im.forEach(function(x){x.loading='eager';});});})();
+
+(function(){var v=document.querySelector('.y-video video');if(!v||!('IntersectionObserver' in window))return;if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;new IntersectionObserver(function(es){es.forEach(function(e){e.isIntersecting?v.play().catch(function(){}):v.pause()})},{threshold:.4}).observe(v)})();
+
 (function(){
-  var rows=document.querySelectorAll('.y-out3, .y-sec .y-nums'); if(!rows.length) return;
+  var rows=document.querySelectorAll('.y-out3, .y-out4, .y-sec .y-nums'); if(!rows.length) return;
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
   function run(row){
     row.classList.add('counted'); if(reduce) return;
@@ -1348,8 +1571,48 @@
     });
   }
   if(!('IntersectionObserver' in window)){ rows.forEach(run); return; }
-  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ run(e.target); io.unobserve(e.target);} }); },{threshold:.4});
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ run(e.target); io.unobserve(e.target);} }); },{threshold:.15});
   rows.forEach(function(r){ io.observe(r); });
 })();
-</script></body>
+</script><div class="pt" aria-hidden="true"><span class="pt-label"></span></div><script>
+(function(){
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var pt=document.querySelector('.pt'); if(!pt) return;
+  var lab=pt.querySelector('.pt-label');
+  var NAMES={'':'Home','about':'About','work':'Projects','goco':'GoCo · Case study','quickfleet':'QuickFleet · Case study','risevest':'Risevest · Case study','lenox-park':'Lenox Park · Case study','dro-health':'DRO Health · Case study'};
+  function nameFor(u){var parts=u.pathname.replace(/index\.html$/,'').split('/').filter(Boolean);var k=parts.length?parts[parts.length-1]:'';return NAMES[k]||'';}
+  try{var stored=sessionStorage.getItem('pt');}catch(e){}
+  if(stored){
+    lab.textContent=stored;
+    try{sessionStorage.removeItem('pt');}catch(e){}
+    var out=function(){requestAnimationFrame(function(){pt.classList.add('leave');document.documentElement.classList.remove('pt-arrive');setTimeout(function(){pt.classList.remove('leave');},650);});};
+    if(document.readyState==='complete') setTimeout(out,60); else window.addEventListener('load',function(){setTimeout(out,60);});
+    setTimeout(function(){if(document.documentElement.classList.contains('pt-arrive')) out();},1600);
+  }
+  window.addEventListener('pageshow',function(e){if(e.persisted){pt.classList.remove('go','leave');document.documentElement.classList.remove('pt-arrive');}});
+  var nativeVT=('CSSViewTransitionRule' in window);
+  if(reduce) return;
+  if(nativeVT){
+    document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a.case-hit');if(!a)return;var c=a.closest('.case');var v=c&&c.querySelector('.case-visual');if(v){document.querySelectorAll('[style*="view-transition-name"]').forEach(function(n){n.style.viewTransitionName='';});v.style.viewTransitionName='case-hero';}},true);
+    window.addEventListener('pageshow',function(){document.querySelectorAll('.case-visual').forEach(function(n){n.style.viewTransitionName='';});});
+    return;
+  }
+  document.addEventListener('click',function(e){
+    if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey) return;
+    var a=e.target.closest&&e.target.closest('a[href]'); if(!a) return;
+    if(a.target&&a.target!=='_self') return; if(a.hasAttribute('download')||a.hasAttribute('data-resume')) return;
+    var href=a.getAttribute('href'); if(!href||href.charAt(0)==='#'||/^(mailto|tel|javascript):/i.test(href)) return;
+    var u; try{u=new URL(a.href,location.href);}catch(err){return;}
+    if(u.origin!==location.origin) return;
+    if(u.pathname===location.pathname&&u.hash) return;
+    if(/\.(pdf|png|jpe?g|webp|mp4|zip)$/i.test(u.pathname)) return;
+    e.preventDefault();
+    var n=nameFor(u); lab.textContent=n;
+    try{sessionStorage.setItem('pt',n||' ');}catch(err){}
+    pt.classList.remove('leave'); void pt.offsetWidth; pt.classList.add('go');
+    setTimeout(function(){location.href=u.href;},430);
+  });
+})();
+</script>
+</body>
 </html>
