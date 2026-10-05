@@ -1484,6 +1484,71 @@
   .rb-fl .rb-flow{width:820px;max-width:none}
 }
 
+.bp-wrap{margin-top:clamp(1.6rem,3vw,2.4rem);overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:18px;box-shadow:0 0 0 1px var(--hairline)}
+.bp{display:grid;grid-template-columns:150px repeat(var(--c),minmax(120px,1fr));min-width:900px;background:#fff}
+.bp-c{padding:.75rem .7rem;border-right:1px solid var(--hairline);border-bottom:1px solid var(--hairline);font:400 .82rem/1.35 var(--body);color:#3f3f46}
+.bp-c:nth-child(calc(var(--c) + 1)n){border-right:0}
+.bp-h{background:var(--light);font:500 .82rem/1.25 var(--body);color:var(--ink)}
+.bp-h span{display:block;margin-bottom:.3rem;font:500 .64rem/1 var(--mono);letter-spacing:.1em;color:var(--accent)}
+.bp-corner{background:var(--light)}
+.bp-lane{background:#fafaf9}
+.bp-lane b{display:block;font:600 .86rem/1.2 var(--body);color:var(--ink)}
+.bp-lane i{display:block;margin-top:.2rem;font:400 .74rem/1.3 var(--body);font-style:normal;color:var(--dim)}
+.bp-x span{display:block;padding:.5rem .6rem;border-radius:9px;background:#f4f4f5}
+.bp-x.app span{background:var(--tint);color:var(--ink)}
+.bp-x.trust span{background:var(--tint);color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--accent)}
+.bp-x.phys span{background:#fff4e5;color:#7a4a0c}
+.bp-e{background:repeating-linear-gradient(135deg,transparent 0 7px,rgba(24,24,27,.025) 7px 8px)}
+.bp-leg{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;margin-top:1rem;font:400 .8rem/1 var(--body);color:var(--dim)}
+.bp-leg span{display:inline-flex;align-items:center;gap:.45rem}
+.bp-leg i{width:14px;height:14px;border-radius:4px}
+.bp-leg .k-app{background:var(--tint)}.bp-leg .k-trust{background:var(--tint);box-shadow:inset 0 0 0 1.5px var(--accent)}.bp-leg .k-phys{background:#fff4e5}
+.bp-cap{margin:.8rem 0 0;font:400 .84rem/1.5 var(--body);color:var(--dim);max-width:70ch}
+.im{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2vw,1.4rem);margin-top:clamp(1.6rem,3vw,2.4rem)}
+.im-p{padding:1.1rem 1.1rem .8rem;border-radius:18px;background:#fff;box-shadow:0 0 0 1px var(--hairline)}
+.im-k{display:flex;align-items:center;gap:.6rem;margin:0 0 .4rem;font:500 .9rem/1.3 var(--body);color:var(--ink)}
+.im-k b{padding:3px 8px;border-radius:6px;background:var(--tint);color:var(--accent);font:600 .68rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.im-k.bad b{background:#fdecea;color:#c2412d}
+.im-svg{display:block;width:100%;height:auto;font-family:var(--body);color:var(--accent)}
+.im-b{fill:#fff;stroke:#c9c9cf;stroke-width:1.4}.im-b.ok{fill:var(--tint);stroke:var(--accent)}
+.im-t{font-size:12.5px;font-weight:500;fill:#27272a}
+.im-hop path{fill:none;stroke:#d9442f;stroke-width:1.4;stroke-dasharray:5 4}
+.im-me{fill:#fff5f3;stroke:#d9442f;stroke-width:1.4}.im-mt{font-size:12px;font-weight:600;fill:#27272a}.im-ms{font-size:10px;fill:#71717a}
+.im-feed path{fill:none;stroke:currentColor;stroke-width:1.5}
+.im-hub{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}.im-ht{font-size:14px;font-weight:600;fill:#18181b}.im-hs{font-size:10.5px;fill:#52525b}
+@media (max-width:860px){.im{grid-template-columns:1fr}}
+.im2{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(1rem,2vw,1.4rem);margin-top:clamp(1.6rem,3vw,2.4rem);align-items:stretch}
+.im2-p{display:flex;flex-direction:column;padding:1.2rem;border-radius:20px;background:#f6f6f4;box-shadow:inset 0 0 0 1px var(--hairline)}
+.im2-p.bad{background:#fdf6f4;box-shadow:inset 0 0 0 1px #f3d4cc}
+.im2-p.good{background:var(--tint);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--accent) 35%,transparent)}
+.im2-k{display:flex;align-items:center;gap:.6rem;margin:0 0 1rem;font:500 .92rem/1.3 var(--body);color:var(--ink)}
+.im2-k b{padding:3px 8px;border-radius:6px;background:#fff;color:var(--accent);font:600 .68rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.im2-p.bad .im2-k b{color:#c2412d}
+.im2-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.im2-s{position:relative;margin:0;padding:.5rem .5rem .6rem;border-radius:12px;background:#fff;box-shadow:0 0 0 1px rgba(24,24,27,.06),0 10px 20px -16px rgba(24,24,27,.35)}
+.im2-s img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:left top;border-radius:7px}
+.im2-s figcaption{display:block;margin-top:.5rem;padding:0 .2rem}
+.im2-s b,.im2-hub b{display:block;font:600 .82rem/1.2 var(--body);color:var(--ink)}
+.im2-s i,.im2-hub i,.im2-xl i{display:block;margin-top:.15rem;font:400 .76rem/1.3 var(--body);font-style:normal;color:var(--dim)}
+.im2-n{position:absolute;left:-7px;top:-7px;z-index:2;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#d9442f;color:#fff;font:600 .72rem/1 var(--mono)}
+.im2-xl{position:relative;display:flex;flex-direction:column;margin-top:.7rem;padding:.75rem .9rem .75rem 1.6rem;border-radius:12px;background:#fff;border:1.5px dashed #e3a69a}
+.im2-xl .im2-n{left:-9px;top:50%;transform:translateY(-50%)}
+.im2-xl b{font:600 .84rem/1.2 var(--body);color:var(--ink)}
+.im2-note{margin:.9rem 0 0;font:500 .82rem/1.4 var(--body);color:#c2412d}
+.im2-note.good{color:var(--accent)}
+.im2-chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.im2-chip{padding:.45rem .75rem;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--accent) 40%,transparent);font:500 .8rem/1 var(--body);color:var(--ink)}
+.im2-arrow{height:26px;margin:.4rem 0;background:linear-gradient(var(--accent),var(--accent)) center/1.5px 100% no-repeat;position:relative}
+.im2-arrow::after{content:"";position:absolute;left:calc(50% - 5px);bottom:-1px;border:5px solid transparent;border-top:7px solid var(--accent);border-bottom:0}
+.im2-hub{margin:0;padding:.6rem .6rem .8rem;border-radius:14px;background:#fff;box-shadow:0 0 0 1.5px var(--accent),0 24px 40px -26px rgba(24,24,27,.45);flex:1}
+.im2-hub img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:left top;border-radius:8px}
+.im2-hub figcaption{margin-top:.6rem;padding:0 .2rem}
+@media (max-width:860px){.im2{grid-template-columns:1fr}}
+.bp-fail-l{background:#fdf3f1!important}
+.bp-fail{background:#fdf3f1}
+.bp-fail span{display:block;padding:.5rem .6rem;border-radius:9px;background:#fff;color:#b23a26;box-shadow:inset 0 0 0 1px #f2c3b8;text-decoration:line-through;text-decoration-color:rgba(178,58,38,.35)}
+.bp-leg .k-fail{background:#fdf3f1;box-shadow:inset 0 0 0 1px #f2c3b8}
+
 
   /* ===== global nav: the homepage capsule, everywhere ===== */
   header.nav.nav-pill{display:none!important}
@@ -1672,7 +1737,7 @@ html.mm-lock,html.mm-lock body{overflow:hidden}
   html.mm-lock .gnav,html.mm-lock .nav{z-index:9100}
 }
 </style>
-<script>(function(){try{var r=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(r)return;document.documentElement.classList.add('boot-on');}catch(e){}})();</script>
+<script>(function(){try{var r=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(r)return;var nav=(performance.getEntriesByType&&performance.getEntriesByType('navigation')[0])||{};var internal=false;try{internal=!!document.referrer&&new URL(document.referrer).origin===location.origin;}catch(e){}if(internal&&nav.type!=='reload')return;document.documentElement.classList.add('boot-on');}catch(e){}})();</script>
 <style id="intro-css">
 .boot{display:none}
 html.boot-on .boot{display:flex;position:fixed;inset:0;z-index:10000;background:#111113;color:#fff;align-items:center;justify-content:center;flex-direction:column}
@@ -1693,7 +1758,6 @@ html.boot-on .wordmark{opacity:0}
 @media (max-width:640px){.boot-name{font-size:clamp(40px,13vw,64px)}}
 </style>
 <style id="resume-wide">@media screen{#resumeModal .modal-card{width:min(94vw,860px);max-height:90vh;padding:clamp(1.8rem,4vw,3rem)}}</style>
-<script defer src="/_vercel/insights/script.js"></script>
 <link id="rp-fonts" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style id="rp-css">
 .rp{font-family:'Open Sans',Arial,sans-serif;color:#1a1a1a;font-size:12px;line-height:1.5;text-align:left}
@@ -1725,6 +1789,7 @@ html.boot-on .wordmark{opacity:0}
 .rp-dl:hover{background:#333}
 @media (max-width:640px){.rp-head{flex-direction:column;align-items:flex-start}.rp-contact{text-align:left}.rp-name{font-size:28px}.rp-row{flex-direction:column;gap:.1rem}}
 </style>
+<script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body id="top">
 <div class="boot" aria-hidden="true"><div class="boot-name" data-text="DRO Health"></div><div class="boot-row">Telehealth platform</div></div>
@@ -1757,7 +1822,7 @@ html.boot-on .wordmark{opacity:0}
 <section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="outcome"><p class="y-l a">Outcome</p><div class="y-c"><h2 class="y-h2">Faster to care, easier to trust</h2></div></div><div class="y-out4 n3"><div class="o4-l"><div class="o4-feat"><b><span class="acc">↓</span><span class="num">18%</span></b><h4>Sign-up drop-off</h4><p>With a shorter, progressive sign-up.</p><div class="o4-bars"><div class="o4-bar"><span>Before</span><i style="--w:1.000"></i><em></em></div><div class="o4-bar now"><span>After</span><i style="--w:0.820"></i><em></em></div></div></div></div><div class="o4-r"><div class="o4-row"><b><span class="acc">+</span><span class="num">45%</span></b><div><h4>User satisfaction</h4><p>Measured after the redesign shipped.</p></div></div><div class="o4-row"><b><span class="acc">&lt;</span><span class="num">60s</span></b><div><h4>From opening the app to booking</h4><p>With the homepage built around intent.</p></div></div><div class="o4-row"><b><span class="num">100K+</span></b><div><h4>Consultations completed</h4><p>On the redesigned platform.</p></div></div></div></div><p class="y-p y-note">The design system also let engineering ship new features faster. <b>People could go from opening the app to booking a doctor in under a minute.</b></p></div></section>
 <section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="reflection"><p class="y-l a">Reflection</p><div class="y-c"><p class="y-quote">In healthcare, people won’t finish a flow they don’t feel safe in, however fast it is.</p><p class="y-p">If I did this again, I’d push harder on what happens after the consultation: prescription tracking, follow-up reminders and health progress. We optimised getting people to a doctor, but long-term retention lives after the visit.</p></div></div></div></section>
 <section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g"><p class="y-l a">Credits</p><div class="y-c"><div class="y-credits"><p>Chinonso Ohambele<span>Product designer</span></p><p>Karen Cummings<span>Product designer</span></p><p>Emeka Brian Iwuchukwu<span>Co-founder</span></p></div></div></div></div></section>
-<section class="mp-wrap cs-rv"><div class="y-wrap"><p class="mp-eyebrow">more projects</p><div class="mp-grid"><a class="mp" href="../goco/" style="--accent:#0E7A4A"><span class="mp-client">GoCo</span><span class="mp-sector">SaaS, HR Tech</span><p class="mp-teaser">Led design across an HR platform for 200K+ users, and rebuilt its most complained-about feature.</p><span class="mp-view">view project →</span></a><a class="mp" href="../quickfleet/" style="--accent:#087A64"><span class="mp-client">QuickFleet</span><span class="mp-sector">Logistics, Electric mobility</span><p class="mp-teaser">Co-founded an electric delivery network, and designed the product it runs on.</p><span class="mp-view">view project →</span></a><a class="mp" href="../lenox-park/" style="--accent:var(--c-slate)"><span class="mp-client">Lenox Park</span><span class="mp-sector">Fintech, DEI analytics</span><p class="mp-teaser">Sole designer on an analytics platform for investors with $4T+ in client assets.</p><span class="mp-view">view project →</span></a><a class="mp" href="../risevest/" style="--accent:var(--c-teal)"><span class="mp-client">Risevest</span><span class="mp-sector">Fintech</span><p class="mp-teaser">Redesigned an investing app used by 620K+ people; onboarding rose from 34% to 58%.</p><span class="mp-view">view project →</span></a></div></div></section>
+<section class="mp-wrap cs-rv"><div class="y-wrap"><p class="mp-eyebrow">more projects</p><div class="mp-grid"><a class="mp" href="../goco/" style="--accent:#0E7A4A"><span class="mp-client">GoCo</span><span class="mp-sector">SaaS, HR Tech</span><p class="mp-teaser">Led design across an HR platform for 200K+ users, and rebuilt its most complained-about feature.</p><span class="mp-view">view project →</span></a><a class="mp" href="../risevest/" style="--accent:var(--c-teal)"><span class="mp-client">Risevest</span><span class="mp-sector">Fintech</span><p class="mp-teaser">Redesigned an investing app used by 620K+ people; onboarding rose from 34% to 58%.</p><span class="mp-view">view project →</span></a><a class="mp" href="../lenox-park/" style="--accent:var(--c-slate)"><span class="mp-client">Lenox Park</span><span class="mp-sector">Fintech, DEI analytics</span><p class="mp-teaser">Sole designer on an analytics platform for investors with $4T+ in client assets.</p><span class="mp-view">view project →</span></a><a class="mp" href="../quickfleet/" style="--accent:#087A64"><span class="mp-client">QuickFleet</span><span class="mp-sector">Logistics, Electric mobility</span><p class="mp-teaser">Co-founded an electric delivery network, and designed the product it runs on.</p><span class="mp-view">view project →</span></a></div></div></section>
 </main>
 <footer class="site-footer" id="contact">
   <div class="foot-inner">
