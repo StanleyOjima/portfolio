@@ -1436,6 +1436,71 @@
   .rb-fl .rb-flow{width:820px;max-width:none}
 }
 
+.bp-wrap{margin-top:clamp(1.6rem,3vw,2.4rem);overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:18px;box-shadow:0 0 0 1px var(--hairline)}
+.bp{display:grid;grid-template-columns:150px repeat(var(--c),minmax(120px,1fr));min-width:900px;background:#fff}
+.bp-c{padding:.75rem .7rem;border-right:1px solid var(--hairline);border-bottom:1px solid var(--hairline);font:400 .82rem/1.35 var(--body);color:#3f3f46}
+.bp-c:nth-child(calc(var(--c) + 1)n){border-right:0}
+.bp-h{background:var(--light);font:500 .82rem/1.25 var(--body);color:var(--ink)}
+.bp-h span{display:block;margin-bottom:.3rem;font:500 .64rem/1 var(--mono);letter-spacing:.1em;color:var(--accent)}
+.bp-corner{background:var(--light)}
+.bp-lane{background:#fafaf9}
+.bp-lane b{display:block;font:600 .86rem/1.2 var(--body);color:var(--ink)}
+.bp-lane i{display:block;margin-top:.2rem;font:400 .74rem/1.3 var(--body);font-style:normal;color:var(--dim)}
+.bp-x span{display:block;padding:.5rem .6rem;border-radius:9px;background:#f4f4f5}
+.bp-x.app span{background:var(--tint);color:var(--ink)}
+.bp-x.trust span{background:var(--tint);color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--accent)}
+.bp-x.phys span{background:#fff4e5;color:#7a4a0c}
+.bp-e{background:repeating-linear-gradient(135deg,transparent 0 7px,rgba(24,24,27,.025) 7px 8px)}
+.bp-leg{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;margin-top:1rem;font:400 .8rem/1 var(--body);color:var(--dim)}
+.bp-leg span{display:inline-flex;align-items:center;gap:.45rem}
+.bp-leg i{width:14px;height:14px;border-radius:4px}
+.bp-leg .k-app{background:var(--tint)}.bp-leg .k-trust{background:var(--tint);box-shadow:inset 0 0 0 1.5px var(--accent)}.bp-leg .k-phys{background:#fff4e5}
+.bp-cap{margin:.8rem 0 0;font:400 .84rem/1.5 var(--body);color:var(--dim);max-width:70ch}
+.im{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2vw,1.4rem);margin-top:clamp(1.6rem,3vw,2.4rem)}
+.im-p{padding:1.1rem 1.1rem .8rem;border-radius:18px;background:#fff;box-shadow:0 0 0 1px var(--hairline)}
+.im-k{display:flex;align-items:center;gap:.6rem;margin:0 0 .4rem;font:500 .9rem/1.3 var(--body);color:var(--ink)}
+.im-k b{padding:3px 8px;border-radius:6px;background:var(--tint);color:var(--accent);font:600 .68rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.im-k.bad b{background:#fdecea;color:#c2412d}
+.im-svg{display:block;width:100%;height:auto;font-family:var(--body);color:var(--accent)}
+.im-b{fill:#fff;stroke:#c9c9cf;stroke-width:1.4}.im-b.ok{fill:var(--tint);stroke:var(--accent)}
+.im-t{font-size:12.5px;font-weight:500;fill:#27272a}
+.im-hop path{fill:none;stroke:#d9442f;stroke-width:1.4;stroke-dasharray:5 4}
+.im-me{fill:#fff5f3;stroke:#d9442f;stroke-width:1.4}.im-mt{font-size:12px;font-weight:600;fill:#27272a}.im-ms{font-size:10px;fill:#71717a}
+.im-feed path{fill:none;stroke:currentColor;stroke-width:1.5}
+.im-hub{fill:var(--tint);stroke:var(--accent);stroke-width:1.8}.im-ht{font-size:14px;font-weight:600;fill:#18181b}.im-hs{font-size:10.5px;fill:#52525b}
+@media (max-width:860px){.im{grid-template-columns:1fr}}
+.im2{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(1rem,2vw,1.4rem);margin-top:clamp(1.6rem,3vw,2.4rem);align-items:stretch}
+.im2-p{display:flex;flex-direction:column;padding:1.2rem;border-radius:20px;background:#f6f6f4;box-shadow:inset 0 0 0 1px var(--hairline)}
+.im2-p.bad{background:#fdf6f4;box-shadow:inset 0 0 0 1px #f3d4cc}
+.im2-p.good{background:var(--tint);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--accent) 35%,transparent)}
+.im2-k{display:flex;align-items:center;gap:.6rem;margin:0 0 1rem;font:500 .92rem/1.3 var(--body);color:var(--ink)}
+.im2-k b{padding:3px 8px;border-radius:6px;background:#fff;color:var(--accent);font:600 .68rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.im2-p.bad .im2-k b{color:#c2412d}
+.im2-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.im2-s{position:relative;margin:0;padding:.5rem .5rem .6rem;border-radius:12px;background:#fff;box-shadow:0 0 0 1px rgba(24,24,27,.06),0 10px 20px -16px rgba(24,24,27,.35)}
+.im2-s img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:left top;border-radius:7px}
+.im2-s figcaption{display:block;margin-top:.5rem;padding:0 .2rem}
+.im2-s b,.im2-hub b{display:block;font:600 .82rem/1.2 var(--body);color:var(--ink)}
+.im2-s i,.im2-hub i,.im2-xl i{display:block;margin-top:.15rem;font:400 .76rem/1.3 var(--body);font-style:normal;color:var(--dim)}
+.im2-n{position:absolute;left:-7px;top:-7px;z-index:2;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#d9442f;color:#fff;font:600 .72rem/1 var(--mono)}
+.im2-xl{position:relative;display:flex;flex-direction:column;margin-top:.7rem;padding:.75rem .9rem .75rem 1.6rem;border-radius:12px;background:#fff;border:1.5px dashed #e3a69a}
+.im2-xl .im2-n{left:-9px;top:50%;transform:translateY(-50%)}
+.im2-xl b{font:600 .84rem/1.2 var(--body);color:var(--ink)}
+.im2-note{margin:.9rem 0 0;font:500 .82rem/1.4 var(--body);color:#c2412d}
+.im2-note.good{color:var(--accent)}
+.im2-chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.im2-chip{padding:.45rem .75rem;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--accent) 40%,transparent);font:500 .8rem/1 var(--body);color:var(--ink)}
+.im2-arrow{height:26px;margin:.4rem 0;background:linear-gradient(var(--accent),var(--accent)) center/1.5px 100% no-repeat;position:relative}
+.im2-arrow::after{content:"";position:absolute;left:calc(50% - 5px);bottom:-1px;border:5px solid transparent;border-top:7px solid var(--accent);border-bottom:0}
+.im2-hub{margin:0;padding:.6rem .6rem .8rem;border-radius:14px;background:#fff;box-shadow:0 0 0 1.5px var(--accent),0 24px 40px -26px rgba(24,24,27,.45);flex:1}
+.im2-hub img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:left top;border-radius:8px}
+.im2-hub figcaption{margin-top:.6rem;padding:0 .2rem}
+@media (max-width:860px){.im2{grid-template-columns:1fr}}
+.bp-fail-l{background:#fdf3f1!important}
+.bp-fail{background:#fdf3f1}
+.bp-fail span{display:block;padding:.5rem .6rem;border-radius:9px;background:#fff;color:#b23a26;box-shadow:inset 0 0 0 1px #f2c3b8;text-decoration:line-through;text-decoration-color:rgba(178,58,38,.35)}
+.bp-leg .k-fail{background:#fdf3f1;box-shadow:inset 0 0 0 1px #f2c3b8}
+
   .ab2-hero{padding:calc(6rem + 2vw) 0 0}
   .ab2-top{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 24px;align-items:end}
   .ab2-txt{grid-column:1/8}
@@ -1588,7 +1653,7 @@ html.mm-lock,html.mm-lock body{overflow:hidden}
   html.mm-lock .gnav,html.mm-lock .nav{z-index:9100}
 }
 </style>
-<script>(function(){try{var r=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(r)return;document.documentElement.classList.add('boot-on');}catch(e){}})();</script>
+<script>(function(){try{var r=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(r)return;var nav=(performance.getEntriesByType&&performance.getEntriesByType('navigation')[0])||{};var internal=false;try{internal=!!document.referrer&&new URL(document.referrer).origin===location.origin;}catch(e){}if(internal&&nav.type!=='reload')return;document.documentElement.classList.add('boot-on');}catch(e){}})();</script>
 <style id="intro-css">
 .boot{display:none}
 html.boot-on .boot{display:flex;position:fixed;inset:0;z-index:10000;background:#111113;color:#fff;align-items:center;justify-content:center;flex-direction:column}
@@ -1704,7 +1769,7 @@ html.boot-on .wordmark{opacity:0}
 <dl class="y-facts"><div class="y-fact"><dt>Experience</dt><dd>8+ years, senior since 2022</dd></div><div class="y-fact"><dt>Focus</dt><dd>B2B SaaS and enterprise products</dd></div><div class="y-fact"><dt>Industries</dt><dd>HR, fintech, health, logistics</dd></div><div class="y-fact"><dt>Location</dt><dd>Remote</dd></div></dl>
 </div></section>
 <section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="why-i-design"><p class="y-l a">Why I design</p><div class="y-c"><h2 class="y-h2">Products people depend on</h2><p class="y-p">I grew up where the simplest conveniences were often out of reach. That’s where my interest in design started: not in how things look, but in whether they work for the person who needs them.</p><p class="y-p">I studied engineering and found my way to product design because I kept asking why things were built the way they were, and how they could work better. <b>I’m drawn to products where getting it right isn’t about aesthetics.</b> It decides whether someone can see a doctor, manage their savings, or do their job without fighting the tool.</p></div></div></div></section>
-<section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="how-i-think-about-design"><p class="y-l a">How I think about design</p><div class="y-c"><h2 class="y-h2">Three habits, and where they paid off</h2></div></div><div class="ab2-pr"><div class="ab2-p"><p class="y-l a">01</p><h3>Start where the complaints are</h3><p>The support queue tells me more than a brainstorm. At GoCo, the Reports rebuild started from the tickets, not the roadmap.</p><a class="ab2-proof" href="../projects/goco/"><b>↓30%</b><span>Support tickets after the Reports rebuild</span><i>→</i></a></div><div class="ab2-p"><p class="y-l a">02</p><h3>Keep the depth, fix the order</h3><p>Expert users rarely want less. Analysts at Lenox Park needed every number, in the order they actually compare things.</p><a class="ab2-proof" href="../projects/lenox-park/"><b>3×</b><span>Faster time to insight, with nothing removed</span><i>→</i></a></div><div class="ab2-p"><p class="y-l a">03</p><h3>Earn trust before asking for it</h3><p>In health and money, people decide fast whether a product is safe. At DRO Health we stopped asking for medical details until the first booking.</p><a class="ab2-proof" href="../projects/dro-health/"><b>↓18%</b><span>Sign-up drop-off</span><i>→</i></a></div></div></div></section>
+<section class="y-sec cs-rv"><div class="y-wrap"><div class="y-g" id="what-i-believe"><p class="y-l a">What I believe</p><div class="y-c"><h2 class="y-h2">What eight years taught me about difficult software</h2><p class="y-p">Beliefs I hold because a project tested them. Each one changed a decision I made, and each one paid off.</p></div></div><div class="ab2-pr"><div class="ab2-p"><p class="y-l a">01</p><h3>Complexity can’t always be removed. It has to be organised.</h3><p>Expert users rarely want less. Analysts at Lenox Park needed every number; what they lacked was an order that matched how they compare. We kept the depth and fixed the sequence.</p><a class="ab2-proof" href="../projects/lenox-park/"><b>3×</b><span>Faster time to insight, with nothing removed</span><i>→</i></a></div><div class="ab2-p"><p class="y-l a">02</p><h3>The support queue is a better brief than a brainstorm.</h3><p>Complaints are research people have already done for you. At GoCo, the Reports rebuild started from the tickets, not the roadmap, and the tickets told us exactly where trust broke.</p><a class="ab2-proof" href="../projects/goco/"><b>↓30%</b><span>Support tickets after the Reports rebuild</span><i>→</i></a></div><div class="ab2-p"><p class="y-l a">03</p><h3>A design system is an operating model, not a Figma library.</h3><p>Components were never GoCo’s problem; twelve teams making their own calls was. The work that mattered was the habit: new work starts from the library, and exceptions earn their way in.</p><a class="ab2-proof" href="../projects/goco/"><b>12+</b><span>Product areas speaking one language</span><i>→</i></a></div><div class="ab2-p"><p class="y-l a">04</p><h3>Earn trust before you ask for anything.</h3><p>In health and money, people decide in seconds whether a product is safe. At DRO Health we stopped asking for medical details until the first booking, when the reason was obvious.</p><a class="ab2-proof" href="../projects/dro-health/"><b>↓18%</b><span>Sign-up drop-off</span><i>→</i></a></div></div></div></section>
 <section class="y-sec cs-rv"><div class="y-wrap"><!-- VERIFY: QuickFleet start date --><div class="y-g" id="experience"><p class="y-l a">Experience</p><div class="y-c"><h2 class="y-h2">Where I’ve done the work</h2></div></div><div class="ab2-xp"><div class="ab2-r"><div class="ab2-logo qf"><img src="img/logo-quickfleet.svg" alt=""></div><div><h3>QuickFleet <span>· Co-founder &amp; CTO</span></h3><p>Electric delivery network for Nigerian cities. I own product and technology: I designed the customer app and designed and built quickfleet.co.</p><a href="../projects/quickfleet/">Read the case study →</a></div><div class="ab2-when">2026 – Present<span>Abuja, Nigeria</span></div></div><div class="ab2-r"><div class="ab2-logo"><img src="img/logo-goco.webp" alt=""></div><div><h3>GoCo <span>· Senior product designer</span></h3><p>One of two product designers on an HR, benefits and payroll platform for 200K+ users. Led Reports, Homepage, Surveys, Onboarding, the design system and the marketing site. Acquired by Intuit.</p><a href="../projects/goco/">Read the case study →</a></div><div class="ab2-when">Jul 2022 – Apr 2025<span>Houston, USA · Remote</span></div></div><div class="ab2-r"><div class="ab2-logo"><img src="img/logo-curva.webp" alt=""></div><div><h3>Curva Digital <span>· Senior product designer</span></h3><p>Design across mobile apps, websites and visual systems for clients in a fast-paced agency.</p></div><div class="ab2-when">Feb 2020 – Jul 2022<span>London, UK · Remote</span></div></div><div class="ab2-r"><div class="ab2-logo"><img src="img/logo-dro.webp" alt=""></div><div><h3>DRO Health <span>· Product designer</span></h3><p>End-to-end redesign of a telehealth platform for 50K+ users: consultations, pharmacy, tests and the design system.</p><a href="../projects/dro-health/">Read the case study →</a></div><div class="ab2-when">Nov 2019 – Feb 2021<span>Lagos, Nigeria</span></div></div><div class="ab2-r"><div class="ab2-logo"><img src="img/logo-busha.webp" alt=""></div><div><h3>Busha <span>· Product designer</span></h3><p>Admin dashboard and product pages for a crypto exchange.</p></div><div class="ab2-when">May 2019 – Oct 2019<span>Lagos, Nigeria</span></div></div><div class="ab2-r"><div class="ab2-logo"><img src="img/logo-transformify.webp" alt=""></div><div><h3>Transformify <span>· UI/UX designer</span></h3><p>Research, user flows and UI for a recruitment platform.</p></div><div class="ab2-when">Jan 2018 – Apr 2019<span>London, UK · Remote</span></div></div><div class="ab2-r"><div class="ab2-logo"><span>SO</span></div><div><h3>Independent <span>· Contract product designer</span></h3><p>Contract product work for startups and scale-ups, alongside full-time roles. Recent engagements include <a href="../projects/risevest/">Risevest’s app redesign</a> and <a href="../projects/lenox-park/">Lenox Park’s analytics platform</a>.</p></div><div class="ab2-when">2017 – Present<span>Remote</span></div></div></div></div></section>
 <section class="voices cs-rv" id="testimonials">
     <div class="voices-inner">
