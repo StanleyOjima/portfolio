@@ -1687,6 +1687,55 @@ html.boot-on .wordmark{opacity:0}
 <style id="mark-pass">.mark,.g-mark{display:block!important;overflow:hidden;padding:0!important}.mark svg,.g-mark svg{width:100%;height:100%;display:block}</style>
 <style id="light-only">:root{color-scheme:only light}</style>
 <style id="nav-size">.capsule,.gnav .gcap{gap:4px!important;padding:6px!important}.capsule .mark,.gnav .g-mark{width:36px!important;height:36px!important;margin-right:8px}.capsule a.lnk,.gnav .g-lnk{padding:11px 13px!important;font-size:14.5px!important}.capsule a.cv,.gnav .g-cv{padding:11px 15px!important;font-size:14.5px!important}@media (max-width:420px){.capsule .mark,.gnav .g-mark{width:34px!important;height:34px!important;margin-right:4px}.capsule a.lnk,.gnav .g-lnk{padding:10px 9px!important;font-size:14px!important}.capsule a.cv,.gnav .g-cv{padding:10px 12px!important;font-size:14px!important}}</style>
+<style id="mobile-fix">
+@media (max-width:767px){
+/* type floor: labels the page renders at 9.6-11.8px go to 12px */
+.qfp .y-l,.qfp .cs-back,.qfp .y-yrs,.qfp .y-fact dt,.qfp .fl-n,.qfp .fl-loop span,.qfp .y-dec-b h4,.qfp .phg-stage span,.qfp .mp-eyebrow,.qfp .mp-view,.qfp .bp-lane i,.site-footer .foot-kicker,.site-footer .foot-status,.site-footer .foot-top-btn,.site-footer .foot-base{font-size:12px}
+.qfp .mp-sector{font-size:11.5px}
+.site-footer .foot-copy{font-size:11px}
+/* column eyebrows were picking up body-paragraph type (.y-col p beat .y-l): give them the same mono label as every other eyebrow */
+.qfp .y-col p.y-l{font:500 12px/1.3 var(--mono);letter-spacing:.08em;margin:0 0 .7rem}
+/* white strip between two full-bleed bands (hero image / video band and the chapter band) */
+.qfp .y-part{padding-top:3rem}
+.qfp .mp-wrap{padding-top:2.5rem}
+/* tap targets: grow hit areas without moving anything */
+.qfp .cs-back{padding:13px 0;margin-top:-13px;margin-bottom:calc(1.2rem - 13px)}
+.site-footer .foot-email{padding:9px 0;margin:-9px 0}
+.site-footer .foot-copy{min-height:32px;position:relative}
+.site-footer .foot-copy::after{content:"";position:absolute;inset:-6px -4px}
+.site-footer .foot-links a{padding:12px 0;margin:-12px 0}
+.site-footer .foot-top-btn{padding:14px 0;margin:-14px 0}
+.y-tabs a{height:40px}
+
+/* The system: 6-step x 6-lane map. Keep it a swipeable matrix, but pin the lane column so every cell keeps its row label */
+.qfp .bp-wrap{margin-left:0;margin-right:0}
+.qfp .bp{grid-template-columns:108px repeat(var(--c),146px);min-width:0;width:max-content}
+.qfp .bp-c{padding:.65rem .55rem}
+.qfp .bp-lane,.qfp .bp-corner{position:sticky;left:0;z-index:2;box-shadow:6px 0 10px -8px rgba(24,24,27,.28)}
+.qfp .bp-lane b{font-size:.84rem}
+.qfp .bp-h span{font-size:11.5px}
+.qfp .bp-x span,.qfp .bp-fail span{padding:.45rem .5rem}
+
+/* Phone screens: a swipe row at a readable size instead of two 168px columns with cramped captions */
+.qfp .pg-band .phg{display:flex!important;gap:16px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-left:var(--nav-pad-x);margin:0 calc(-1 * var(--nav-pad-x));padding:2px var(--nav-pad-x) 4px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.qfp .pg-band .phg::-webkit-scrollbar{display:none}
+.qfp .pg-band .phg-item{flex:0 0 min(64vw,272px);scroll-snap-align:start}
+.qfp .pg-band .phg + .phg-stage{margin-top:2.6rem}
+.qfp .pg-band .phg-stage{margin-bottom:1.1rem}
+
+/* Decision images: the base sheet forced a 380px box but contained the image, leaving a white slab under a 217px band. Show the band edge to edge, cropped only at its empty sides so the two screens are larger */
+.qfp .y-dec .y-bleed.ph img{min-height:0!important;height:340px!important;object-fit:cover!important;object-position:50% 50%!important}
+.qfp .y-dec .y-bleed.ph figcaption{display:grid!important;grid-template-columns:1fr 1fr;gap:0 8px!important;padding:0 12px;margin-top:.9rem;font-size:12px;letter-spacing:0;text-align:center}
+.qfp .y-dec .y-bleed.ph figcaption span{text-wrap:balance}
+
+/* Video band: CTA was centred while its caption ran full width left-aligned */
+.qfp .y-videocta p{text-align:center;max-width:32ch}
+}
+@media (max-width:380px){
+.qfp .bp{grid-template-columns:100px repeat(var(--c),140px)}
+.qfp .y-dec .y-bleed.ph img{height:320px!important}
+}
+</style>
 </head>
 <body id="top">
 <div class="boot" aria-hidden="true"><div class="boot-name" data-text="QuickFleet"></div><div class="boot-row">Electric delivery network</div></div>

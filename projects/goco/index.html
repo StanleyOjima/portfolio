@@ -1736,6 +1736,59 @@ html.boot-on .wordmark{opacity:0}
 <style id="mark-pass">.mark,.g-mark{display:block!important;overflow:hidden;padding:0!important}.mark svg,.g-mark svg{width:100%;height:100%;display:block}</style>
 <style id="light-only">:root{color-scheme:only light}</style>
 <style id="nav-size">.capsule,.gnav .gcap{gap:4px!important;padding:6px!important}.capsule .mark,.gnav .g-mark{width:36px!important;height:36px!important;margin-right:8px}.capsule a.lnk,.gnav .g-lnk{padding:11px 13px!important;font-size:14.5px!important}.capsule a.cv,.gnav .g-cv{padding:11px 15px!important;font-size:14.5px!important}@media (max-width:420px){.capsule .mark,.gnav .g-mark{width:34px!important;height:34px!important;margin-right:4px}.capsule a.lnk,.gnav .g-lnk{padding:10px 9px!important;font-size:14px!important}.capsule a.cv,.gnav .g-cv{padding:10px 12px!important;font-size:14px!important}}</style>
+<style id="mobile-fix">
+@media (max-width:767px){
+  /* Research board (user flow, interview guide, pain points): its grid track grew to 865px,
+     so the whole page scrolled sideways and the fixed nav/tabs were laid out off-screen */
+  .rb-sec{padding:2rem 0 .4rem}
+  .rb-canvas{grid-template-columns:minmax(0,1fr);gap:1.9rem;padding:2rem var(--nav-pad-x) 1.6rem;border-radius:0;box-shadow:inset 0 1px 0 rgba(24,24,27,.07),inset 0 -1px 0 rgba(24,24,27,.07)}
+  .rb-p{min-width:0;padding:2.3rem 1.1rem 1.2rem}
+  .rb-h{left:12px;font-size:.75rem}
+  /* user-flow diagrams scroll sideways inside their panel, run to the panel edge and fade out there */
+  .rb-fl{margin:0 -1.1rem;padding:0 1.1rem;scrollbar-width:none;
+    -webkit-mask-image:linear-gradient(#000 0 0),linear-gradient(90deg,#000 calc(100% - 44px),transparent);
+            mask-image:linear-gradient(#000 0 0),linear-gradient(90deg,#000 calc(100% - 44px),transparent);
+    -webkit-mask-size:100% 2.4rem,100% 100%;mask-size:100% 2.4rem,100% 100%;
+    -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+  .rb-fl + .rb-fl{-webkit-mask-size:100% 3.8rem,100% 100%;mask-size:100% 3.8rem,100% 100%}
+  .rb-fl::-webkit-scrollbar{display:none}
+  .rb-fl .rb-flow{width:960px;box-sizing:content-box;padding-right:28px}
+  .rb-k{position:sticky;left:0;width:fit-content;max-width:calc(100vw - 2 * var(--nav-pad-x) - 2.2rem)}
+  .rb-k b{font-size:.75rem}
+  .fl-loop span{font-size:.8rem}
+  /* interview guide */
+  .rb-doc ul{padding-left:1.55rem}
+  .rb-doc li{font-size:.9rem;line-height:1.5}
+  .rb-gh{font-size:.95rem}
+  .rb-gh span{font-size:.75rem}
+  /* pain points: one note per row instead of three 80px columns */
+  .rb-grid{grid-template-columns:minmax(0,1fr);gap:6px}
+  .rb-s{min-height:0;align-items:center;padding:.8rem .9rem;font-size:.9rem}
+  .rb-cl + .rb-cl{margin-top:1.3rem}
+  .rb-cg{font-size:.88rem}
+  .rb-cg span{font-size:.75rem}
+  .rb-cap{padding:0 var(--nav-pad-x);font-size:.86rem}
+
+  /* hero: the years line wraps under the pills but kept its 8px inline offset */
+  .y-yrs{flex-basis:100%;margin:.2rem 0 0}
+
+  /* before vs after: stacked per row (struck "before" above, "→ after" below) instead of two 140px columns */
+  .y-vs2-h{display:flex;gap:1.6rem}
+  .y-vs2-h i{display:none}
+  .y-vs2-r{grid-template-columns:1.7rem minmax(0,1fr);row-gap:.3rem}
+  .y-vs2-r span:first-child{grid-column:1/-1}
+  .y-vs2-r i{grid-column:1;text-align:left}
+  .y-vs2-r span:last-child{grid-column:2}
+
+  /* one size for every mono micro-label on phones (was 9.9-11.8px, mixed by section) */
+  .y-l,.cs-back,.y-yrs,.y-fact dt,.fl-n,.y-dec-b h4,.wt-count,.wt-step span,.o4-bar span,
+  .mp-eyebrow,.mp-sector,.mp-view,.foot-kicker,.foot-status,.foot-base,.foot-top-btn,.foot-copy{font-size:.75rem}
+
+  /* tap targets: grow the hit area without moving anything */
+  .cs-back,.foot-email,.foot-copy,.foot-links a,.foot-top-btn{position:relative}
+  .cs-back::after,.foot-email::after,.foot-copy::after,.foot-links a::after,.foot-top-btn::after{content:"";position:absolute;inset:-12px -4px}
+}
+</style>
 </head>
 <body id="top">
 <div class="boot" aria-hidden="true"><div class="boot-name" data-text="GoCo"></div><div class="boot-row">HR, benefits and payroll</div></div>

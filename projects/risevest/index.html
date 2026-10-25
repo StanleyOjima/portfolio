@@ -1692,6 +1692,50 @@ html.boot-on .wordmark{opacity:0}
 <style id="mark-pass">.mark,.g-mark{display:block!important;overflow:hidden;padding:0!important}.mark svg,.g-mark svg{width:100%;height:100%;display:block}</style>
 <style id="light-only">:root{color-scheme:only light}</style>
 <style id="nav-size">.capsule,.gnav .gcap{gap:4px!important;padding:6px!important}.capsule .mark,.gnav .g-mark{width:36px!important;height:36px!important;margin-right:8px}.capsule a.lnk,.gnav .g-lnk{padding:11px 13px!important;font-size:14.5px!important}.capsule a.cv,.gnav .g-cv{padding:11px 15px!important;font-size:14.5px!important}@media (max-width:420px){.capsule .mark,.gnav .g-mark{width:34px!important;height:34px!important;margin-right:4px}.capsule a.lnk,.gnav .g-lnk{padding:10px 9px!important;font-size:14px!important}.capsule a.cv,.gnav .g-cv{padding:10px 12px!important;font-size:14px!important}}</style>
+<style id="mobile-fix">
+/* Phone layout pass (Risevest). Phones only: desktop and tablet untouched. */
+@media (max-width:767px){
+  :root{--nav-pad-x:20px}
+  /* readable minimums for mono labels (were 9.9-11.8px) */
+  .cs-back,.y-l,.y-yrs,.y-fact dt,.fl-n,.y-dec-b h4,.o4-bar span,.mp-eyebrow,.mp-view,.foot-kicker,.foot-status,.foot-base,.foot-top-btn{font-size:12px}
+  .mp-sector,.foot-copy{font-size:12px}
+  .fl-loop span{font-size:12.5px}
+  /* hero: the year/sector line drops under the pills; align it to the gutter instead of indenting it */
+  .y-yrs{margin-left:0;flex-basis:100%;margin-top:2px}
+  /* tap targets: grow hit areas without moving anything */
+  .cs-back,.foot-email,.foot-copy,.foot-links a,.foot-top-btn{position:relative}
+  .cs-back::after,.foot-email::after,.foot-copy::after,.foot-links a::after,.foot-top-btn::after{content:"";position:absolute;left:0;right:0;top:50%;height:44px;transform:translateY(-50%)}
+  /* section rhythm: desktop-sized gaps (100-176px) tightened for a phone */
+  .y-sec{padding-top:3.5rem}
+  .y-part{padding-top:2.5rem}
+  .y-chb{padding:2.4rem 0}
+  .y-part + .y-sec{padding-top:3rem}
+  .pg-band{padding:2.4rem 0 2rem}
+  .mp-wrap{margin-top:1rem;padding-top:3.5rem}
+  /* presentation images: no empty letterbox above and below */
+  .y-bleed img{min-height:0!important}
+  /* decision images: phones sit centred on plain backdrop; crop only the backdrop so the screens are legible */
+  .y-dec .y-bleed.ph img{height:380px!important;object-fit:cover!important;object-position:center!important}
+  /* "what I designed" gallery: swipeable row of phones instead of two cramped columns */
+  .pg-band .phg{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:66%;gap:0 16px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-padding:0 var(--nav-pad-x);margin:0 calc(-1 * var(--nav-pad-x));padding:2px var(--nav-pad-x) 30px;scrollbar-width:none;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+  .pg-band .phg::-webkit-scrollbar{display:none}
+  .pg-band .phg-item{scroll-snap-align:start;min-width:0}
+  .pg-band .phg-item figcaption b{font-size:1.06rem}
+  .pg-band .phg-item figcaption p{font-size:.94rem;line-height:1.5}
+  /* before vs after: stack each pair instead of two narrow columns */
+  .y-vs2-h{display:flex;align-items:center;gap:10px}
+  .y-vs2-h i{display:block;width:22px;height:1px;background:rgba(255,255,255,.3)}
+  .y-vs2-r{grid-template-columns:1.6rem minmax(0,1fr);row-gap:.4rem;align-items:baseline}
+  .y-vs2-r span:first-child{grid-column:1/-1;font-size:.94rem}
+  .y-vs2-r i{grid-column:1;text-align:left}
+  .y-vs2-r span:last-child{grid-column:2}
+  /* outcome cards: the leftover grid gap (19px) stacked on the h4 margin once rows became flex columns */
+  .y-out4 .o4-row{gap:0}
+  /* credits: one clean list */
+  .y-credits{grid-template-columns:1fr;gap:1.1rem}
+  .y-credits span{margin-top:.2rem}
+}
+</style>
 </head>
 <body id="top">
 <div class="boot" aria-hidden="true"><div class="boot-name" data-text="Risevest"></div><div class="boot-row">Investment app · 620K+ users</div></div>

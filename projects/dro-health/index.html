@@ -1795,6 +1795,50 @@ html.boot-on .wordmark{opacity:0}
 <style id="mark-pass">.mark,.g-mark{display:block!important;overflow:hidden;padding:0!important}.mark svg,.g-mark svg{width:100%;height:100%;display:block}</style>
 <style id="light-only">:root{color-scheme:only light}</style>
 <style id="nav-size">.capsule,.gnav .gcap{gap:4px!important;padding:6px!important}.capsule .mark,.gnav .g-mark{width:36px!important;height:36px!important;margin-right:8px}.capsule a.lnk,.gnav .g-lnk{padding:11px 13px!important;font-size:14.5px!important}.capsule a.cv,.gnav .g-cv{padding:11px 15px!important;font-size:14.5px!important}@media (max-width:420px){.capsule .mark,.gnav .g-mark{width:34px!important;height:34px!important;margin-right:4px}.capsule a.lnk,.gnav .g-lnk{padding:10px 9px!important;font-size:14px!important}.capsule a.cv,.gnav .g-cv{padding:10px 12px!important;font-size:14px!important}}</style>
+<style id="mobile-fix">
+/* Phone layout pass (DRO Health). Phones only: tablet and desktop untouched. */
+@media (max-width:767px){
+  :root{--nav-pad-x:20px}
+  /* readable minimums for mono labels and meta (were 9.6-11.8px) */
+  .cs-back,.y-l,.y-yrs,.y-fact dt,.fl-n,.fl-loop span,.y-dec-b h4,.o4-bar span,.mp-eyebrow,.mp-sector,.mp-view,.foot-kicker,.foot-status,.foot-base,.foot-top-btn,.foot-copy{font-size:12px}
+  /* research columns: the eyebrow was inheriting body-paragraph type (.y-col p beat .y-l); give it the same mono label as every other eyebrow */
+  .y-col p.y-l{font:500 12px/1.3 var(--mono);letter-spacing:.08em;margin:0 0 .7rem}
+  /* hero: the year/sector line drops under the pills; align it to the gutter instead of indenting it */
+  .y-yrs{margin-left:0;flex-basis:100%;margin-top:2px}
+  /* tap targets: grow hit areas without moving anything */
+  .cs-back,.foot-email,.foot-copy,.foot-links a,.foot-top-btn{position:relative}
+  .cs-back::after,.foot-email::after,.foot-copy::after,.foot-links a::after,.foot-top-btn::after{content:"";position:absolute;left:-6px;right:-6px;top:50%;height:44px;transform:translateY(-50%)}
+  .y-tabs a{height:40px}
+  /* section rhythm: desktop-sized white strips between full-bleed bands tightened for a phone */
+  .y-part{padding-top:2.5rem}
+  .y-chb{padding:2.4rem 0}
+  .y-part + .y-sec{padding-top:3rem}
+  .pg-band{padding:2.4rem 0 2rem}
+  .mp-wrap{margin-top:1rem;padding-top:3.5rem}
+  /* presentation images: the base sheet forced a 380px box around a contained 211px image, leaving 85px of blank above and below */
+  .y-bleed img{min-height:0!important}
+  /* hero and decision 02 show two phones centred on a plain backdrop: crop only backdrop so the screens are legible */
+  main .y-bleed img[src$="dro-hero.webp"],main .y-bleed img[src$="dro-dec2.webp"]{aspect-ratio:1/1!important;height:auto!important;object-fit:cover!important;object-position:50% 50%!important}
+  /* "what I designed" gallery: a swipeable row of phones instead of two 168px columns with cramped captions */
+  .pg-band .phg{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:66%;gap:0 16px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-padding:0 var(--nav-pad-x);margin:0 calc(-1 * var(--nav-pad-x));padding:2px var(--nav-pad-x) 6px;scrollbar-width:none;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+  .pg-band .phg::-webkit-scrollbar{display:none}
+  .pg-band .phg-item{scroll-snap-align:start;min-width:0}
+  .pg-band .phg-item figcaption p{font-size:.94rem!important}
+  /* before vs after: stack each pair instead of two narrow columns */
+  .y-vs2-h{display:flex;align-items:center;gap:10px}
+  .y-vs2-h i{display:block;width:22px;height:1px;background:rgba(255,255,255,.3)}
+  .y-vs2-r{grid-template-columns:1.6rem minmax(0,1fr);row-gap:.4rem;align-items:baseline}
+  .y-vs2-r span:first-child{grid-column:1/-1;font-size:.94rem}
+  .y-vs2-r i{grid-column:1;text-align:left}
+  .y-vs2-r span:last-child{grid-column:2}
+  /* outcome: the stacked feature card and stat cards used different inner gutters (26px vs 19px) */
+  .o4-feat{padding:1.5rem 1.3rem}
+  .o4-row,.o4-row:first-child,.o4-row:last-child{padding:1.2rem 1.3rem}
+  /* credits: one clean list instead of a 2+1 grid that wraps names */
+  .y-credits{grid-template-columns:1fr;gap:1.1rem}
+  .y-credits span{margin-top:.2rem}
+}
+</style>
 </head>
 <body id="top">
 <div class="boot" aria-hidden="true"><div class="boot-name" data-text="DRO Health"></div><div class="boot-row">Telehealth platform</div></div>
