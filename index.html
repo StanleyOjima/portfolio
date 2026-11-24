@@ -856,7 +856,7 @@ html.mm-lock,html.mm-lock body{overflow:hidden}
 }
 @media (max-width:379px){.badge.sm .card .ttl2{font-size:12.5px}}</style><style>@media (max-width:767px){.badge.sm .card .ttl2{font-size:12.5px}}@media (max-width:379px){.badge.sm .card .ttl2{font-size:11.5px}}@media (max-width:767px){.badge .clasp{visibility:hidden}}@media (max-width:767px){
   .hero > .wordmark.stack{text-align:left!important;padding-left:var(--gutter);margin-left:-.06em!important;white-space:nowrap}
-  .mtop{padding-top:96px!important;padding-bottom:18px!important;flex:1 1 auto;display:flex;flex-direction:column;justify-content:center}
+  .mtop{padding-top:96px!important;padding-bottom:0!important;flex:0 0 auto!important;display:block}
   .hero > .stage{flex:0 0 auto!important}
   .hero > .wordmark.stack{margin-bottom:14px!important}
   .badge.sm .card .sub2 span,.badge.sm .card .sub2 .sep{display:inline}
@@ -982,6 +982,7 @@ html.mm-lock,html.mm-lock body{overflow:hidden}
 }
 </style>
 <style id="soul-card">.pc-v.soul img{left:4%;top:12%;width:128%;height:auto;object-fit:initial;transform:none}.case:hover .pc-v.soul img{transform:translateY(-4px)}@media (max-width:980px){.pc-v.soul img{left:3%;top:auto!important;bottom:-14%;width:122%}}</style>
+<style id="m-rhythm">@media (max-width:767px){#testimonials{padding-top:56px!important;padding-bottom:56px!important}.voices-eyebrow{margin-bottom:22px!important}.tsp{margin-top:0!important}.tsp-stage{padding-top:22px!important}#work{padding-top:64px!important;padding-bottom:64px!important}.work-eyebrow{margin-bottom:20px!important}#contact{padding-top:72px!important}}</style>
 </head>
 <body>
 <div class="boot" aria-hidden="true"><div class="boot-name" data-text="stanley ojima"></div><div class="boot-row">Senior product designer</div></div>
@@ -1263,6 +1264,7 @@ html.mm-lock,html.mm-lock body{overflow:hidden}
   const N = 16, G = 0.24, DAMP = 0.966, ITER = 16, DT = 1000 / 120, TIME = 0.72;   // TIME < 1 = slow motion
   let pts = [], c = null;
   let anchor = {x:0,y:0}, seg = 20, dClip = 200, bw = 272, bh = 420, W = 0, H = 0;
+  let S = 1;   // phones: the pass scales to fit the screen height
   let dragging = false, grab = {x:0,y:0}, target = {x:0,y:0};
   let ry = 0, still = 0, running = false, booted = false, last = 0, acc = 0;
 
@@ -1293,6 +1295,45 @@ html.mm-lock,html.mm-lock body{overflow:hidden}
     return fs;
   }
 
+  /* phones: text, pass and name all fit the first screen; the pass sits in the space between, never on the name */
+  const svhProbe = document.createElement('div');
+  svhProbe.style.cssText = 'position:fixed;left:0;top:0;width:1px;height:100vh;height:100svh;visibility:hidden;pointer-events:none';
+  document.body.appendChild(svhProbe);
+  function layoutPhone(){
+    const mt = document.querySelector('.mtop');
+    stage.style.minHeight = '0px'; stage.style.height = '0px';
+    const fs = fitWordmark();
+    const svh = svhProbe.offsetHeight || window.innerHeight;
+    const TOP = 33;                                  // hidden clasp space above the sleeve
+    const vis = bh - TOP;                            // visible pass height at scale 1
+    const mtH = mt.getBoundingClientRect().bottom - hero.getBoundingClientRect().top;
+    const short = svh < 720;
+    const GT = short ? 16 : 20, GB = short ? 18 : 22; // min air above and below the pass
+    const SMIN = 0.72;
+    const wmB = () => wm.offsetHeight + (parseFloat(getComputedStyle(wm).marginBottom) || 0);
+    let wmH = wmB();
+    // short screens: the full name stays on the first screen; it gives up a little width before the pass gets too small to read
+    const need = vis * SMIN + GT + GB;
+    if (svh - mtH - wmH < need) {
+      const k = Math.max(0.8, (svh - mtH - need) / wmH);
+      wm.style.fontSize = (fs * k).toFixed(2) + 'px';
+      wmH = wmB();
+    }
+    const room = svh - mtH - wmH;
+    S = Math.max(SMIN, Math.min(1, (room - GT - GB) / vis));
+    const stageH = Math.max(Math.ceil(vis * S + GT + GB), Math.floor(room));
+    stage.style.height = stageH + 'px'; stage.style.minHeight = stageH + 'px';
+    const hr = hero.getBoundingClientRect();
+    const sTop = stage.getBoundingClientRect().top - hr.top;
+    const free = stageH - vis * S;
+    const gapTop = Math.max(GT, Math.round(free * 0.5 - 2));
+    const clipY = sTop + gapTop - TOP * S + 4;
+    anchor = { x: W / 2, y: clipY - 46 };
+    seg = (clipY - anchor.y) / (N - 1);
+    dClip = bh * S * 0.5;
+    H = hero.clientHeight;
+  }
+
   function layout(){
     W = hero.clientWidth;
     const narrow = W < 700;
@@ -1303,6 +1344,8 @@ html.mm-lock,html.mm-lock body{overflow:hidden}
     const hr = hero.getBoundingClientRect();
     bh = badge.offsetHeight;
     anchor = { x: narrow ? W / 2 : W * 0.73, y: narrow ? (stage.getBoundingClientRect().top - hr.top - 34) : -72 };
+    if (narrow) { layoutPhone(); return; }
+    S = 1;
     // on phones the badge hangs from the nav, directly above the name
     // phones: the badge's lower edge tucks over the top of the name, like a pass resting on a desk
     const OVL = narrow ? Math.round(Math.min(W * 0.05, 22)) : 0;
@@ -1388,7 +1431,7 @@ html.mm-lock,html.mm-lock body{overflow:hidden}
     const rot = -Math.atan2(c.x - e.x, c.y - e.y) * 180 / Math.PI;
     ry += (Math.max(-15, Math.min(15, (c.x - c.px) * 1.2)) - ry) * 0.08;
     badge.style.setProperty('--sheen', (0.45 + Math.min(0.5, Math.abs(ry) / 60)).toFixed(2));
-    badge.style.transform = `translate3d(${(e.x - bw / 2).toFixed(2)}px, ${(e.y - 4).toFixed(2)}px, 0) rotate(${rot.toFixed(2)}deg) perspective(900px) rotateY(${ry.toFixed(2)}deg)`;
+    badge.style.transform = `translate3d(${(e.x - bw / 2).toFixed(2)}px, ${(e.y - 4).toFixed(2)}px, 0) rotate(${rot.toFixed(2)}deg) perspective(900px) rotateY(${ry.toFixed(2)}deg)` + (S !== 1 ? ` scale(${S.toFixed(3)})` : '');
   }
 
   function energy(){
