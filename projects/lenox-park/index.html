@@ -1825,7 +1825,7 @@ html.boot-on .wordmark{opacity:0}
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
   var pt=document.querySelector('.pt'); if(!pt) return;
   var lab=pt.querySelector('.pt-label'), sub=pt.querySelector('.pt-sub');
-  var NAMES={'':['Stanley Ojima','Home'],'about':['About','Stanley Ojima'],'work':['Projects','Five case studies'],'projects':['Projects','Five case studies'],'goco':['GoCo','Case study'],'quickfleet':['QuickFleet','Case study'],'risevest':['Risevest','Case study'],'lenox-park':['Lenox Park','Case study'],'dro-health':['DRO Health','Case study']};
+  var NAMES={'':['Stanley Ojima','Home'],'about':['About','Stanley Ojima'],'work':['Projects','Six case studies'],'projects':['Projects','Six case studies'],'goco':['GoCo','Case study'],'quickfleet':['QuickFleet','Case study'],'risevest':['Risevest','Case study'],'lenox-park':['Lenox Park','Case study'],'dro-health':['DRO Health','Case study'],'soul':['SOUL','Case study']};
   function nameFor(u){var parts=u.pathname.replace(/index\.html$/,'').split('/').filter(Boolean);var k=parts.length?parts[parts.length-1]:'';return NAMES[k]||['',''];}
   try{var stored=sessionStorage.getItem('pt');}catch(e){}
   if(stored){
